@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.34031.82
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FE7A1B72-C5B7-4D7C-BB7D-76384D4DE8E1}") = "pxfh-hmi", "pxfh-hmi\pxfh-hmi.hmiproj", "{C4444954-30A0-40B4-9402-5B78202570C8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|TwinCAT HMI = Debug|TwinCAT HMI
+		Release|TwinCAT HMI = Release|TwinCAT HMI
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C4444954-30A0-40B4-9402-5B78202570C8}.Debug|TwinCAT HMI.ActiveCfg = Debug|TwinCAT HMI
+		{C4444954-30A0-40B4-9402-5B78202570C8}.Debug|TwinCAT HMI.Build.0 = Debug|TwinCAT HMI
+		{C4444954-30A0-40B4-9402-5B78202570C8}.Release|TwinCAT HMI.ActiveCfg = Release|TwinCAT HMI
+		{C4444954-30A0-40B4-9402-5B78202570C8}.Release|TwinCAT HMI.Build.0 = Release|TwinCAT HMI
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AFFB86DD-3A4C-4EE7-B6B3-92B00DF5B6A5}
+	EndGlobalSection
+EndGlobal
