@@ -55,6 +55,13 @@
             "REQUIRED": true,
             "STARTUPTYPE": 0
         },
+        "TcHmiRecipeManagement": {
+            "ENABLED": true,
+            "NAME": "TcHmiRecipeManagement",
+            "PATH": "..\\..\\Packages\\Beckhoff.TwinCAT.HMI.RecipeManagement.19.0.109\\runtimes\\win-x64\\native\\",
+            "REQUIRED": false,
+            "STARTUPTYPE": 1
+        },
         "TcHmiSqliteLogger": {
             "ENABLED": true,
             "NAME": "TcHmiSqliteLogger",
@@ -70,9 +77,25 @@
             "PROCESSID": -1,
             "REQUIRED": true,
             "STARTUPTYPE": 1
+        },
+        "TcHmiVision": {
+            "ENABLED": true,
+            "NAME": "TcHmiVision",
+            "PATH": "..\\..\\Packages\\Beckhoff.TwinCAT.HMI.Vision.13.7.109\\runtimes\\win\\net472\\",
+            "REQUIRED": false,
+            "STARTUPTYPE": 1
         }
     },
-    "FILES": {},
+    "FILES": {
+        "/": {
+            "ACCESS": 3,
+            "LOGINPAGE": "/LoginPage.html"
+        },
+        "www/Default.html": {
+            "ACCESS": 3,
+            "LOGINPAGE": "/LoginPage.html"
+        }
+    },
     "FILESREGEX": [
         {
             "FILESHTTPHEADERS": "Content-Security-Policy: frame-ancestors 'self'",
@@ -2824,6 +2847,190 @@
             "SCHEMA": {},
             "USEMAPPING": true
         },
+        "TcHmiRecipeManagement.ActivateRecipe": {
+            "ACCESS": 3,
+            "DOMAIN": "TcHmiRecipeManagement",
+            "DYNAMIC": false,
+            "HIDDEN": true,
+            "MAPPING": "ActivateRecipe",
+            "OPTIONS": {},
+            "SCHEMA": {
+                "function": true,
+                "writeValue": {
+                    "properties": {
+                        "path": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "path"
+                    ],
+                    "type": "object"
+                }
+            },
+            "USEMAPPING": true
+        },
+        "TcHmiRecipeManagement.Config": {
+            "ACCESS": 0,
+            "DOMAIN": "TcHmiRecipeManagement",
+            "DYNAMIC": false,
+            "HIDDEN": true,
+            "MAPPING": "Config",
+            "OPTIONS": {},
+            "SCHEMA": {},
+            "USEMAPPING": true
+        },
+        "TcHmiRecipeManagement.GetActiveRecipes": {
+            "ACCESS": 3,
+            "DOMAIN": "TcHmiRecipeManagement",
+            "DYNAMIC": false,
+            "HIDDEN": true,
+            "MAPPING": "GetActiveRecipes",
+            "OPTIONS": {},
+            "SCHEMA": {
+                "function": true,
+                "items": {
+                    "recipe": {
+                        "type": "string"
+                    }
+                },
+                "type": "array",
+                "writeValue": {
+                    "anyOf": [
+                        {
+                            "items": {
+                                "description": "recipe name(s)",
+                                "type": "string"
+                            },
+                            "type": "array"
+                        },
+                        {
+                            "$ref": "tchmi:general#/definitions/VOID"
+                        }
+                    ]
+                }
+            },
+            "USEMAPPING": true
+        },
+        "TcHmiRecipeManagement.GetRecipes": {
+            "ACCESS": 3,
+            "DOMAIN": "TcHmiRecipeManagement",
+            "DYNAMIC": false,
+            "HIDDEN": true,
+            "MAPPING": "GetRecipes",
+            "OPTIONS": {},
+            "SCHEMA": {
+                "function": true,
+                "items": {
+                    "recipes": {
+                        "type": "string"
+                    }
+                },
+                "type": "array",
+                "writeValue": {
+                    "properties": {
+                        "recipeTypePath": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "recipeTypePath"
+                    ],
+                    "type": "object"
+                }
+            },
+            "USEMAPPING": true
+        },
+        "TcHmiRecipeManagement.ListRecipeTypes": {
+            "ACCESS": 3,
+            "DOMAIN": "TcHmiRecipeManagement",
+            "DYNAMIC": false,
+            "HIDDEN": true,
+            "MAPPING": "ListRecipeTypes",
+            "OPTIONS": {},
+            "SCHEMA": {
+                "function": true
+            },
+            "USEMAPPING": true
+        },
+        "TcHmiRecipeManagement.ListRecipes": {
+            "ACCESS": 3,
+            "DOMAIN": "TcHmiRecipeManagement",
+            "DYNAMIC": false,
+            "HIDDEN": true,
+            "MAPPING": "ListRecipes",
+            "OPTIONS": {},
+            "SCHEMA": {
+                "function": true
+            },
+            "USEMAPPING": true
+        },
+        "TcHmiRecipeManagement.ReadFromTarget": {
+            "ACCESS": 3,
+            "DOMAIN": "TcHmiRecipeManagement",
+            "DYNAMIC": false,
+            "HIDDEN": true,
+            "MAPPING": "ReadFromTarget",
+            "OPTIONS": {},
+            "SCHEMA": {
+                "function": true,
+                "properties": {
+                    "path": {
+                        "type": "string"
+                    },
+                    "values": {
+                        "additionalProperties": {},
+                        "type": "object"
+                    }
+                },
+                "type": "object",
+                "writeValue": {
+                    "properties": {
+                        "path": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "path"
+                    ],
+                    "type": "object"
+                }
+            },
+            "USEMAPPING": true
+        },
+        "TcHmiRecipeManagement.UpdateRecipe": {
+            "ACCESS": 3,
+            "DOMAIN": "TcHmiRecipeManagement",
+            "DYNAMIC": false,
+            "HIDDEN": true,
+            "MAPPING": "UpdateRecipe",
+            "OPTIONS": {},
+            "SCHEMA": {
+                "function": true,
+                "properties": {
+                    "info": {
+                        "description": "List of updates made",
+                        "items": {
+                            "type": "string"
+                        },
+                        "type": "array"
+                    }
+                },
+                "type": "object",
+                "writeValue": {
+                    "properties": {
+                        "path": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "path"
+                    ],
+                    "type": "object"
+                }
+            },
+            "USEMAPPING": true
+        },
         "TcHmiSqliteLogger.Clear": {
             "ACCESS": 3,
             "DOMAIN": "TcHmiSqliteLogger",
@@ -3207,6 +3414,83 @@
             },
             "USEMAPPING": true
         },
+        "TcHmiVision.Config": {
+            "ACCESS": 0,
+            "DOMAIN": "TcHmiVision",
+            "DYNAMIC": false,
+            "HIDDEN": true,
+            "MAPPING": "Config",
+            "OPTIONS": {},
+            "SCHEMA": {},
+            "USEMAPPING": true
+        },
+        "TcHmiVision.Diagnostics": {
+            "ACCESS": 1,
+            "DOMAIN": "TcHmiVision",
+            "DYNAMIC": false,
+            "HIDDEN": true,
+            "MAPPING": "Diagnostics",
+            "OPTIONS": {},
+            "SCHEMA": {
+                "function": true,
+                "properties": {
+                    "Runtimes": {
+                        "additionalProperties": {
+                            "properties": {
+                                "adsState": {
+                                    "propertyOrder": 3,
+                                    "readOnly": true,
+                                    "type": "string"
+                                },
+                                "connectionState": {
+                                    "propertyOrder": 1,
+                                    "readOnly": true,
+                                    "type": "string"
+                                },
+                                "systemServiceAdsState": {
+                                    "propertyOrder": 2,
+                                    "readOnly": true,
+                                    "type": "string"
+                                }
+                            },
+                            "readOnly": true,
+                            "type": "object"
+                        },
+                        "readOnly": true,
+                        "type": "object"
+                    }
+                },
+                "readOnly": true,
+                "transient": true,
+                "type": "object"
+            },
+            "USEMAPPING": true
+        },
+        "TcHmiVision.GetSchema": {
+            "ACCESS": 3,
+            "DOMAIN": "TcHmiVision",
+            "DYNAMIC": false,
+            "HIDDEN": true,
+            "MAPPING": "GetSchema",
+            "OPTIONS": {},
+            "SCHEMA": {
+                "function": true,
+                "writeValue": {
+                    "type": "string"
+                }
+            },
+            "USEMAPPING": true
+        },
+        "TcHmiVision.ListSymbols": {
+            "ACCESS": 3,
+            "DOMAIN": "TcHmiVision",
+            "DYNAMIC": false,
+            "HIDDEN": true,
+            "MAPPING": "ListSymbols",
+            "OPTIONS": {},
+            "SCHEMA": {},
+            "USEMAPPING": true
+        },
         "Unsubscribe": {
             "ACCESS": 3,
             "DOMAIN": "TcHmiSrv",
@@ -3357,7 +3641,8 @@
             "FILEACCESS": 0,
             "FILES": {
                 "/Config/ServerState": 1,
-                "/FavIcon.ico": 1
+                "/FavIcon.ico": 1,
+                "/LoginPage.html": 3
             },
             "SYMBOLACCESS": 0,
             "SYMBOLS": {
@@ -3420,12 +3705,51 @@
                 "Logout": 3,
                 "SetLocale": 3,
                 "SubscribeEvents": 3,
+                "TcHmiRecipeManagement.ActivateRecipe": 3,
+                "TcHmiRecipeManagement.GetActiveRecipes": 3,
+                "TcHmiRecipeManagement.GetRecipes": 3,
+                "TcHmiRecipeManagement.ListRecipeTypes": 3,
+                "TcHmiRecipeManagement.ListRecipes": 3,
+                "TcHmiRecipeManagement.ReadFromTarget": 3,
+                "TcHmiRecipeManagement.UpdateRecipe": 3,
                 "TcHmiSqliteLogger.Diagnostics": 1,
                 "TcHmiUserManagement.ChangePassword": 3,
                 "Unsubscribe": 3,
                 "UnsubscribeEvents": 3,
                 "UpdateEventsSubscription": 3,
                 "UserSelectType": 1
+            }
+        },
+        "admin": {
+            "ENABLED": true,
+            "FILEACCESS": 3,
+            "FILES": {},
+            "SYMBOLACCESS": 0,
+            "SYMBOLS": {
+                "AddOrChangeUser": 0,
+                "ChangeUserSettings": 0,
+                "RemoveUser": 0,
+                "TcHmiUserManagement.AddUser": 0,
+                "TcHmiUserManagement.DisableUser": 0,
+                "TcHmiUserManagement.EnableUser": 0,
+                "TcHmiUserManagement.RemoveUser": 0,
+                "TcHmiUserManagement.RenameUser": 0
+            }
+        },
+        "operator": {
+            "ENABLED": true,
+            "FILEACCESS": 3,
+            "FILES": {},
+            "SYMBOLACCESS": 0,
+            "SYMBOLS": {
+                "AddOrChangeUser": 0,
+                "ChangeUserSettings": 0,
+                "RemoveUser": 0,
+                "TcHmiUserManagement.AddUser": 0,
+                "TcHmiUserManagement.DisableUser": 0,
+                "TcHmiUserManagement.EnableUser": 0,
+                "TcHmiUserManagement.RemoveUser": 0,
+                "TcHmiUserManagement.RenameUser": 0
             }
         }
     },
@@ -3457,6 +3781,17 @@
                 "USERGROUPUSERS_LOCALE": "project",
                 "USERGROUPUSERS_TIMEFORMATLOCALE": "project",
                 "USERGROUPUSERS_TIMEZONE": "project"
+            },
+            "root": {
+                "USERGROUPUSERS_AUTO_LOGOFF": "P30D",
+                "USERGROUPUSERS_GROUPS": [
+                    "__SystemUsers",
+                    "admin",
+                    "operator"
+                ],
+                "USERGROUPUSERS_LOCALE": "client",
+                "USERGROUPUSERS_TIMEFORMATLOCALE": "project",
+                "USERGROUPUSERS_TIMEZONE": "project"
             }
         }
     },
@@ -3464,8 +3799,10 @@
     "VIDEOSEGMENTSIZE": 1048576,
     "VIRTUALDIRECTORIES": {
         "/": "..\\..\\pxfh-hmi\\",
+        "/Beckhoff.TwinCAT.HMI.BaseTemplate": "..\\..\\Packages\\Beckhoff.TwinCAT.HMI.BaseTemplate.12.760.48\\runtimes\\native1.12-tchmi",
         "/Beckhoff.TwinCAT.HMI.Controls": "..\\..\\Packages\\Beckhoff.TwinCAT.HMI.Controls.12.760.48\\runtimes\\native1.12-tchmi",
         "/Beckhoff.TwinCAT.HMI.Functions": "..\\..\\Packages\\Beckhoff.TwinCAT.HMI.Functions.12.760.48\\runtimes\\native1.12-tchmi",
+        "/Beckhoff.TwinCAT.HMI.ResponsiveNavigation": "..\\..\\Packages\\Beckhoff.TwinCAT.HMI.ResponsiveNavigation.12.760.48\\runtimes\\native1.12-tchmi",
         "/bin": "..\\..\\pxfh-hmi\\bin\\",
         "/bin/framework": "..\\..\\pxfh-hmi\\bin\\framework",
         "/framework": "..\\..\\Packages\\Beckhoff.TwinCAT.HMI.Framework.12.760.48\\runtimes\\native1.12-tchmi"

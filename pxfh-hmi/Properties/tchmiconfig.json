@@ -3,7 +3,7 @@
   "basePath": "./framework",
   "scaleMode": "None",
   "startupView": "Desktop.view",
-  "loginPage": "",
+  "loginPage": "LoginPage.html",
   "tcHmiServer": {
     "websocketIntervalTime": 500,
     "websocketTimeout": 20000,
@@ -70,8 +70,8 @@
   "trigger": [],
   "actionTemplates": [],
   "languages": {
-    "de": "Localization/de.localization",
-    "en": "Localization/en.localization"
+    "en": "Localization/en.localization",
+    "zh-CN": "Localization/zh-CN.localization"
   },
   "languageFallback": "",
   "disableLoadingOptimization": false,
@@ -86,6 +86,10 @@
   },
   "packages": [
     {
+      "name": "Beckhoff.TwinCAT.HMI.BaseTemplate",
+      "basePath": "/Beckhoff.TwinCAT.HMI.BaseTemplate"
+    },
+    {
       "name": "Beckhoff.TwinCAT.HMI.Controls",
       "basePath": "/Beckhoff.TwinCAT.HMI.Controls"
     },
@@ -96,6 +100,10 @@
     {
       "name": "Beckhoff.TwinCAT.HMI.Functions",
       "basePath": "/Beckhoff.TwinCAT.HMI.Functions"
+    },
+    {
+      "name": "Beckhoff.TwinCAT.HMI.ResponsiveNavigation",
+      "basePath": "/Beckhoff.TwinCAT.HMI.ResponsiveNavigation"
     }
   ],
   "keyboardLayouts": [
@@ -112,9 +120,9 @@
   "systemKeyboard": {
     "providerName": "",
     "projectKeyboardMapping": {
-      "de": {
-        "text": "KeyboardLayouts/German - compact.keyboard.json",
-        "decimal": "KeyboardLayouts/Numpad (plusminus).keyboard.json",
+      "zh-CN": {
+        "text": "",
+        "decimal": "",
         "numeric": ""
       },
       "en": {

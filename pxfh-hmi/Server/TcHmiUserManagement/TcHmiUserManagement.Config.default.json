@@ -1,10 +1,10 @@
 {
     "USERS": {
         "__SystemAdministrator": {
-            "ALGORITHM": 0,
-            "ENABLED": false,
-            "PASSWORD": "",
-            "SALT": ""
+            "ALGORITHM": 1,
+            "ENABLED": true,
+            "PASSWORD": "881cc94e50f9187947b0a50758d13a8cf0d243e2e7df4169d898c06cc43d90a76e2075496bb5b4ff0ece9d9702a94a32710b9f4de75bcfbbe7a2ee90fc0ad727",
+            "SALT": "hq9j4j3l5cRbyHnloRdBVhj0AZByzdEFHFnvzPbAqAitHnK6gjDQsAka/w9zRZNHH8IQBhEUFIvgfQLqVac8gw=="
         },
         "__SystemGuest": {
             "ALGORITHM": 0,
@@ -17,6 +17,12 @@
             "ENABLED": true,
             "PASSWORD": "",
             "SALT": ""
+        },
+        "root": {
+            "ALGORITHM": 1,
+            "ENABLED": true,
+            "PASSWORD": "e66263f3eb9e9faee06bb24c680fb35bc913834fb795de823d48d2d92396e942a4c71b0dc36b6e309489794e0f59ccdbb94683bd6fb390d91d5521ac9784fab6",
+            "SALT": "RLQCeBSeNinDGfffTFo2H7Spy/Hvph5Imaw6+fA/ayEKpMsCSKp4SJfSC/nyyDmwAvyyWwyBAAHvaOIJ4Rf7lA=="
         }
     }
 }

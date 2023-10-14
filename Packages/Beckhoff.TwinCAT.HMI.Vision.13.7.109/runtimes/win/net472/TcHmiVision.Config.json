@@ -1,0 +1,63 @@
+{
+  "$schema": "../../TcHmiSrv/schema/ExtensionSettings.Schema.json",
+  "version": "1.12.760.48",
+  "configVersion": "1.0.0.13",
+  "guid": "3fb9ee51-4588-4f96-8824-2d847d442ae0",
+  "visibility": "AlwaysShow",
+  "policies": [
+    "StrictPropertyValidation"
+  ],
+  "symbols": {
+    "ListSymbols": {},
+    "GetSchema": {
+      "writeValue": {
+        "type": "string"
+      },
+      "readValue": {
+        "function": true
+      }
+    },
+    "Diagnostics": {
+      "readValue": {
+        "function": true,
+        "type": "object",
+        "readOnly": true,
+        "transient": true,
+        "properties": {
+          "Runtimes": {
+            "readOnly": true,
+            "type": "object",
+            "additionalProperties": {
+              "readOnly": true,
+              "type": "object",
+              "properties": {
+                "connectionState": {
+                  "type": "string",
+                  "propertyOrder": 1,
+                  "readOnly": true
+                },
+                "systemServiceAdsState": {
+                  "type": "string",
+                  "propertyOrder": 2,
+                  "readOnly": true
+                },
+                "adsState": {
+                  "type": "string",
+                  "propertyOrder": 3,
+                  "readOnly": true
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "dotNetTargetFrameworkVersion": "v6.0",
+  "dotNetTargetFramework": "net6.0",
+  "dotNetPlatformTarget": "AnyCPU",
+  "dotNetConfiguration": "Release",
+  "packageVersion": "13.7.109",
+  "productVersion": "1.12.760.48",
+  "signature": "gj5jmZJbNlTxI3BYukpBZq7QfSnSzaiZxkDKH/nPiEd2/lBb9DNoWL5Q6jCLqa2ovKoLeH/LhC6HYPQa4HDPlEiWq4WS5gzas+4qeWzVHse/oljHfg+DRKm5mS3OUFCQdyJIJuQIX/us/GMLU4Ip6zWTkfh+yD64w3jNwUcBH9TtQZRlRUuKAOuhNdk/g5zX9FTOJpjdZeqAZwt4EQ6or8Xug+FnY7poyc2D78w/LGqd1nk+LaJseL8j2GhVixJQn1ilkKZnhnYYXkWa0OlA9s384xn9789+Ff6gjVG7SCG1acp99+sx9mIddYQBZF/NA4y1jmYGvzOenLoPIiICBQ=="
+}
