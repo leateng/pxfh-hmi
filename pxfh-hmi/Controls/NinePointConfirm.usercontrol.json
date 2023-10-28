@@ -1,0 +1,205 @@
+{
+  "parameters": [
+    {
+      "name": "data-tchmi-status1",
+      "displayName": "status1",
+      "allowSymbolExpressionsInObject": false,
+      "visible": true,
+      "type": "tchmi:general#/definitions/Object",
+      "category": "",
+      "description": "",
+      "defaultValue": {
+        "confirmed": false,
+        "x": 0,
+        "y": 0
+      },
+      "requiredOnCompile": false,
+      "readOnly": false,
+      "bindable": true,
+      "heritable": true,
+      "propertyName": "status1",
+      "propertySetterName": "setStatus1",
+      "propertyGetterName": "getStatus1",
+      "refTo": ""
+    },
+    {
+      "name": "data-tchmi-status2",
+      "displayName": "status2",
+      "allowSymbolExpressionsInObject": false,
+      "visible": true,
+      "type": "tchmi:general#/definitions/Object",
+      "category": "",
+      "description": "",
+      "defaultValue": {
+        "confirmed": false,
+        "x": 0,
+        "y": 0
+      },
+      "requiredOnCompile": false,
+      "readOnly": false,
+      "bindable": true,
+      "heritable": true,
+      "propertyName": "status2",
+      "propertySetterName": "setStatus2",
+      "propertyGetterName": "getStatus2",
+      "refTo": ""
+    },
+    {
+      "name": "data-tchmi-status3",
+      "displayName": "status3",
+      "allowSymbolExpressionsInObject": false,
+      "visible": true,
+      "type": "tchmi:general#/definitions/Object",
+      "category": "",
+      "description": "",
+      "defaultValue": {
+        "confirmed": false,
+        "x": 0,
+        "y": 0
+      },
+      "requiredOnCompile": false,
+      "readOnly": false,
+      "bindable": true,
+      "heritable": true,
+      "propertyName": "status3",
+      "propertySetterName": "setStatus3",
+      "propertyGetterName": "getStatus3",
+      "refTo": ""
+    },
+    {
+      "name": "data-tchmi-status4",
+      "displayName": "status4",
+      "allowSymbolExpressionsInObject": false,
+      "visible": true,
+      "type": "tchmi:general#/definitions/Object",
+      "category": "",
+      "description": "",
+      "defaultValue": {
+        "confirmed": false,
+        "x": 0,
+        "y": 0
+      },
+      "requiredOnCompile": false,
+      "readOnly": false,
+      "bindable": true,
+      "heritable": true,
+      "propertyName": "status4",
+      "propertySetterName": "setStatus4",
+      "propertyGetterName": "getStatus4",
+      "refTo": ""
+    },
+    {
+      "name": "data-tchmi-status5",
+      "displayName": "status5",
+      "allowSymbolExpressionsInObject": false,
+      "visible": true,
+      "type": "tchmi:general#/definitions/Object",
+      "category": "",
+      "description": "",
+      "defaultValue": {
+        "confirmed": false,
+        "x": 0,
+        "y": 0
+      },
+      "requiredOnCompile": false,
+      "readOnly": false,
+      "bindable": true,
+      "heritable": true,
+      "propertyName": "status5",
+      "propertySetterName": "setStatus5",
+      "propertyGetterName": "getStatus5",
+      "refTo": ""
+    },
+    {
+      "name": "data-tchmi-status6",
+      "displayName": "status6",
+      "allowSymbolExpressionsInObject": false,
+      "visible": true,
+      "type": "tchmi:general#/definitions/Object",
+      "category": "",
+      "description": "",
+      "defaultValue": {
+        "confirmed": false,
+        "x": 0,
+        "y": 0
+      },
+      "requiredOnCompile": false,
+      "readOnly": false,
+      "bindable": true,
+      "heritable": true,
+      "propertyName": "status6",
+      "propertySetterName": "setStatus6",
+      "propertyGetterName": "getStatus6",
+      "refTo": ""
+    },
+    {
+      "name": "data-tchmi-status7",
+      "displayName": "status7",
+      "allowSymbolExpressionsInObject": false,
+      "visible": true,
+      "type": "tchmi:general#/definitions/Object",
+      "category": "",
+      "description": "",
+      "defaultValue": {
+        "confirmed": false,
+        "x": 0,
+        "y": 0
+      },
+      "requiredOnCompile": false,
+      "readOnly": false,
+      "bindable": true,
+      "heritable": true,
+      "propertyName": "status7",
+      "propertySetterName": "setStatus7",
+      "propertyGetterName": "getStatus7",
+      "refTo": ""
+    },
+    {
+      "name": "data-tchmi-status8",
+      "displayName": "status8",
+      "allowSymbolExpressionsInObject": false,
+      "visible": true,
+      "type": "tchmi:general#/definitions/Object",
+      "category": "",
+      "description": "",
+      "defaultValue": {
+        "confirmed": false,
+        "x": 0,
+        "y": 0
+      },
+      "requiredOnCompile": false,
+      "readOnly": false,
+      "bindable": true,
+      "heritable": true,
+      "propertyName": "status8",
+      "propertySetterName": "setStatus8",
+      "propertyGetterName": "getStatus8",
+      "refTo": ""
+    },
+    {
+      "name": "data-tchmi-status9",
+      "displayName": "status9",
+      "allowSymbolExpressionsInObject": false,
+      "visible": true,
+      "type": "tchmi:general#/definitions/Object",
+      "category": "",
+      "description": "",
+      "defaultValue": {
+        "confirmed": false,
+        "x": 0,
+        "y": 0
+      },
+      "requiredOnCompile": false,
+      "readOnly": false,
+      "bindable": true,
+      "heritable": true,
+      "propertyName": "status9",
+      "propertySetterName": "setStatus9",
+      "propertyGetterName": "getStatus9",
+      "refTo": ""
+    }
+  ],
+  "virtualRights": [],
+  "$schema": "./../../Packages/Beckhoff.TwinCAT.HMI.Framework.12.760.48/runtimes/native1.12-tchmi/Schema/UserControlConfig.Schema.json",
+  "description": ""
+}

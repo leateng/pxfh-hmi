@@ -17,7 +17,7 @@
     <HmiLogDesignerModeComMessages>false</HmiLogDesignerModeComMessages>
     <HmiServerVersion>Latest</HmiServerVersion>
     <HmiUseX64>True</HmiUseX64>
-    <HmiDefaultLanguage>client</HmiDefaultLanguage>
+    <HmiDefaultLanguage>zh-CN</HmiDefaultLanguage>
     <TargetFrameworkMoniker>native,Version=v1.12.0,Profile=tchmi</TargetFrameworkMoniker>
     <TargetFramework>native1.12-tchmi</TargetFramework>
     <AzureFunctionsVersion>v2</AzureFunctionsVersion>
@@ -27,7 +27,7 @@
     <HmiViewportUserScaleable>Default</HmiViewportUserScaleable>
     <HmiPostProcessing>True</HmiPostProcessing>
     <Name>pxfh-hmi</Name>
-    <HmiCommunicationRouterPort>10101</HmiCommunicationRouterPort>
+    <HmiCommunicationRouterPort>10102</HmiCommunicationRouterPort>
     <HmiCommunicationServerAuthPort>13001</HmiCommunicationServerAuthPort>
     <HmiInitial>1.12.760.48</HmiInitial>
     <HmiRecent>1.12.760.48</HmiRecent>
@@ -118,6 +118,9 @@
     <Folder Include="Imports\Videos" />
     <Folder Include="KeyboardLayouts\" />
     <Folder Include="Localization" />
+    <Folder Include="Contents" />
+    <Folder Include="Controls" />
+    <Folder Include="functions" />
     <Folder Include="Server\TcHmiRecipeManagement" />
     <Folder Include="Server\TcHmiVision" />
     <Folder Include="Themes" />
@@ -130,6 +133,127 @@
     <Folder Include="Properties" />
     <Content Include=".eslintrc.json">
       <Visible>false</Visible>
+    </Content>
+    <Content Include="common.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Contents\Camera1.content">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Contents\Calibrate.content">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Contents\Jog.content">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Contents\RecipeManagement.content">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Contents\UserManagement.content">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Contents\UserSetting.content">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Contents\Workspace.content">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Controls\DirectionKeyPad.usercontrol">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Controls\DirectionKeyPad.usercontrol.json">
+      <SubType>Content</SubType>
+      <DependentUpon>Controls\DirectionKeyPad.usercontrol</DependentUpon>
+    </Content>
+    <Content Include="Controls\NinePointConfirm.usercontrol">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Controls\NinePointConfirm.usercontrol.json">
+      <SubType>Content</SubType>
+      <DependentUpon>Controls\NinePointConfirm.usercontrol</DependentUpon>
+    </Content>
+    <Content Include="Controls\VerticalDirectionKeyPad.usercontrol">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Controls\VerticalDirectionKeyPad.usercontrol.json">
+      <SubType>Content</SubType>
+      <DependentUpon>Controls\VerticalDirectionKeyPad.usercontrol</DependentUpon>
+    </Content>
+    <Content Include="functions\CurrentUserName.function.json">
+      <SubType>Content</SubType>
+      <DependentUpon>functions\CurrentUserName.js</DependentUpon>
+    </Content>
+    <Content Include="functions\CurrentUserName.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Images\background_green_active.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Images\background_yellow_normal.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Images\calibrate_active.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Images\calibrate_pressed.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Images\folder_active.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Images\icons_camera_normal.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Images\icons_down_normal.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Images\icons_left_normal.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Images\icons_right_normal.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Images\icons_service_normal.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Images\icons_up_normal.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Images\logout_normal.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Images\recipe_normal.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Images\startpage_normal.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Images\toolbox_draggin.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Images\user_active.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Images\user_normal.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Images\user_pressed.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Images\vision-normal.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Imports\hc.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Imports\Images\background_yellow_normal.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Imports\Images\hc.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Imports\Images\hc2.png">
+      <SubType>Content</SubType>
     </Content>
     <Content Include="Localization\zh-CN.localization">
       <SubType>Content</SubType>

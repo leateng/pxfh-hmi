@@ -50,10 +50,80 @@
       "name": "Fonts/Fonts.css",
       "description": "",
       "type": "Stylesheet"
+    },
+    {
+      "name": "common.css",
+      "description": "",
+      "type": "Stylesheet"
+    },
+    {
+      "name": "functions/CurrentUserName.js",
+      "description": "",
+      "type": "JavaScript"
     }
   ],
-  "userControls": [],
-  "content": [],
+  "userControls": [
+    {
+      "url": "Controls/DirectionKeyPad.usercontrol"
+    },
+    {
+      "url": "Controls/NinePointConfirm.usercontrol"
+    },
+    {
+      "url": "Controls/VerticalDirectionKeyPad.usercontrol"
+    }
+  ],
+  "content": [
+    {
+      "url": "Contents/Camera1.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    },
+    {
+      "url": "Contents/Calibrate.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    },
+    {
+      "url": "Contents/Jog.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    },
+    {
+      "url": "Contents/RecipeManagement.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    },
+    {
+      "url": "Contents/UserManagement.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    },
+    {
+      "url": "Contents/UserSetting.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    },
+    {
+      "url": "Contents/Workspace.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    }
+  ],
   "views": [
     {
       "url": "Desktop.view",
@@ -62,9 +132,32 @@
       "preloadBindings": false
     }
   ],
-  "userFunctions": [],
+  "userFunctions": [
+    {
+      "url": "functions/CurrentUserName.js"
+    }
+  ],
   "symbols": {
-    "internal": {},
+    "internal": {
+      "CurrentPage": {
+        "value": "home",
+        "type": "tchmi:general#/definitions/String",
+        "persist": false,
+        "readonly": false
+      },
+      "selectedTheme": {
+        "value": "",
+        "type": "tchmi:general#/definitions/String",
+        "persist": true,
+        "readonly": false
+      },
+      "selectedLanguage": {
+        "value": "",
+        "type": "tchmi:general#/definitions/String",
+        "persist": true,
+        "readonly": false
+      }
+    },
     "themedResources": {}
   },
   "trigger": [],

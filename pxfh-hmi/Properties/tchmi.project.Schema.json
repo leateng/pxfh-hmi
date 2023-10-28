@@ -1,4 +1,29 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "definitions": {}
+  "definitions": {
+    "DirectionKeyPad": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "Controls\\DirectionKeyPad.usercontrol.json",
+      "type": "object",
+      "id": "tchmi:project#/definitions/DirectionKeyPad"
+    },
+    "VerticalDirectionKeyPad": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "Controls\\VerticalDirectionKeyPad.usercontrol.json",
+      "type": "object",
+      "id": "tchmi:project#/definitions/VerticalDirectionKeyPad"
+    },
+    "NinePointConfirm": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "Controls\\NinePointConfirm.usercontrol.json",
+      "id": "tchmi:project#/definitions/NinePointConfirm",
+      "type": "object"
+    }
+  }
 }

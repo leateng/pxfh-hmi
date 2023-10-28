@@ -1,0 +1,11 @@
+<div id="Camera1" data-tchmi-type="TcHmi.Controls.System.TcHmiContent" data-tchmi-top="0" data-tchmi-left="0" data-tchmi-width="100" data-tchmi-height="100" data-tchmi-background-image="Themes/Base/Images/Background.png" data-tchmi-background-image-width-unit="%" data-tchmi-background-image-width="100" data-tchmi-background-image-height="100" data-tchmi-background-image-height-unit="%" data-tchmi-width-unit="%" data-tchmi-height-unit="%">
+
+<div id="DirectionKeyPad_1" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-height="300" data-tchmi-height-unit="px" data-tchmi-left="16" data-tchmi-left-unit="px" data-tchmi-target-user-control="Controls/DirectionKeyPad.usercontrol" data-tchmi-top="90" data-tchmi-top-unit="px" data-tchmi-width="300" data-tchmi-width-unit="px">
+</div>
+<div id="VerticalDirectionKeyPad_1" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-height="300" data-tchmi-height-unit="px" data-tchmi-left="326" data-tchmi-left-unit="px" data-tchmi-target-user-control="Controls/VerticalDirectionKeyPad.usercontrol" data-tchmi-top="90" data-tchmi-top-unit="px" data-tchmi-width="100" data-tchmi-width-unit="px">
+</div>
+<div id="NinePointConfirm_1" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-height="300" data-tchmi-height-unit="px" data-tchmi-left="436" data-tchmi-left-unit="px" data-tchmi-target-user-control="Controls/NinePointConfirm.usercontrol" data-tchmi-top="90" data-tchmi-top-unit="px" data-tchmi-width="300" data-tchmi-width-unit="px">
+</div>
+
+
+</div>

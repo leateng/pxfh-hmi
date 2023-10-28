@@ -23,7 +23,7 @@
         "Default.html"
     ],
     "DEFAULTEVENTEXTENSION": "TcHmiSqliteLogger",
-    "DEFAULTLOCALE": "client",
+    "DEFAULTLOCALE": "zh-CN",
     "DEFAULTTIMEFORMATLOCALE": "client",
     "DEFAULTTIMEZONE": "client",
     "DEFAULTUSERGROUP": "__SystemUsers",
@@ -3776,9 +3776,12 @@
             "__SystemUser": {
                 "USERGROUPUSERS_AUTO_LOGOFF": "PT0S",
                 "USERGROUPUSERS_GROUPS": [
-                    "__SystemUsers"
+                    "__SystemUsers",
+                    "__SystemAdministrators",
+                    "admin",
+                    "operator"
                 ],
-                "USERGROUPUSERS_LOCALE": "project",
+                "USERGROUPUSERS_LOCALE": "en",
                 "USERGROUPUSERS_TIMEFORMATLOCALE": "project",
                 "USERGROUPUSERS_TIMEZONE": "project"
             },
@@ -3792,6 +3795,14 @@
                 "USERGROUPUSERS_LOCALE": "client",
                 "USERGROUPUSERS_TIMEFORMATLOCALE": "project",
                 "USERGROUPUSERS_TIMEZONE": "project"
+            },
+            "teng": {
+                "USERGROUPUSERS_AUTO_LOGOFF": "PT0S",
+                "USERGROUPUSERS_GROUPS": [
+                    "__SystemUsers",
+                    "operator"
+                ],
+                "USERGROUPUSERS_LOCALE": "client"
             }
         }
     },

@@ -1,4 +1,38 @@
 {
-    "recipeList": {},
-    "recipeTypeList": {}
+    "recipeList": {
+        "New folder": {
+            "New recipe": {
+                "recipeTypeName": "rtype2",
+                "values": {}
+            }
+        },
+        "recipe1": {
+            "recipeTypeName": "rtype1",
+            "values": {}
+        },
+        "recipe2": {
+            "recipeTypeName": "rtype2",
+            "values": {}
+        },
+        "recipe3": {
+            "recipeTypeName": "rtype1",
+            "values": {}
+        }
+    },
+    "recipeTypeList": {
+        "rtype1": {
+            "members": {},
+            "options": {
+                "enabled": "None"
+            },
+            "recipeTypeNames": []
+        },
+        "rtype2": {
+            "members": {},
+            "options": {
+                "enabled": "None"
+            },
+            "recipeTypeNames": []
+        }
+    }
 }

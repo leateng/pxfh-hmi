@@ -2,6 +2,17 @@
   "$schema": "./../../Packages/Beckhoff.TwinCAT.HMI.Framework.12.760.48/runtimes/native1.12-tchmi/Schema/LocalizationDescription.Schema.json",
   "locale": "zh-CN",
   "localizedText": {
-    "Language": "中文 "
+    "user-setting": "用户设置",
+    "theme": "主题",
+    "language": "语言",
+    "Lang": "中文 ",
+    "submit": "提交",
+    "workspace": "工作台",
+    "recipe": "配方",
+    "jog": "JOG",
+    "calibrate": "校准",
+    "logout": "登出",
+    "user-management": "用户管理",
+    "recipe-mangement": "配方管理"
   }
 }

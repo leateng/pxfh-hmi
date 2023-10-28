@@ -2,6 +2,17 @@
   "$schema": "./../../Packages/Beckhoff.TwinCAT.HMI.Framework.12.760.48/runtimes/native1.12-tchmi/Schema/LocalizationDescription.Schema.json",
   "locale": "en",
   "localizedText": {
-    "Language": "English"
+    "user-setting": "User Setting",
+    "theme": "Theme",
+    "language": "Language",
+    "Lang": "English",
+    "submit": "submit",
+    "workspace": "workspace",
+    "recipe": "recipe",
+    "jog": "JOG",
+    "calibrate": "calibrate",
+    "logout": "logout",
+    "user-management": "user management",
+    "recipe-mangement": "recipe management"
   }
 }

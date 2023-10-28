@@ -13,16 +13,22 @@
             "SALT": ""
         },
         "__SystemUser": {
-            "ALGORITHM": 0,
+            "ALGORITHM": 1,
             "ENABLED": true,
-            "PASSWORD": "",
-            "SALT": ""
+            "PASSWORD": "f8992450faef73a47dde752b6084aca468fa54a52da1958945441f40a65a936e4c17d5062b64f978df038e6410b70efa184ea20f1cc45e29b49c0c6d6cdd906d",
+            "SALT": "I9zBFSDOxYo3gJV1FaKn9SWMKXxo8GA+hNyHFcIAU+tW5ZiD4Vsl4CZwvE4gDJtFVnfQBbwX5Mb5ExMpMabkSg=="
         },
         "root": {
             "ALGORITHM": 1,
             "ENABLED": true,
             "PASSWORD": "e66263f3eb9e9faee06bb24c680fb35bc913834fb795de823d48d2d92396e942a4c71b0dc36b6e309489794e0f59ccdbb94683bd6fb390d91d5521ac9784fab6",
             "SALT": "RLQCeBSeNinDGfffTFo2H7Spy/Hvph5Imaw6+fA/ayEKpMsCSKp4SJfSC/nyyDmwAvyyWwyBAAHvaOIJ4Rf7lA=="
+        },
+        "teng": {
+            "ALGORITHM": 1,
+            "ENABLED": true,
+            "PASSWORD": "d19fe4298329ee57a1e307e6235b8046e1163b3dff947ae81c9813ea12aeabec5d5deb9ace03306a1695b28dfa3adfecaa2361a645442a829b0a9c1d8b9df99b",
+            "SALT": "0lscxt9cpU6oCOWSjJsOBQ1F+7E2R5Idz+ODv0TVe0mFWOS5KK9xr4NTkjh8u4iaXY3JAYZwUp3Q2BcKGDbFvg=="
         }
     }
 }

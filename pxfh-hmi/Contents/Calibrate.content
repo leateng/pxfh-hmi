@@ -1,0 +1,48 @@
+<div id="Calibrate" data-tchmi-type="TcHmi.Controls.System.TcHmiContent" data-tchmi-top="0" data-tchmi-left="0" data-tchmi-width="100" data-tchmi-height="100" data-tchmi-width-unit="%" data-tchmi-height-unit="%" data-tchmi-creator-visibility="Visible">
+<div id="TcHmiTabNavigation_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTabNavigation" data-tchmi-height="100" data-tchmi-height-unit="%" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width="100" data-tchmi-width-unit="%" data-tchmi-tab-alignment="Top">
+<script data-tchmi-target-attribute="data-tchmi-tabs" type="application/json">
+[
+  {
+    "name": "Camera1",
+    "displayName": "Camera1",
+    "targetFile": {
+      "path": "Contents/Camera1.content"
+    },
+    "targetFileHostPreload": true,
+    "targetFileHostPreAttach": true,
+    "targetFileHostKeepAlive": true,
+    "horizontalAlignment": "Left",
+    "verticalAlignment": "Center",
+    "icon": {
+      "iconPath": "Images/icons_camera_normal.svg",
+      "iconWidth": 48.0,
+      "iconWidthUnit": "px",
+      "iconHeight": 48.0,
+      "iconHeightUnit": "px"
+    }
+  },
+  {
+    "name": "Camera2",
+    "displayName": "Camera2",
+    "targetFileHostPreload": true,
+    "targetFileHostPreAttach": true,
+    "targetFileHostKeepAlive": true,
+    "horizontalAlignment": "Left",
+    "verticalAlignment": "Center",
+    "icon": {
+      "iconPath": "Images/icons_camera_normal.svg",
+      "iconWidth": 32.0,
+      "iconWidthUnit": "px",
+      "iconHeight": 32.0,
+      "iconHeightUnit": "px"
+    }
+  }
+]
+</script>
+
+
+
+
+
+</div>
+</div>
