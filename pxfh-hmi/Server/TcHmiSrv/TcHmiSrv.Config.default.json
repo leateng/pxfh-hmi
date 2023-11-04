@@ -23,7 +23,7 @@
         "Default.html"
     ],
     "DEFAULTEVENTEXTENSION": "TcHmiSqliteLogger",
-    "DEFAULTLOCALE": "zh-CN",
+    "DEFAULTLOCALE": "en",
     "DEFAULTTIMEFORMATLOCALE": "client",
     "DEFAULTTIMEZONE": "client",
     "DEFAULTUSERGROUP": "__SystemUsers",
@@ -2522,6 +2522,36 @@
             },
             "USEMAPPING": true
         },
+        "PLC1.MAIN.ipImageInDisplay.bmp": {
+            "ACCESS": 3,
+            "DOMAIN": "TcHmiVision",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::MAIN::ipImageInDisplay::bmp",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/BINARY"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.MAIN.ipImageInDisplay.stream": {
+            "ACCESS": 3,
+            "DOMAIN": "TcHmiVision",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::MAIN::ipImageInDisplay::stream",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/BINARY"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.MAIN.ipProcessedImageToDisplay.bmp": {
+            "ACCESS": 3,
+            "DOMAIN": "TcHmiVision",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::MAIN::ipProcessedImageToDisplay::bmp",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/BINARY"
+            },
+            "USEMAPPING": true
+        },
         "RefreshDefinitions": {
             "ACCESS": 3,
             "DOMAIN": "TcHmiSrv",
@@ -3703,6 +3733,9 @@
                 "LocalizeText": 3,
                 "Login": 3,
                 "Logout": 3,
+                "PLC1.MAIN.ipImageInDisplay.bmp": 3,
+                "PLC1.MAIN.ipImageInDisplay.stream": 3,
+                "PLC1.MAIN.ipProcessedImageToDisplay.bmp": 3,
                 "SetLocale": 3,
                 "SubscribeEvents": 3,
                 "TcHmiRecipeManagement.ActivateRecipe": 3,

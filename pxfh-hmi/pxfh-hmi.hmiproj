@@ -9,7 +9,7 @@
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">15.0</VisualStudioVersion>
     <AvailablePlatforms>TwinCAT HMI</AvailablePlatforms>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
-    <HmiTitle>Please enter your Title...</HmiTitle>
+    <HmiTitle>CMP</HmiTitle>
     <HmiVerboseLevel>2</HmiVerboseLevel>
     <HmiVersion>1.0.0.0</HmiVersion>
     <HmiCommunicationServerPort>3001</HmiCommunicationServerPort>
@@ -17,7 +17,7 @@
     <HmiLogDesignerModeComMessages>false</HmiLogDesignerModeComMessages>
     <HmiServerVersion>Latest</HmiServerVersion>
     <HmiUseX64>True</HmiUseX64>
-    <HmiDefaultLanguage>zh-CN</HmiDefaultLanguage>
+    <HmiDefaultLanguage>en</HmiDefaultLanguage>
     <TargetFrameworkMoniker>native,Version=v1.12.0,Profile=tchmi</TargetFrameworkMoniker>
     <TargetFramework>native1.12-tchmi</TargetFramework>
     <AzureFunctionsVersion>v2</AzureFunctionsVersion>

@@ -357,6 +357,6 @@ div[data-tchmi-type="TcHmi.Controls.System.TcHmiView"] {
 }
 
 #TcHmiRecipeEdit {
-    width: calc(100% - 60px);
-    height: calc(100% - 110px);
+    width: calc(100% - 0px);
+    height: calc(100% - 60px);
 }

@@ -166,7 +166,7 @@
     "en": "Localization/en.localization",
     "zh-CN": "Localization/zh-CN.localization"
   },
-  "languageFallback": "",
+  "languageFallback": "en",
   "disableLoadingOptimization": false,
   "creatorSettings": {
     "viewport": {

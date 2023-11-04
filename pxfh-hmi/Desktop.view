@@ -334,4 +334,8 @@
 
 
 </div>
+<div id="TcHmiImage" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiImage" data-tchmi-height="299" data-tchmi-height-unit="px" data-tchmi-left="21" data-tchmi-left-unit="px" data-tchmi-top="120" data-tchmi-top-unit="px" data-tchmi-width="339" data-tchmi-width-unit="px" data-tchmi-src="%s%PLC1.MAIN.ipImageInDisplay.bmp%/s%">
+</div>
+<div id="TcHmiImage_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiImage" data-tchmi-height="299" data-tchmi-height-unit="px" data-tchmi-left="370" data-tchmi-left-unit="px" data-tchmi-top="120" data-tchmi-top-unit="px" data-tchmi-width="346" data-tchmi-width-unit="px" data-tchmi-src="%s%PLC1.MAIN.ipProcessedImageToDisplay.bmp%/s%">
+</div>
 </div>
