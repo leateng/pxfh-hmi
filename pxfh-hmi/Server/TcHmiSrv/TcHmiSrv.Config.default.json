@@ -35,7 +35,7 @@
     "ENABLE_SERVER_UPDATE": true,
     "ENDPOINTS": [
         "http://127.0.0.1:13001",
-        "http://127.0.0.1:3001"
+        "http://127.0.0.1:3002"
     ],
     "ETAGENABLED": true,
     "EXTENSIONS": {
@@ -2532,21 +2532,11 @@
             },
             "USEMAPPING": true
         },
-        "PLC1.MAIN.ipImageInDisplay.stream": {
+        "PLC1.MAIN.ipImageInDisplay.jpeg": {
             "ACCESS": 3,
             "DOMAIN": "TcHmiVision",
             "DYNAMIC": true,
-            "MAPPING": "PLC1::MAIN::ipImageInDisplay::stream",
-            "SCHEMA": {
-                "$ref": "tchmi:general#/definitions/BINARY"
-            },
-            "USEMAPPING": true
-        },
-        "PLC1.MAIN.ipProcessedImageToDisplay.bmp": {
-            "ACCESS": 3,
-            "DOMAIN": "TcHmiVision",
-            "DYNAMIC": true,
-            "MAPPING": "PLC1::MAIN::ipProcessedImageToDisplay::bmp",
+            "MAPPING": "PLC1::MAIN::ipImageInDisplay::jpeg",
             "SCHEMA": {
                 "$ref": "tchmi:general#/definitions/BINARY"
             },
@@ -3734,6 +3724,7 @@
                 "Login": 3,
                 "Logout": 3,
                 "PLC1.MAIN.ipImageInDisplay.bmp": 3,
+                "PLC1.MAIN.ipImageInDisplay.jpeg": 3,
                 "PLC1.MAIN.ipImageInDisplay.stream": 3,
                 "PLC1.MAIN.ipProcessedImageToDisplay.bmp": 3,
                 "SetLocale": 3,

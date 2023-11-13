@@ -64,6 +64,9 @@
   ],
   "userControls": [
     {
+      "url": "Controls/camera.usercontrol"
+    },
+    {
       "url": "Controls/DirectionKeyPad.usercontrol"
     },
     {

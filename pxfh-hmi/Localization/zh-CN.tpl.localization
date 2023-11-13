@@ -13,6 +13,7 @@
     "calibrate": "校准",
     "logout": "登出",
     "user-management": "用户管理",
-    "recipe-mangement": "配方管理"
+    "recipe-mangement": "配方管理",
+    "camera": "摄像机"
   }
 }

@@ -13,6 +13,7 @@
     "calibrate": "calibrate",
     "logout": "logout",
     "user-management": "user management",
-    "recipe-mangement": "recipe management"
+    "recipe-mangement": "recipe management",
+    "camera": "Camera"
   }
 }

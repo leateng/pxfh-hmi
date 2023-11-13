@@ -24,6 +24,14 @@
       "frameworkUserControlConfig": "Controls\\NinePointConfirm.usercontrol.json",
       "id": "tchmi:project#/definitions/NinePointConfirm",
       "type": "object"
+    },
+    "camera": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "Controls\\camera.usercontrol.json",
+      "id": "tchmi:project#/definitions/camera",
+      "type": "object"
     }
   }
 }
