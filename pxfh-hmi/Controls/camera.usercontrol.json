@@ -9,7 +9,7 @@
       "category": "",
       "description": "",
       "defaultValue": "camera",
-      "defaultValueInternal": "",
+      "defaultValueInternal": "camera",
       "requiredOnCompile": false,
       "readOnly": false,
       "bindable": true,
@@ -17,6 +17,23 @@
       "propertyName": "title",
       "propertySetterName": "setTitle",
       "propertyGetterName": "getTitle",
+      "refTo": ""
+    },
+    {
+      "name": "data-tchmi-imagesrc",
+      "displayName": "imageSrc",
+      "allowSymbolExpressionsInObject": false,
+      "visible": true,
+      "type": "tchmi:general#/definitions/String",
+      "category": "",
+      "description": "",
+      "requiredOnCompile": false,
+      "readOnly": false,
+      "bindable": true,
+      "heritable": true,
+      "propertyName": "imageSrc",
+      "propertySetterName": "setImageSrc",
+      "propertyGetterName": "getImageSrc",
       "refTo": ""
     }
   ],

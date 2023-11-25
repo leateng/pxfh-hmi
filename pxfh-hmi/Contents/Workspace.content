@@ -1,7 +1,7 @@
-<div id="Workspace" data-tchmi-type="TcHmi.Controls.System.TcHmiContent" data-tchmi-top="0" data-tchmi-left="0" data-tchmi-width="100" data-tchmi-height="100" data-tchmi-width-mode="Value" data-tchmi-height-mode="Value" data-tchmi-width-unit="%" data-tchmi-height-unit="%" data-tchmi-creator-viewport-width="1440" data-tchmi-creator-viewport-height="1080">
-<div id="TcHmiRecipeSelect" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiRecipeSelect" data-tchmi-height="100" data-tchmi-height-unit="px" data-tchmi-server-interval="1000" data-tchmi-width="350" data-tchmi-width-unit="px" data-tchmi-left="1080" data-tchmi-top="10">
+<div id="Workspace" data-tchmi-type="TcHmi.Controls.System.TcHmiContent" data-tchmi-top="0" data-tchmi-left="0" data-tchmi-width="100" data-tchmi-height="100" data-tchmi-width-mode="Value" data-tchmi-height-mode="Value" data-tchmi-width-unit="%" data-tchmi-height-unit="%" data-tchmi-creator-viewport-width="1680" data-tchmi-creator-viewport-height="1152" data-tchmi-creator-locked="False">
+<div id="TcHmiRecipeSelect" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiRecipeSelect" data-tchmi-height="100" data-tchmi-height-unit="px" data-tchmi-server-interval="1000" data-tchmi-width="350" data-tchmi-width-unit="px" data-tchmi-left="1320" data-tchmi-top="10">
 </div>
-<div id="TcHmiImage" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiImage" data-tchmi-height="224" data-tchmi-height-unit="px" data-tchmi-left="15" data-tchmi-left-unit="px" data-tchmi-top="455" data-tchmi-top-unit="px" data-tchmi-width="261" data-tchmi-width-unit="px" data-tchmi-src="%s%PLC1.MAIN.ipImageInDisplay.jpeg%/s%">
+<div id="TcHmiImage" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiImage" data-tchmi-height="292" data-tchmi-height-unit="px" data-tchmi-left="18" data-tchmi-left-unit="px" data-tchmi-top="385" data-tchmi-top-unit="px" data-tchmi-width="715" data-tchmi-width-unit="px" data-tchmi-src="%s%PLC1.MAIN.fbC2Calibration.ipImageResDisp.png%/s%">
 <script data-tchmi-target-attribute="data-tchmi-border-width" type="application/json">
 {
   "left": 1,
@@ -24,8 +24,8 @@
 }
 </script>
 </div>
-<div id="Camera" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-height="430" data-tchmi-height-unit="px" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-target-user-control="Controls/camera.usercontrol" data-tchmi-title="camera" data-tchmi-top="10" data-tchmi-top-unit="px" data-tchmi-width="400" data-tchmi-width-unit="px">
+<div id="Camera" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-height="350" data-tchmi-height-unit="px" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-target-user-control="Controls/camera.usercontrol" data-tchmi-title="%l%camera1%/l%" data-tchmi-top="10" data-tchmi-top-unit="px" data-tchmi-width="405" data-tchmi-width-unit="px" data-tchmi-imagesrc="%s%PLC1.MAIN.fbC2Calibration.ipImageResDisp.png%/s%">
 </div>
-<div id="Camera_1" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-height="430" data-tchmi-height-unit="px" data-tchmi-left="420" data-tchmi-left-unit="px" data-tchmi-target-user-control="Controls/camera.usercontrol" data-tchmi-title="camera" data-tchmi-top="10" data-tchmi-top-unit="px" data-tchmi-width="400" data-tchmi-width-unit="px">
+<div id="Camera_1" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-height="350" data-tchmi-height-unit="px" data-tchmi-left="425" data-tchmi-left-unit="px" data-tchmi-target-user-control="Controls/camera.usercontrol" data-tchmi-title="%l%camera2%/l%" data-tchmi-top="10" data-tchmi-top-unit="px" data-tchmi-width="405" data-tchmi-width-unit="px" data-tchmi-imagesrc="%s%PLC1.MAIN.fbC2Calibration.ipImageResDisp.png%/s%">
 </div>
 </div>

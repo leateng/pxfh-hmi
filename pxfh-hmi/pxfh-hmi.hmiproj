@@ -137,6 +137,9 @@
     <Content Include="common.css">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="Contents\BottomNav.content">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="Contents\Camera1.content">
       <SubType>Content</SubType>
     </Content>

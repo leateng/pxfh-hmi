@@ -14,6 +14,8 @@
     "logout": "logout",
     "user-management": "user management",
     "recipe-mangement": "recipe management",
-    "camera": "Camera"
+    "camera": "Camera",
+    "camera1": "Camera 1",
+    "camera2": "Camera 2"
   }
 }
