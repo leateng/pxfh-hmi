@@ -1,8 +1,9 @@
 <div id="camera" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControl" data-tchmi-top="0" data-tchmi-left="0" data-tchmi-width="405" data-tchmi-height="350" data-tchmi-width-unit="px" data-tchmi-height-unit="px" data-tchmi-creator-viewport-width="500" data-tchmi-creator-viewport-height="500" data-tchmi-creator-visibility="Visible" data-tchmi-creator-locked="False">
-<div id="TcHmiTextblock_12" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="30" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-text="%pp%title%/pp%" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width="100" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-font-size="22">
+<div id="TcHmiTextblock_12" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="30" data-tchmi-height-unit="px" data-tchmi-left="1" data-tchmi-left-unit="px" data-tchmi-text="%pp%title%/pp%" data-tchmi-top="1" data-tchmi-top-unit="px" data-tchmi-width="100" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-font-size="22">
 </div>
-<div id="TcHmiContainer" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-height="320" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="30" data-tchmi-top-unit="px" data-tchmi-width="405" data-tchmi-width-unit="px">
-<div id="TcHmiImage_3" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiImage" data-tchmi-height="320" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width="405" data-tchmi-width-unit="px" data-tchmi-background-image="Images/icons_camera_normal.svg" data-tchmi-background-image-width="30" data-tchmi-background-image-width-unit="%" data-tchmi-src="%pp%imageSrc%/pp%">
+<div id="TcHmiButton_32" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiButton" data-tchmi-height="30" data-tchmi-height-unit="px" data-tchmi-width="30" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-zindex="999" data-tchmi-background-image="Images/reset_achse_pressed.svg" data-tchmi-background-image-width-unit="%" data-tchmi-background-image-height-unit="%" data-tchmi-background-image-width="100" data-tchmi-background-image-height="100" data-tchmi-bottom="1" data-tchmi-left="1">
+</div>
+<div id="TcHmiImage_3" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiImage" data-tchmi-height="320" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="30" data-tchmi-top-unit="px" data-tchmi-width="405" data-tchmi-width-unit="px" data-tchmi-background-image="Images/icons_camera_normal.svg" data-tchmi-background-image-width="30" data-tchmi-background-image-width-unit="%" data-tchmi-src="%pp%imageSrc%/pp%">
 <script data-tchmi-target-attribute="data-tchmi-border-width" type="application/json">
 {
   "left": 1,
@@ -25,11 +26,7 @@
 }
 </script>
 
-<script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
-{
-  "color": "rgba(0, 0, 0, 1)"
-}
-</script>
+
 
 
 
@@ -50,11 +47,6 @@
           "var $imageContainer = control.getElement();",
           "const container = $imageContainer.get(0)",
           "const image = $imageContainer.find('img')[0];",
-          "",
-          "console.log(container);",
-          "console.log(image);",
-          "",
-          "",
           "",
           "// 全局变量",
           "let result,",
@@ -169,24 +161,20 @@
         "injectContextObject": true,
         "asyncWait": true,
         "waitMode": "Synchronous"
-      },
-      {
-        "objectType": "WriteToSymbol",
-        "active": true,
-        "symbolExpression": "%ctrl%TcHmiImage_3::BackgroundImage%/ctrl%",
-        "value": {
-          "objectType": "StaticValue",
-          "valueType": "tchmi:framework#/definitions/Path",
-          "value": null
-        },
-        "asyncWait": true
       }
     ]
   }
 ]
 </script>
-</div>
-</div>
 
 
+
+
+
+<script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+{
+  "color": "rgba(0, 0, 0, 1)"
+}
+</script>
+</div>
 </div>

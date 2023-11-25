@@ -220,6 +220,9 @@
     <Content Include="Images\icons_left_normal.svg">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="Images\icons_reset_normal.svg">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="Images\icons_right_normal.svg">
       <SubType>Content</SubType>
     </Content>
@@ -235,10 +238,13 @@
     <Content Include="Images\recipe_normal.svg">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Images\startpage_normal.svg">
+    <Content Include="Images\reset_achse_active.svg">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Images\test-img.jpg">
+    <Content Include="Images\reset_achse_pressed.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Images\startpage_normal.svg">
       <SubType>Content</SubType>
     </Content>
     <Content Include="Images\toolbox_draggin.svg">
