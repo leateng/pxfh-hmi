@@ -238,6 +238,9 @@
     <Content Include="Images\startpage_normal.svg">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="Images\test-img.jpg">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="Images\toolbox_draggin.svg">
       <SubType>Content</SubType>
     </Content>

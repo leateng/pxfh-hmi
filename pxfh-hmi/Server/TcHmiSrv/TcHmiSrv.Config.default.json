@@ -2522,6 +2522,16 @@
             },
             "USEMAPPING": true
         },
+        "PLC1.MAIN.fbAdjust.fbFindContour.ipImageResDisp.png": {
+            "ACCESS": 3,
+            "DOMAIN": "TcHmiVision",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::MAIN::fbAdjust::fbFindContour::ipImageResDisp::png",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/BINARY"
+            },
+            "USEMAPPING": true
+        },
         "PLC1.MAIN.fbC2Calibration.ipImageResDisp.bmp": {
             "ACCESS": 3,
             "DOMAIN": "TcHmiVision",
@@ -3753,6 +3763,7 @@
                 "LocalizeText": 3,
                 "Login": 3,
                 "Logout": 3,
+                "PLC1.MAIN.fbAdjust.fbFindContour.ipImageResDisp.png": 3,
                 "PLC1.MAIN.fbC2Calibration.ipImageResDisp.bmp": 3,
                 "PLC1.MAIN.fbC2Calibration.ipImageResDisp.jpeg": 3,
                 "PLC1.MAIN.fbC2Calibration.ipImageResDisp.png": 3,
