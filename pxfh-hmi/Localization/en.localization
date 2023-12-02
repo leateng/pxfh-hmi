@@ -16,6 +16,10 @@
     "recipe-mangement": "recipe management",
     "camera": "Camera",
     "camera1": "Camera 1",
-    "camera2": "Camera 2"
+    "camera2": "Camera 2",
+    "power_recipe": "power recipe",
+    "delete-recipe": "delete recipe",
+    "update-recipe": "update recipe",
+    "create-recipe": "create recipe"
   }
 }

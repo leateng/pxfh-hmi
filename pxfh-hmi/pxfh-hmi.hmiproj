@@ -121,6 +121,7 @@
     <Folder Include="Contents" />
     <Folder Include="Controls" />
     <Folder Include="functions" />
+    <Folder Include="javascripts" />
     <Folder Include="Server\TcHmiRecipeManagement" />
     <Folder Include="Server\TcHmiVision" />
     <Folder Include="Themes" />
@@ -147,6 +148,9 @@
       <SubType>Content</SubType>
     </Content>
     <Content Include="Contents\Jog.content">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Contents\PowerRecipe.content">
       <SubType>Content</SubType>
     </Content>
     <Content Include="Contents\RecipeManagement.content">
@@ -182,6 +186,13 @@
       <SubType>Content</SubType>
       <DependentUpon>Controls\NinePointConfirm.usercontrol</DependentUpon>
     </Content>
+    <Content Include="Controls\RecipeDetail.usercontrol">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Controls\RecipeDetail.usercontrol.json">
+      <SubType>Content</SubType>
+      <DependentUpon>Controls\RecipeDetail.usercontrol</DependentUpon>
+    </Content>
     <Content Include="Controls\VerticalDirectionKeyPad.usercontrol">
       <SubType>Content</SubType>
     </Content>
@@ -209,6 +220,9 @@
       <SubType>Content</SubType>
     </Content>
     <Content Include="Images\folder_active.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Images\icons_analog-output_normal.svg">
       <SubType>Content</SubType>
     </Content>
     <Content Include="Images\icons_camera_normal.svg">
@@ -275,6 +289,9 @@
       <SubType>Content</SubType>
     </Content>
     <Content Include="Imports\Images\hc2.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="javascripts\chart.js">
       <SubType>Content</SubType>
     </Content>
     <Content Include="Localization\zh-CN.localization">

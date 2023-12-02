@@ -2522,6 +2522,23 @@
             },
             "USEMAPPING": true
         },
+        "PLC1.GVL_HMI.bHMIHome": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_HMI::bHMIHome",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/BOOL"
+                    },
+                    {
+                        "comment": "HMI->PLC"
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
         "PLC1.MAIN.fbAdjust.fbFindContour.ipImageResDisp.png": {
             "ACCESS": 3,
             "DOMAIN": "TcHmiVision",
@@ -3763,6 +3780,7 @@
                 "LocalizeText": 3,
                 "Login": 3,
                 "Logout": 3,
+                "PLC1.GVL_HMI.bHMIHome": 3,
                 "PLC1.MAIN.fbAdjust.fbFindContour.ipImageResDisp.png": 3,
                 "PLC1.MAIN.fbC2Calibration.ipImageResDisp.bmp": 3,
                 "PLC1.MAIN.fbC2Calibration.ipImageResDisp.jpeg": 3,

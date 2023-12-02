@@ -32,6 +32,14 @@
       "frameworkUserControlConfig": "Controls\\camera.usercontrol.json",
       "id": "tchmi:project#/definitions/camera",
       "type": "object"
+    },
+    "RecipeDetail": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "Controls\\RecipeDetail.usercontrol.json",
+      "type": "object",
+      "id": "tchmi:project#/definitions/RecipeDetail"
     }
   }
 }

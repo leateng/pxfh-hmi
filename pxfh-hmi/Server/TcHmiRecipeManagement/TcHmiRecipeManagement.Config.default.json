@@ -1,34 +1,31 @@
 {
     "recipeList": {
-        "New folder": {
-            "New recipe": {
-                "recipeTypeName": "rtype2",
-                "values": {}
+        "1": {
+            "recipeTypeName": "rtype1",
+            "values": {
+                "PLC1.GVL_HMI.bHMIHome": true
             }
         },
-        "recipe1": {
+        "New recipe": {
             "recipeTypeName": "rtype1",
-            "values": {}
-        },
-        "recipe2": {
-            "recipeTypeName": "rtype2",
-            "values": {}
-        },
-        "recipe3": {
-            "recipeTypeName": "rtype1",
-            "values": {}
+            "values": {
+                "PLC1.GVL_HMI.bHMIHome": true
+            }
         }
     },
     "recipeTypeList": {
         "rtype1": {
-            "members": {},
-            "options": {
-                "enabled": "None"
+            "members": {
+                "PLC1.GVL_HMI.bHMIHome": {
+                    "defaultValue": true,
+                    "enabled": true,
+                    "group": "",
+                    "order": 0,
+                    "schema": {},
+                    "symbol": "PLC1.GVL_HMI.bHMIHome",
+                    "unit": ""
+                }
             },
-            "recipeTypeNames": []
-        },
-        "rtype2": {
-            "members": {},
             "options": {
                 "enabled": "None"
             },

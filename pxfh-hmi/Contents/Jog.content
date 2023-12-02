@@ -1,10 +1,10 @@
 <div id="Jog" data-tchmi-type="TcHmi.Controls.System.TcHmiContent" data-tchmi-top="0" data-tchmi-left="0" data-tchmi-width="100" data-tchmi-height="100" data-tchmi-width-unit="%" data-tchmi-height-unit="%" data-tchmi-creator-viewport-width="1920" data-tchmi-creator-viewport-height="1080">
-<div id="TcHmiTabNavigation" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTabNavigation" data-tchmi-height="100" data-tchmi-height-unit="%" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width="100" data-tchmi-width-unit="%" data-tchmi-tab-alignment="Left" data-tchmi-background-image-horizontal-alignment="Center" data-tchmi-background-image-vertical-alignment="Center">
+<div id="TcHmiTabNavigation" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTabNavigation" data-tchmi-height="100" data-tchmi-height-unit="%" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width="100" data-tchmi-width-unit="%" data-tchmi-tab-alignment="Top" data-tchmi-background-image-horizontal-alignment="Center" data-tchmi-background-image-vertical-alignment="Center">
 <script data-tchmi-target-attribute="data-tchmi-tabs" type="application/json">
 [
   {
-    "name": "Camera1",
-    "displayName": "Camera1",
+    "name": "%f%%l%camera1%/l%%/f%",
+    "displayName": "%l%camera1%/l%",
     "targetFile": {
       "path": "Contents/Camera1.content"
     },
@@ -15,15 +15,15 @@
     "verticalAlignment": "Center",
     "icon": {
       "iconPath": "Images/icons_camera_normal.svg",
-      "iconWidth": 100.0,
+      "iconWidth": 48.0,
       "iconWidthUnit": "px",
-      "iconHeight": 100.0,
+      "iconHeight": 48.0,
       "iconHeightUnit": "px"
     }
   },
   {
-    "name": "Camera2",
-    "displayName": "Camera2",
+    "name": "%l%camera2%/l%",
+    "displayName": "%l%camera2%/l%",
     "targetFileHostPreload": true,
     "targetFileHostPreAttach": true,
     "targetFileHostKeepAlive": true,
@@ -31,14 +31,16 @@
     "verticalAlignment": "Center",
     "icon": {
       "iconPath": "Images/icons_camera_normal.svg",
-      "iconWidth": 32.0,
+      "iconWidth": 48.0,
       "iconWidthUnit": "px",
-      "iconHeight": 32.0,
+      "iconHeight": 48.0,
       "iconHeightUnit": "px"
     }
   }
 ]
 </script>
+
+
 
 
 

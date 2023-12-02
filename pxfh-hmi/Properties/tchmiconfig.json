@@ -60,6 +60,11 @@
       "name": "functions/CurrentUserName.js",
       "description": "",
       "type": "JavaScript"
+    },
+    {
+      "name": "javascripts/chart.js",
+      "description": "",
+      "type": "JavaScript"
     }
   ],
   "userControls": [
@@ -73,10 +78,20 @@
       "url": "Controls/NinePointConfirm.usercontrol"
     },
     {
+      "url": "Controls/RecipeDetail.usercontrol"
+    },
+    {
       "url": "Controls/VerticalDirectionKeyPad.usercontrol"
     }
   ],
   "content": [
+    {
+      "url": "Contents/BottomNav.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    },
     {
       "url": "Contents/Camera1.content",
       "preload": false,
@@ -93,6 +108,13 @@
     },
     {
       "url": "Contents/Jog.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    },
+    {
+      "url": "Contents/PowerRecipe.content",
       "preload": false,
       "keepAlive": false,
       "loadSync": false,
@@ -121,13 +143,6 @@
     },
     {
       "url": "Contents/Workspace.content",
-      "preload": false,
-      "keepAlive": false,
-      "loadSync": false,
-      "preloadBindings": false
-    },
-    {
-      "url": "Contents/BottomNav.content",
       "preload": false,
       "keepAlive": false,
       "loadSync": false,
@@ -165,6 +180,17 @@
         "value": "",
         "type": "tchmi:general#/definitions/String",
         "persist": true,
+        "readonly": false
+      },
+      "currentRecipe": {
+        "type": "tchmi:server#/definitions/recipe",
+        "persist": false,
+        "readonly": false
+      },
+      "currentEditRecipe": {
+        "value": {},
+        "type": "tchmi:general#/definitions/Object",
+        "persist": false,
         "readonly": false
       }
     },

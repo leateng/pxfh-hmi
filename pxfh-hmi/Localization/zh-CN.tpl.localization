@@ -16,6 +16,10 @@
     "recipe-mangement": "配方管理",
     "camera": "摄像机",
     "camera1": "相机 1",
-    "camera2": "相机 2"
+    "camera2": "相机 2",
+    "power_recipe": "电源配方",
+    "delete-recipe": "删除配方",
+    "update-recipe": "更新配方",
+    "create-recipe": "创建配方"
   }
 }
