@@ -20,6 +20,8 @@
     "power_recipe": "power recipe",
     "delete-recipe": "delete recipe",
     "update-recipe": "update recipe",
-    "create-recipe": "create recipe"
+    "create-recipe": "create recipe",
+    "start": "Start",
+    "stop": "Stop"
   }
 }

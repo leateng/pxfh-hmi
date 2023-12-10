@@ -367,22 +367,18 @@ img.tchmi-image-template-content {
 }
 
 tchmi-content-tabs tchmi-tab-links {
-    align-items:flex-start;
+    align-items: flex-start;
+    justify-content: flex-start;
 }
 
-tchmi-content-tabs tchmi-tab-links tchmi-tab-link {
-    width: 200px;
-}
+    tchmi-content-tabs tchmi-tab-links tchmi-tab-link {
+        width: 200px;
+    }
 
-tchmi-content-tabs tchmi-tab-links tchmi-tab-link[active] {
+    tchmi-content-tabs tchmi-tab-links > tchmi-tab-link:not([disabled])[active] {
         border-bottom: 2px solid;
-        border-bottom-color: orangered;
-}
-
-tchmi-content-tabs tchmi-tab-links > tchmi-tab-link:not([disabled])[active] {
-    border-bottom: 2px solid;
-    border-bottom-color: orangered;
-}
+        border-bottom-color: #4089cb;
+    }
 
 tchmi-content-tabs tchmi-tab-contents {
     background-image: url(Images/Background.png);

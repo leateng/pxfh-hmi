@@ -27,7 +27,34 @@
     "DEFAULTTIMEFORMATLOCALE": "client",
     "DEFAULTTIMEZONE": "client",
     "DEFAULTUSERGROUP": "__SystemUsers",
-    "DEFINITIONS": {},
+    "DEFINITIONS": {
+        "PLC1.ARRAY_1..2_OF-UINT": {
+            "items": {
+                "$ref": "tchmi:general#/definitions/UINT"
+            },
+            "maxItems": 2,
+            "minItems": 2,
+            "startOffset": 1,
+            "type": "array"
+        },
+        "PLC1.ARRAY_1..3_1..3_OF-UINT": {
+            "displayAsMatrix": 2,
+            "items": {
+                "allowMapping": false,
+                "items": {
+                    "$ref": "tchmi:general#/definitions/UINT"
+                },
+                "maxItems": 3,
+                "minItems": 3,
+                "startOffset": 1,
+                "type": "array"
+            },
+            "maxItems": 3,
+            "minItems": 3,
+            "startOffset": 1,
+            "type": "array"
+        }
+    },
     "DEFLATECOMPRESSIONLEVEL": 5,
     "DIAGNOSTICS_DOMAINS": [],
     "DISABLED_CONFIGURATION_HINTS": [],
@@ -2539,11 +2566,41 @@
             },
             "USEMAPPING": true
         },
+        "PLC1.MAIN.CellMatrix": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::MAIN::CellMatrix",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/PLC1.ARRAY_1..3_1..3_OF-UINT"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.MAIN.MatrixWandH": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::MAIN::MatrixWandH",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/PLC1.ARRAY_1..2_OF-UINT"
+            },
+            "USEMAPPING": true
+        },
         "PLC1.MAIN.fbAdjust.fbFindContour.ipImageResDisp.png": {
             "ACCESS": 3,
             "DOMAIN": "TcHmiVision",
             "DYNAMIC": true,
             "MAPPING": "PLC1::MAIN::fbAdjust::fbFindContour::ipImageResDisp::png",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/BINARY"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.MAIN.fbAdjust.ipImageResDisp.png": {
+            "ACCESS": 3,
+            "DOMAIN": "TcHmiVision",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::MAIN::fbAdjust::ipImageResDisp::png",
             "SCHEMA": {
                 "$ref": "tchmi:general#/definitions/BINARY"
             },
@@ -2574,6 +2631,26 @@
             "DOMAIN": "TcHmiVision",
             "DYNAMIC": true,
             "MAPPING": "PLC1::MAIN::fbC2Calibration::ipImageResDisp::png",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/BINARY"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.MAIN.fbPut.fbFindContour.ipImageThresholdDisp.png": {
+            "ACCESS": 3,
+            "DOMAIN": "TcHmiVision",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::MAIN::fbPut::fbFindContour::ipImageThresholdDisp::png",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/BINARY"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.MAIN.fbPut.ipImageResDisp.png": {
+            "ACCESS": 3,
+            "DOMAIN": "TcHmiVision",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::MAIN::fbPut::ipImageResDisp::png",
             "SCHEMA": {
                 "$ref": "tchmi:general#/definitions/BINARY"
             },
@@ -3781,10 +3858,15 @@
                 "Login": 3,
                 "Logout": 3,
                 "PLC1.GVL_HMI.bHMIHome": 3,
+                "PLC1.MAIN.CellMatrix": 3,
+                "PLC1.MAIN.MatrixWandH": 3,
                 "PLC1.MAIN.fbAdjust.fbFindContour.ipImageResDisp.png": 3,
+                "PLC1.MAIN.fbAdjust.ipImageResDisp.png": 3,
                 "PLC1.MAIN.fbC2Calibration.ipImageResDisp.bmp": 3,
                 "PLC1.MAIN.fbC2Calibration.ipImageResDisp.jpeg": 3,
                 "PLC1.MAIN.fbC2Calibration.ipImageResDisp.png": 3,
+                "PLC1.MAIN.fbPut.fbFindContour.ipImageThresholdDisp.png": 3,
+                "PLC1.MAIN.fbPut.ipImageResDisp.png": 3,
                 "PLC1.MAIN.ipImageInDisplay.bmp": 3,
                 "PLC1.MAIN.ipImageInDisplay.jpeg": 3,
                 "PLC1.MAIN.ipImageInDisplay.stream": 3,

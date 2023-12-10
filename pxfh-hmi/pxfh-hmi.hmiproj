@@ -27,7 +27,7 @@
     <HmiViewportUserScaleable>Default</HmiViewportUserScaleable>
     <HmiPostProcessing>True</HmiPostProcessing>
     <Name>pxfh-hmi</Name>
-    <HmiCommunicationRouterPort>10104</HmiCommunicationRouterPort>
+    <HmiCommunicationRouterPort>10105</HmiCommunicationRouterPort>
     <HmiCommunicationServerAuthPort>13001</HmiCommunicationServerAuthPort>
     <HmiInitial>1.12.760.48</HmiInitial>
     <HmiRecent>1.12.760.48</HmiRecent>
@@ -165,6 +165,13 @@
     <Content Include="Contents\Workspace.content">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="Controls\AnalogDiscs.usercontrol">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Controls\AnalogDiscs.usercontrol.json">
+      <SubType>Content</SubType>
+      <DependentUpon>Controls\AnalogDiscs.usercontrol</DependentUpon>
+    </Content>
     <Content Include="Controls\camera.usercontrol">
       <SubType>Content</SubType>
     </Content>
@@ -210,6 +217,12 @@
     <Content Include="Images\background_green_active.svg">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="Images\background_red_active.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Images\background_yellow_active.svg">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="Images\background_yellow_normal.svg">
       <SubType>Content</SubType>
     </Content>
@@ -231,7 +244,13 @@
     <Content Include="Images\icons_down_normal.svg">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="Images\icons_green_active.svg">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="Images\icons_left_normal.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Images\icons_red_active.svg">
       <SubType>Content</SubType>
     </Content>
     <Content Include="Images\icons_reset_normal.svg">
@@ -247,6 +266,9 @@
       <SubType>Content</SubType>
     </Content>
     <Content Include="Images\logout_normal.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Images\Manifest\background_yellow_active.svg">
       <SubType>Content</SubType>
     </Content>
     <Content Include="Images\recipe_normal.svg">

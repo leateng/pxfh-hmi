@@ -40,6 +40,22 @@
       "frameworkUserControlConfig": "Controls\\RecipeDetail.usercontrol.json",
       "type": "object",
       "id": "tchmi:project#/definitions/RecipeDetail"
+    },
+    "analog_discs": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "Controls\\AnalogDiscs.usercontrol.json",
+      "type": "object",
+      "id": "tchmi:project#/definitions/analog_discs"
+    },
+    "AnalogDiscs": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "Controls\\AnalogDiscs.usercontrol.json",
+      "type": "object",
+      "id": "tchmi:project#/definitions/AnalogDiscs"
     }
   }
 }

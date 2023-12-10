@@ -1,0 +1,172 @@
+<div id="analog_discs" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControl" data-tchmi-top="0" data-tchmi-left="0" data-tchmi-width="100" data-tchmi-height="100" data-tchmi-width-unit="%" data-tchmi-height-unit="%" data-tchmi-creator-viewport-width="320" data-tchmi-creator-viewport-height="320">
+<div id="TcHmiContainer_AnalogDiscs" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-height="100" data-tchmi-height-unit="%" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width="100" data-tchmi-width-unit="%">
+
+<script data-tchmi-target-attribute="data-tchmi-border-width" type="application/json">
+{
+  "left": 1,
+  "right": 1,
+  "top": 1,
+  "bottom": 1,
+  "leftUnit": "px",
+  "rightUnit": "px",
+  "topUnit": "px",
+  "bottomUnit": "px"
+}
+</script>
+
+<script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+{
+  "left": "Solid",
+  "right": "Solid",
+  "top": "Solid",
+  "bottom": "Solid"
+}
+</script>
+
+
+
+
+
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "%s%PLC1.MAIN.CellMatrix%/s%",
+    "actions": [
+      {
+        "objectType": "JavaScript",
+        "active": true,
+        "sourceLines": [
+          "console.log(\"update matrix status\");",
+          "",
+          "TcHmi.Symbol.readEx2(\"%s%PLC1.MAIN.MatrixWandH%/s%\", function(data){",
+          "    const matrixSize = data.value",
+          "    const [rowSize, colSize] = matrixSize;",
+          "    ",
+          "    const control = TcHmi.Symbol.readEx(\"%ctrl%TcHmiContainer_AnalogDiscs%/ctrl%\");",
+          "\tconst container = control.getElement(); //获取dom",
+          "\tconst $container = jQuery(container).children().first();",
+          "\t",
+          "\tTcHmi.Symbol.readEx2(\"%s%PLC1.MAIN.CellMatrix%/s%\", function(data){",
+          "     \tconst statusMatrix = data.value;",
+          "     \tconst children = $container.children()",
+          "     \t",
+          " \t\tfor(i = 0; i < rowSize; i++) {",
+          "\t\t\tfor(j = 0; j < colSize; j++) {",
+          "     \t\t\tconst index = i * colSize + j;",
+          "     \t\t\tconst element = jQuery(children[index]);",
+          "     \t\t\tconst elementStatus = statusMatrix[i][j];",
+          "     \t\t\t",
+          "     \t\t\telement.attr({\"status\": elementStatus});",
+          "\t\t\t}",
+          "\t\t}",
+          "\t});",
+          "});"
+        ],
+        "injectContextObject": false,
+        "asyncWait": true,
+        "waitMode": "Synchronous"
+      }
+    ]
+  },
+  {
+    "event": "%s%PLC1.MAIN.MatrixWandH%/s%",
+    "actions": [
+      {
+        "objectType": "JavaScript",
+        "active": true,
+        "sourceLines": [
+          "console.log(\"init analog matrixSize\");",
+          "",
+          "TcHmi.Symbol.readEx2(\"%s%PLC1.MAIN.MatrixWandH%/s%\", function(data){",
+          "    const matrixSize = data.value",
+          "    const [rowSize, colSize] = matrixSize;",
+          "    ",
+          "    const control = TcHmi.Symbol.readEx(\"%ctrl%TcHmiContainer_AnalogDiscs%/ctrl%\");",
+          "\tconst container = control.getElement(); //获取dom",
+          "\tconst $container = jQuery(container).children().first();",
+          "\tif(! $container.hasClass(\"analog-discs-grid-container\")){",
+          "\t\t$container.addClass(\"analog-discs-grid-container\");",
+          "\t}",
+          "\t$container.css(\"--row\", rowSize);",
+          "\t$container.css(\"--col\", colSize);",
+          "\t$container.empty();",
+          "\t",
+          "\tfor(i = 0; i < rowSize; i++) {",
+          "\t\tfor(j = 0; j < colSize; j++) {",
+          "\t\t\tvar col = jQuery(\"<div class='analog-discs-grid-item'></div>\");",
+          "\t\t\tcol.attr({\"rowIndex\": i, \"colIndex\": j});",
+          "\t\t\t$container.append(col);",
+          "\t\t}",
+          "\t}",
+          "\t",
+          "\tTcHmi.Symbol.readEx2(\"%s%PLC1.MAIN.CellMatrix%/s%\", function(data){",
+          "     \tconst statusMatrix = data.value;",
+          "     \tconst children = $container.children()",
+          "     \t",
+          " \t\tfor(i = 0; i < rowSize; i++) {",
+          "\t\t\tfor(j = 0; j < colSize; j++) {",
+          "     \t\t\tconst index = i * colSize + j;",
+          "     \t\t\tconst element = jQuery(children[index]);",
+          "     \t\t\tconst elementStatus = statusMatrix[i][j];",
+          "     \t\t\t",
+          "     \t\t\telement.attr({\"status\": elementStatus});",
+          "\t\t\t}",
+          "\t\t}",
+          "\t});",
+          "});"
+        ],
+        "injectContextObject": true,
+        "asyncWait": true,
+        "waitMode": "Asynchronous"
+      }
+    ]
+  },
+  {
+    "event": "TcHmiContainer_AnalogDiscs.onInitialized",
+    "actions": [
+      {
+        "objectType": "JavaScript",
+        "active": true,
+        "sourceLines": [
+          "console.log(\"add analog click event\");",
+          "",
+          "const control = TcHmi.Symbol.readEx(\"%ctrl%TcHmiContainer_AnalogDiscs%/ctrl%\");",
+          "const container = control.getElement(); //获取dom",
+          "jQuery(container).on('click', '.analog-discs-grid-item', function() {",
+          "\tconsole.log('子元素被点击');",
+          "\tconsole.log($(this));",
+          "\tconsole.log($(this).attr(\"status\"));",
+          "",
+          "\tlet status = $(this).attr(\"status\");",
+          "\tconst rowIndex = $(this).attr(\"rowIndex\");",
+          "\tconst colIndex = $(this).attr(\"colIndex\");",
+          "\t",
+          "\tif(String(status) == \"0\") {",
+          "\t\tstatus = 1;\t",
+          "\t}",
+          "\telse {",
+          "\t\tstatus = 0;",
+          "\t}",
+          "",
+          "\tconst name = `%s%PLC1.MAIN.CellMatrix[${rowIndex}][${colIndex}]%/s%`;",
+          "\tTcHmi.Symbol.writeEx(name, status, function (data) {",
+          "\t    if (data.error === TcHmi.Errors.NONE) {",
+          "\t        console.log('update status success');",
+          "\t    } else {",
+          "\t        console.log('update status failed');",
+          "\t        console.log(name);",
+          "\t        console.log(data);",
+          "\t    }",
+          "\t});",
+          "});"
+        ],
+        "injectContextObject": false,
+        "asyncWait": true,
+        "waitMode": "Synchronous"
+      }
+    ]
+  }
+]
+</script>
+</div>
+</div>

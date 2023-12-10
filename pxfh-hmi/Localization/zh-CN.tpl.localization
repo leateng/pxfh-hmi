@@ -20,6 +20,8 @@
     "power_recipe": "电源配方",
     "delete-recipe": "删除配方",
     "update-recipe": "更新配方",
-    "create-recipe": "创建配方"
+    "create-recipe": "创建配方",
+    "start": "启动",
+    "stop": "暂停"
   }
 }

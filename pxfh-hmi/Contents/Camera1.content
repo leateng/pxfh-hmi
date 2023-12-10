@@ -6,7 +6,7 @@
 </div>
 <div id="NinePointConfirm_1" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-height="400" data-tchmi-height-unit="px" data-tchmi-left="620" data-tchmi-left-unit="px" data-tchmi-target-user-control="Controls/NinePointConfirm.usercontrol" data-tchmi-top="10" data-tchmi-top-unit="px" data-tchmi-width="400" data-tchmi-width-unit="px">
 </div>
-<div id="Camera_2" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-height="350" data-tchmi-height-unit="px" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-target-user-control="Controls/camera.usercontrol" data-tchmi-title="camera" data-tchmi-top="10" data-tchmi-top-unit="px" data-tchmi-width="405" data-tchmi-width-unit="px">
+<div id="Camera_2" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-height="562" data-tchmi-height-unit="px" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-target-user-control="Controls/camera.usercontrol" data-tchmi-title="camera" data-tchmi-top="10" data-tchmi-top-unit="px" data-tchmi-width="586" data-tchmi-width-unit="px">
 </div>
 
 
