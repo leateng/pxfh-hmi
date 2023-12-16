@@ -2676,6 +2676,106 @@
             },
             "USEMAPPING": true
         },
+        "PLC1.MAIN.powerTimeCool": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::MAIN::powerTimeCool",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/UINT"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.MAIN.powerTimeDown": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::MAIN::powerTimeDown",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/UINT"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.MAIN.powerTimeDown2": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::MAIN::powerTimeDown2",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/UINT"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.MAIN.powerTimeHold": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::MAIN::powerTimeHold",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/UINT"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.MAIN.powerTimeUp": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::MAIN::powerTimeUp",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/UINT"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.MAIN.powerTimeUp2": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::MAIN::powerTimeUp2",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/UINT"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.MAIN.powerTimeWeld": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::MAIN::powerTimeWeld",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/UINT"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.MAIN.powerTimeWeld2": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::MAIN::powerTimeWeld2",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/UINT"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.MAIN.powerVoltage1": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::MAIN::powerVoltage1",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/UINT"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.MAIN.powerVoltage2": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::MAIN::powerVoltage2",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/UINT"
+            },
+            "USEMAPPING": true
+        },
         "RefreshDefinitions": {
             "ACCESS": 3,
             "DOMAIN": "TcHmiSrv",
@@ -3871,6 +3971,16 @@
                 "PLC1.MAIN.ipImageInDisplay.jpeg": 3,
                 "PLC1.MAIN.ipImageInDisplay.stream": 3,
                 "PLC1.MAIN.ipProcessedImageToDisplay.bmp": 3,
+                "PLC1.MAIN.powerTimeCool": 3,
+                "PLC1.MAIN.powerTimeDown": 3,
+                "PLC1.MAIN.powerTimeDown2": 3,
+                "PLC1.MAIN.powerTimeHold": 3,
+                "PLC1.MAIN.powerTimeUp": 3,
+                "PLC1.MAIN.powerTimeUp2": 3,
+                "PLC1.MAIN.powerTimeWeld": 3,
+                "PLC1.MAIN.powerTimeWeld2": 3,
+                "PLC1.MAIN.powerVoltage1": 3,
+                "PLC1.MAIN.powerVoltage2": 3,
                 "SetLocale": 3,
                 "SubscribeEvents": 3,
                 "TcHmiRecipeManagement.ActivateRecipe": 3,

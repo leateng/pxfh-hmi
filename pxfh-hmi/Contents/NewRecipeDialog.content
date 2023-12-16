@@ -1,0 +1,105 @@
+<div id="NewRecipeDialog" data-tchmi-type="TcHmi.Controls.System.TcHmiContent" data-tchmi-top="0" data-tchmi-left="0" data-tchmi-width="500" data-tchmi-height="150">
+
+<div id="TcHmiButton_saveRecipe" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiButton" data-tchmi-height="50" data-tchmi-height-unit="px" data-tchmi-left="390" data-tchmi-left-unit="px" data-tchmi-top="90" data-tchmi-top-unit="px" data-tchmi-width="100" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text="%l%ok%/l%" data-tchmi-is-enabled="false">
+
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "TcHmiButton_saveRecipe.onPressed",
+    "actions": [
+      {
+        "objectType": "JavaScript",
+        "active": true,
+        "sourceLines": [
+          "const recipe = {",
+          "\t\"recipeTypeName\": \"PowerRType\",",
+          "\t\"values\": {}",
+          "};",
+          "",
+          "const nameInput = TcHmi.Symbol.readEx(\"%ctrl%TcHmiTextbox_RecipeName%/ctrl%\");",
+          "",
+          "TcHmi.Server.RecipeManagement.createRecipe(",
+          "    nameInput.getText(), ",
+          "    null, ",
+          "    recipe, ",
+          "    function(data) {",
+          "        if (data.error === TcHmi.Errors.NONE) {",
+          "            console.log(\"create recipe success\");",
+          "            nameInput.setText(\"\");",
+          "            const dialog = TcHmi.Symbol.readEx(\"%ctrl%TcHmiPopup%/ctrl%\");",
+          "            dialog.close();",
+          "        } else {",
+          "            console.log(data.error);",
+          "        }",
+          "    }",
+          ");"
+        ],
+        "injectContextObject": true,
+        "asyncWait": true,
+        "waitMode": "Asynchronous"
+      }
+    ]
+  }
+]
+</script>
+</div>
+<div id="TcHmiTextbox_RecipeName" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextbox" data-tchmi-height="48" data-tchmi-height-unit="px" data-tchmi-left="161" data-tchmi-left-unit="px" data-tchmi-text="" data-tchmi-top="10" data-tchmi-top-unit="px" data-tchmi-width="329" data-tchmi-width-unit="px" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-font-size="26">
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "top": 3,
+  "right": 3,
+  "bottom": 3,
+  "left": 3
+}
+</script>
+
+
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "TcHmiTextbox_RecipeName.onTextChanged",
+    "actions": [
+      {
+        "objectType": "JavaScript",
+        "active": true,
+        "sourceLines": [
+          "const nameInput = TcHmi.Symbol.readEx(\"%ctrl%TcHmiTextbox_RecipeName%/ctrl%\");",
+          "const saveButton = TcHmi.Symbol.readEx(\"%ctrl%TcHmiButton_saveRecipe%/ctrl%\");",
+          "const name = nameInput.getText().trim();",
+          "",
+          "if(name != \"\") {",
+          "\tconst recipeList = new TcHmi.Symbol(\"%s%TcHmiRecipeManagement.Config::recipeList%/s%\");",
+          "\trecipeList.readEx(function (data) {",
+          "\t\tif (data.error === TcHmi.Errors.NONE) {",
+          "\t\t\tvar value = data.value; ",
+          "\t\t\tconsole.log(value); ",
+          "\t\t\tif(value[name] != undefined) {",
+          "\t\t\t\tsaveButton.setIsEnabled(false);",
+          "\t\t\t}",
+          "\t\t\telse {",
+          "\t\t\t\tsaveButton.setIsEnabled(true);",
+          "\t\t\t}",
+          "\t\t\t",
+          "\t\t} else {",
+          "\t        // Handle error... ",
+          "\t\t\tconsole.log(data.error);",
+          "\t\t\tsaveButton.setIsEnabled(false);",
+          "\t\t}",
+          "\t});",
+          "}",
+          "else {",
+          "\tsaveButton.setIsEnabled(false);",
+          "}"
+        ],
+        "injectContextObject": false,
+        "asyncWait": true,
+        "waitMode": "Synchronous"
+      }
+    ]
+  }
+]
+</script>
+</div>
+<div id="TcHmiTextblock_26" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="48" data-tchmi-height-unit="px" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-top="10" data-tchmi-top-unit="px" data-tchmi-width="141" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-font-size="26" data-tchmi-text="%f%%l%recipe-name%/l%%/f%">
+</div>
+</div>

@@ -3,17 +3,168 @@
         "1": {
             "recipeTypeName": "rtype1",
             "values": {
-                "PLC1.GVL_HMI.bHMIHome": true
+                "PLC1.GVL_HMI.bHMIHome": true,
+                "XEndPower": "",
+                "XStartPower": "",
+                "YEndPower": "",
+                "YStartPower": ""
+            }
+        },
+        "111": {
+            "recipeTypeName": "PowerRType",
+            "values": {
+                "powerTimeCool": 10,
+                "powerTimeDown": 10,
+                "powerTimeDown2": 10,
+                "powerTimeHold": 20,
+                "powerTimeUp": 10,
+                "powerTimeUp2": 10,
+                "powerTimeWeld": 10,
+                "powerTimeWeld2": 10,
+                "powerVoltage1": 50,
+                "powerVoltage2": 80
+            }
+        },
+        "2222": {
+            "recipeTypeName": "PowerRType",
+            "values": {
+                "powerTimeCool": 10,
+                "powerTimeDown": 10,
+                "powerTimeDown2": 10,
+                "powerTimeHold": 30,
+                "powerTimeUp": 10,
+                "powerTimeUp2": 10,
+                "powerTimeWeld": 10,
+                "powerTimeWeld2": 10,
+                "powerVoltage1": 50,
+                "powerVoltage2": 100
+            }
+        },
+        "333": {
+            "recipeTypeName": "PowerRType",
+            "values": {
+                "powerTimeCool": 10,
+                "powerTimeDown": 10,
+                "powerTimeDown2": 10,
+                "powerTimeHold": 20,
+                "powerTimeUp": 10,
+                "powerTimeUp2": 10,
+                "powerTimeWeld": 10,
+                "powerTimeWeld2": 10,
+                "powerVoltage1": 20,
+                "powerVoltage2": 100
             }
         },
         "New recipe": {
             "recipeTypeName": "rtype1",
             "values": {
-                "PLC1.GVL_HMI.bHMIHome": true
+                "PLC1.GVL_HMI.bHMIHome": true,
+                "XEndPower": "",
+                "XStartPower": "",
+                "YEndPower": "",
+                "YStartPower": ""
             }
         }
     },
     "recipeTypeList": {
+        "PowerRType": {
+            "members": {
+                "powerTimeCool": {
+                    "defaultValue": 10,
+                    "enabled": true,
+                    "group": "",
+                    "order": 3,
+                    "schema": {},
+                    "symbol": "PLC1.MAIN.powerTimeCool",
+                    "unit": ""
+                },
+                "powerTimeDown": {
+                    "defaultValue": 10,
+                    "enabled": true,
+                    "group": "",
+                    "order": 2,
+                    "schema": {},
+                    "symbol": "PLC1.MAIN.powerTimeDown",
+                    "unit": ""
+                },
+                "powerTimeDown2": {
+                    "defaultValue": 10,
+                    "enabled": true,
+                    "group": "",
+                    "order": 6,
+                    "schema": {},
+                    "symbol": "PLC1.MAIN.powerTimeDown2",
+                    "unit": ""
+                },
+                "powerTimeHold": {
+                    "defaultValue": 10,
+                    "enabled": true,
+                    "group": "",
+                    "order": 7,
+                    "schema": {},
+                    "symbol": "PLC1.MAIN.powerTimeHold",
+                    "unit": ""
+                },
+                "powerTimeUp": {
+                    "defaultValue": 10,
+                    "enabled": true,
+                    "group": "",
+                    "order": 0,
+                    "schema": {},
+                    "symbol": "PLC1.MAIN.powerTimeUp",
+                    "unit": ""
+                },
+                "powerTimeUp2": {
+                    "defaultValue": 10,
+                    "enabled": true,
+                    "group": "",
+                    "order": 4,
+                    "schema": {},
+                    "symbol": "PLC1.MAIN.powerTimeUp2",
+                    "unit": ""
+                },
+                "powerTimeWeld": {
+                    "defaultValue": 10,
+                    "enabled": true,
+                    "group": "",
+                    "order": 1,
+                    "schema": {},
+                    "symbol": "PLC1.MAIN.powerTimeWeld",
+                    "unit": ""
+                },
+                "powerTimeWeld2": {
+                    "defaultValue": 10,
+                    "enabled": true,
+                    "group": "",
+                    "order": 5,
+                    "schema": {},
+                    "symbol": "PLC1.MAIN.powerTimeWeld2",
+                    "unit": ""
+                },
+                "powerVoltage1": {
+                    "defaultValue": 50,
+                    "enabled": true,
+                    "group": "",
+                    "order": 8,
+                    "schema": {},
+                    "symbol": "PLC1.MAIN.powerVoltage1",
+                    "unit": ""
+                },
+                "powerVoltage2": {
+                    "defaultValue": 100,
+                    "enabled": true,
+                    "group": "",
+                    "order": 9,
+                    "schema": {},
+                    "symbol": "PLC1.MAIN.powerVoltage2",
+                    "unit": ""
+                }
+            },
+            "options": {
+                "enabled": "None"
+            },
+            "recipeTypeNames": []
+        },
         "rtype1": {
             "members": {
                 "PLC1.GVL_HMI.bHMIHome": {
@@ -24,6 +175,30 @@
                     "schema": {},
                     "symbol": "PLC1.GVL_HMI.bHMIHome",
                     "unit": ""
+                },
+                "XEndPower": {
+                    "enabled": true,
+                    "group": "",
+                    "order": 2,
+                    "recipeType": "PowerRType"
+                },
+                "XStartPower": {
+                    "enabled": true,
+                    "group": "",
+                    "order": 1,
+                    "recipeType": "PowerRType"
+                },
+                "YEndPower": {
+                    "enabled": true,
+                    "group": "",
+                    "order": 3,
+                    "recipeType": "PowerRType"
+                },
+                "YStartPower": {
+                    "enabled": true,
+                    "group": "",
+                    "order": 4,
+                    "recipeType": "PowerRType"
                 }
             },
             "options": {

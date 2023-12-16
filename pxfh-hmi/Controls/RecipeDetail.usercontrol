@@ -1,7 +1,7 @@
 <div id="RecipeDetail" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControl" data-tchmi-top="0" data-tchmi-left="0" data-tchmi-width="762" data-tchmi-height="750" data-tchmi-width-unit="px" data-tchmi-height-unit="px" data-tchmi-creator-viewport-width="500" data-tchmi-creator-viewport-height="500">
 <div id="TcHmiTextblock_13" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="40" data-tchmi-height-unit="px" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-text="recipe name" data-tchmi-top="10" data-tchmi-top-unit="px" data-tchmi-width="140" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-font-size="28">
 </div>
-<div id="TcHmiTextbox" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextbox" data-tchmi-height="40" data-tchmi-height-unit="px" data-tchmi-left="160" data-tchmi-left-unit="px" data-tchmi-text="%f%%i%currentEditRecipe%/i%%/f%" data-tchmi-top="10" data-tchmi-top-unit="px" data-tchmi-width="367" data-tchmi-width-unit="px">
+<div id="TcHmiTextbox" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextbox" data-tchmi-height="40" data-tchmi-height-unit="px" data-tchmi-left="160" data-tchmi-left-unit="px" data-tchmi-top="10" data-tchmi-top-unit="px" data-tchmi-width="367" data-tchmi-width-unit="px" data-tchmi-text="%$i%currentEditRecipe|BindingMode=TwoWay%/i%">
 <script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
 {
   "top": 3,

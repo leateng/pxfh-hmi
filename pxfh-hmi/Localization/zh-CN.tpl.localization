@@ -22,6 +22,9 @@
     "update-recipe": "更新配方",
     "create-recipe": "创建配方",
     "start": "启动",
-    "stop": "暂停"
+    "stop": "暂停",
+    "recipe-name": "配方名称",
+    "ok": "确认",
+    "power-recipe-management": "电源配方管理"
   }
 }

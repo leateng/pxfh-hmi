@@ -18,10 +18,13 @@
     "camera1": "Camera 1",
     "camera2": "Camera 2",
     "power_recipe": "power recipe",
-    "delete-recipe": "delete recipe",
-    "update-recipe": "update recipe",
-    "create-recipe": "create recipe",
+    "delete-recipe": "Delete Recipe",
+    "update-recipe": "Update Recipe",
+    "create-recipe": "Create Recipe",
     "start": "Start",
-    "stop": "Stop"
+    "stop": "Stop",
+    "recipe-name": "Recipe Name",
+    "ok": "OK",
+    "power-recipe-management": "Power Recipe Management"
   }
 }

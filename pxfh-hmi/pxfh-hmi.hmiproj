@@ -150,6 +150,9 @@
     <Content Include="Contents\Jog.content">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="Contents\NewRecipeDialog.content">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="Contents\PowerRecipe.content">
       <SubType>Content</SubType>
     </Content>
@@ -207,11 +210,32 @@
       <SubType>Content</SubType>
       <DependentUpon>Controls\VerticalDirectionKeyPad.usercontrol</DependentUpon>
     </Content>
+    <Content Include="functions\CalcPowerLineData.function.json">
+      <SubType>Content</SubType>
+      <DependentUpon>functions\CalcPowerLineData.js</DependentUpon>
+    </Content>
+    <Content Include="functions\CalcPowerLineData.js">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="functions\CurrentUserName.function.json">
       <SubType>Content</SubType>
       <DependentUpon>functions\CurrentUserName.js</DependentUpon>
     </Content>
     <Content Include="functions\CurrentUserName.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="functions\ListRecipes.function.json">
+      <SubType>Content</SubType>
+      <DependentUpon>functions\ListRecipes.js</DependentUpon>
+    </Content>
+    <Content Include="functions\ListRecipes.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="functions\PowerChartUpdate.function.json">
+      <SubType>Content</SubType>
+      <DependentUpon>functions\PowerChartUpdate.js</DependentUpon>
+    </Content>
+    <Content Include="functions\PowerChartUpdate.js">
       <SubType>Content</SubType>
     </Content>
     <Content Include="Images\background_green_active.svg">
@@ -271,6 +295,9 @@
     <Content Include="Images\Manifest\background_yellow_active.svg">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="Images\recipe_normal - Copy.svg">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="Images\recipe_normal.svg">
       <SubType>Content</SubType>
     </Content>
@@ -284,6 +311,15 @@
       <SubType>Content</SubType>
     </Content>
     <Content Include="Images\toolbox_draggin.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Images\trash_normal - Copy.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Images\trash_normal.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Images\upload_normal.svg">
       <SubType>Content</SubType>
     </Content>
     <Content Include="Images\user_active.svg">

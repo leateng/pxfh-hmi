@@ -3,7 +3,7 @@
 
 
 
-<div id="TcHmiCombobox_RecipeList" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiCombobox" data-tchmi-auto-focus-out="true" data-tchmi-combobox-text="Select" data-tchmi-height="50" data-tchmi-height-unit="px" data-tchmi-width="264" data-tchmi-width-unit="px" data-tchmi-src-data="%s%TcHmiRecipeManagement.Config::recipeList%/s%" data-tchmi-right="330" data-tchmi-bottom-unit="px" data-tchmi-bottom="10">
+<div id="TcHmiCombobox_RecipeList" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiCombobox" data-tchmi-auto-focus-out="true" data-tchmi-combobox-text="Select" data-tchmi-height="40" data-tchmi-height-unit="px" data-tchmi-width="372" data-tchmi-width-unit="px" data-tchmi-src-data="%f%ListRecipes(%s%TcHmiRecipeManagement.Config::recipeList%/s%, &quot;PowerRType&quot;)%/f%" data-tchmi-text-font-size="23" data-tchmi-text-horizontal-alignment="Left" data-tchmi-data-height="30" data-tchmi-left="187" data-tchmi-top="100">
 <script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
 {
   "top": 3,
@@ -23,24 +23,42 @@
         "objectType": "JavaScript",
         "active": true,
         "sourceLines": [
-          "var control = TcHmi.Symbol.readEx(\"%ctrl%TcHmiCombobox_RecipeList%/ctrl%\");",
-          "console.log(control.getSelectedText());",
-          "console.log(control.getSelectedId());",
-          "console.log(control.getSelectedValue());",
+          "const control = TcHmi.Symbol.readEx(\"%ctrl%TcHmiCombobox_RecipeList%/ctrl%\");",
           "",
+          "// console.log(control.getSelectedText());",
+          "// console.log(control.getSelectedId());",
+          "// console.log(control.getSelectedValue());",
           "",
-          "TcHmi.Symbol.writeEx(\"%i%currentEditRecipe%/i%\", control.getSelectedValue()); "
+          "const recipeName = control.getSelectedText();",
+          "const recipeValue = control.getSelectedValue();",
+          "",
+          "console.log(recipeName);",
+          "console.log(recipeValue);"
         ],
         "injectContextObject": false,
         "asyncWait": true,
         "waitMode": "Synchronous"
+      },
+      {
+        "objectType": "Function",
+        "active": true,
+        "fn": "TcHmi.Functions.Beckhoff.ActivateRecipe",
+        "fnParams": [
+          {
+            "objectType": "FunctionExpression",
+            "functionExpression": "%ctrl%TcHmiCombobox_RecipeList::SelectedText%/ctrl%"
+          }
+        ],
+        "asyncWait": true
       }
     ]
   }
 ]
 </script>
+
+
 </div>
-<div id="TcHmiButton_34" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiButton" data-tchmi-height="50" data-tchmi-height-unit="px" data-tchmi-width="100" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text="%l%delete-recipe%/l%" data-tchmi-right="220" data-tchmi-bottom-unit="px" data-tchmi-bottom="10">
+<div id="TcHmiButton_34" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiButton" data-tchmi-height="50" data-tchmi-height-unit="px" data-tchmi-width="100" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text="%l%delete-recipe%/l%" data-tchmi-right="254" data-tchmi-bottom-unit="px" data-tchmi-bottom="30" data-tchmi-icon="Images/trash_normal.svg" data-tchmi-icon-horizontal-alignment="Left" data-tchmi-icon-width="32" data-tchmi-icon-height="32">
 
 <script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
 [
@@ -77,11 +95,441 @@
   }
 ]
 </script>
+
+<script data-tchmi-target-attribute="data-tchmi-text-padding" type="application/json">
+{
+  "left": 20,
+  "right": 0,
+  "top": 0,
+  "bottom": 0,
+  "leftUnit": "px",
+  "rightUnit": "px",
+  "topUnit": "px",
+  "bottomUnit": "px"
+}
+</script>
 </div>
-<div id="TcHmiButton_35" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiButton" data-tchmi-height="50" data-tchmi-height-unit="px" data-tchmi-text="%l%update-recipe%/l%" data-tchmi-width="100" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-right-unit="%" data-tchmi-right="0" data-tchmi-bottom-unit="px" data-tchmi-bottom="10">
+<div id="TcHmiButton_35" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiButton" data-tchmi-height="50" data-tchmi-height-unit="px" data-tchmi-text="%l%update-recipe%/l%" data-tchmi-width="100" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-right-unit="px" data-tchmi-right="30" data-tchmi-bottom-unit="px" data-tchmi-bottom="30" data-tchmi-icon="Images/upload_normal.svg" data-tchmi-icon-width="32" data-tchmi-icon-height="32" data-tchmi-icon-horizontal-alignment="Left">
+
+<script data-tchmi-target-attribute="data-tchmi-text-padding" type="application/json">
+{
+  "left": 20,
+  "right": 0,
+  "top": 0,
+  "bottom": 0,
+  "leftUnit": "px",
+  "rightUnit": "px",
+  "topUnit": "px",
+  "bottomUnit": "px"
+}
+</script>
+
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "TcHmiButton_35.onPressed",
+    "actions": [
+      {
+        "objectType": "Function",
+        "active": true,
+        "fn": "TcHmi.Functions.Beckhoff.TeachRecipe",
+        "fnParams": [
+          {
+            "objectType": "FunctionExpression",
+            "functionExpression": "%ctrl%TcHmiCombobox_RecipeList::SelectedText%/ctrl%"
+          }
+        ],
+        "asyncWait": true
+      }
+    ]
+  }
+]
+</script>
 </div>
-<div id="TcHmiButton_36" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiButton" data-tchmi-height="50" data-tchmi-height-unit="px" data-tchmi-text="%l%create-recipe%/l%" data-tchmi-width="100" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="110" data-tchmi-right-unit="px" data-tchmi-bottom="10" data-tchmi-bottom-unit="px">
+<div id="TcHmiButton_36" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiButton" data-tchmi-height="50" data-tchmi-height-unit="px" data-tchmi-text="%l%create-recipe%/l%" data-tchmi-width="100" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="140" data-tchmi-right-unit="px" data-tchmi-bottom="30" data-tchmi-bottom-unit="px" data-tchmi-icon="Images/recipe_normal.svg" data-tchmi-icon-width="32" data-tchmi-icon-height="32" data-tchmi-icon-horizontal-alignment="Left">
+
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "TcHmiButton_36.onPressed",
+    "actions": [
+      {
+        "objectType": "ControlApiFunction",
+        "active": true,
+        "control": "TcHmiPopup",
+        "fn": "open",
+        "asyncWait": true
+      }
+    ]
+  }
+]
+</script>
+
+<script data-tchmi-target-attribute="data-tchmi-text-padding" type="application/json">
+{
+  "left": 20,
+  "right": 0,
+  "top": 0,
+  "bottom": 0,
+  "leftUnit": "px",
+  "rightUnit": "px",
+  "topUnit": "px",
+  "bottomUnit": "px"
+}
+</script>
 </div>
-<div id="RecipeDetail_1" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-height="560" data-tchmi-height-unit="px" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-target-user-control="Controls/RecipeDetail.usercontrol" data-tchmi-top="10" data-tchmi-top-unit="px" data-tchmi-width="596" data-tchmi-width-unit="px">
+<div id="TcHmiPopup" data-tchmi-type="TcHmi.Controls.System.TcHmiPopup" data-tchmi-height="200" data-tchmi-height-unit="px" data-tchmi-left="666" data-tchmi-left-unit="px" data-tchmi-top="925" data-tchmi-top-unit="px" data-tchmi-width="520" data-tchmi-width-unit="px" data-tchmi-target-file-host-preload="true" data-tchmi-target-file-host-keep-alive="true" data-tchmi-modal="true" data-tchmi-movable="false">
+
+<script data-tchmi-target-attribute="data-tchmi-target-file" type="application/json">
+{
+  "path": "Contents/NewRecipeDialog.content"
+}
+</script>
+</div>
+<div id="TcHmiTextblock_27" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="40" data-tchmi-height-unit="px" data-tchmi-left="30" data-tchmi-left-unit="px" data-tchmi-text="%f%%l%recipe-name%/l%%/f%" data-tchmi-top="100" data-tchmi-top-unit="px" data-tchmi-width="145" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-font-size="28">
+</div>
+<div id="TcHmiLineChart_PowerChart" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiLineChart" data-tchmi-height="250" data-tchmi-height-unit="px" data-tchmi-left="30" data-tchmi-left-unit="px" data-tchmi-top="156" data-tchmi-top-unit="px" data-tchmi-width="913" data-tchmi-width-unit="px" data-tchmi-x-axis-unit="ms" data-tchmi-x-main-tick-max-value="100" data-tchmi-x-main-tick-min-value="0" data-tchmi-x-sub-tick-steps="4" data-tchmi-y-sub-tick-steps="4" data-tchmi-y-main-tick-steps="11" data-tchmi-show-legend="false" data-tchmi-x-axis-auto-scaling="true">
+<script data-tchmi-target-attribute="data-tchmi-y-axis" type="application/json">
+[
+  {
+    "id": 1,
+    "showAxis": true,
+    "position": "Left",
+    "mainTickMinValue": 0.0,
+    "mainTickMaxValue": 100.0,
+    "showLabels": true,
+    "showAxisName": true,
+    "axisName": "Volts",
+    "axisNameFontFamily": "",
+    "axisNameFontSize": 15,
+    "axisNameFontSizeUnit": "px",
+    "axisNameFontWeight": "Bold",
+    "decimalPlaces": 2,
+    "unit": "A",
+    "autoScaling": false,
+    "logarithmicScale": false,
+    "axisLabeling": "Number",
+    "labelFontColor": "%tr%Control::TcHmi.Controls.Beckhoff.TcHmiLineChart::YAxisLabelFontColor%/tr%",
+    "axisColor": "%tr%Control::TcHmi.Controls.Beckhoff.TcHmiLineChart::YAxisAxisColor%/tr%",
+    "axisNameFontColor": "%tr%Control::TcHmi.Controls.Beckhoff.TcHmiLineChart::YAxisAxisNameFontColor%/tr%"
+  }
+]
+</script>
+
+
+
+
+
+
+<script data-tchmi-target-attribute="data-tchmi-grid-line-color" type="application/json">
+{
+  "color": "rgba(3, 89, 15, 1)"
+}
+</script>
+
+
+
+<script data-tchmi-target-attribute="data-tchmi-line-graph-descriptions" type="application/json">
+[
+  {
+    "yAxisId": 1,
+    "legendName": "",
+    "xScaleFactor": 1.0,
+    "yScaleFactor": 1.0,
+    "showAxis": true,
+    "lineWidth": 2,
+    "pointDot": false,
+    "pointDotRadius": 3,
+    "pointDotStrokeWidth": 1,
+    "lineColor": {
+      "color": "rgba(3, 89, 15, 1)"
+    },
+    "pointDotFillColor": "%tr%Control::TcHmi.Controls.Beckhoff.TcHmiLineChart::LineGraphDescriptionPointDotFillColor%/tr%",
+    "pointDotStrokeColor": "%tr%Control::TcHmi.Controls.Beckhoff.TcHmiLineChart::LineGraphDescriptionPointDotStrokeColor%/tr%",
+    "fillMode": "None",
+    "fillColor": "%tr%Control::TcHmi.Controls.Beckhoff.TcHmiLineChart::LineGraphDescriptionFillColor%/tr%",
+    "fillTransparency": 50.0
+  }
+]
+</script>
+
+
+
+<script data-tchmi-target-attribute="data-tchmi-line-graph-data" type="application/json">
+[
+  [
+    {
+      "x": 0.0,
+      "y": 0.0
+    },
+    {
+      "x": 10.0,
+      "y": 50.0
+    },
+    {
+      "x": 20.0,
+      "y": 50.0
+    },
+    {
+      "x": 30.0,
+      "y": 0.0
+    },
+    {
+      "x": 35.0,
+      "y": 0.0
+    },
+    {
+      "x": 40.0,
+      "y": 80.0
+    },
+    {
+      "x": 50.0,
+      "y": 80.0
+    },
+    {
+      "x": 60.0,
+      "y": 0.0
+    },
+    {
+      "x": 70.0,
+      "y": 0.0
+    }
+  ]
+]
+</script>
+
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "%s%PLC1.MAIN.powerTimeCool%/s%",
+    "actions": []
+  },
+  {
+    "event": "%s%PLC1.MAIN.powerTimeDown%/s%",
+    "actions": []
+  },
+  {
+    "event": "%s%PLC1.MAIN.powerTimeDown2%/s%",
+    "actions": []
+  },
+  {
+    "event": "%s%PLC1.MAIN.powerTimeHold%/s%",
+    "actions": []
+  },
+  {
+    "event": "%s%PLC1.MAIN.powerTimeUp%/s%",
+    "actions": []
+  },
+  {
+    "event": "%s%PLC1.MAIN.powerTimeUp2%/s%",
+    "actions": []
+  },
+  {
+    "event": "%s%PLC1.MAIN.powerTimeWeld%/s%",
+    "actions": []
+  },
+  {
+    "event": "%s%PLC1.MAIN.powerTimeWeld2%/s%",
+    "actions": []
+  },
+  {
+    "event": "%s%PLC1.MAIN.powerVoltage1%/s%",
+    "actions": [
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%ctrl%TcHmiLineChart_PowerChart::LineGraphData%/ctrl%",
+        "value": {
+          "objectType": "Symbol",
+          "valueType": "tchmi:general#/definitions/String",
+          "symbolExpression": "%f%TcHmi.Functions.pxfh_hmi.CalcPowerLineData()%/f%"
+        },
+        "asyncWait": true
+      },
+      {
+        "objectType": "Function",
+        "active": false,
+        "fn": "TcHmi.Functions.pxfh_hmi.PowerChartUpdate",
+        "fnParams": [
+          {
+            "objectType": "Symbol",
+            "valueType": "tchmi:framework#/definitions/TcHmi.Controls.Beckhoff.TcHmiLineChart",
+            "symbolExpression": "%ctrl%TcHmiLineChart_PowerChart%/ctrl%"
+          }
+        ],
+        "asyncWait": true
+      }
+    ]
+  },
+  {
+    "event": "%s%PLC1.MAIN.powerVoltage2%/s%",
+    "actions": [
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%ctrl%TcHmiLineChart_PowerChart::LineGraphData%/ctrl%",
+        "value": {
+          "objectType": "Symbol",
+          "valueType": "tchmi:general#/definitions/String",
+          "symbolExpression": "%f%TcHmi.Functions.pxfh_hmi.CalcPowerLineData()%/f%"
+        },
+        "asyncWait": true
+      },
+      {
+        "objectType": "Function",
+        "active": false,
+        "fn": "TcHmi.Functions.pxfh_hmi.PowerChartUpdate",
+        "fnParams": [
+          {
+            "objectType": "Symbol",
+            "valueType": "tchmi:framework#/definitions/TcHmi.Controls.Beckhoff.TcHmiLineChart",
+            "symbolExpression": "%ctrl%TcHmiLineChart_PowerChart%/ctrl%"
+          }
+        ],
+        "asyncWait": true
+      }
+    ]
+  }
+]
+</script>
+</div>
+<div id="TcHmiPolyline_9" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiPolyline" data-tchmi-height="88" data-tchmi-height-unit="px" data-tchmi-left="120" data-tchmi-left-unit="px" data-tchmi-points="0, 100,  100, 0 200, 0 300, 100 400, 100 500, 0 600, 0 700, 100 800, 100" data-tchmi-scale-mode="ScaleToFill" data-tchmi-top="451" data-tchmi-top-unit="px" data-tchmi-width="800" data-tchmi-width-unit="px" data-tchmi-stroke-thickness="2" data-tchmi-fill-mode="EvenOdd">
+</div>
+<div id="TcHmiContainer_2" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-height="57" data-tchmi-height-unit="px" data-tchmi-left="120" data-tchmi-left-unit="px" data-tchmi-top="539" data-tchmi-top-unit="px" data-tchmi-width="800" data-tchmi-width-unit="px" data-tchmi-creator-visibility="Visible" data-tchmi-creator-locked="False">
+<div id="TcHmiTextblock_28" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="50" data-tchmi-height-unit="%" data-tchmi-left="87.5" data-tchmi-left-unit="%" data-tchmi-text="HOLD" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width="12.5" data-tchmi-width-unit="%" data-tchmi-word-wrap="true" data-tchmi-text-horizontal-alignment="Center" data-tchmi-text-vertical-alignment="Center" data-tchmi-height-mode="Value" data-tchmi-creator-locked="True">
+</div>
+<div id="TcHmiTextblock_29" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="50" data-tchmi-height-unit="%" data-tchmi-left="75" data-tchmi-left-unit="%" data-tchmi-text="DOWN" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width="12.5" data-tchmi-width-unit="%" data-tchmi-word-wrap="true" data-tchmi-text-horizontal-alignment="Center" data-tchmi-text-vertical-alignment="Center" data-tchmi-height-mode="Value" data-tchmi-creator-locked="True">
+</div>
+<div id="TcHmiTextblock_30" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="50" data-tchmi-height-unit="%" data-tchmi-left="62.5" data-tchmi-left-unit="%" data-tchmi-text="WELD" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width="12.5" data-tchmi-width-unit="%" data-tchmi-word-wrap="true" data-tchmi-text-horizontal-alignment="Center" data-tchmi-text-vertical-alignment="Center" data-tchmi-height-mode="Value" data-tchmi-creator-locked="True">
+</div>
+<div id="TcHmiTextblock_31" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="50" data-tchmi-height-unit="%" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-text="UP" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width="12.5" data-tchmi-width-unit="%" data-tchmi-word-wrap="true" data-tchmi-text-horizontal-alignment="Center" data-tchmi-text-vertical-alignment="Center" data-tchmi-height-mode="Value" data-tchmi-creator-locked="True">
+</div>
+<div id="TcHmiTextblock_32" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="50" data-tchmi-height-unit="%" data-tchmi-left="37.5" data-tchmi-left-unit="%" data-tchmi-text="COOL" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width="12.5" data-tchmi-width-unit="%" data-tchmi-word-wrap="true" data-tchmi-text-horizontal-alignment="Center" data-tchmi-text-vertical-alignment="Center" data-tchmi-height-mode="Value" data-tchmi-creator-locked="True">
+</div>
+<div id="TcHmiTextblock_33" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="50" data-tchmi-height-unit="%" data-tchmi-left="25" data-tchmi-left-unit="%" data-tchmi-text="DOWN" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width="12.5" data-tchmi-width-unit="%" data-tchmi-word-wrap="true" data-tchmi-text-horizontal-alignment="Center" data-tchmi-text-vertical-alignment="Center" data-tchmi-height-mode="Value" data-tchmi-creator-locked="True">
+</div>
+
+<div id="TcHmiTextblock_34" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="50" data-tchmi-height-unit="%" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-text="UP" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width="12.5" data-tchmi-width-unit="%" data-tchmi-word-wrap="true" data-tchmi-text-horizontal-alignment="Center" data-tchmi-text-vertical-alignment="Center" data-tchmi-height-mode="Value" data-tchmi-creator-locked="True">
+</div>
+<div id="TcHmiTextblock_35" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="50" data-tchmi-height-unit="%" data-tchmi-left="12.5" data-tchmi-left-unit="%" data-tchmi-text="WELD" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width="12.5" data-tchmi-width-unit="%" data-tchmi-word-wrap="true" data-tchmi-text-horizontal-alignment="Center" data-tchmi-text-vertical-alignment="Center" data-tchmi-height-mode="Value" data-tchmi-creator-locked="True">
+</div>
+<div id="TcHmiNumericInput_PowerTimeUp" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiNumericInput" data-tchmi-auto-focus-out="true" data-tchmi-decimal-digits="0" data-tchmi-height="50" data-tchmi-height-unit="%" data-tchmi-left="0" data-tchmi-left-unit="%" data-tchmi-max-value="100" data-tchmi-min-value="0" data-tchmi-reset-to-last-valid-value="true" data-tchmi-top="50" data-tchmi-top-unit="%" data-tchmi-value="%s%PLC1.MAIN.powerTimeUp|BindingMode=TwoWay%/s%" data-tchmi-width="12.5" data-tchmi-width-unit="%" data-tchmi-value-horizontal-alignment="Center" data-tchmi-creator-locked="True">
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "top": 3,
+  "right": 3,
+  "bottom": 3,
+  "left": 3
+}
+</script>
+
+</div>
+<div id="TcHmiNumericInput_PowerTimeWeld" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiNumericInput" data-tchmi-auto-focus-out="true" data-tchmi-decimal-digits="0" data-tchmi-height="50" data-tchmi-height-unit="%" data-tchmi-left="12.5" data-tchmi-left-unit="%" data-tchmi-max-value="100" data-tchmi-min-value="0" data-tchmi-reset-to-last-valid-value="true" data-tchmi-top="50" data-tchmi-top-unit="%" data-tchmi-value="%s%PLC1.MAIN.powerTimeWeld|BindingMode=TwoWay%/s%" data-tchmi-width="12.5" data-tchmi-width-unit="%" data-tchmi-value-horizontal-alignment="Center" data-tchmi-creator-locked="True">
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "top": 3,
+  "right": 3,
+  "bottom": 3,
+  "left": 3
+}
+</script>
+
+</div>
+<div id="TcHmiNumericInput_PowerTimeDown" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiNumericInput" data-tchmi-auto-focus-out="true" data-tchmi-decimal-digits="0" data-tchmi-height="50" data-tchmi-height-unit="%" data-tchmi-left="25" data-tchmi-left-unit="%" data-tchmi-max-value="100" data-tchmi-min-value="0" data-tchmi-reset-to-last-valid-value="true" data-tchmi-top="50" data-tchmi-top-unit="%" data-tchmi-value="%s%PLC1.MAIN.powerTimeDown|BindingMode=TwoWay%/s%" data-tchmi-width="12.5" data-tchmi-width-unit="%" data-tchmi-value-horizontal-alignment="Center" data-tchmi-creator-locked="True">
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "top": 3,
+  "right": 3,
+  "bottom": 3,
+  "left": 3
+}
+</script>
+
+</div>
+<div id="TcHmiNumericInput_PowerTimeCool" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiNumericInput" data-tchmi-auto-focus-out="true" data-tchmi-decimal-digits="0" data-tchmi-height="50" data-tchmi-height-unit="%" data-tchmi-left="37.5" data-tchmi-left-unit="%" data-tchmi-max-value="100" data-tchmi-min-value="0" data-tchmi-reset-to-last-valid-value="true" data-tchmi-top="50" data-tchmi-top-unit="%" data-tchmi-value="%s%PLC1.MAIN.powerTimeCool|BindingMode=TwoWay%/s%" data-tchmi-width="12.5" data-tchmi-width-unit="%" data-tchmi-value-horizontal-alignment="Center" data-tchmi-creator-locked="True">
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "top": 3,
+  "right": 3,
+  "bottom": 3,
+  "left": 3
+}
+</script>
+
+</div>
+<div id="TcHmiNumericInput_PowerTimeUp2" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiNumericInput" data-tchmi-auto-focus-out="true" data-tchmi-decimal-digits="0" data-tchmi-height="50" data-tchmi-height-unit="%" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-max-value="100" data-tchmi-min-value="0" data-tchmi-reset-to-last-valid-value="true" data-tchmi-top="50" data-tchmi-top-unit="%" data-tchmi-value="%s%PLC1.MAIN.powerTimeUp2|BindingMode=TwoWay%/s%" data-tchmi-width="12.5" data-tchmi-width-unit="%" data-tchmi-value-horizontal-alignment="Center" data-tchmi-creator-locked="True">
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "top": 3,
+  "right": 3,
+  "bottom": 3,
+  "left": 3
+}
+</script>
+
+</div>
+<div id="TcHmiNumericInput_PowerTimeWeld2" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiNumericInput" data-tchmi-auto-focus-out="true" data-tchmi-decimal-digits="0" data-tchmi-height="50" data-tchmi-height-unit="%" data-tchmi-left="62.5" data-tchmi-left-unit="%" data-tchmi-max-value="100" data-tchmi-min-value="0" data-tchmi-reset-to-last-valid-value="true" data-tchmi-top="50" data-tchmi-top-unit="%" data-tchmi-value="%s%PLC1.MAIN.powerTimeWeld2|BindingMode=TwoWay%/s%" data-tchmi-width="12.5" data-tchmi-width-unit="%" data-tchmi-value-horizontal-alignment="Center" data-tchmi-creator-locked="True">
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "top": 3,
+  "right": 3,
+  "bottom": 3,
+  "left": 3
+}
+</script>
+
+</div>
+<div id="TcHmiNumericInput_PowerTimeDown2" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiNumericInput" data-tchmi-auto-focus-out="true" data-tchmi-decimal-digits="0" data-tchmi-height="50" data-tchmi-height-unit="%" data-tchmi-left="75" data-tchmi-left-unit="%" data-tchmi-max-value="100" data-tchmi-min-value="0" data-tchmi-reset-to-last-valid-value="true" data-tchmi-top="50" data-tchmi-top-unit="%" data-tchmi-value="%s%PLC1.MAIN.powerTimeDown2|BindingMode=TwoWay%/s%" data-tchmi-width="12.5" data-tchmi-width-unit="%" data-tchmi-value-horizontal-alignment="Center" data-tchmi-creator-locked="True">
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "top": 3,
+  "right": 3,
+  "bottom": 3,
+  "left": 3
+}
+</script>
+
+</div>
+<div id="TcHmiNumericInput_PowerTimeHold" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiNumericInput" data-tchmi-auto-focus-out="true" data-tchmi-decimal-digits="0" data-tchmi-height="50" data-tchmi-height-unit="%" data-tchmi-left="87.5" data-tchmi-left-unit="%" data-tchmi-max-value="100" data-tchmi-min-value="0" data-tchmi-reset-to-last-valid-value="true" data-tchmi-top="50" data-tchmi-top-unit="%" data-tchmi-value="%s%PLC1.MAIN.powerTimeHold|BindingMode=TwoWay%/s%" data-tchmi-width="12.5" data-tchmi-width-unit="%" data-tchmi-value-horizontal-alignment="Center" data-tchmi-creator-locked="True">
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "top": 3,
+  "right": 3,
+  "bottom": 3,
+  "left": 3
+}
+</script>
+
+</div>
+</div>
+<div id="TcHmiContainer_3" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-height="45" data-tchmi-height-unit="px" data-tchmi-left="120" data-tchmi-left-unit="px" data-tchmi-top="406" data-tchmi-top-unit="px" data-tchmi-width="800" data-tchmi-width-unit="px">
+<div id="TcHmiNumericInput_PowerVoltage1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiNumericInput" data-tchmi-auto-focus-out="true" data-tchmi-decimal-digits="0" data-tchmi-height="50" data-tchmi-height-unit="%" data-tchmi-left="12.5" data-tchmi-left-unit="%" data-tchmi-max-value="100" data-tchmi-min-value="0" data-tchmi-reset-to-last-valid-value="true" data-tchmi-top="50" data-tchmi-top-unit="%" data-tchmi-value="%s%PLC1.MAIN.powerVoltage1|BindingMode=TwoWay%/s%" data-tchmi-width="12.5" data-tchmi-width-unit="%" data-tchmi-value-horizontal-alignment="Center" data-tchmi-creator-locked="True">
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "top": 3,
+  "right": 3,
+  "bottom": 3,
+  "left": 3
+}
+</script>
+
+</div>
+<div id="TcHmiTextblock_36" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="50" data-tchmi-height-unit="%" data-tchmi-left="12.5" data-tchmi-left-unit="%" data-tchmi-text="VOLTAGE1" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width="12.5" data-tchmi-width-unit="%" data-tchmi-word-wrap="true" data-tchmi-text-horizontal-alignment="Center" data-tchmi-text-vertical-alignment="Center" data-tchmi-height-mode="Value" data-tchmi-creator-locked="True">
+</div>
+<div id="TcHmiNumericInput_PowerVoltage2" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiNumericInput" data-tchmi-auto-focus-out="true" data-tchmi-decimal-digits="0" data-tchmi-height="50" data-tchmi-height-unit="%" data-tchmi-left="62.5" data-tchmi-left-unit="%" data-tchmi-max-value="100" data-tchmi-min-value="0" data-tchmi-reset-to-last-valid-value="true" data-tchmi-top="50.0" data-tchmi-top-unit="%" data-tchmi-width="12.5" data-tchmi-width-unit="%" data-tchmi-value-horizontal-alignment="Center" data-tchmi-creator-locked="True" data-tchmi-value="%s%PLC1.MAIN.powerVoltage2|BindingMode=TwoWay%/s%">
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "top": 3,
+  "right": 3,
+  "bottom": 3,
+  "left": 3
+}
+</script>
+
+</div>
+<div id="TcHmiTextblock_37" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="50" data-tchmi-height-unit="%" data-tchmi-left="62.5" data-tchmi-left-unit="%" data-tchmi-text="VOLTAGE2" data-tchmi-top="0" data-tchmi-top-unit="%" data-tchmi-width="12.5" data-tchmi-width-unit="%" data-tchmi-word-wrap="true" data-tchmi-text-horizontal-alignment="Center" data-tchmi-text-vertical-alignment="Center" data-tchmi-height-mode="Value" data-tchmi-creator-locked="True">
+</div>
+</div>
+<div id="TcHmiTextblock_38" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="50" data-tchmi-height-unit="px" data-tchmi-left="30" data-tchmi-left-unit="px" data-tchmi-top="30" data-tchmi-top-unit="px" data-tchmi-width="548" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-font-size="32" data-tchmi-text="%f%%l%power-recipe-management%/l%%/f%" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-font-weight="Bold">
 </div>
 </div>
