@@ -25,6 +25,11 @@
     "stop": "暂停",
     "recipe-name": "配方名称",
     "ok": "确认",
-    "power-recipe-management": "电源配方管理"
+    "power-recipe-management": "电源配方管理",
+    "basic": "基础",
+    "power": "电源",
+    "create": "创建",
+    "delete": "删除",
+    "update": "更新"
   }
 }

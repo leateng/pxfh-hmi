@@ -156,6 +156,12 @@
     <Content Include="Contents\PowerRecipe.content">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="Contents\RecipeBasicConfig.content">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Contents\RecipeManagement2.content">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="Contents\RecipeManagement.content">
       <SubType>Content</SubType>
     </Content>

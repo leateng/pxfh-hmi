@@ -1,15 +1,5 @@
 {
     "recipeList": {
-        "1": {
-            "recipeTypeName": "rtype1",
-            "values": {
-                "PLC1.GVL_HMI.bHMIHome": true,
-                "XEndPower": "",
-                "XStartPower": "",
-                "YEndPower": "",
-                "YStartPower": ""
-            }
-        },
         "111": {
             "recipeTypeName": "PowerRType",
             "values": {
@@ -55,18 +45,38 @@
                 "powerVoltage2": 100
             }
         },
-        "New recipe": {
-            "recipeTypeName": "rtype1",
+        "444": {
+            "recipeTypeName": "PowerRType",
             "values": {
-                "PLC1.GVL_HMI.bHMIHome": true,
-                "XEndPower": "",
-                "XStartPower": "",
-                "YEndPower": "",
-                "YStartPower": ""
+                "powerTimeCool": 10,
+                "powerTimeDown": 10,
+                "powerTimeDown2": 10,
+                "powerTimeHold": 10,
+                "powerTimeUp": 10,
+                "powerTimeUp2": 10,
+                "powerTimeWeld": 10,
+                "powerTimeWeld2": 10,
+                "powerVoltage1": 30,
+                "powerVoltage2": 80
             }
+        },
+        "main11111": {
+            "recipeTypeName": "MainRType",
+            "values": {}
+        },
+        "main2": {
+            "recipeTypeName": "MainRType",
+            "values": {}
         }
     },
     "recipeTypeList": {
+        "MainRType": {
+            "members": {},
+            "options": {
+                "enabled": "None"
+            },
+            "recipeTypeNames": []
+        },
         "PowerRType": {
             "members": {
                 "powerTimeCool": {
@@ -158,47 +168,6 @@
                     "schema": {},
                     "symbol": "PLC1.MAIN.powerVoltage2",
                     "unit": ""
-                }
-            },
-            "options": {
-                "enabled": "None"
-            },
-            "recipeTypeNames": []
-        },
-        "rtype1": {
-            "members": {
-                "PLC1.GVL_HMI.bHMIHome": {
-                    "defaultValue": true,
-                    "enabled": true,
-                    "group": "",
-                    "order": 0,
-                    "schema": {},
-                    "symbol": "PLC1.GVL_HMI.bHMIHome",
-                    "unit": ""
-                },
-                "XEndPower": {
-                    "enabled": true,
-                    "group": "",
-                    "order": 2,
-                    "recipeType": "PowerRType"
-                },
-                "XStartPower": {
-                    "enabled": true,
-                    "group": "",
-                    "order": 1,
-                    "recipeType": "PowerRType"
-                },
-                "YEndPower": {
-                    "enabled": true,
-                    "group": "",
-                    "order": 3,
-                    "recipeType": "PowerRType"
-                },
-                "YStartPower": {
-                    "enabled": true,
-                    "group": "",
-                    "order": 4,
-                    "recipeType": "PowerRType"
                 }
             },
             "options": {

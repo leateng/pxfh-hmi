@@ -35,6 +35,6 @@
 }
 </script>
 </div>
-<div id="Analog_discs" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-height="349" data-tchmi-height-unit="px" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-target-user-control="Controls/AnalogDiscs.usercontrol" data-tchmi-top="370" data-tchmi-top-unit="px" data-tchmi-width="403" data-tchmi-width-unit="px">
+<div id="Analog_discs" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-height="405" data-tchmi-height-unit="px" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-target-user-control="Controls/AnalogDiscs.usercontrol" data-tchmi-top="370" data-tchmi-top-unit="px" data-tchmi-width="405" data-tchmi-width-unit="px">
 </div>
 </div>

@@ -13,7 +13,7 @@
     "calibrate": "calibrate",
     "logout": "logout",
     "user-management": "user management",
-    "recipe-mangement": "recipe management",
+    "recipe-mangement": "Recipe Management",
     "camera": "Camera",
     "camera1": "Camera 1",
     "camera2": "Camera 2",
@@ -25,6 +25,11 @@
     "stop": "Stop",
     "recipe-name": "Recipe Name",
     "ok": "OK",
-    "power-recipe-management": "Power Recipe Management"
+    "power-recipe-management": "Power Recipe Management",
+    "basic": "Basic",
+    "power": "Power",
+    "create": "Create",
+    "delete": "Delete",
+    "update": "Update"
   }
 }

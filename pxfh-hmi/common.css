@@ -36,3 +36,12 @@
     .analog-discs-grid-item[status="3"] {
         background-image: url(Images/background_green_active.svg);
     }
+
+#TcHmiTabNavigation_2 {
+    height: calc(100% - 160px);
+    width: calc(100% - 60px);
+}
+
+#TcHmiTabNavigation_2 tchmi-content-tabs tchmi-tab-links tchmi-tab-link {
+    height: 70px;
+}
