@@ -30,6 +30,8 @@
     "power": "Power",
     "create": "Create",
     "delete": "Delete",
-    "update": "Update"
+    "update": "Update",
+    "schedule": "Schedule",
+    "power-schedule-management": "Power Schedule Management"
   }
 }

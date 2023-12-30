@@ -265,7 +265,7 @@
         "value": {
           "objectType": "StaticValue",
           "valueType": "tchmi:framework#/definitions/ContentPath",
-          "value": "Contents/PowerRecipe.content"
+          "value": "Contents/PowerRecipeManagement.content"
         },
         "asyncWait": true
       }

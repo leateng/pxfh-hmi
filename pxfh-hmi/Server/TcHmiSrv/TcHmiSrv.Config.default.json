@@ -28,12 +28,38 @@
     "DEFAULTTIMEZONE": "client",
     "DEFAULTUSERGROUP": "__SystemUsers",
     "DEFINITIONS": {
+        "PLC1.ARRAY_1..10_OF-UINT": {
+            "items": {
+                "$ref": "tchmi:general#/definitions/UINT"
+            },
+            "maxItems": 10,
+            "minItems": 10,
+            "startOffset": 1,
+            "type": "array"
+        },
         "PLC1.ARRAY_1..2_OF-UINT": {
             "items": {
                 "$ref": "tchmi:general#/definitions/UINT"
             },
             "maxItems": 2,
             "minItems": 2,
+            "startOffset": 1,
+            "type": "array"
+        },
+        "PLC1.ARRAY_1..3_1..10_OF-UINT": {
+            "displayAsMatrix": 2,
+            "items": {
+                "allowMapping": false,
+                "items": {
+                    "$ref": "tchmi:general#/definitions/UINT"
+                },
+                "maxItems": 10,
+                "minItems": 10,
+                "startOffset": 1,
+                "type": "array"
+            },
+            "maxItems": 3,
+            "minItems": 3,
             "startOffset": 1,
             "type": "array"
         },
@@ -2676,6 +2702,16 @@
             },
             "USEMAPPING": true
         },
+        "PLC1.MAIN.powerSchedules": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::MAIN::powerSchedules",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/PLC1.ARRAY_1..3_1..10_OF-UINT"
+            },
+            "USEMAPPING": true
+        },
         "PLC1.MAIN.powerTimeCool": {
             "ACCESS": 3,
             "DOMAIN": "ADS",
@@ -2773,6 +2809,16 @@
             "MAPPING": "PLC1::MAIN::powerVoltage2",
             "SCHEMA": {
                 "$ref": "tchmi:general#/definitions/UINT"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.MAIN.selectedPowerSchedule": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::MAIN::selectedPowerSchedule",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/PLC1.ARRAY_1..10_OF-UINT"
             },
             "USEMAPPING": true
         },
@@ -3971,6 +4017,7 @@
                 "PLC1.MAIN.ipImageInDisplay.jpeg": 3,
                 "PLC1.MAIN.ipImageInDisplay.stream": 3,
                 "PLC1.MAIN.ipProcessedImageToDisplay.bmp": 3,
+                "PLC1.MAIN.powerSchedules": 3,
                 "PLC1.MAIN.powerTimeCool": 3,
                 "PLC1.MAIN.powerTimeDown": 3,
                 "PLC1.MAIN.powerTimeDown2": 3,
@@ -3981,6 +4028,7 @@
                 "PLC1.MAIN.powerTimeWeld2": 3,
                 "PLC1.MAIN.powerVoltage1": 3,
                 "PLC1.MAIN.powerVoltage2": 3,
+                "PLC1.MAIN.selectedPowerSchedule": 3,
                 "SetLocale": 3,
                 "SubscribeEvents": 3,
                 "TcHmiRecipeManagement.ActivateRecipe": 3,

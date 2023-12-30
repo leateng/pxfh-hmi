@@ -12,7 +12,7 @@
         "active": true,
         "sourceLines": [
           "const recipe = {",
-          "\t\"recipeTypeName\": \"PowerRType\",",
+          "\t\"recipeTypeName\": \"MainRType\",",
           "\t\"values\": {}",
           "};",
           "",
@@ -26,7 +26,7 @@
           "        if (data.error === TcHmi.Errors.NONE) {",
           "            console.log(\"create recipe success\");",
           "            nameInput.setText(\"\");",
-          "            const dialog = TcHmi.Symbol.readEx(\"%ctrl%TcHmiPopup%/ctrl%\");",
+          "            const dialog = TcHmi.Symbol.readEx(\"%ctrl%TcHmiPopup_NewRecipe%/ctrl%\");",
           "            dialog.close();",
           "        } else {",
           "            console.log(data.error);",

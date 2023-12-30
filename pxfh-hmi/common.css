@@ -17,31 +17,35 @@
     box-shadow: rgba(0, 0, 0, 0.6) 0px 0px 5px 0px;
 }
 
-    /*forbidden status*/
-    .analog-discs-grid-item[status="0"] {
-        background-image: url(Images/background_red_active.svg);
-    }
+/*forbidden status*/
+.analog-discs-grid-item[status="0"] {
+    background-image: url(Images/background_red_active.svg);
+}
 
-    /*normal status*/
-    .analog-discs-grid-item[status="1"] {
-        background: linear-gradient(135deg, #35333d, #141415);
-    }
+/*normal status*/
+.analog-discs-grid-item[status="1"] {
+    background: linear-gradient(135deg, #35333d, #141415);
+}
 
-    /*process status*/
-    .analog-discs-grid-item[status="2"] {
-        background-image: url(Images/background_yellow_active.svg);
-    }
+/*process status*/
+.analog-discs-grid-item[status="2"] {
+    background-image: url(Images/background_yellow_active.svg);
+}
 
-    /*normal done*/
-    .analog-discs-grid-item[status="3"] {
-        background-image: url(Images/background_green_active.svg);
-    }
+/*normal done*/
+.analog-discs-grid-item[status="3"] {
+    background-image: url(Images/background_green_active.svg);
+}
 
-#TcHmiTabNavigation_2 {
-    height: calc(100% - 160px);
+#TcHmiTabNavigation_MainRecipe {
+    height: calc(100% - 140px);
     width: calc(100% - 60px);
 }
 
-#TcHmiTabNavigation_2 tchmi-content-tabs tchmi-tab-links tchmi-tab-link {
-    height: 70px;
+#TcHmiTabNavigation_MainRecipe tchmi-content-tabs tchmi-tab-links tchmi-tab-link {
+    height: 50px;
+}
+
+#TcHmiTabNavigation_MainRecipe tchmi-content-tabs tchmi-tab-links tchmi-tab-link[active] {
+    border-left: 2px solid #1960a3;
 }

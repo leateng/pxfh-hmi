@@ -1,5 +1,9 @@
 {
     "recipeList": {
+        "1": {
+            "recipeTypeName": "MainRType",
+            "values": {}
+        },
         "111": {
             "recipeTypeName": "PowerRType",
             "values": {
@@ -14,6 +18,25 @@
                 "powerVoltage1": 50,
                 "powerVoltage2": 80
             }
+        },
+        "1111": {
+            "recipeTypeName": "PowerRType",
+            "values": {
+                "powerTimeCool": 10,
+                "powerTimeDown": 10,
+                "powerTimeDown2": 10,
+                "powerTimeHold": 10,
+                "powerTimeUp": 10,
+                "powerTimeUp2": 10,
+                "powerTimeWeld": 10,
+                "powerTimeWeld2": 10,
+                "powerVoltage1": 50,
+                "powerVoltage2": 100
+            }
+        },
+        "2": {
+            "recipeTypeName": "MainRType",
+            "values": {}
         },
         "2222": {
             "recipeTypeName": "PowerRType",
@@ -30,6 +53,10 @@
                 "powerVoltage2": 100
             }
         },
+        "23": {
+            "recipeTypeName": "MainRType",
+            "values": {}
+        },
         "333": {
             "recipeTypeName": "PowerRType",
             "values": {
@@ -44,6 +71,10 @@
                 "powerVoltage1": 20,
                 "powerVoltage2": 100
             }
+        },
+        "4": {
+            "recipeTypeName": "MainRType",
+            "values": {}
         },
         "444": {
             "recipeTypeName": "PowerRType",
@@ -60,11 +91,7 @@
                 "powerVoltage2": 80
             }
         },
-        "main11111": {
-            "recipeTypeName": "MainRType",
-            "values": {}
-        },
-        "main2": {
+        "63245": {
             "recipeTypeName": "MainRType",
             "values": {}
         }

@@ -383,3 +383,9 @@ tchmi-content-tabs tchmi-tab-links {
 tchmi-content-tabs tchmi-tab-contents {
     background-image: url(Images/Background.png);
 }
+
+#BottomNav {
+    border-top: 1px solid rgb(53, 51, 61);
+    background-color: rgba(0, 0, 0, 0.3);
+}
+ 

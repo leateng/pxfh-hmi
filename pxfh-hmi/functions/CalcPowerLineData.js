@@ -7,18 +7,20 @@
         var pxfh_hmi;
         (function (pxfh_hmi) {
             function CalcPowerLineData() {
-                const PowerVoltage1 = TcHmi.Symbol.readEx("%ctrl%TcHmiNumericInput_PowerVoltage1%/ctrl%").getValue();
-                const PowerVoltage2 = TcHmi.Symbol.readEx("%ctrl%TcHmiNumericInput_PowerVoltage2%/ctrl%").getValue();
+                var selectedPowerSchedule = TcHmi.Symbol.readEx('%i%selectedPowerSchedule2%/i%');
 
-                const PowerTimeUp = TcHmi.Symbol.readEx("%ctrl%TcHmiNumericInput_PowerTimeUp%/ctrl%").getValue();
-                const PowerTimeWeld = TcHmi.Symbol.readEx("%ctrl%TcHmiNumericInput_PowerTimeWeld%/ctrl%").getValue();
-                const PowerTimeDown = TcHmi.Symbol.readEx("%ctrl%TcHmiNumericInput_PowerTimeDown%/ctrl%").getValue();
-                const PowerTimeCool = TcHmi.Symbol.readEx("%ctrl%TcHmiNumericInput_PowerTimeCool%/ctrl%").getValue();
+                const PowerTimeUp   = selectedPowerSchedule[0];
+                const PowerTimeWeld = selectedPowerSchedule[1];
+                const PowerTimeDown = selectedPowerSchedule[2];
+                const PowerTimeCool = selectedPowerSchedule[3];
 
-                const PowerTimeUp2 = TcHmi.Symbol.readEx("%ctrl%TcHmiNumericInput_PowerTimeUp2%/ctrl%").getValue();
-                const PowerTimeWeld2 = TcHmi.Symbol.readEx("%ctrl%TcHmiNumericInput_PowerTimeWeld2%/ctrl%").getValue();
-                const PowerTimeDown2 = TcHmi.Symbol.readEx("%ctrl%TcHmiNumericInput_PowerTimeDown2%/ctrl%").getValue();
-                const PowerTimeHold = TcHmi.Symbol.readEx("%ctrl%TcHmiNumericInput_PowerTimeHold%/ctrl%").getValue();
+                const PowerTimeUp2   = selectedPowerSchedule[4];
+                const PowerTimeWeld2 = selectedPowerSchedule[5];
+                const PowerTimeDown2 = selectedPowerSchedule[6];
+                const PowerTimeHold  = selectedPowerSchedule[7];
+
+                const PowerVoltage1 = selectedPowerSchedule[8];
+                const PowerVoltage2 = selectedPowerSchedule[9];
 
                 const x1 = PowerTimeUp;
                 const x2 = x1 + PowerTimeWeld;

@@ -30,6 +30,8 @@
     "power": "电源",
     "create": "创建",
     "delete": "删除",
-    "update": "更新"
+    "update": "更新",
+    "schedule": "计划",
+    "power-schedule-management": "电源计划管理"
   }
 }

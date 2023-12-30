@@ -80,6 +80,16 @@
       "name": "functions/PowerChartUpdate.js",
       "description": "",
       "type": "JavaScript"
+    },
+    {
+      "name": "functions/ListPowerSchedules.js",
+      "description": "",
+      "type": "JavaScript"
+    },
+    {
+      "name": "functions/UpdatePowerSchedule.js",
+      "description": "",
+      "type": "JavaScript"
     }
   ],
   "userControls": [
@@ -139,7 +149,21 @@
       "preloadBindings": false
     },
     {
-      "url": "Contents/PowerRecipe.content",
+      "url": "Contents/PowerRecipeManagement.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    },
+    {
+      "url": "Contents/RecipeBasicConfig.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    },
+    {
+      "url": "Contents/RecipeManagement2.content",
       "preload": false,
       "keepAlive": false,
       "loadSync": false,
@@ -172,20 +196,6 @@
       "keepAlive": false,
       "loadSync": false,
       "preloadBindings": false
-    },
-    {
-      "url": "Contents/RecipeManagement2.content",
-      "preload": false,
-      "keepAlive": false,
-      "loadSync": false,
-      "preloadBindings": false
-    },
-    {
-      "url": "Contents/RecipeBasicConfig.content",
-      "preload": false,
-      "keepAlive": false,
-      "loadSync": false,
-      "preloadBindings": false
     }
   ],
   "views": [
@@ -204,10 +214,16 @@
       "url": "functions/CurrentUserName.js"
     },
     {
+      "url": "functions/ListPowerSchedules.js"
+    },
+    {
       "url": "functions/ListRecipes.js"
     },
     {
       "url": "functions/PowerChartUpdate.js"
+    },
+    {
+      "url": "functions/UpdatePowerSchedule.js"
     }
   ],
   "symbols": {
@@ -243,13 +259,21 @@
         "persist": false,
         "readonly": false
       },
-      "startPowerRecipe": {
-        "value": {
-          "recipeTypeName": "PowerRType",
-          "values": {}
-        },
-        "type": "tchmi:server#/definitions/recipe",
-        "persist": true,
+      "selectedPowerSchedule2": {
+        "value": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "type": "tchmi:general#/definitions/Array",
+        "persist": false,
         "readonly": false
       }
     },

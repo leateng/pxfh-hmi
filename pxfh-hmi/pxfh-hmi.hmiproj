@@ -27,7 +27,7 @@
     <HmiViewportUserScaleable>Default</HmiViewportUserScaleable>
     <HmiPostProcessing>True</HmiPostProcessing>
     <Name>pxfh-hmi</Name>
-    <HmiCommunicationRouterPort>10105</HmiCommunicationRouterPort>
+    <HmiCommunicationRouterPort>10106</HmiCommunicationRouterPort>
     <HmiCommunicationServerAuthPort>13001</HmiCommunicationServerAuthPort>
     <HmiInitial>1.12.760.48</HmiInitial>
     <HmiRecent>1.12.760.48</HmiRecent>
@@ -153,7 +153,7 @@
     <Content Include="Contents\NewRecipeDialog.content">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Contents\PowerRecipe.content">
+    <Content Include="Contents\PowerRecipeManagement.content">
       <SubType>Content</SubType>
     </Content>
     <Content Include="Contents\RecipeBasicConfig.content">
@@ -230,6 +230,13 @@
     <Content Include="functions\CurrentUserName.js">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="functions\ListPowerSchedules.function.json">
+      <SubType>Content</SubType>
+      <DependentUpon>functions\ListPowerSchedules.js</DependentUpon>
+    </Content>
+    <Content Include="functions\ListPowerSchedules.js">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="functions\ListRecipes.function.json">
       <SubType>Content</SubType>
       <DependentUpon>functions\ListRecipes.js</DependentUpon>
@@ -242,6 +249,13 @@
       <DependentUpon>functions\PowerChartUpdate.js</DependentUpon>
     </Content>
     <Content Include="functions\PowerChartUpdate.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="functions\UpdatePowerSchedule.function.json">
+      <SubType>Content</SubType>
+      <DependentUpon>functions\UpdatePowerSchedule.js</DependentUpon>
+    </Content>
+    <Content Include="functions\UpdatePowerSchedule.js">
       <SubType>Content</SubType>
     </Content>
     <Content Include="Images\background_green_active.svg">
