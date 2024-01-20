@@ -32,6 +32,11 @@
     "delete": "删除",
     "update": "更新",
     "schedule": "计划",
-    "power-schedule-management": "电源计划管理"
+    "power-schedule-management": "电源计划管理",
+    "clear": "清空",
+    "camera-calibrate": "相机校准",
+    "move-speed": "移动速度",
+    "fast": "快速",
+    "slow": "慢速"
   }
 }

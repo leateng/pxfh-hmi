@@ -32,6 +32,11 @@
     "delete": "Delete",
     "update": "Update",
     "schedule": "Schedule",
-    "power-schedule-management": "Power Schedule Management"
+    "power-schedule-management": "Power Schedule Management",
+    "clear": "Clear",
+    "camera-calibrate": "Camera Calibrate",
+    "move-speed": "Move Speed",
+    "fast": "Fast",
+    "slow": "Slow"
   }
 }

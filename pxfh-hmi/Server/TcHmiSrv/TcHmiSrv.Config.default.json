@@ -28,6 +28,14 @@
     "DEFAULTTIMEZONE": "client",
     "DEFAULTUSERGROUP": "__SystemUsers",
     "DEFINITIONS": {
+        "PLC1.ARRAY_0..255_OF-INT": {
+            "items": {
+                "$ref": "tchmi:general#/definitions/INT"
+            },
+            "maxItems": 256,
+            "minItems": 256,
+            "type": "array"
+        },
         "PLC1.ARRAY_1..10_OF-UINT": {
             "items": {
                 "$ref": "tchmi:general#/definitions/UINT"
@@ -79,6 +87,484 @@
             "minItems": 3,
             "startOffset": 1,
             "type": "array"
+        },
+        "PLC1.ARRAY_1..3_OF-PowerSchedule": {
+            "items": {
+                "$ref": "#/definitions/PLC1.PowerSchedule"
+            },
+            "maxItems": 3,
+            "minItems": 3,
+            "startOffset": 1,
+            "type": "array"
+        },
+        "PLC1.ITcVnDisplayableImage": {
+            "attributes": {
+                "Category": "TcVnDisplayableImage",
+                "CppApi_NoSmartPointer": "",
+                "RelatedType": "{48da88b5-7b23-4bd4-921b-d39483f1d3ba}",
+                "docuFolder": "Interfaces\\Images"
+            },
+            "type": "object"
+        },
+        "PLC1.PowerSchedule": {
+            "properties": {
+                "heatRatio1": {
+                    "allOf": [
+                        {
+                            "$ref": "tchmi:general#/definitions/UINT"
+                        },
+                        {
+                            "comment": "ÈÈÁ¿±È",
+                            "propertyOrder": 22
+                        }
+                    ]
+                },
+                "heatRatio10": {
+                    "allOf": [
+                        {
+                            "$ref": "tchmi:general#/definitions/UINT"
+                        },
+                        {
+                            "propertyOrder": 31
+                        }
+                    ]
+                },
+                "heatRatio11": {
+                    "allOf": [
+                        {
+                            "$ref": "tchmi:general#/definitions/UINT"
+                        },
+                        {
+                            "propertyOrder": 32
+                        }
+                    ]
+                },
+                "heatRatio12": {
+                    "allOf": [
+                        {
+                            "$ref": "tchmi:general#/definitions/UINT"
+                        },
+                        {
+                            "propertyOrder": 33
+                        }
+                    ]
+                },
+                "heatRatio2": {
+                    "allOf": [
+                        {
+                            "$ref": "tchmi:general#/definitions/UINT"
+                        },
+                        {
+                            "propertyOrder": 23
+                        }
+                    ]
+                },
+                "heatRatio3": {
+                    "allOf": [
+                        {
+                            "$ref": "tchmi:general#/definitions/UINT"
+                        },
+                        {
+                            "propertyOrder": 24
+                        }
+                    ]
+                },
+                "heatRatio4": {
+                    "allOf": [
+                        {
+                            "$ref": "tchmi:general#/definitions/UINT"
+                        },
+                        {
+                            "propertyOrder": 25
+                        }
+                    ]
+                },
+                "heatRatio5": {
+                    "allOf": [
+                        {
+                            "$ref": "tchmi:general#/definitions/UINT"
+                        },
+                        {
+                            "propertyOrder": 26
+                        }
+                    ]
+                },
+                "heatRatio6": {
+                    "allOf": [
+                        {
+                            "$ref": "tchmi:general#/definitions/UINT"
+                        },
+                        {
+                            "propertyOrder": 27
+                        }
+                    ]
+                },
+                "heatRatio7": {
+                    "allOf": [
+                        {
+                            "$ref": "tchmi:general#/definitions/UINT"
+                        },
+                        {
+                            "propertyOrder": 28
+                        }
+                    ]
+                },
+                "heatRatio8": {
+                    "allOf": [
+                        {
+                            "$ref": "tchmi:general#/definitions/UINT"
+                        },
+                        {
+                            "propertyOrder": 29
+                        }
+                    ]
+                },
+                "heatRatio9": {
+                    "allOf": [
+                        {
+                            "$ref": "tchmi:general#/definitions/UINT"
+                        },
+                        {
+                            "propertyOrder": 30
+                        }
+                    ]
+                },
+                "powerAmpere1": {
+                    "allOf": [
+                        {
+                            "$ref": "tchmi:general#/definitions/UINT"
+                        },
+                        {
+                            "comment": "powerTimeHold : UINT;\r\n µçÁ÷",
+                            "propertyOrder": 8
+                        }
+                    ]
+                },
+                "powerAmpere2": {
+                    "allOf": [
+                        {
+                            "$ref": "tchmi:general#/definitions/UINT"
+                        },
+                        {
+                            "propertyOrder": 9
+                        }
+                    ]
+                },
+                "powerTimeCool": {
+                    "allOf": [
+                        {
+                            "$ref": "tchmi:general#/definitions/UINT"
+                        },
+                        {
+                            "propertyOrder": 4
+                        }
+                    ]
+                },
+                "powerTimeDown": {
+                    "allOf": [
+                        {
+                            "$ref": "tchmi:general#/definitions/UINT"
+                        },
+                        {
+                            "propertyOrder": 3
+                        }
+                    ]
+                },
+                "powerTimeDown2": {
+                    "allOf": [
+                        {
+                            "$ref": "tchmi:general#/definitions/UINT"
+                        },
+                        {
+                            "propertyOrder": 7
+                        }
+                    ]
+                },
+                "powerTimeUp": {
+                    "allOf": [
+                        {
+                            "$ref": "tchmi:general#/definitions/UINT"
+                        },
+                        {
+                            "comment": "Ê±¼ä",
+                            "propertyOrder": 1
+                        }
+                    ]
+                },
+                "powerTimeUp2": {
+                    "allOf": [
+                        {
+                            "$ref": "tchmi:general#/definitions/UINT"
+                        },
+                        {
+                            "propertyOrder": 5
+                        }
+                    ]
+                },
+                "powerTimeWeld": {
+                    "allOf": [
+                        {
+                            "$ref": "tchmi:general#/definitions/UINT"
+                        },
+                        {
+                            "propertyOrder": 2
+                        }
+                    ]
+                },
+                "powerTimeWeld2": {
+                    "allOf": [
+                        {
+                            "$ref": "tchmi:general#/definitions/UINT"
+                        },
+                        {
+                            "propertyOrder": 6
+                        }
+                    ]
+                },
+                "stageTarget1": {
+                    "allOf": [
+                        {
+                            "$ref": "tchmi:general#/definitions/UINT"
+                        },
+                        {
+                            "comment": "½×Ä¿±ê",
+                            "propertyOrder": 10
+                        }
+                    ]
+                },
+                "stageTarget10": {
+                    "allOf": [
+                        {
+                            "$ref": "tchmi:general#/definitions/UINT"
+                        },
+                        {
+                            "propertyOrder": 19
+                        }
+                    ]
+                },
+                "stageTarget11": {
+                    "allOf": [
+                        {
+                            "$ref": "tchmi:general#/definitions/UINT"
+                        },
+                        {
+                            "propertyOrder": 20
+                        }
+                    ]
+                },
+                "stageTarget12": {
+                    "allOf": [
+                        {
+                            "$ref": "tchmi:general#/definitions/UINT"
+                        },
+                        {
+                            "propertyOrder": 21
+                        }
+                    ]
+                },
+                "stageTarget2": {
+                    "allOf": [
+                        {
+                            "$ref": "tchmi:general#/definitions/UINT"
+                        },
+                        {
+                            "propertyOrder": 11
+                        }
+                    ]
+                },
+                "stageTarget3": {
+                    "allOf": [
+                        {
+                            "$ref": "tchmi:general#/definitions/UINT"
+                        },
+                        {
+                            "propertyOrder": 12
+                        }
+                    ]
+                },
+                "stageTarget4": {
+                    "allOf": [
+                        {
+                            "$ref": "tchmi:general#/definitions/UINT"
+                        },
+                        {
+                            "propertyOrder": 13
+                        }
+                    ]
+                },
+                "stageTarget5": {
+                    "allOf": [
+                        {
+                            "$ref": "tchmi:general#/definitions/UINT"
+                        },
+                        {
+                            "propertyOrder": 14
+                        }
+                    ]
+                },
+                "stageTarget6": {
+                    "allOf": [
+                        {
+                            "$ref": "tchmi:general#/definitions/UINT"
+                        },
+                        {
+                            "propertyOrder": 15
+                        }
+                    ]
+                },
+                "stageTarget7": {
+                    "allOf": [
+                        {
+                            "$ref": "tchmi:general#/definitions/UINT"
+                        },
+                        {
+                            "propertyOrder": 16
+                        }
+                    ]
+                },
+                "stageTarget8": {
+                    "allOf": [
+                        {
+                            "$ref": "tchmi:general#/definitions/UINT"
+                        },
+                        {
+                            "propertyOrder": 17
+                        }
+                    ]
+                },
+                "stageTarget9": {
+                    "allOf": [
+                        {
+                            "$ref": "tchmi:general#/definitions/UINT"
+                        },
+                        {
+                            "propertyOrder": 18
+                        }
+                    ]
+                },
+                "timeRatio1": {
+                    "allOf": [
+                        {
+                            "$ref": "tchmi:general#/definitions/UINT"
+                        },
+                        {
+                            "comment": "Ê±¼ä±È",
+                            "propertyOrder": 34
+                        }
+                    ]
+                },
+                "timeRatio10": {
+                    "allOf": [
+                        {
+                            "$ref": "tchmi:general#/definitions/UINT"
+                        },
+                        {
+                            "propertyOrder": 43
+                        }
+                    ]
+                },
+                "timeRatio11": {
+                    "allOf": [
+                        {
+                            "$ref": "tchmi:general#/definitions/UINT"
+                        },
+                        {
+                            "propertyOrder": 44
+                        }
+                    ]
+                },
+                "timeRatio12": {
+                    "allOf": [
+                        {
+                            "$ref": "tchmi:general#/definitions/UINT"
+                        },
+                        {
+                            "propertyOrder": 45
+                        }
+                    ]
+                },
+                "timeRatio2": {
+                    "allOf": [
+                        {
+                            "$ref": "tchmi:general#/definitions/UINT"
+                        },
+                        {
+                            "propertyOrder": 35
+                        }
+                    ]
+                },
+                "timeRatio3": {
+                    "allOf": [
+                        {
+                            "$ref": "tchmi:general#/definitions/UINT"
+                        },
+                        {
+                            "propertyOrder": 36
+                        }
+                    ]
+                },
+                "timeRatio4": {
+                    "allOf": [
+                        {
+                            "$ref": "tchmi:general#/definitions/UINT"
+                        },
+                        {
+                            "propertyOrder": 37
+                        }
+                    ]
+                },
+                "timeRatio5": {
+                    "allOf": [
+                        {
+                            "$ref": "tchmi:general#/definitions/UINT"
+                        },
+                        {
+                            "propertyOrder": 38
+                        }
+                    ]
+                },
+                "timeRatio6": {
+                    "allOf": [
+                        {
+                            "$ref": "tchmi:general#/definitions/UINT"
+                        },
+                        {
+                            "propertyOrder": 39
+                        }
+                    ]
+                },
+                "timeRatio7": {
+                    "allOf": [
+                        {
+                            "$ref": "tchmi:general#/definitions/UINT"
+                        },
+                        {
+                            "propertyOrder": 40
+                        }
+                    ]
+                },
+                "timeRatio8": {
+                    "allOf": [
+                        {
+                            "$ref": "tchmi:general#/definitions/UINT"
+                        },
+                        {
+                            "propertyOrder": 41
+                        }
+                    ]
+                },
+                "timeRatio9": {
+                    "allOf": [
+                        {
+                            "$ref": "tchmi:general#/definitions/UINT"
+                        },
+                        {
+                            "propertyOrder": 42
+                        }
+                    ]
+                }
+            },
+            "type": "object"
         }
     },
     "DEFLATECOMPRESSIONLEVEL": 5,
@@ -2575,6 +3061,23 @@
             },
             "USEMAPPING": true
         },
+        "PLC1.GVL_HMI.CellMatrix": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_HMI::CellMatrix",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "comment": "aElementOnShelf :  ARRAY [0..255] OF INT\r\n\t\t:=[ 1, 1, 1, 1, 1, 1, 1, 1, 1,\r\n\t\t\t1, 1, 1, 1, 1, 1, 1, 0, 0,\r\n\t\t\t0, 0, 0, 0, 0, 0, 0, 0, 0,\r\n\t\t\t0, 0, 0, 0, 0, 0, 0, 0, 0,\r\n\t\t\t0, 0, 0, 0, 0, 0, 0, 0, 0,\r\n\t\t\t0, 0, 0, 0, 0, 0, 0, 0, 0]; \r\n\taElementStatus  :  ARRAY [0..255] OF INT;"
+                    },
+                    {
+                        "$ref": "tchmi:server#/definitions/PLC1.ARRAY_0..255_OF-INT"
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
         "PLC1.GVL_HMI.bHMIHome": {
             "ACCESS": 3,
             "DOMAIN": "ADS",
@@ -2589,6 +3092,436 @@
                         "comment": "HMI->PLC"
                     }
                 ]
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL_HMI.bMoveTest": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_HMI::bMoveTest",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL_HMI.bStackBlow": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_HMI::bStackBlow",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL_HMI.bStart": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_HMI::bStart",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL_HMI.bVacBlow": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_HMI::bVacBlow",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL_HMI.bVacInhale": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_HMI::bVacInhale",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL_HMI.bX1JogBackward": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_HMI::bX1JogBackward",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL_HMI.bX1JogFastBackward": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_HMI::bX1JogFastBackward",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL_HMI.bX1JogFastForward": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_HMI::bX1JogFastForward",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL_HMI.bX1JogForward": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_HMI::bX1JogForward",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL_HMI.bX1MoveAbs": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_HMI::bX1MoveAbs",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL_HMI.bX2JogBackward": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_HMI::bX2JogBackward",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL_HMI.bX2JogFastBackward": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_HMI::bX2JogFastBackward",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL_HMI.bX2JogFastForward": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_HMI::bX2JogFastForward",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL_HMI.bX2JogForward": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_HMI::bX2JogForward",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL_HMI.bX2MoveAbs": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_HMI::bX2MoveAbs",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL_HMI.bYJogBackward": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_HMI::bYJogBackward",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL_HMI.bYJogFastBackward": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_HMI::bYJogFastBackward",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL_HMI.bYJogFastForward": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_HMI::bYJogFastForward",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL_HMI.bYJogForward": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_HMI::bYJogForward",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL_HMI.bYMoveAbs": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_HMI::bYMoveAbs",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL_HMI.bZ1JogBackward": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_HMI::bZ1JogBackward",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL_HMI.bZ1JogFastBackward": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_HMI::bZ1JogFastBackward",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL_HMI.bZ1JogFastForward": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_HMI::bZ1JogFastForward",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL_HMI.bZ1JogForward": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_HMI::bZ1JogForward",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL_HMI.bZ1MoveAbs": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_HMI::bZ1MoveAbs",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL_HMI.lrCrtPosX1": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_HMI::lrCrtPosX1",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/LREAL"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL_HMI.lrCrtPosX2": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_HMI::lrCrtPosX2",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/LREAL"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL_HMI.lrCrtPosY": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_HMI::lrCrtPosY",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/LREAL"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL_HMI.lrCrtPosZ1": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_HMI::lrCrtPosZ1",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/LREAL"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL_HMI.lrDistanceColumn": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_HMI::lrDistanceColumn",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/LREAL"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL_HMI.lrDistanceRow": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_HMI::lrDistanceRow",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/LREAL"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL_HMI.lrLength": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_HMI::lrLength",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/LREAL"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL_HMI.lrWidth": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_HMI::lrWidth",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/LREAL"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL_HMI.lrX1MovePosition": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_HMI::lrX1MovePosition",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/LREAL"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL_HMI.lrX1MoveVelocity": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_HMI::lrX1MoveVelocity",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/LREAL"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL_HMI.lrX2MovePosition": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_HMI::lrX2MovePosition",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/LREAL"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL_HMI.lrX2MoveVelocity": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_HMI::lrX2MoveVelocity",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/LREAL"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL_HMI.lrYMovePosition": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_HMI::lrYMovePosition",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/LREAL"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL_HMI.lrYMoveVelocity": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_HMI::lrYMoveVelocity",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/LREAL"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL_HMI.lrZ1MovePosition": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_HMI::lrZ1MovePosition",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/LREAL"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL_HMI.lrZ1MoveVelocity": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_HMI::lrZ1MoveVelocity",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/LREAL"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL_HMI.nMaxColumn": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_HMI::nMaxColumn",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/INT"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL_HMI.nMaxRow": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_HMI::nMaxRow",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/INT"
             },
             "USEMAPPING": true
         },
@@ -2682,6 +3615,33 @@
             },
             "USEMAPPING": true
         },
+        "PLC1.MAIN.fbSelect.ipImageInDisp": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::MAIN::fbSelect::ipImageInDisp",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:server#/definitions/PLC1.ITcVnDisplayableImage"
+                    },
+                    {
+                        "propertyOrder": 26
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.MAIN.fbSelect.ipImageInDisp.png": {
+            "ACCESS": 3,
+            "DOMAIN": "TcHmiVision",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::MAIN::fbSelect::ipImageInDisp::png",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/BINARY"
+            },
+            "USEMAPPING": true
+        },
         "PLC1.MAIN.ipImageInDisplay.bmp": {
             "ACCESS": 3,
             "DOMAIN": "TcHmiVision",
@@ -2708,7 +3668,7 @@
             "DYNAMIC": true,
             "MAPPING": "PLC1::MAIN::powerSchedules",
             "SCHEMA": {
-                "$ref": "tchmi:server#/definitions/PLC1.ARRAY_1..3_1..10_OF-UINT"
+                "$ref": "tchmi:server#/definitions/PLC1.ARRAY_1..3_OF-PowerSchedule"
             },
             "USEMAPPING": true
         },
@@ -4003,7 +4963,51 @@
                 "LocalizeText": 3,
                 "Login": 3,
                 "Logout": 3,
+                "PLC1.GVL_HMI.CellMatrix": 3,
                 "PLC1.GVL_HMI.bHMIHome": 3,
+                "PLC1.GVL_HMI.bMoveTest": 3,
+                "PLC1.GVL_HMI.bStackBlow": 3,
+                "PLC1.GVL_HMI.bStart": 3,
+                "PLC1.GVL_HMI.bVacBlow": 3,
+                "PLC1.GVL_HMI.bVacInhale": 3,
+                "PLC1.GVL_HMI.bX1JogBackward": 3,
+                "PLC1.GVL_HMI.bX1JogFastBackward": 3,
+                "PLC1.GVL_HMI.bX1JogFastForward": 3,
+                "PLC1.GVL_HMI.bX1JogForward": 3,
+                "PLC1.GVL_HMI.bX1MoveAbs": 3,
+                "PLC1.GVL_HMI.bX2JogBackward": 3,
+                "PLC1.GVL_HMI.bX2JogFastBackward": 3,
+                "PLC1.GVL_HMI.bX2JogFastForward": 3,
+                "PLC1.GVL_HMI.bX2JogForward": 3,
+                "PLC1.GVL_HMI.bX2MoveAbs": 3,
+                "PLC1.GVL_HMI.bYJogBackward": 3,
+                "PLC1.GVL_HMI.bYJogFastBackward": 3,
+                "PLC1.GVL_HMI.bYJogFastForward": 3,
+                "PLC1.GVL_HMI.bYJogForward": 3,
+                "PLC1.GVL_HMI.bYMoveAbs": 3,
+                "PLC1.GVL_HMI.bZ1JogBackward": 3,
+                "PLC1.GVL_HMI.bZ1JogFastBackward": 3,
+                "PLC1.GVL_HMI.bZ1JogFastForward": 3,
+                "PLC1.GVL_HMI.bZ1JogForward": 3,
+                "PLC1.GVL_HMI.bZ1MoveAbs": 3,
+                "PLC1.GVL_HMI.lrCrtPosX1": 3,
+                "PLC1.GVL_HMI.lrCrtPosX2": 3,
+                "PLC1.GVL_HMI.lrCrtPosY": 3,
+                "PLC1.GVL_HMI.lrCrtPosZ1": 3,
+                "PLC1.GVL_HMI.lrDistanceColumn": 3,
+                "PLC1.GVL_HMI.lrDistanceRow": 3,
+                "PLC1.GVL_HMI.lrLength": 3,
+                "PLC1.GVL_HMI.lrWidth": 3,
+                "PLC1.GVL_HMI.lrX1MovePosition": 3,
+                "PLC1.GVL_HMI.lrX1MoveVelocity": 3,
+                "PLC1.GVL_HMI.lrX2MovePosition": 3,
+                "PLC1.GVL_HMI.lrX2MoveVelocity": 3,
+                "PLC1.GVL_HMI.lrYMovePosition": 3,
+                "PLC1.GVL_HMI.lrYMoveVelocity": 3,
+                "PLC1.GVL_HMI.lrZ1MovePosition": 3,
+                "PLC1.GVL_HMI.lrZ1MoveVelocity": 3,
+                "PLC1.GVL_HMI.nMaxColumn": 3,
+                "PLC1.GVL_HMI.nMaxRow": 3,
                 "PLC1.MAIN.CellMatrix": 3,
                 "PLC1.MAIN.MatrixWandH": 3,
                 "PLC1.MAIN.fbAdjust.fbFindContour.ipImageResDisp.png": 3,
@@ -4013,6 +5017,8 @@
                 "PLC1.MAIN.fbC2Calibration.ipImageResDisp.png": 3,
                 "PLC1.MAIN.fbPut.fbFindContour.ipImageThresholdDisp.png": 3,
                 "PLC1.MAIN.fbPut.ipImageResDisp.png": 3,
+                "PLC1.MAIN.fbSelect.ipImageInDisp": 3,
+                "PLC1.MAIN.fbSelect.ipImageInDisp.png": 3,
                 "PLC1.MAIN.ipImageInDisplay.bmp": 3,
                 "PLC1.MAIN.ipImageInDisplay.jpeg": 3,
                 "PLC1.MAIN.ipImageInDisplay.stream": 3,

@@ -1,104 +1,86 @@
 {
     "recipeList": {
-        "1": {
-            "recipeTypeName": "MainRType",
-            "values": {}
-        },
-        "111": {
-            "recipeTypeName": "PowerRType",
-            "values": {
-                "powerTimeCool": 10,
-                "powerTimeDown": 10,
-                "powerTimeDown2": 10,
-                "powerTimeHold": 20,
-                "powerTimeUp": 10,
-                "powerTimeUp2": 10,
-                "powerTimeWeld": 10,
-                "powerTimeWeld2": 10,
-                "powerVoltage1": 50,
-                "powerVoltage2": 80
-            }
-        },
         "1111": {
-            "recipeTypeName": "PowerRType",
+            "recipeTypeName": "MainRType",
             "values": {
-                "powerTimeCool": 10,
-                "powerTimeDown": 10,
-                "powerTimeDown2": 10,
-                "powerTimeHold": 10,
-                "powerTimeUp": 10,
-                "powerTimeUp2": 10,
-                "powerTimeWeld": 10,
-                "powerTimeWeld2": 10,
-                "powerVoltage1": 50,
-                "powerVoltage2": 100
+                "lrDistanceColumn": 8.0,
+                "lrDistanceRow": 8.0,
+                "lrLength": 17.5,
+                "lrWidth": 13.4,
+                "nMaxColumn": 2,
+                "nMaxRow": 2
             }
         },
-        "2": {
+        "New recipe": {
             "recipeTypeName": "MainRType",
-            "values": {}
-        },
-        "2222": {
-            "recipeTypeName": "PowerRType",
             "values": {
-                "powerTimeCool": 10,
-                "powerTimeDown": 10,
-                "powerTimeDown2": 10,
-                "powerTimeHold": 30,
-                "powerTimeUp": 10,
-                "powerTimeUp2": 10,
-                "powerTimeWeld": 10,
-                "powerTimeWeld2": 10,
-                "powerVoltage1": 50,
-                "powerVoltage2": 100
+                "lrDistanceColumn": 0.0,
+                "lrDistanceRow": 0.0,
+                "lrLength": 0.0,
+                "lrWidth": 0.0,
+                "nMaxColumn": 4,
+                "nMaxRow": 4
             }
-        },
-        "23": {
-            "recipeTypeName": "MainRType",
-            "values": {}
-        },
-        "333": {
-            "recipeTypeName": "PowerRType",
-            "values": {
-                "powerTimeCool": 10,
-                "powerTimeDown": 10,
-                "powerTimeDown2": 10,
-                "powerTimeHold": 20,
-                "powerTimeUp": 10,
-                "powerTimeUp2": 10,
-                "powerTimeWeld": 10,
-                "powerTimeWeld2": 10,
-                "powerVoltage1": 20,
-                "powerVoltage2": 100
-            }
-        },
-        "4": {
-            "recipeTypeName": "MainRType",
-            "values": {}
-        },
-        "444": {
-            "recipeTypeName": "PowerRType",
-            "values": {
-                "powerTimeCool": 10,
-                "powerTimeDown": 10,
-                "powerTimeDown2": 10,
-                "powerTimeHold": 10,
-                "powerTimeUp": 10,
-                "powerTimeUp2": 10,
-                "powerTimeWeld": 10,
-                "powerTimeWeld2": 10,
-                "powerVoltage1": 30,
-                "powerVoltage2": 80
-            }
-        },
-        "63245": {
-            "recipeTypeName": "MainRType",
-            "values": {}
         }
     },
     "recipeTypeList": {
         "MainRType": {
-            "members": {},
+            "members": {
+                "lrDistanceColumn": {
+                    "defaultValue": 0.0,
+                    "enabled": true,
+                    "group": "",
+                    "order": 0,
+                    "schema": {},
+                    "symbol": "PLC1.GVL_HMI.lrDistanceColumn",
+                    "unit": ""
+                },
+                "lrDistanceRow": {
+                    "defaultValue": 0.0,
+                    "enabled": true,
+                    "group": "",
+                    "order": 1,
+                    "schema": {},
+                    "symbol": "PLC1.GVL_HMI.lrDistanceRow",
+                    "unit": ""
+                },
+                "lrLength": {
+                    "defaultValue": 0.0,
+                    "enabled": true,
+                    "group": "",
+                    "order": 2,
+                    "schema": {},
+                    "symbol": "PLC1.GVL_HMI.lrLength",
+                    "unit": ""
+                },
+                "lrWidth": {
+                    "defaultValue": 0.0,
+                    "enabled": true,
+                    "group": "",
+                    "order": 3,
+                    "schema": {},
+                    "symbol": "PLC1.GVL_HMI.lrWidth",
+                    "unit": ""
+                },
+                "nMaxColumn": {
+                    "defaultValue": 0,
+                    "enabled": true,
+                    "group": "",
+                    "order": 4,
+                    "schema": {},
+                    "symbol": "PLC1.GVL_HMI.nMaxColumn",
+                    "unit": ""
+                },
+                "nMaxRow": {
+                    "defaultValue": 0,
+                    "enabled": true,
+                    "group": "",
+                    "order": 5,
+                    "schema": {},
+                    "symbol": "PLC1.GVL_HMI.nMaxRow",
+                    "unit": ""
+                }
+            },
             "options": {
                 "enabled": "None"
             },

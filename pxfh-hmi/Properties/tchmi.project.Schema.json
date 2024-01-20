@@ -56,6 +56,166 @@
       "frameworkUserControlConfig": "Controls\\AnalogDiscs.usercontrol.json",
       "type": "object",
       "id": "tchmi:project#/definitions/AnalogDiscs"
+    },
+    "PLC1.PowerSchedule": {
+      "properties": {
+        "heatRatio1": {
+          "type": "number"
+        },
+        "heatRatio10": {
+          "type": "number"
+        },
+        "heatRatio11": {
+          "type": "number"
+        },
+        "heatRatio12": {
+          "type": "number"
+        },
+        "heatRatio2": {
+          "type": "number"
+        },
+        "heatRatio3": {
+          "type": "number"
+        },
+        "heatRatio4": {
+          "type": "number"
+        },
+        "heatRatio5": {
+          "type": "number"
+        },
+        "heatRatio6": {
+          "type": "number"
+        },
+        "heatRatio7": {
+          "type": "number"
+        },
+        "heatRatio8": {
+          "type": "number"
+        },
+        "heatRatio9": {
+          "type": "number"
+        },
+        "powerAmpere1": {
+          "type": "number"
+        },
+        "powerAmpere2": {
+          "type": "number"
+        },
+        "powerTimeCool": {
+          "type": "number"
+        },
+        "powerTimeDown": {
+          "type": "number"
+        },
+        "powerTimeDown2": {
+          "type": "number"
+        },
+        "powerTimeUp": {
+          "type": "number"
+        },
+        "powerTimeUp2": {
+          "type": "number"
+        },
+        "powerTimeWeld": {
+          "type": "number"
+        },
+        "powerTimeWeld2": {
+          "type": "number"
+        },
+        "stageTarget1": {
+          "type": "number"
+        },
+        "stageTarget10": {
+          "type": "number"
+        },
+        "stageTarget11": {
+          "type": "number"
+        },
+        "stageTarget12": {
+          "type": "number"
+        },
+        "stageTarget2": {
+          "type": "number"
+        },
+        "stageTarget3": {
+          "type": "number"
+        },
+        "stageTarget4": {
+          "type": "number"
+        },
+        "stageTarget5": {
+          "type": "number"
+        },
+        "stageTarget6": {
+          "type": "number"
+        },
+        "stageTarget7": {
+          "type": "number"
+        },
+        "stageTarget8": {
+          "type": "number"
+        },
+        "stageTarget9": {
+          "type": "number"
+        },
+        "timeRatio1": {
+          "type": "number"
+        },
+        "timeRatio10": {
+          "type": "number"
+        },
+        "timeRatio11": {
+          "type": "number"
+        },
+        "timeRatio12": {
+          "type": "number"
+        },
+        "timeRatio2": {
+          "type": "number"
+        },
+        "timeRatio3": {
+          "type": "number"
+        },
+        "timeRatio4": {
+          "type": "number"
+        },
+        "timeRatio5": {
+          "type": "number"
+        },
+        "timeRatio6": {
+          "type": "number"
+        },
+        "timeRatio7": {
+          "type": "number"
+        },
+        "timeRatio8": {
+          "type": "number"
+        },
+        "timeRatio9": {
+          "type": "number"
+        },
+        "automatic": {
+          "type": "boolean"
+        }
+      },
+      "type": "object",
+      "id": "tchmi:project#/definitions/PLC1.PowerSchedule"
+    },
+    "coordinates": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "Controls\\coordinates.usercontrol.json",
+      "type": "object",
+      "id": "tchmi:project#/definitions/coordinates"
+    },
+    "AbsMove": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "Controls\\AbsMove.usercontrol.json",
+      "type": "object",
+      "id": "tchmi:project#/definitions/AbsMove"
     }
   }
 }

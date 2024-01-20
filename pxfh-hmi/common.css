@@ -37,15 +37,55 @@
     background-image: url(Images/background_green_active.svg);
 }
 
-#TcHmiTabNavigation_MainRecipe {
-    height: calc(100% - 140px);
-    width: calc(100% - 60px);
+tchmi-content-tabs tchmi-tab-links {
+    align-items: flex-start;
+    justify-content: flex-start;
 }
 
-#TcHmiTabNavigation_MainRecipe tchmi-content-tabs tchmi-tab-links tchmi-tab-link {
+tchmi-content-tabs tchmi-tab-links tchmi-tab-link {
+    width: 200px;
+}
+
+tchmi-content-tabs tchmi-tab-links > tchmi-tab-link:not([disabled])[active] {
+    border-bottom: 2px solid;
+    border-bottom-color: #4089cb;
+}
+
+/* keep camera image ratio */
+img.tchmi-image-template-content {
+    object-fit: contain;
+}
+
+/* vertical tab*/
+.tchmi-class-myVerticalTab {
+    width: calc(100% - 60px);
+    /*height: calc(100% - 145px);*/
+}
+
+.tchmi-class-myTabHeight1 {
+    height: calc(100% - 145px);
+}
+
+.tchmi-class-myTabHeight2 {
+    height: calc(100% - 95px);
+}
+
+.tchmi-class-myVerticalTab tchmi-content-tabs tchmi-tab-links tchmi-tab-link {
     height: 50px;
 }
 
-#TcHmiTabNavigation_MainRecipe tchmi-content-tabs tchmi-tab-links tchmi-tab-link[active] {
-    border-left: 2px solid #1960a3;
+.tchmi-class-myVerticalTab tchmi-content-tabs tchmi-tab-links tchmi-tab-link[active] {
+    border-left: 2px solid #1960a3 !important;
 }
+
+/*main recipe tab
+#TcHmiTabNavigation_MainRecipe {
+    height: calc(100% - 145px);
+    width: calc(100% - 60px);
+}*/
+/*power recipe tab
+#TcHmiTabNavigation_PowerRecipe {
+    height: calc(100% - 155px);
+    width: calc(100% - 60px);
+}
+*/

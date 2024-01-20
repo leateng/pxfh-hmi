@@ -42,7 +42,7 @@
         "objectType": "JavaScript",
         "active": true,
         "sourceLines": [
-          "const control = TcHmi.Symbol.readEx(\"%ctrl%TcHmiCombobox_RecipeList%/ctrl%\");",
+          "const control = TcHmi.Symbol.readEx(\"%ctrl%TcHmiCombobox_MainRecipeList%/ctrl%\");",
           "",
           "// console.log(control.getSelectedText());",
           "// console.log(control.getSelectedId());",
@@ -65,7 +65,7 @@
         "fnParams": [
           {
             "objectType": "FunctionExpression",
-            "functionExpression": "%ctrl%TcHmiCombobox_RecipeList::SelectedText%/ctrl%"
+            "functionExpression": "%ctrl%TcHmiCombobox_MainRecipeList::SelectedText%/ctrl%"
           }
         ],
         "asyncWait": true
@@ -166,7 +166,7 @@
         "fnParams": [
           {
             "objectType": "FunctionExpression",
-            "functionExpression": "%ctrl%TcHmiCombobox_RecipeList::SelectedText%/ctrl%"
+            "functionExpression": "%ctrl%TcHmiCombobox_MainRecipeList::SelectedText%/ctrl%"
           }
         ],
         "asyncWait": true
@@ -278,5 +278,16 @@
 
 
 
+
+
+
+
+
+<script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
+[
+  "myTabHeight1",
+  "myVerticalTab"
+]
+</script>
 </div>
 </div>

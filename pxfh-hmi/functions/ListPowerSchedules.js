@@ -7,7 +7,7 @@
         var pxfh_hmi;
         (function (pxfh_hmi) {
             function ListPowerSchedules(ctx, schedules) {
-                console.log("==== init power schedules");
+                console.log("==== ListPowerSchedules.js init power schedules =====");
                 if (!schedules) {
                     // Inform the system that we are done and have a dummy result
                     ctx.success({});

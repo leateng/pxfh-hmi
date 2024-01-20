@@ -27,11 +27,12 @@
     <HmiViewportUserScaleable>Default</HmiViewportUserScaleable>
     <HmiPostProcessing>True</HmiPostProcessing>
     <Name>pxfh-hmi</Name>
-    <HmiCommunicationRouterPort>10106</HmiCommunicationRouterPort>
+    <HmiCommunicationRouterPort>10108</HmiCommunicationRouterPort>
     <HmiCommunicationServerAuthPort>13001</HmiCommunicationServerAuthPort>
     <HmiInitial>1.12.760.48</HmiInitial>
     <HmiRecent>1.12.760.48</HmiRecent>
     <HmiServerNodeAdvancedView>False</HmiServerNodeAdvancedView>
+    <HmiServerNodeAdvancedSettingsView>True</HmiServerNodeAdvancedSettingsView>
   </PropertyGroup>
   <PropertyGroup>
     <TwinCATHmi_Tasks>$(TcHmiDirectory)\MSBuild\Beckhoff.TwinCAT.HMI.tasks</TwinCATHmi_Tasks>
@@ -141,6 +142,9 @@
     <Content Include="Contents\BottomNav.content">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="Contents\JogCamera1.content">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="Contents\Camera1.content">
       <SubType>Content</SubType>
     </Content>
@@ -151,6 +155,12 @@
       <SubType>Content</SubType>
     </Content>
     <Content Include="Contents\NewRecipeDialog.content">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Contents\PowerRecipeStep.content">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Contents\PowerRecipeBasic.content">
       <SubType>Content</SubType>
     </Content>
     <Content Include="Contents\PowerRecipeManagement.content">
@@ -174,6 +184,13 @@
     <Content Include="Contents\Workspace.content">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="Controls\AbsMove.usercontrol">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Controls\AbsMove.usercontrol.json">
+      <SubType>Content</SubType>
+      <DependentUpon>Controls\AbsMove.usercontrol</DependentUpon>
+    </Content>
     <Content Include="Controls\AnalogDiscs.usercontrol">
       <SubType>Content</SubType>
     </Content>
@@ -187,6 +204,13 @@
     <Content Include="Controls\camera.usercontrol.json">
       <SubType>Content</SubType>
       <DependentUpon>Controls\camera.usercontrol</DependentUpon>
+    </Content>
+    <Content Include="Controls\coordinates.usercontrol">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Controls\coordinates.usercontrol.json">
+      <SubType>Content</SubType>
+      <DependentUpon>Controls\coordinates.usercontrol</DependentUpon>
     </Content>
     <Content Include="Controls\DirectionKeyPad.usercontrol">
       <SubType>Content</SubType>

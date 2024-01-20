@@ -6,11 +6,11 @@
     (function (/** @type {globalThis.TcHmi.Functions} */ Functions) {
         var pxfh_hmi;
         (function (pxfh_hmi) {
-            function UpdatePowerSchedule(scheduleIndex, value, allSchedules) {
-                const symbol = `%s%PLC1.MAIN.powerSchedules%/s%`
+            function UpdatePowerSchedule(scheduleIndex, value) {
                 const index = scheduleIndex - 1;
-                allSchedules[index] = value;
-                TcHmi.Symbol.writeEx(symbol, JSON.stringify(allSchedules), function (data) {
+                const symbol = `%s%PLC1.MAIN.powerSchedules[${index}]%/s%`
+                console.log(value);
+                TcHmi.Symbol.writeEx(symbol, JSON.stringify(value), function (data) {
                     if (data.error === TcHmi.Errors.NONE) {
                         console.log(`update power schedule ${scheduleIndex} success`)
                     } else {

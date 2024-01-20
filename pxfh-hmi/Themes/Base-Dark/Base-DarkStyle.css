@@ -361,31 +361,11 @@ div[data-tchmi-type="TcHmi.Controls.System.TcHmiView"] {
     height: calc(100% - 60px);
 }
 
-/* keep camera image ratio */
-img.tchmi-image-template-content {
-    object-fit: contain;
-}
-
-tchmi-content-tabs tchmi-tab-links {
-    align-items: flex-start;
-    justify-content: flex-start;
-}
-
-    tchmi-content-tabs tchmi-tab-links tchmi-tab-link {
-        width: 200px;
-    }
-
-    tchmi-content-tabs tchmi-tab-links > tchmi-tab-link:not([disabled])[active] {
-        border-bottom: 2px solid;
-        border-bottom-color: #4089cb;
-    }
-
-tchmi-content-tabs tchmi-tab-contents {
-    background-image: url(Images/Background.png);
-}
-
 #BottomNav {
     border-top: 1px solid rgb(53, 51, 61);
     background-color: rgba(0, 0, 0, 0.3);
 }
- 
+
+tchmi-content-tabs tchmi-tab-contents {
+    background-image: url(Images/Background.png);
+}

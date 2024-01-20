@@ -27,21 +27,9 @@
       {
         "name": "value",
         "displayName": "scheduleValue",
-        "type": "tchmi:general#/definitions/Array",
+        "type": "tchmi:project#/definitions/PLC1.PowerSchedule",
         "description": "",
-        "defaultValue": "",
-        "required": true,
-        "bindable": true,
-        "restParameter": false,
-        "asReference": false,
-        "allowControlAttributeBindingOptions": false
-      },
-      {
-        "name": "allSchedules",
-        "displayName": "allSchedules",
-        "type": "tchmi:general#/definitions/Array",
-        "description": "",
-        "defaultValue": "",
+        "defaultValue": {},
         "required": true,
         "bindable": true,
         "restParameter": false,
