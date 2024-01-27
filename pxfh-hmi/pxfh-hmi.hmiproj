@@ -166,6 +166,12 @@
     <Content Include="Contents\PowerRecipeManagement.content">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="Contents\RecipeOtherConfig.content">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Contents\RecipeWeldingConfig.content">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="Contents\RecipeBasicConfig.content">
       <SubType>Content</SubType>
     </Content>
@@ -197,6 +203,13 @@
     <Content Include="Controls\AnalogDiscs.usercontrol.json">
       <SubType>Content</SubType>
       <DependentUpon>Controls\AnalogDiscs.usercontrol</DependentUpon>
+    </Content>
+    <Content Include="Controls\BondPad.usercontrol">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Controls\BondPad.usercontrol.json">
+      <SubType>Content</SubType>
+      <DependentUpon>Controls\BondPad.usercontrol</DependentUpon>
     </Content>
     <Content Include="Controls\camera.usercontrol">
       <SubType>Content</SubType>

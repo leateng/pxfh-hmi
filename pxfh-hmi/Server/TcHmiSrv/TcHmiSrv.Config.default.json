@@ -3465,6 +3465,16 @@
             },
             "USEMAPPING": true
         },
+        "PLC1.GVL_HMI.lrXOverrun": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_HMI::lrXOverrun",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/LREAL"
+            },
+            "USEMAPPING": true
+        },
         "PLC1.GVL_HMI.lrYMovePosition": {
             "ACCESS": 3,
             "DOMAIN": "ADS",
@@ -3480,6 +3490,16 @@
             "DOMAIN": "ADS",
             "DYNAMIC": true,
             "MAPPING": "PLC1::GVL_HMI::lrYMoveVelocity",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/LREAL"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL_HMI.lrYOverrun": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_HMI::lrYOverrun",
             "SCHEMA": {
                 "$ref": "tchmi:general#/definitions/LREAL"
             },
@@ -3505,6 +3525,16 @@
             },
             "USEMAPPING": true
         },
+        "PLC1.GVL_HMI.nElementWeldMode": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_HMI::nElementWeldMode",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/INT"
+            },
+            "USEMAPPING": true
+        },
         "PLC1.GVL_HMI.nMaxColumn": {
             "ACCESS": 3,
             "DOMAIN": "ADS",
@@ -3520,6 +3550,16 @@
             "DOMAIN": "ADS",
             "DYNAMIC": true,
             "MAPPING": "PLC1::GVL_HMI::nMaxRow",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/INT"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL_HMI.nPlateWeldMode": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_HMI::nPlateWeldMode",
             "SCHEMA": {
                 "$ref": "tchmi:general#/definitions/INT"
             },
@@ -5002,12 +5042,16 @@
                 "PLC1.GVL_HMI.lrX1MoveVelocity": 3,
                 "PLC1.GVL_HMI.lrX2MovePosition": 3,
                 "PLC1.GVL_HMI.lrX2MoveVelocity": 3,
+                "PLC1.GVL_HMI.lrXOverrun": 3,
                 "PLC1.GVL_HMI.lrYMovePosition": 3,
                 "PLC1.GVL_HMI.lrYMoveVelocity": 3,
+                "PLC1.GVL_HMI.lrYOverrun": 3,
                 "PLC1.GVL_HMI.lrZ1MovePosition": 3,
                 "PLC1.GVL_HMI.lrZ1MoveVelocity": 3,
+                "PLC1.GVL_HMI.nElementWeldMode": 3,
                 "PLC1.GVL_HMI.nMaxColumn": 3,
                 "PLC1.GVL_HMI.nMaxRow": 3,
+                "PLC1.GVL_HMI.nPlateWeldMode": 3,
                 "PLC1.MAIN.CellMatrix": 3,
                 "PLC1.MAIN.MatrixWandH": 3,
                 "PLC1.MAIN.fbAdjust.fbFindContour.ipImageResDisp.png": 3,

@@ -37,6 +37,15 @@
     "camera-calibrate": "相机校准",
     "move-speed": "移动速度",
     "fast": "快速",
-    "slow": "慢速"
+    "slow": "慢速",
+    "welding": "焊接",
+    "other": "其他",
+    "x-axis": "X边",
+    "y-axis": "Y边",
+    "power-schedule": "电源方案",
+    "sealing-weld": "封焊",
+    "spot-welding": "点焊",
+    "overrun": "超程",
+    "save": "保存"
   }
 }

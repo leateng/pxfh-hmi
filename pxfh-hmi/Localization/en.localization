@@ -37,6 +37,15 @@
     "camera-calibrate": "Camera Calibrate",
     "move-speed": "Move Speed",
     "fast": "Fast",
-    "slow": "Slow"
+    "slow": "Slow",
+    "welding": "Welding ",
+    "other": "Other",
+    "x-axis": "X-Axis",
+    "y-axis": "Y-Axis",
+    "power-schedule": "Power Schedule",
+    "sealing-weld": "Sealing Weld",
+    "spot-welding": "Spot Welding",
+    "overrun": "Overrun",
+    "save": "Save"
   }
 }

@@ -1,0 +1,84 @@
+<div id="BondPad" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControl" data-tchmi-top="0" data-tchmi-left="0" data-tchmi-width="100" data-tchmi-height="100" data-tchmi-width-unit="%" data-tchmi-height-unit="%" data-tchmi-creator-viewport-width="500" data-tchmi-creator-viewport-height="500">
+
+
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "%s%PLC1.GVL_HMI.nMaxRow%/s%",
+    "actions": [
+      {
+        "objectType": "JavaScript",
+        "active": true,
+        "sourceLines": [
+          "TcHmi.Symbol.readEx2(\"%s%PLC1.GVL_HMI.nMaxColumn%/s%\", function(colData){",
+          "  TcHmi.Symbol.readEx2(\"%s%PLC1.GVL_HMI.nMaxRow%/s%\", function(rowData){",
+          "    const rowSize = rowData.value;",
+          "    const colSize = colData.value;",
+          "",
+          "    const control = TcHmi.Symbol.readEx(\"%ctrl%BondPad%/ctrl%\");",
+          "    const container = control.getElement(); //获取dom",
+          "    const $container = jQuery(container).children().first();",
+          "    if(! $container.hasClass(\"analog-discs-grid-container\")){",
+          "      $container.addClass(\"analog-discs-grid-container\");",
+          "    }",
+          "    $container.css(\"--row\", rowSize);",
+          "    $container.css(\"--col\", colSize);",
+          "    $container.empty();",
+          "    ",
+          "    for(i = 0; i < rowSize; i++) {",
+          "      for(j = 0; j < colSize; j++) {",
+          "        var element = jQuery(\"<div class='analog-discs-grid-item'></div>\");",
+          "        element.attr({\"rowIndex\": i, \"colIndex\": j, \"status\": 1});",
+          "        $container.append(element);",
+          "      }",
+          "    }",
+          "  });",
+          "});"
+        ],
+        "injectContextObject": false,
+        "asyncWait": true,
+        "waitMode": "Synchronous"
+      }
+    ]
+  },
+  {
+    "event": "%s%PLC1.GVL_HMI.nMaxColumn%/s%",
+    "actions": [
+      {
+        "objectType": "JavaScript",
+        "active": true,
+        "sourceLines": [
+          "TcHmi.Symbol.readEx2(\"%s%PLC1.GVL_HMI.nMaxColumn%/s%\", function(colData){",
+          "  TcHmi.Symbol.readEx2(\"%s%PLC1.GVL_HMI.nMaxRow%/s%\", function(rowData){",
+          "    const rowSize = rowData.value;",
+          "    const colSize = colData.value;",
+          "",
+          "    const control = TcHmi.Symbol.readEx(\"%ctrl%BondPad%/ctrl%\");",
+          "    const container = control.getElement(); //获取dom",
+          "    const $container = jQuery(container).children().first();",
+          "    if(! $container.hasClass(\"analog-discs-grid-container\")){",
+          "      $container.addClass(\"analog-discs-grid-container\");",
+          "    }",
+          "    $container.css(\"--row\", rowSize);",
+          "    $container.css(\"--col\", colSize);",
+          "    $container.empty();",
+          "    ",
+          "    for(i = 0; i < rowSize; i++) {",
+          "      for(j = 0; j < colSize; j++) {",
+          "        var element = jQuery(\"<div class='analog-discs-grid-item'></div>\");",
+          "        element.attr({\"rowIndex\": i, \"colIndex\": j, \"status\": 1});",
+          "        $container.append(element);",
+          "      }",
+          "    }",
+          "  });",
+          "});"
+        ],
+        "injectContextObject": false,
+        "asyncWait": true,
+        "waitMode": "Synchronous"
+      }
+    ]
+  }
+]
+</script>
+</div>

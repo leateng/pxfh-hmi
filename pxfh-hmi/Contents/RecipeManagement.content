@@ -77,7 +77,7 @@
 
 
 </div>
-<div id="TcHmiButton_38" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiButton" data-tchmi-height="40" data-tchmi-height-unit="px" data-tchmi-width="100" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text="%l%delete%/l%" data-tchmi-icon="Images/trash_normal.svg" data-tchmi-icon-horizontal-alignment="Center" data-tchmi-icon-width="32" data-tchmi-icon-height="32" data-tchmi-top="90" data-tchmi-left="569">
+<div id="TcHmiButton_38" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiButton" data-tchmi-height="40" data-tchmi-height-unit="px" data-tchmi-width="100" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text="%l%delete%/l%" data-tchmi-icon="Images/trash_normal.svg" data-tchmi-icon-horizontal-alignment="Center" data-tchmi-icon-width="32" data-tchmi-icon-height="32" data-tchmi-top="90" data-tchmi-left="789">
 <script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
 [
   {
@@ -140,7 +140,7 @@
 }
 </script>
 </div>
-<div id="TcHmiButton_39" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiButton" data-tchmi-height="40" data-tchmi-height-unit="px" data-tchmi-text="%l%update%/l%" data-tchmi-width="100" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-icon="Images/upload_normal.svg" data-tchmi-icon-width="32" data-tchmi-icon-height="32" data-tchmi-icon-horizontal-alignment="Center" data-tchmi-top="90" data-tchmi-left="789">
+<div id="TcHmiButton_39" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiButton" data-tchmi-height="40" data-tchmi-height-unit="px" data-tchmi-width="100" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-icon="Images/upload_normal.svg" data-tchmi-icon-width="32" data-tchmi-icon-height="32" data-tchmi-icon-horizontal-alignment="Center" data-tchmi-top="90" data-tchmi-left="679" data-tchmi-text="%l%save%/l%">
 <script data-tchmi-target-attribute="data-tchmi-text-padding" type="application/json">
 {
   "left": 20,
@@ -189,7 +189,7 @@
 }
 </script>
 </div>
-<div id="TcHmiButton_40" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiButton" data-tchmi-height="40" data-tchmi-height-unit="px" data-tchmi-text="%l%create%/l%" data-tchmi-width="100" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-icon="Images/recipe_normal.svg" data-tchmi-icon-width="32" data-tchmi-icon-height="32" data-tchmi-icon-horizontal-alignment="Center" data-tchmi-top="90" data-tchmi-left="679">
+<div id="TcHmiButton_40" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiButton" data-tchmi-height="40" data-tchmi-height-unit="px" data-tchmi-text="%l%create%/l%" data-tchmi-width="100" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-icon="Images/recipe_normal.svg" data-tchmi-icon-width="32" data-tchmi-icon-height="32" data-tchmi-icon-horizontal-alignment="Center" data-tchmi-top="90" data-tchmi-left="569">
 <script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
 [
   {
@@ -256,8 +256,11 @@
     "verticalAlignment": "Center"
   },
   {
-    "name": "recipe_power_config",
-    "displayName": "%l%power%/l%",
+    "name": "recipe_welding_config",
+    "displayName": "%l%welding%/l%",
+    "targetFile": {
+      "path": "Contents/RecipeWeldingConfig.content"
+    },
     "targetFileHostPreload": true,
     "targetFileHostPreAttach": true,
     "targetFileHostKeepAlive": true,
@@ -265,8 +268,11 @@
     "verticalAlignment": "Center"
   },
   {
-    "name": "recipe_camera_config",
-    "displayName": "%l%camera%/l%",
+    "name": "recipe_other_config",
+    "displayName": "%l%other%/l%",
+    "targetFile": {
+      "path": "Contents/RecipeOtherConfig.content"
+    },
     "targetFileHostPreload": false,
     "targetFileHostPreAttach": false,
     "targetFileHostKeepAlive": false,

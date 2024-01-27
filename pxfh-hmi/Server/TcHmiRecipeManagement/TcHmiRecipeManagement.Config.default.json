@@ -1,5 +1,35 @@
 {
     "recipeList": {
+        "09": {
+            "recipeTypeName": "MainRType",
+            "values": {
+                "lrDistanceColumn": 3.0,
+                "lrDistanceRow": 3.0,
+                "lrLength": 30.0,
+                "lrWidth": 40.0,
+                "lrXOverrun": 0.0,
+                "lrYOverrun": 0.0,
+                "nElementWeldMode": 0,
+                "nMaxColumn": 6,
+                "nMaxRow": 5,
+                "nPlateWeldMode": 0
+            }
+        },
+        "098098": {
+            "recipeTypeName": "MainRType",
+            "values": {
+                "lrDistanceColumn": 0.0,
+                "lrDistanceRow": 0.0,
+                "lrLength": 0.0,
+                "lrWidth": 0.0,
+                "lrXOverrun": 0.0,
+                "lrYOverrun": 0.0,
+                "nElementWeldMode": 0,
+                "nMaxColumn": 0,
+                "nMaxRow": 0,
+                "nPlateWeldMode": 0
+            }
+        },
         "1111": {
             "recipeTypeName": "MainRType",
             "values": {
@@ -7,8 +37,27 @@
                 "lrDistanceRow": 8.0,
                 "lrLength": 17.5,
                 "lrWidth": 13.4,
+                "lrXOverrun": -1.0,
+                "lrYOverrun": -1.0,
+                "nElementWeldMode": 1,
                 "nMaxColumn": 2,
-                "nMaxRow": 2
+                "nMaxRow": 2,
+                "nPlateWeldMode": 1
+            }
+        },
+        "222": {
+            "recipeTypeName": "MainRType",
+            "values": {
+                "lrDistanceColumn": 2.0,
+                "lrDistanceRow": 2.0,
+                "lrLength": 2.0,
+                "lrWidth": 2.0,
+                "lrXOverrun": 1.0,
+                "lrYOverrun": 1.0,
+                "nElementWeldMode": 0,
+                "nMaxColumn": 3,
+                "nMaxRow": 3,
+                "nPlateWeldMode": 0
             }
         },
         "New recipe": {
@@ -18,8 +67,12 @@
                 "lrDistanceRow": 0.0,
                 "lrLength": 0.0,
                 "lrWidth": 0.0,
+                "lrXOverrun": 0.0,
+                "lrYOverrun": 0.0,
+                "nElementWeldMode": 0,
                 "nMaxColumn": 4,
-                "nMaxRow": 4
+                "nMaxRow": 4,
+                "nPlateWeldMode": 0
             }
         }
     },
@@ -62,6 +115,39 @@
                     "symbol": "PLC1.GVL_HMI.lrWidth",
                     "unit": ""
                 },
+                "lrXOverrun": {
+                    "defaultValue": 0.0,
+                    "enabled": true,
+                    "group": "",
+                    "order": 6,
+                    "schema": {
+                        "maximum": 100.0,
+                        "minimum": -10.0
+                    },
+                    "symbol": "PLC1.GVL_HMI.lrXOverrun",
+                    "unit": ""
+                },
+                "lrYOverrun": {
+                    "defaultValue": 0.0,
+                    "enabled": true,
+                    "group": "",
+                    "order": 7,
+                    "schema": {
+                        "maximum": 100.0,
+                        "minimum": -10.0
+                    },
+                    "symbol": "PLC1.GVL_HMI.lrYOverrun",
+                    "unit": ""
+                },
+                "nElementWeldMode": {
+                    "defaultValue": 0,
+                    "enabled": true,
+                    "group": "",
+                    "order": 9,
+                    "schema": {},
+                    "symbol": "PLC1.GVL_HMI.nElementWeldMode",
+                    "unit": ""
+                },
                 "nMaxColumn": {
                     "defaultValue": 0,
                     "enabled": true,
@@ -78,6 +164,15 @@
                     "order": 5,
                     "schema": {},
                     "symbol": "PLC1.GVL_HMI.nMaxRow",
+                    "unit": ""
+                },
+                "nPlateWeldMode": {
+                    "defaultValue": 0,
+                    "enabled": true,
+                    "group": "",
+                    "order": 8,
+                    "schema": {},
+                    "symbol": "PLC1.GVL_HMI.nPlateWeldMode",
                     "unit": ""
                 }
             },
