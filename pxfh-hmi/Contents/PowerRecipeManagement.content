@@ -3,7 +3,7 @@
 
 
 
-<div id="TcHmiCombobox_PowerRecipeList" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiCombobox" data-tchmi-auto-focus-out="true" data-tchmi-combobox-text="Select" data-tchmi-height="40" data-tchmi-height-unit="px" data-tchmi-width="230" data-tchmi-width-unit="px" data-tchmi-src-data="%f%TcHmi.Functions.pxfh_hmi.ListPowerSchedules(%s%PLC1.MAIN.powerSchedules%/s%)%/f%" data-tchmi-text-font-size="23" data-tchmi-text-horizontal-alignment="Left" data-tchmi-data-height="30" data-tchmi-left="143" data-tchmi-top="90" >
+<div id="TcHmiCombobox_PowerRecipeList" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiCombobox" data-tchmi-auto-focus-out="true" data-tchmi-combobox-text="Select" data-tchmi-height="40" data-tchmi-height-unit="px" data-tchmi-width="230" data-tchmi-width-unit="px" data-tchmi-src-data="%f%TcHmi.Functions.pxfh_hmi.ListPowerSchedules(%i%powerScheduleArray%/i%)%/f%" data-tchmi-text-font-size="23" data-tchmi-text-horizontal-alignment="Left" data-tchmi-data-height="30" data-tchmi-left="143" data-tchmi-top="90" >
 <script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
 {
   "left": 15,
@@ -380,7 +380,7 @@
       },
       {
         "objectType": "Function",
-        "active": true,
+        "active": false,
         "fn": "TcHmi.Functions.pxfh_hmi.UpdatePowerSchedule",
         "fnParams": [
           {
@@ -391,6 +391,34 @@
           {
             "objectType": "Symbol",
             "valueType": "tchmi:general#/definitions/String",
+            "symbolExpression": "%i%selectedPowerSchedule%/i%"
+          }
+        ],
+        "asyncWait": true
+      },
+      {
+        "objectType": "JavaScript",
+        "active": true,
+        "sourceLines": [
+          "console.log(\"before update power schedule\")"
+        ],
+        "injectContextObject": false,
+        "asyncWait": true,
+        "waitMode": "Synchronous"
+      },
+      {
+        "objectType": "Function",
+        "active": true,
+        "fn": "TcHmi.Functions.pxfh_hmi.UpdatePowerSchedule",
+        "fnParams": [
+          {
+            "objectType": "Symbol",
+            "valueType": "tchmi:general#/definitions/Number",
+            "symbolExpression": "%ctrl%TcHmiCombobox_PowerRecipeList::SelectedText%/ctrl%"
+          },
+          {
+            "objectType": "Symbol",
+            "valueType": "tchmi:project#/definitions/PLC1.PowerSchedule",
             "symbolExpression": "%i%selectedPowerSchedule%/i%"
           }
         ],

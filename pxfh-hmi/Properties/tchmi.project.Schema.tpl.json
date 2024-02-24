@@ -224,6 +224,52 @@
       "frameworkUserControlConfig": "Controls\\BondPad.usercontrol.json",
       "type": "object",
       "id": "tchmi:project#/definitions/BondPad"
+    },
+    "Copy_of_PLC1.ARRAY_1..63_OF-scheduleParaStruct": {
+      "items": {
+        "$ref": "tchmi:server#/definitions/PLC1.scheduleParaStruct"
+      },
+      "type": "array",
+      "minItems": 63,
+      "maxItems": 63,
+      "title": "power schedule array",
+      "startOffset": 1,
+      "id": "tchmi:server#/definitions/PLC1.ARRAY_1..63_OF-scheduleParaStruct"
+    },
+    "MyMainRecipeType": {
+      "properties": {
+        "lrDistanceColumn": {
+          "$ref": "tchmi:general#/definitions/Number"
+        },
+        "lrDistanceRow": {
+          "$ref": "tchmi:general#/definitions/Number"
+        },
+        "lrLength": {
+          "$ref": "tchmi:general#/definitions/Number"
+        },
+        "lrWidth": {
+          "$ref": "tchmi:general#/definitions/Number"
+        },
+        "lrXOverrun": {
+          "$ref": "tchmi:general#/definitions/Number"
+        },
+        "lrYOverrun": {
+          "$ref": "tchmi:general#/definitions/Number"
+        },
+        "nMaxColumn": {
+          "$ref": "tchmi:general#/definitions/Number"
+        },
+        "nMaxRow": {
+          "$ref": "tchmi:general#/definitions/Number"
+        },
+        "nPlateWeldMode": {
+          "$ref": "tchmi:general#/definitions/Number"
+        },
+        "nElementWeldMode": {
+          "$ref": "tchmi:general#/definitions/Number"
+        }
+      },
+      "type": "object"
     }
   }
 }

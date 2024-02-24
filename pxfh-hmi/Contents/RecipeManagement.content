@@ -60,7 +60,7 @@
       },
       {
         "objectType": "Function",
-        "active": true,
+        "active": false,
         "fn": "TcHmi.Functions.Beckhoff.ActivateRecipe",
         "fnParams": [
           {
@@ -69,6 +69,29 @@
           }
         ],
         "asyncWait": true
+      },
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%i%selectedRecipe%/i%",
+        "value": {
+          "objectType": "Symbol",
+          "valueType": "tchmi:general#/definitions/String",
+          "symbolExpression": "%ctrl%TcHmiCombobox_MainRecipeList::SelectedValue::values%/ctrl%"
+        },
+        "asyncWait": true
+      },
+      {
+        "objectType": "JavaScript",
+        "active": true,
+        "sourceLines": [
+          "var a = TcHmi.Symbol.readEx(\"%i%selectedRecipe%/i%\");",
+          "console.log(\"==selected recipe\");",
+          "console.log(a);"
+        ],
+        "injectContextObject": false,
+        "asyncWait": true,
+        "waitMode": "Synchronous"
       }
     ]
   }
@@ -161,12 +184,30 @@
     "actions": [
       {
         "objectType": "Function",
-        "active": true,
+        "active": false,
         "fn": "TcHmi.Functions.Beckhoff.TeachRecipe",
         "fnParams": [
           {
             "objectType": "FunctionExpression",
             "functionExpression": "%ctrl%TcHmiCombobox_MainRecipeList::SelectedText%/ctrl%"
+          }
+        ],
+        "asyncWait": true
+      },
+      {
+        "objectType": "Function",
+        "active": true,
+        "fn": "TcHmi.Functions.pxfh_hmi.UpdateRecipe",
+        "fnParams": [
+          {
+            "objectType": "Symbol",
+            "valueType": "tchmi:general#/definitions/String",
+            "symbolExpression": "%ctrl%TcHmiCombobox_MainRecipeList::SelectedText%/ctrl%"
+          },
+          {
+            "objectType": "Symbol",
+            "valueType": "tchmi:general#/definitions/Object",
+            "symbolExpression": "%i%selectedRecipe%/i%"
           }
         ],
         "asyncWait": true

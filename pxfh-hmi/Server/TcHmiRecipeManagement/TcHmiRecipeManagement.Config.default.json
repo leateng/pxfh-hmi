@@ -3,31 +3,16 @@
         "09": {
             "recipeTypeName": "MainRType",
             "values": {
-                "lrDistanceColumn": 3.0,
-                "lrDistanceRow": 3.0,
-                "lrLength": 30.0,
-                "lrWidth": 40.0,
-                "lrXOverrun": 0.0,
-                "lrYOverrun": 0.0,
-                "nElementWeldMode": 0,
-                "nMaxColumn": 6,
-                "nMaxRow": 5,
-                "nPlateWeldMode": 0
-            }
-        },
-        "098098": {
-            "recipeTypeName": "MainRType",
-            "values": {
-                "lrDistanceColumn": 0.0,
-                "lrDistanceRow": 0.0,
-                "lrLength": 0.0,
-                "lrWidth": 0.0,
-                "lrXOverrun": 0.0,
-                "lrYOverrun": 0.0,
-                "nElementWeldMode": 0,
-                "nMaxColumn": 0,
-                "nMaxRow": 0,
-                "nPlateWeldMode": 0
+                "lrDistanceColumn": 8.0,
+                "lrDistanceRow": 8.0,
+                "lrLength": 17.5,
+                "lrWidth": 13.4,
+                "lrXOverrun": -1.0,
+                "lrYOverrun": -1.0,
+                "nElementWeldMode": 1,
+                "nMaxColumn": 2,
+                "nMaxRow": 1,
+                "nPlateWeldMode": 3
             }
         },
         "1111": {
@@ -37,12 +22,27 @@
                 "lrDistanceRow": 8.0,
                 "lrLength": 17.5,
                 "lrWidth": 13.4,
-                "lrXOverrun": -1.0,
-                "lrYOverrun": -1.0,
-                "nElementWeldMode": 1,
+                "lrXOverrun": 0.0,
+                "lrYOverrun": 0.0,
+                "nElementWeldMode": 0,
+                "nMaxColumn": 2,
+                "nMaxRow": 1,
+                "nPlateWeldMode": 0
+            }
+        },
+        "123": {
+            "recipeTypeName": "MainRType",
+            "values": {
+                "lrDistanceColumn": 0.0,
+                "lrDistanceRow": 0.0,
+                "lrLength": 0.0,
+                "lrWidth": 0.0,
+                "lrXOverrun": 1.0,
+                "lrYOverrun": 1.0,
+                "nElementWeldMode": 0,
                 "nMaxColumn": 2,
                 "nMaxRow": 2,
-                "nPlateWeldMode": 1
+                "nPlateWeldMode": 0
             }
         },
         "222": {
@@ -60,19 +60,19 @@
                 "nPlateWeldMode": 0
             }
         },
-        "New recipe": {
+        "test": {
             "recipeTypeName": "MainRType",
             "values": {
-                "lrDistanceColumn": 0.0,
-                "lrDistanceRow": 0.0,
-                "lrLength": 0.0,
-                "lrWidth": 0.0,
-                "lrXOverrun": 0.0,
-                "lrYOverrun": 0.0,
-                "nElementWeldMode": 0,
-                "nMaxColumn": 4,
-                "nMaxRow": 4,
-                "nPlateWeldMode": 0
+                "lrDistanceColumn": 1.0,
+                "lrDistanceRow": 1.0,
+                "lrLength": 10.0,
+                "lrWidth": 10.0,
+                "lrXOverrun": -2.0,
+                "lrYOverrun": -3.0,
+                "nElementWeldMode": 1,
+                "nMaxColumn": 2,
+                "nMaxRow": 2,
+                "nPlateWeldMode": 1
             }
         }
     },

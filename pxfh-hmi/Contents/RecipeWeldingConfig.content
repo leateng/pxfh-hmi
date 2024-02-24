@@ -35,7 +35,7 @@
 </div>
 <div id="TcHmiTextblock_122" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="444" data-tchmi-left-unit="px" data-tchmi-text="%f%%l%overrun%/l%%/f%" data-tchmi-top="10" data-tchmi-top-unit="px" data-tchmi-width="150" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-font-weight="Bold">
 </div>
-<div id="TcHmiNumericInput_94" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiNumericInput" data-tchmi-auto-focus-out="true" data-tchmi-decimal-digits="2" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="444" data-tchmi-left-unit="px" data-tchmi-max-value="100" data-tchmi-min-value="-10" data-tchmi-reset-to-last-valid-value="true" data-tchmi-top="46" data-tchmi-top-unit="px" data-tchmi-value="%s%PLC1.GVL_HMI.lrXOverrun|BindingMode=TwoWay%/s%" data-tchmi-width="150" data-tchmi-width-unit="px" data-tchmi-auto-select-text="true" data-tchmi-ignore-invalid-values="true">
+<div id="TcHmiNumericInput_94" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiNumericInput" data-tchmi-auto-focus-out="true" data-tchmi-decimal-digits="2" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="444" data-tchmi-left-unit="px" data-tchmi-max-value="100" data-tchmi-min-value="-10" data-tchmi-reset-to-last-valid-value="true" data-tchmi-top="46" data-tchmi-top-unit="px" data-tchmi-value="%i%selectedRecipe::lrXOverrun|BindingMode=TwoWay%/i%" data-tchmi-width="150" data-tchmi-width-unit="px" data-tchmi-auto-select-text="true" data-tchmi-ignore-invalid-values="true">
 <script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
 {
   "top": 3,
@@ -46,7 +46,7 @@
 </script>
 
 </div>
-<div id="TcHmiNumericInput_95" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiNumericInput" data-tchmi-auto-focus-out="true" data-tchmi-decimal-digits="2" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="444" data-tchmi-left-unit="px" data-tchmi-max-value="100" data-tchmi-min-value="-10" data-tchmi-reset-to-last-valid-value="true" data-tchmi-top="82" data-tchmi-top-unit="px" data-tchmi-value="%s%PLC1.GVL_HMI.lrYOverrun|BindingMode=TwoWay%/s%" data-tchmi-width="150" data-tchmi-width-unit="px" data-tchmi-auto-select-text="true" data-tchmi-ignore-invalid-values="true">
+<div id="TcHmiNumericInput_95" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiNumericInput" data-tchmi-auto-focus-out="true" data-tchmi-decimal-digits="2" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="444" data-tchmi-left-unit="px" data-tchmi-max-value="100" data-tchmi-min-value="-10" data-tchmi-reset-to-last-valid-value="true" data-tchmi-top="82" data-tchmi-top-unit="px" data-tchmi-value="%i%selectedRecipe::lrYOverrun|BindingMode=TwoWay%/i%" data-tchmi-width="150" data-tchmi-width-unit="px" data-tchmi-auto-select-text="true" data-tchmi-ignore-invalid-values="true">
 <script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
 {
   "top": 3,
@@ -77,10 +77,10 @@
       {
         "objectType": "WriteToSymbol",
         "active": true,
-        "symbolExpression": "%s%PLC1.GVL_HMI.nElementWeldMode%/s%",
+        "symbolExpression": "%i%selectedRecipe::nElementWeldMode%/i%",
         "value": {
           "objectType": "StaticValue",
-          "valueType": "tchmi:general#/definitions/INT",
+          "valueType": "tchmi:general#/definitions/Number",
           "value": 1
         },
         "asyncWait": true
@@ -88,7 +88,7 @@
     ]
   },
   {
-    "event": "%s%PLC1.GVL_HMI.nElementWeldMode%/s%",
+    "event": "%i%selectedRecipe::nElementWeldMode%/i%",
     "actions": [
       {
         "objectType": "Condition",
@@ -99,13 +99,13 @@
               {
                 "compare1": {
                   "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/INT",
-                  "symbolExpression": "%s%PLC1.GVL_HMI.nElementWeldMode%/s%"
+                  "valueType": "tchmi:general#/definitions/Number",
+                  "symbolExpression": "%i%selectedRecipe::nElementWeldMode%/i%"
                 },
                 "compare2": {
                   "objectType": "StaticValue",
-                  "valueType": "tchmi:general#/definitions/INT",
-                  "value": 1
+                  "valueType": "tchmi:general#/definitions/Number",
+                  "value": 1.0
                 },
                 "compareOperator": "==",
                 "logic": null
@@ -158,10 +158,10 @@
       {
         "objectType": "WriteToSymbol",
         "active": true,
-        "symbolExpression": "%s%PLC1.GVL_HMI.nElementWeldMode%/s%",
+        "symbolExpression": "%i%selectedRecipe::nElementWeldMode%/i%",
         "value": {
           "objectType": "StaticValue",
-          "valueType": "tchmi:general#/definitions/INT",
+          "valueType": "tchmi:general#/definitions/Number",
           "value": 0
         },
         "asyncWait": true
@@ -169,7 +169,7 @@
     ]
   },
   {
-    "event": "%s%PLC1.GVL_HMI.nElementWeldMode%/s%",
+    "event": "%i%selectedRecipe::nElementWeldMode%/i%",
     "actions": [
       {
         "objectType": "Condition",
@@ -181,12 +181,12 @@
                 "compare1": {
                   "objectType": "Symbol",
                   "valueType": "tchmi:general#/definitions/INT",
-                  "symbolExpression": "%s%PLC1.GVL_HMI.nElementWeldMode%/s%"
+                  "symbolExpression": "%i%selectedRecipe::nElementWeldMode%/i%"
                 },
                 "compare2": {
                   "objectType": "StaticValue",
-                  "valueType": "tchmi:general#/definitions/INT",
-                  "value": 0
+                  "valueType": "tchmi:general#/definitions/Number",
+                  "value": 0.0
                 },
                 "compareOperator": "==",
                 "logic": null
@@ -241,10 +241,10 @@
       {
         "objectType": "WriteToSymbol",
         "active": true,
-        "symbolExpression": "%s%PLC1.GVL_HMI.nPlateWeldMode%/s%",
+        "symbolExpression": "%i%selectedRecipe::nPlateWeldMode%/i%",
         "value": {
           "objectType": "StaticValue",
-          "valueType": "tchmi:general#/definitions/INT",
+          "valueType": "tchmi:general#/definitions/Number",
           "value": 0
         },
         "asyncWait": true
@@ -252,7 +252,7 @@
     ]
   },
   {
-    "event": "%s%PLC1.GVL_HMI.nPlateWeldMode%/s%",
+    "event": "%i%selectedRecipe::nPlateWeldMode%/i%",
     "actions": [
       {
         "objectType": "Condition",
@@ -263,13 +263,13 @@
               {
                 "compare1": {
                   "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/String",
-                  "symbolExpression": "%s%PLC1.GVL_HMI.nPlateWeldMode%/s%"
+                  "valueType": "tchmi:general#/definitions/Number",
+                  "symbolExpression": "%i%selectedRecipe::nPlateWeldMode%/i%"
                 },
                 "compare2": {
                   "objectType": "StaticValue",
-                  "valueType": "tchmi:general#/definitions/INT",
-                  "value": 0
+                  "valueType": "tchmi:general#/definitions/Number",
+                  "value": 0.0
                 },
                 "compareOperator": "==",
                 "logic": null
@@ -328,10 +328,10 @@
       {
         "objectType": "WriteToSymbol",
         "active": true,
-        "symbolExpression": "%s%PLC1.GVL_HMI.nPlateWeldMode%/s%",
+        "symbolExpression": "%i%selectedRecipe::nPlateWeldMode%/i%",
         "value": {
           "objectType": "StaticValue",
-          "valueType": "tchmi:general#/definitions/INT",
+          "valueType": "tchmi:general#/definitions/Number",
           "value": 1
         },
         "asyncWait": true
@@ -339,7 +339,7 @@
     ]
   },
   {
-    "event": "%s%PLC1.GVL_HMI.nPlateWeldMode%/s%",
+    "event": "%i%selectedRecipe::nPlateWeldMode%/i%",
     "actions": [
       {
         "objectType": "Condition",
@@ -350,13 +350,13 @@
               {
                 "compare1": {
                   "objectType": "Symbol",
-                  "valueType": "tchmi:general#/definitions/INT",
-                  "symbolExpression": "%s%PLC1.GVL_HMI.nPlateWeldMode%/s%"
+                  "valueType": "tchmi:general#/definitions/Number",
+                  "symbolExpression": "%i%selectedRecipe::nPlateWeldMode%/i%"
                 },
                 "compare2": {
                   "objectType": "StaticValue",
-                  "valueType": "tchmi:general#/definitions/INT",
-                  "value": 1
+                  "valueType": "tchmi:general#/definitions/Number",
+                  "value": 1.0
                 },
                 "compareOperator": "==",
                 "logic": null

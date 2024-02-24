@@ -27,7 +27,7 @@
     <HmiViewportUserScaleable>Default</HmiViewportUserScaleable>
     <HmiPostProcessing>True</HmiPostProcessing>
     <Name>pxfh-hmi</Name>
-    <HmiCommunicationRouterPort>10108</HmiCommunicationRouterPort>
+    <HmiCommunicationRouterPort>10111</HmiCommunicationRouterPort>
     <HmiCommunicationServerAuthPort>13001</HmiCommunicationServerAuthPort>
     <HmiInitial>1.12.760.48</HmiInitial>
     <HmiRecent>1.12.760.48</HmiRecent>
@@ -123,6 +123,7 @@
     <Folder Include="Controls" />
     <Folder Include="functions" />
     <Folder Include="javascripts" />
+    <Folder Include="styles" />
     <Folder Include="Server\TcHmiRecipeManagement" />
     <Folder Include="Server\TcHmiVision" />
     <Folder Include="Themes" />
@@ -295,6 +296,13 @@
     <Content Include="functions\UpdatePowerSchedule.js">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="functions\UpdateRecipe.function.json">
+      <SubType>Content</SubType>
+      <DependentUpon>functions\UpdateRecipe.js</DependentUpon>
+    </Content>
+    <Content Include="functions\UpdateRecipe.js">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="Images\background_green_active.svg">
       <SubType>Content</SubType>
     </Content>
@@ -409,6 +417,9 @@
     <Content Include="javascripts\chart.js">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="javascripts\jquery.toast.js">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="Localization\zh-CN.localization">
       <SubType>Content</SubType>
       <DependentUpon>Localization\zh-CN.tpl.localization</DependentUpon>
@@ -462,6 +473,9 @@
       <SubType>Content</SubType>
     </Content>
     <Content Include="Server\TcHmiVision\TcHmiVision.Storage.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="styles\jquery.toast.css">
       <SubType>Content</SubType>
     </Content>
     <Content Include="tsconfig.tpl.json">

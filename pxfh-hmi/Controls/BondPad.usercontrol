@@ -4,14 +4,14 @@
 <script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
 [
   {
-    "event": "%s%PLC1.GVL_HMI.nMaxRow%/s%",
+    "event": "%i%selectedRecipe::nMaxRow%/i%",
     "actions": [
       {
         "objectType": "JavaScript",
         "active": true,
         "sourceLines": [
-          "TcHmi.Symbol.readEx2(\"%s%PLC1.GVL_HMI.nMaxColumn%/s%\", function(colData){",
-          "  TcHmi.Symbol.readEx2(\"%s%PLC1.GVL_HMI.nMaxRow%/s%\", function(rowData){",
+          "TcHmi.Symbol.readEx2(\"%i%selectedRecipe::nMaxColumn%/i%\", function(colData){",
+          "  TcHmi.Symbol.readEx2(\"%i%selectedRecipe::nMaxRow%/i%\", function(rowData){",
           "    const rowSize = rowData.value;",
           "    const colSize = colData.value;",
           "",
@@ -42,14 +42,14 @@
     ]
   },
   {
-    "event": "%s%PLC1.GVL_HMI.nMaxColumn%/s%",
+    "event": "%i%selectedRecipe::nMaxColumn%/i%",
     "actions": [
       {
         "objectType": "JavaScript",
         "active": true,
         "sourceLines": [
-          "TcHmi.Symbol.readEx2(\"%s%PLC1.GVL_HMI.nMaxColumn%/s%\", function(colData){",
-          "  TcHmi.Symbol.readEx2(\"%s%PLC1.GVL_HMI.nMaxRow%/s%\", function(rowData){",
+          "TcHmi.Symbol.readEx2(\"%i%selectedRecipe::nMaxColumn%/i%\", function(colData){",
+          "  TcHmi.Symbol.readEx2(\"%i%selectedRecipe::nMaxRow%/i%\", function(rowData){",
           "    const rowSize = rowData.value;",
           "    const colSize = colData.value;",
           "",

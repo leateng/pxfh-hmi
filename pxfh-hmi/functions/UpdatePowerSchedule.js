@@ -7,17 +7,53 @@
         var pxfh_hmi;
         (function (pxfh_hmi) {
             function UpdatePowerSchedule(scheduleIndex, value) {
+                console.log(scheduleIndex)
+                if (scheduleIndex == null) {
+                    $.toast({
+                        heading: 'Warning',
+                        text: "Please select a schedule!",
+                        position: 'top-center',
+                        icon: 'warning',
+                    });
+                    return;
+                }
+
                 const index = scheduleIndex - 1;
-                const symbol = `%s%PLC1.MAIN.powerSchedules[${index}]%/s%`
-                console.log(value);
+                var error = TcHmi.Errors.NONE;
+
+                // write to internal variable
+                var symbol = `%i%powerScheduleArray[${index}]%/i%`
                 TcHmi.Symbol.writeEx(symbol, JSON.stringify(value), function (data) {
                     if (data.error === TcHmi.Errors.NONE) {
-                        console.log(`update power schedule ${scheduleIndex} success`)
-                    } else {
-                        const msg = `update power schedule ${scheduleIndex} failed: ${TcHmi.Errors[data.error]}`;
-                        alert(msg);
+                        // write to PLC variable
+                        var symbol = `%s%PLC1.GVL_HMI.aScheduleInfo[${index}]%/s%`
+                        TcHmi.Symbol.writeEx(symbol, JSON.stringify(value), function (data) {
+                            if (data.error != TcHmi.Errors.NONE) {
+                                error = data.error;
+                            }
+                        });
+                    }
+                    else {
+                        error = data.error;
                     }
                 });
+
+                if (error === TcHmi.Errors.NONE) {
+                    $.toast({
+                        heading: 'Success',
+                        text: "Update Power Schedule success.",
+                        position: 'top-center',
+                        icon: 'success',
+                    });
+                } else {
+                    var errMsg = `update power schedule ${scheduleIndex} failed: ${TcHmi.Errors[error]}`;
+                    $.toast({
+                        heading: 'Error',
+                        text: errMsg,
+                        position: 'top-center',
+                        icon: 'error',
+                    })
+                }
             }
             pxfh_hmi.UpdatePowerSchedule = UpdatePowerSchedule;
         })(pxfh_hmi = Functions.pxfh_hmi || (Functions.pxfh_hmi = {}));

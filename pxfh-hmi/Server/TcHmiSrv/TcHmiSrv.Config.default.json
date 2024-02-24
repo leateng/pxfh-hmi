@@ -54,23 +54,6 @@
             "startOffset": 1,
             "type": "array"
         },
-        "PLC1.ARRAY_1..3_1..10_OF-UINT": {
-            "displayAsMatrix": 2,
-            "items": {
-                "allowMapping": false,
-                "items": {
-                    "$ref": "tchmi:general#/definitions/UINT"
-                },
-                "maxItems": 10,
-                "minItems": 10,
-                "startOffset": 1,
-                "type": "array"
-            },
-            "maxItems": 3,
-            "minItems": 3,
-            "startOffset": 1,
-            "type": "array"
-        },
         "PLC1.ARRAY_1..3_1..3_OF-UINT": {
             "displayAsMatrix": 2,
             "items": {
@@ -94,6 +77,15 @@
             },
             "maxItems": 3,
             "minItems": 3,
+            "startOffset": 1,
+            "type": "array"
+        },
+        "PLC1.ARRAY_1..63_OF-scheduleParaStruct": {
+            "items": {
+                "$ref": "#/definitions/PLC1.scheduleParaStruct"
+            },
+            "maxItems": 63,
+            "minItems": 63,
             "startOffset": 1,
             "type": "array"
         },
@@ -449,6 +441,466 @@
                         },
                         {
                             "comment": "Ê±¼ä±È",
+                            "propertyOrder": 34
+                        }
+                    ]
+                },
+                "timeRatio10": {
+                    "allOf": [
+                        {
+                            "$ref": "tchmi:general#/definitions/UINT"
+                        },
+                        {
+                            "propertyOrder": 43
+                        }
+                    ]
+                },
+                "timeRatio11": {
+                    "allOf": [
+                        {
+                            "$ref": "tchmi:general#/definitions/UINT"
+                        },
+                        {
+                            "propertyOrder": 44
+                        }
+                    ]
+                },
+                "timeRatio12": {
+                    "allOf": [
+                        {
+                            "$ref": "tchmi:general#/definitions/UINT"
+                        },
+                        {
+                            "propertyOrder": 45
+                        }
+                    ]
+                },
+                "timeRatio2": {
+                    "allOf": [
+                        {
+                            "$ref": "tchmi:general#/definitions/UINT"
+                        },
+                        {
+                            "propertyOrder": 35
+                        }
+                    ]
+                },
+                "timeRatio3": {
+                    "allOf": [
+                        {
+                            "$ref": "tchmi:general#/definitions/UINT"
+                        },
+                        {
+                            "propertyOrder": 36
+                        }
+                    ]
+                },
+                "timeRatio4": {
+                    "allOf": [
+                        {
+                            "$ref": "tchmi:general#/definitions/UINT"
+                        },
+                        {
+                            "propertyOrder": 37
+                        }
+                    ]
+                },
+                "timeRatio5": {
+                    "allOf": [
+                        {
+                            "$ref": "tchmi:general#/definitions/UINT"
+                        },
+                        {
+                            "propertyOrder": 38
+                        }
+                    ]
+                },
+                "timeRatio6": {
+                    "allOf": [
+                        {
+                            "$ref": "tchmi:general#/definitions/UINT"
+                        },
+                        {
+                            "propertyOrder": 39
+                        }
+                    ]
+                },
+                "timeRatio7": {
+                    "allOf": [
+                        {
+                            "$ref": "tchmi:general#/definitions/UINT"
+                        },
+                        {
+                            "propertyOrder": 40
+                        }
+                    ]
+                },
+                "timeRatio8": {
+                    "allOf": [
+                        {
+                            "$ref": "tchmi:general#/definitions/UINT"
+                        },
+                        {
+                            "propertyOrder": 41
+                        }
+                    ]
+                },
+                "timeRatio9": {
+                    "allOf": [
+                        {
+                            "$ref": "tchmi:general#/definitions/UINT"
+                        },
+                        {
+                            "propertyOrder": 42
+                        }
+                    ]
+                }
+            },
+            "type": "object"
+        },
+        "PLC1.scheduleParaStruct": {
+            "properties": {
+                "heatRatio1": {
+                    "allOf": [
+                        {
+                            "$ref": "tchmi:general#/definitions/UINT"
+                        },
+                        {
+                            "comment": "ÈÈÁ¿±È %",
+                            "propertyOrder": 22
+                        }
+                    ]
+                },
+                "heatRatio10": {
+                    "allOf": [
+                        {
+                            "$ref": "tchmi:general#/definitions/UINT"
+                        },
+                        {
+                            "propertyOrder": 31
+                        }
+                    ]
+                },
+                "heatRatio11": {
+                    "allOf": [
+                        {
+                            "$ref": "tchmi:general#/definitions/UINT"
+                        },
+                        {
+                            "propertyOrder": 32
+                        }
+                    ]
+                },
+                "heatRatio12": {
+                    "allOf": [
+                        {
+                            "$ref": "tchmi:general#/definitions/UINT"
+                        },
+                        {
+                            "propertyOrder": 33
+                        }
+                    ]
+                },
+                "heatRatio2": {
+                    "allOf": [
+                        {
+                            "$ref": "tchmi:general#/definitions/UINT"
+                        },
+                        {
+                            "propertyOrder": 23
+                        }
+                    ]
+                },
+                "heatRatio3": {
+                    "allOf": [
+                        {
+                            "$ref": "tchmi:general#/definitions/UINT"
+                        },
+                        {
+                            "propertyOrder": 24
+                        }
+                    ]
+                },
+                "heatRatio4": {
+                    "allOf": [
+                        {
+                            "$ref": "tchmi:general#/definitions/UINT"
+                        },
+                        {
+                            "propertyOrder": 25
+                        }
+                    ]
+                },
+                "heatRatio5": {
+                    "allOf": [
+                        {
+                            "$ref": "tchmi:general#/definitions/UINT"
+                        },
+                        {
+                            "propertyOrder": 26
+                        }
+                    ]
+                },
+                "heatRatio6": {
+                    "allOf": [
+                        {
+                            "$ref": "tchmi:general#/definitions/UINT"
+                        },
+                        {
+                            "propertyOrder": 27
+                        }
+                    ]
+                },
+                "heatRatio7": {
+                    "allOf": [
+                        {
+                            "$ref": "tchmi:general#/definitions/UINT"
+                        },
+                        {
+                            "propertyOrder": 28
+                        }
+                    ]
+                },
+                "heatRatio8": {
+                    "allOf": [
+                        {
+                            "$ref": "tchmi:general#/definitions/UINT"
+                        },
+                        {
+                            "propertyOrder": 29
+                        }
+                    ]
+                },
+                "heatRatio9": {
+                    "allOf": [
+                        {
+                            "$ref": "tchmi:general#/definitions/UINT"
+                        },
+                        {
+                            "propertyOrder": 30
+                        }
+                    ]
+                },
+                "powerAmpere1": {
+                    "allOf": [
+                        {
+                            "$ref": "tchmi:general#/definitions/UINT"
+                        },
+                        {
+                            "comment": "powerTimeHold : UINT;\r\n µçÁ÷£¬µ¥Î»A",
+                            "propertyOrder": 8
+                        }
+                    ]
+                },
+                "powerAmpere2": {
+                    "allOf": [
+                        {
+                            "$ref": "tchmi:general#/definitions/UINT"
+                        },
+                        {
+                            "propertyOrder": 9
+                        }
+                    ]
+                },
+                "powerTimeCool": {
+                    "allOf": [
+                        {
+                            "$ref": "tchmi:general#/definitions/UINT"
+                        },
+                        {
+                            "propertyOrder": 4
+                        }
+                    ]
+                },
+                "powerTimeDown": {
+                    "allOf": [
+                        {
+                            "$ref": "tchmi:general#/definitions/UINT"
+                        },
+                        {
+                            "propertyOrder": 3
+                        }
+                    ]
+                },
+                "powerTimeDown2": {
+                    "allOf": [
+                        {
+                            "$ref": "tchmi:general#/definitions/UINT"
+                        },
+                        {
+                            "propertyOrder": 7
+                        }
+                    ]
+                },
+                "powerTimeUp": {
+                    "allOf": [
+                        {
+                            "$ref": "tchmi:general#/definitions/UINT"
+                        },
+                        {
+                            "comment": "Ê±¼ä£¬µ¥Î»ms",
+                            "propertyOrder": 1
+                        }
+                    ]
+                },
+                "powerTimeUp2": {
+                    "allOf": [
+                        {
+                            "$ref": "tchmi:general#/definitions/UINT"
+                        },
+                        {
+                            "propertyOrder": 5
+                        }
+                    ]
+                },
+                "powerTimeWeld": {
+                    "allOf": [
+                        {
+                            "$ref": "tchmi:general#/definitions/UINT"
+                        },
+                        {
+                            "propertyOrder": 2
+                        }
+                    ]
+                },
+                "powerTimeWeld2": {
+                    "allOf": [
+                        {
+                            "$ref": "tchmi:general#/definitions/UINT"
+                        },
+                        {
+                            "propertyOrder": 6
+                        }
+                    ]
+                },
+                "stageTarget1": {
+                    "allOf": [
+                        {
+                            "$ref": "tchmi:general#/definitions/UINT"
+                        },
+                        {
+                            "comment": "½×Ä¿±ê %",
+                            "propertyOrder": 10
+                        }
+                    ]
+                },
+                "stageTarget10": {
+                    "allOf": [
+                        {
+                            "$ref": "tchmi:general#/definitions/UINT"
+                        },
+                        {
+                            "propertyOrder": 19
+                        }
+                    ]
+                },
+                "stageTarget11": {
+                    "allOf": [
+                        {
+                            "$ref": "tchmi:general#/definitions/UINT"
+                        },
+                        {
+                            "propertyOrder": 20
+                        }
+                    ]
+                },
+                "stageTarget12": {
+                    "allOf": [
+                        {
+                            "$ref": "tchmi:general#/definitions/UINT"
+                        },
+                        {
+                            "propertyOrder": 21
+                        }
+                    ]
+                },
+                "stageTarget2": {
+                    "allOf": [
+                        {
+                            "$ref": "tchmi:general#/definitions/UINT"
+                        },
+                        {
+                            "propertyOrder": 11
+                        }
+                    ]
+                },
+                "stageTarget3": {
+                    "allOf": [
+                        {
+                            "$ref": "tchmi:general#/definitions/UINT"
+                        },
+                        {
+                            "propertyOrder": 12
+                        }
+                    ]
+                },
+                "stageTarget4": {
+                    "allOf": [
+                        {
+                            "$ref": "tchmi:general#/definitions/UINT"
+                        },
+                        {
+                            "propertyOrder": 13
+                        }
+                    ]
+                },
+                "stageTarget5": {
+                    "allOf": [
+                        {
+                            "$ref": "tchmi:general#/definitions/UINT"
+                        },
+                        {
+                            "propertyOrder": 14
+                        }
+                    ]
+                },
+                "stageTarget6": {
+                    "allOf": [
+                        {
+                            "$ref": "tchmi:general#/definitions/UINT"
+                        },
+                        {
+                            "propertyOrder": 15
+                        }
+                    ]
+                },
+                "stageTarget7": {
+                    "allOf": [
+                        {
+                            "$ref": "tchmi:general#/definitions/UINT"
+                        },
+                        {
+                            "propertyOrder": 16
+                        }
+                    ]
+                },
+                "stageTarget8": {
+                    "allOf": [
+                        {
+                            "$ref": "tchmi:general#/definitions/UINT"
+                        },
+                        {
+                            "propertyOrder": 17
+                        }
+                    ]
+                },
+                "stageTarget9": {
+                    "allOf": [
+                        {
+                            "$ref": "tchmi:general#/definitions/UINT"
+                        },
+                        {
+                            "propertyOrder": 18
+                        }
+                    ]
+                },
+                "timeRatio1": {
+                    "allOf": [
+                        {
+                            "$ref": "tchmi:general#/definitions/UINT"
+                        },
+                        {
+                            "comment": "Ê±¼ä±È %",
                             "propertyOrder": 34
                         }
                     ]
@@ -3078,6 +3530,36 @@
             },
             "USEMAPPING": true
         },
+        "PLC1.GVL_HMI.aScheduleInfo": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_HMI::aScheduleInfo",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/PLC1.ARRAY_1..63_OF-scheduleParaStruct"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL_HMI.bElementEmpty": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_HMI::bElementEmpty",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL_HMI.bElementResume": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_HMI::bElementResume",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            "USEMAPPING": true
+        },
         "PLC1.GVL_HMI.bHMIHome": {
             "ACCESS": 3,
             "DOMAIN": "ADS",
@@ -3100,6 +3582,26 @@
             "DOMAIN": "ADS",
             "DYNAMIC": true,
             "MAPPING": "PLC1::GVL_HMI::bMoveTest",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL_HMI.bShelfFull": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_HMI::bShelfFull",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL_HMI.bShelfResume": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_HMI::bShelfResume",
             "SCHEMA": {
                 "$ref": "tchmi:general#/definitions/BOOL"
             },
@@ -5004,8 +5506,13 @@
                 "Login": 3,
                 "Logout": 3,
                 "PLC1.GVL_HMI.CellMatrix": 3,
+                "PLC1.GVL_HMI.aScheduleInfo": 3,
+                "PLC1.GVL_HMI.bElementEmpty": 3,
+                "PLC1.GVL_HMI.bElementResume": 3,
                 "PLC1.GVL_HMI.bHMIHome": 3,
                 "PLC1.GVL_HMI.bMoveTest": 3,
+                "PLC1.GVL_HMI.bShelfFull": 3,
+                "PLC1.GVL_HMI.bShelfResume": 3,
                 "PLC1.GVL_HMI.bStackBlow": 3,
                 "PLC1.GVL_HMI.bStart": 3,
                 "PLC1.GVL_HMI.bVacBlow": 3,
