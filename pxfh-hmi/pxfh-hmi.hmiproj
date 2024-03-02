@@ -143,6 +143,9 @@
     <Content Include="Contents\BottomNav.content">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="Contents\Jog2.content">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="Contents\JogCamera1.content">
       <SubType>Content</SubType>
     </Content>
@@ -168,6 +171,9 @@
       <SubType>Content</SubType>
     </Content>
     <Content Include="Contents\RecipeOtherConfig.content">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Contents\RecipeTunningConfig.content">
       <SubType>Content</SubType>
     </Content>
     <Content Include="Contents\RecipeWeldingConfig.content">

@@ -1,84 +1,105 @@
 {
     "recipeList": {
-        "09": {
+        "aaa": {
             "recipeTypeName": "MainRType",
             "values": {
+                "intECylinderWeldDepth": 2600,
+                "intScheduleX": 1,
+                "intScheduleY": 5,
                 "lrDistanceColumn": 8.0,
                 "lrDistanceRow": 8.0,
-                "lrLength": 17.5,
-                "lrWidth": 13.4,
-                "lrXOverrun": -1.0,
-                "lrYOverrun": -1.0,
-                "nElementWeldMode": 1,
-                "nMaxColumn": 2,
-                "nMaxRow": 1,
-                "nPlateWeldMode": 3
-            }
-        },
-        "1111": {
-            "recipeTypeName": "MainRType",
-            "values": {
-                "lrDistanceColumn": 8.0,
-                "lrDistanceRow": 8.0,
-                "lrLength": 17.5,
-                "lrWidth": 13.4,
+                "lrGripperTunningAngle": 0.0,
+                "lrR1TunningAngle": 1.5,
+                "lrVacXOffset": 2.0,
+                "lrVacYOffset": 2.0,
+                "lrWeldXNegOffset": 0.0,
+                "lrWeldXPosOffset": 0.0,
+                "lrWeldYNegOffset": 0.0,
+                "lrWeldYPosOffset": 0.0,
+                "lrX1X2Diff": 0.0,
+                "lrX2GripperPositionOffset": 0.0,
+                "lrXLength": 17.5,
                 "lrXOverrun": 0.0,
+                "lrY1Y2Diff": 0.0,
+                "lrYGripperPositionOffset": 0.0,
+                "lrYLength": 13.4,
                 "lrYOverrun": 0.0,
                 "nElementWeldMode": 0,
-                "nMaxColumn": 2,
+                "nMaxColumn": 3,
                 "nMaxRow": 1,
                 "nPlateWeldMode": 0
             }
         },
-        "123": {
+        "bbb": {
             "recipeTypeName": "MainRType",
             "values": {
+                "intECylinderWeldDepth": 2600,
+                "intScheduleX": 1,
+                "intScheduleY": 1,
                 "lrDistanceColumn": 0.0,
                 "lrDistanceRow": 0.0,
-                "lrLength": 0.0,
-                "lrWidth": 0.0,
-                "lrXOverrun": 1.0,
-                "lrYOverrun": 1.0,
+                "lrGripperTunningAngle": 0.0,
+                "lrR1TunningAngle": 1.5,
+                "lrVacXOffset": 0.0,
+                "lrVacYOffset": 0.0,
+                "lrWeldXNegOffset": 0.0,
+                "lrWeldXPosOffset": 0.0,
+                "lrWeldYNegOffset": 0.0,
+                "lrWeldYPosOffset": 0.0,
+                "lrX1X2Diff": 0.0,
+                "lrX2GripperPositionOffset": 0.0,
+                "lrXLength": 0.0,
+                "lrXOverrun": 0.0,
+                "lrY1Y2Diff": 0.0,
+                "lrYGripperPositionOffset": 0.0,
+                "lrYLength": 0.0,
+                "lrYOverrun": 0.0,
                 "nElementWeldMode": 0,
-                "nMaxColumn": 2,
-                "nMaxRow": 2,
+                "nMaxColumn": 0,
+                "nMaxRow": 0,
                 "nPlateWeldMode": 0
-            }
-        },
-        "222": {
-            "recipeTypeName": "MainRType",
-            "values": {
-                "lrDistanceColumn": 2.0,
-                "lrDistanceRow": 2.0,
-                "lrLength": 2.0,
-                "lrWidth": 2.0,
-                "lrXOverrun": 1.0,
-                "lrYOverrun": 1.0,
-                "nElementWeldMode": 0,
-                "nMaxColumn": 3,
-                "nMaxRow": 3,
-                "nPlateWeldMode": 0
-            }
-        },
-        "test": {
-            "recipeTypeName": "MainRType",
-            "values": {
-                "lrDistanceColumn": 1.0,
-                "lrDistanceRow": 1.0,
-                "lrLength": 10.0,
-                "lrWidth": 10.0,
-                "lrXOverrun": -2.0,
-                "lrYOverrun": -3.0,
-                "nElementWeldMode": 1,
-                "nMaxColumn": 2,
-                "nMaxRow": 2,
-                "nPlateWeldMode": 1
             }
         }
     },
     "recipeTypeList": {
         "MainRType": {
             "members": {
+                "intECylinderWeldDepth": {
+                    "defaultValue": 2600,
+                    "enabled": true,
+                    "group": "",
+                    "order": 19,
+                    "schema": {
+                        "maximum": 4000,
+                        "minimum": 1200
+                    },
+                    "symbol": "PLC1.GVL_HMI.intECylinderWeldDepth",
+                    "unit": ""
+                },
+                "intScheduleX": {
+                    "defaultValue": 1,
+                    "enabled": true,
+                    "group": "",
+                    "order": 23,
+                    "schema": {
+                        "maximum": 63,
+                        "minimum": 1
+                    },
+                    "symbol": "PLC1.GVL_HMI.intScheduleX",
+                    "unit": ""
+                },
+                "intScheduleY": {
+                    "defaultValue": 1,
+                    "enabled": true,
+                    "group": "",
+                    "order": 24,
+                    "schema": {
+                        "maximum": 63,
+                        "minimum": 1
+                    },
+                    "symbol": "PLC1.GVL_HMI.intScheduleY",
+                    "unit": ""
+                },
                 "lrDistanceColumn": {
                     "defaultValue": 0.0,
                     "enabled": true,
@@ -97,29 +118,140 @@
                     "symbol": "PLC1.GVL_HMI.lrDistanceRow",
                     "unit": ""
                 },
-                "lrLength": {
+                "lrGripperTunningAngle": {
                     "defaultValue": 0.0,
                     "enabled": true,
                     "group": "",
-                    "order": 2,
-                    "schema": {},
-                    "symbol": "PLC1.GVL_HMI.lrLength",
+                    "order": 20,
+                    "schema": {
+                        "maximum": 10.0,
+                        "minimum": -10.0
+                    },
+                    "symbol": "PLC1.GVL_HMI.lrGripperTunningAngle",
                     "unit": ""
                 },
-                "lrWidth": {
+                "lrR1TunningAngle": {
+                    "defaultValue": 1.5,
+                    "enabled": true,
+                    "group": "",
+                    "order": 8,
+                    "schema": {
+                        "maximum": 10.0,
+                        "minimum": -10.0
+                    },
+                    "symbol": "PLC1.GVL_HMI.lrR1TunningAngle",
+                    "unit": ""
+                },
+                "lrVacXOffset": {
                     "defaultValue": 0.0,
                     "enabled": true,
                     "group": "",
-                    "order": 3,
+                    "order": 9,
+                    "schema": {
+                        "maximum": 10.0,
+                        "minimum": -10.0
+                    },
+                    "symbol": "PLC1.GVL_HMI.lrVacXOffset",
+                    "unit": ""
+                },
+                "lrVacYOffset": {
+                    "defaultValue": 0.0,
+                    "enabled": true,
+                    "group": "",
+                    "order": 10,
+                    "schema": {
+                        "maximum": 10.0,
+                        "minimum": -10.0
+                    },
+                    "symbol": "PLC1.GVL_HMI.lrVacYOffset",
+                    "unit": ""
+                },
+                "lrWeldXNegOffset": {
+                    "defaultValue": "0",
+                    "enabled": true,
+                    "group": "",
+                    "order": 14,
+                    "schema": {
+                        "maximum": 10.0,
+                        "minimum": -10.0
+                    },
+                    "symbol": "PLC1.GVL_HMI.lrWeldXNegOffset",
+                    "unit": ""
+                },
+                "lrWeldXPosOffset": {
+                    "defaultValue": 0.0,
+                    "enabled": true,
+                    "group": "",
+                    "order": 13,
+                    "schema": {
+                        "maximum": 10.0,
+                        "minimum": -10.0
+                    },
+                    "symbol": "PLC1.GVL_HMI.lrWeldXPosOffset",
+                    "unit": ""
+                },
+                "lrWeldYNegOffset": {
+                    "defaultValue": "0",
+                    "enabled": true,
+                    "group": "",
+                    "order": 16,
+                    "schema": {
+                        "maximum": 10.0,
+                        "minimum": -10.0
+                    },
+                    "symbol": "PLC1.GVL_HMI.lrWeldYNegOffset",
+                    "unit": ""
+                },
+                "lrWeldYPosOffset": {
+                    "defaultValue": 0.0,
+                    "enabled": true,
+                    "group": "",
+                    "order": 15,
+                    "schema": {
+                        "maximum": 10.0,
+                        "minimum": -10.0
+                    },
+                    "symbol": "PLC1.GVL_HMI.lrWeldYPosOffset",
+                    "unit": ""
+                },
+                "lrX1X2Diff": {
+                    "defaultValue": 0.0,
+                    "enabled": true,
+                    "group": "",
+                    "order": 11,
+                    "schema": {
+                        "maximum": 10.0,
+                        "minimum": -10.0
+                    },
+                    "symbol": "PLC1.GVL_HMI.lrX1X2Diff",
+                    "unit": ""
+                },
+                "lrX2GripperPositionOffset": {
+                    "defaultValue": "0",
+                    "enabled": true,
+                    "group": "",
+                    "order": 17,
+                    "schema": {
+                        "maximum": 10.0,
+                        "minimum": -10.0
+                    },
+                    "symbol": "PLC1.GVL_HMI.lrX2GripperPositionOffset",
+                    "unit": ""
+                },
+                "lrXLength": {
+                    "defaultValue": 0.0,
+                    "enabled": true,
+                    "group": "",
+                    "order": 21,
                     "schema": {},
-                    "symbol": "PLC1.GVL_HMI.lrWidth",
+                    "symbol": "PLC1.GVL_HMI.lrXLength",
                     "unit": ""
                 },
                 "lrXOverrun": {
                     "defaultValue": 0.0,
                     "enabled": true,
                     "group": "",
-                    "order": 6,
+                    "order": 4,
                     "schema": {
                         "maximum": 100.0,
                         "minimum": -10.0
@@ -127,11 +259,44 @@
                     "symbol": "PLC1.GVL_HMI.lrXOverrun",
                     "unit": ""
                 },
+                "lrY1Y2Diff": {
+                    "defaultValue": 0.0,
+                    "enabled": true,
+                    "group": "",
+                    "order": 12,
+                    "schema": {
+                        "maximum": 10.0,
+                        "minimum": -10.0
+                    },
+                    "symbol": "PLC1.GVL_HMI.lrY1Y2Diff",
+                    "unit": ""
+                },
+                "lrYGripperPositionOffset": {
+                    "defaultValue": "0",
+                    "enabled": true,
+                    "group": "",
+                    "order": 18,
+                    "schema": {
+                        "maximum": 10.0,
+                        "minimum": -10.0
+                    },
+                    "symbol": "PLC1.GVL_HMI.lrYGripperPositionOffset",
+                    "unit": ""
+                },
+                "lrYLength": {
+                    "defaultValue": 0.0,
+                    "enabled": true,
+                    "group": "",
+                    "order": 22,
+                    "schema": {},
+                    "symbol": "PLC1.GVL_HMI.lrYLength",
+                    "unit": ""
+                },
                 "lrYOverrun": {
                     "defaultValue": 0.0,
                     "enabled": true,
                     "group": "",
-                    "order": 7,
+                    "order": 5,
                     "schema": {
                         "maximum": 100.0,
                         "minimum": -10.0
@@ -143,7 +308,7 @@
                     "defaultValue": 0,
                     "enabled": true,
                     "group": "",
-                    "order": 9,
+                    "order": 7,
                     "schema": {},
                     "symbol": "PLC1.GVL_HMI.nElementWeldMode",
                     "unit": ""
@@ -152,7 +317,7 @@
                     "defaultValue": 0,
                     "enabled": true,
                     "group": "",
-                    "order": 4,
+                    "order": 2,
                     "schema": {},
                     "symbol": "PLC1.GVL_HMI.nMaxColumn",
                     "unit": ""
@@ -161,7 +326,7 @@
                     "defaultValue": 0,
                     "enabled": true,
                     "group": "",
-                    "order": 5,
+                    "order": 3,
                     "schema": {},
                     "symbol": "PLC1.GVL_HMI.nMaxRow",
                     "unit": ""
@@ -170,7 +335,7 @@
                     "defaultValue": 0,
                     "enabled": true,
                     "group": "",
-                    "order": 8,
+                    "order": 6,
                     "schema": {},
                     "symbol": "PLC1.GVL_HMI.nPlateWeldMode",
                     "unit": ""

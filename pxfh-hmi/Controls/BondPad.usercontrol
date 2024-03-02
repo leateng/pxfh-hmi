@@ -8,7 +8,7 @@
     "actions": [
       {
         "objectType": "JavaScript",
-        "active": true,
+        "active": false,
         "sourceLines": [
           "TcHmi.Symbol.readEx2(\"%i%selectedRecipe::nMaxColumn%/i%\", function(colData){",
           "  TcHmi.Symbol.readEx2(\"%i%selectedRecipe::nMaxRow%/i%\", function(rowData){",
@@ -31,6 +31,58 @@
           "        element.attr({\"rowIndex\": i, \"colIndex\": j, \"status\": 1});",
           "        $container.append(element);",
           "      }",
+          "    }",
+          "  });",
+          "});"
+        ],
+        "injectContextObject": false,
+        "asyncWait": true,
+        "waitMode": "Synchronous"
+      },
+      {
+        "objectType": "JavaScript",
+        "active": true,
+        "sourceLines": [
+          "TcHmi.Symbol.readEx2(\"%i%selectedRecipe::nMaxColumn%/i%\", function(colData){",
+          "  TcHmi.Symbol.readEx2(\"%i%selectedRecipe::nMaxRow%/i%\", function(rowData){",
+          "    const rowSize = rowData.value;",
+          "    const colSize = colData.value;",
+          "",
+          "    if (rowSize == undefined || colSize == undefined || rowSize == null || colSize == null)",
+          "        return;",
+          "",
+          "    const control = TcHmi.Symbol.readEx(\"%ctrl%BondPad%/ctrl%\");",
+          "    const container = control.getElement(); //获取dom",
+          "    const $container = jQuery(container).children().first();",
+          "    $container.empty();",
+          "    if(! $container.hasClass(\"analog-discs-grid-container\")){",
+          "      $container.addClass(\"analog-discs-grid-container\");",
+          "    }",
+          "",
+          "",
+          "    var max = rowSize > colSize ? rowSize : colSize;",
+          "    var container_width = $container.width();",
+          "    var element_width = container_width / max;",
+          "    ",
+          "    var col_elems = []",
+          "    for (var c = 0; c < colSize; c++) {",
+          "        var col_elem = document.createElement(\"span\");",
+          "        col_elem.className = \"col\"",
+          "        col_elem.style = `width: ${element_width}px; height: ${container_width}px; float: left;`",
+          "        $container.append(col_elem);",
+          "        col_elems.push(col_elem);",
+          "      }",
+          "",
+          "    for (var c = 0; c < colSize; c++) {",
+          "        for (var r = 0; r < rowSize; r++) {",
+          "          var elem = document.createElement(\"div\");",
+          "          elem.style = `width: ${element_width}px; height: ${element_width}px;`",
+          "          elem.className = \"analog-discs-grid-item\";",
+          "          elem.setAttribute(\"rowIndex\", r);",
+          "          elem.setAttribute(\"colIndex\", c);",
+          "          elem.setAttribute(\"status\", 1);",
+          "          col_elems[c].append(elem);",
+          "        }",
           "    }",
           "  });",
           "});"
@@ -46,7 +98,7 @@
     "actions": [
       {
         "objectType": "JavaScript",
-        "active": true,
+        "active": false,
         "sourceLines": [
           "TcHmi.Symbol.readEx2(\"%i%selectedRecipe::nMaxColumn%/i%\", function(colData){",
           "  TcHmi.Symbol.readEx2(\"%i%selectedRecipe::nMaxRow%/i%\", function(rowData){",
@@ -76,9 +128,67 @@
         "injectContextObject": false,
         "asyncWait": true,
         "waitMode": "Synchronous"
+      },
+      {
+        "objectType": "JavaScript",
+        "active": true,
+        "sourceLines": [
+          "TcHmi.Symbol.readEx2(\"%i%selectedRecipe::nMaxColumn%/i%\", function(colData){",
+          "  TcHmi.Symbol.readEx2(\"%i%selectedRecipe::nMaxRow%/i%\", function(rowData){",
+          "    const rowSize = rowData.value;",
+          "    const colSize = colData.value;",
+          "",
+          "    if (rowSize == undefined || colSize == undefined || rowSize == null || colSize == null)",
+          "        return;",
+          "",
+          "    const control = TcHmi.Symbol.readEx(\"%ctrl%BondPad%/ctrl%\");",
+          "    const container = control.getElement(); //获取dom",
+          "    const $container = jQuery(container).children().first();",
+          "    $container.empty();",
+          "    if(! $container.hasClass(\"analog-discs-grid-container\")){",
+          "      $container.addClass(\"analog-discs-grid-container\");",
+          "    }",
+          "",
+          "",
+          "    var max = rowSize > colSize ? rowSize : colSize;",
+          "    var container_width = $container.width();",
+          "    var element_width = container_width / max;",
+          "    ",
+          "    var col_elems = []",
+          "    for (var c = 0; c < colSize; c++) {",
+          "        var col_elem = document.createElement(\"span\");",
+          "        col_elem.className = \"col\"",
+          "        col_elem.style = `width: ${element_width}px; height: ${container_width}px; float: left;`",
+          "        $container.append(col_elem);",
+          "        col_elems.push(col_elem);",
+          "      }",
+          "",
+          "    for (var c = 0; c < colSize; c++) {",
+          "        for (var r = 0; r < rowSize; r++) {",
+          "          var elem = document.createElement(\"div\");",
+          "          elem.style = `width: ${element_width}px; height: ${element_width}px;`",
+          "          elem.className = \"analog-discs-grid-item\";",
+          "          elem.setAttribute(\"rowIndex\", r);",
+          "          elem.setAttribute(\"colIndex\", c);",
+          "          elem.setAttribute(\"status\", 1);",
+          "          col_elems[c].append(elem);",
+          "        }",
+          "    }",
+          "  });",
+          "});"
+        ],
+        "injectContextObject": false,
+        "asyncWait": true,
+        "waitMode": "Synchronous"
       }
     ]
   }
+]
+</script>
+
+<script data-tchmi-target-attribute="data-tchmi-class-names" type="application/json">
+[
+  "bondPad"
 ]
 </script>
 </div>

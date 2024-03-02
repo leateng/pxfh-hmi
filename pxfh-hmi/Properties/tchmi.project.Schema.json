@@ -238,22 +238,64 @@
     },
     "MyMainRecipeType": {
       "properties": {
+        "intECylinderWeldDepth": {
+          "$ref": "tchmi:general#/definitions/Number"
+        },
         "lrDistanceColumn": {
           "$ref": "tchmi:general#/definitions/Number"
         },
         "lrDistanceRow": {
           "$ref": "tchmi:general#/definitions/Number"
         },
-        "lrLength": {
+        "lrGripperTunningAngle": {
           "$ref": "tchmi:general#/definitions/Number"
         },
-        "lrWidth": {
+        "lrR1TunningAngle": {
+          "$ref": "tchmi:general#/definitions/Number"
+        },
+        "lrVacXOffset": {
+          "$ref": "tchmi:general#/definitions/Number"
+        },
+        "lrVacYOffset": {
+          "$ref": "tchmi:general#/definitions/Number"
+        },
+        "lrWeldXNegOffset": {
+          "$ref": "tchmi:general#/definitions/Number"
+        },
+        "lrWeldXPosOffset": {
+          "$ref": "tchmi:general#/definitions/Number"
+        },
+        "lrWeldYNegOffset": {
+          "$ref": "tchmi:general#/definitions/Number"
+        },
+        "lrWeldYPosOffset": {
+          "$ref": "tchmi:general#/definitions/Number"
+        },
+        "lrX1X2Diff": {
+          "$ref": "tchmi:general#/definitions/Number"
+        },
+        "lrX2GripperPositionOffset": {
+          "$ref": "tchmi:general#/definitions/Number"
+        },
+        "lrXLength": {
           "$ref": "tchmi:general#/definitions/Number"
         },
         "lrXOverrun": {
           "$ref": "tchmi:general#/definitions/Number"
         },
+        "lrY1Y2Diff": {
+          "$ref": "tchmi:general#/definitions/Number"
+        },
+        "lrYGripperPositionOffset": {
+          "$ref": "tchmi:general#/definitions/Number"
+        },
+        "lrYLength": {
+          "$ref": "tchmi:general#/definitions/Number"
+        },
         "lrYOverrun": {
+          "$ref": "tchmi:general#/definitions/Number"
+        },
+        "nElementWeldMode": {
           "$ref": "tchmi:general#/definitions/Number"
         },
         "nMaxColumn": {
@@ -265,11 +307,15 @@
         "nPlateWeldMode": {
           "$ref": "tchmi:general#/definitions/Number"
         },
-        "nElementWeldMode": {
-          "$ref": "tchmi:general#/definitions/Number"
+        "intScheduleX": {
+          "$ref": "tchmi:general#/definitions/INT"
+        },
+        "intScheduleY": {
+          "$ref": "tchmi:general#/definitions/INT"
         }
       },
-      "type": "object"
+      "type": "object",
+      "id": "tchmi:project#/definitions/MyMainRecipeType"
     }
   }
 }

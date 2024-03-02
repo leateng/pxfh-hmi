@@ -1,17 +1,34 @@
 @import url("styles/jquery.toast.css");
 
+#BottomNavRegion .tchmi-button-template-content-text {
+    color: #4089cb;
+}
+#BottomNavRegion .down .tchmi-button-template-content-text {
+    color: #FFFFFF;
+}
+
+svg {
+}
+
 #TcHmiMainRegion {
     height: calc(100% - 100px);
 }
 
+#TcHmiJogRegion {
+    height: calc(100% - 80px);
+    width: calc(100% - 60px);
+}
+
+/*
 .analog-discs-grid-container {
     display: grid;
     grid-template-columns: repeat(var(--col), 1fr);
     grid-template-rows: repeat(var(--row), 1fr);
 }
+*/
 
 .analog-discs-grid-item {
-    margin: 5px;
+    margin: 0px;
     cursor: pointer;
     background-color: #000000;
     background-size: cover;
@@ -80,14 +97,6 @@ img.tchmi-image-template-content {
     border-left: 2px solid #1960a3 !important;
 }
 
-/*main recipe tab
-#TcHmiTabNavigation_MainRecipe {
-    height: calc(100% - 145px);
-    width: calc(100% - 60px);
-}*/
-/*power recipe tab
-#TcHmiTabNavigation_PowerRecipe {
-    height: calc(100% - 155px);
-    width: calc(100% - 60px);
+.analog-discs-grid-container {
+    background-color: rgba(0, 0, 0, 0.3);
 }
-*/

@@ -46,6 +46,7 @@
     "sealing-weld": "封焊",
     "spot-welding": "点焊",
     "overrun": "超程",
-    "save": "保存"
+    "save": "保存",
+    "tunning": "调试参数"
   }
 }

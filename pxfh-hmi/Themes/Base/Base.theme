@@ -1,15 +1,19 @@
 {
   "controlTypeValues": {},
   "controlClassValues": {
-    "myVerticalTab": {
-      "attributes": {},
-      "themedResources": {}
-    },
     "myTabHeight1": {
       "attributes": {},
       "themedResources": {}
     },
     "myTabHeight2": {
+      "attributes": {},
+      "themedResources": {}
+    },
+    "myVerticalTab": {
+      "attributes": {},
+      "themedResources": {}
+    },
+    "bondPad": {
       "attributes": {},
       "themedResources": {}
     }

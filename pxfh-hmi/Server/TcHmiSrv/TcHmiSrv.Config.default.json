@@ -3587,6 +3587,16 @@
             },
             "USEMAPPING": true
         },
+        "PLC1.GVL_HMI.bR1MoveAbs": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_HMI::bR1MoveAbs",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            "USEMAPPING": true
+        },
         "PLC1.GVL_HMI.bShelfFull": {
             "ACCESS": 3,
             "DOMAIN": "ADS",
@@ -3847,6 +3857,57 @@
             },
             "USEMAPPING": true
         },
+        "PLC1.GVL_HMI.intECylinderWeldDepth": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_HMI::intECylinderWeldDepth",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/INT"
+                    },
+                    {
+                        "comment": "º¸½ÓÊ±µç¸×¸ß¶È"
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL_HMI.intScheduleX": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_HMI::intScheduleX",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/UINT"
+                    },
+                    {
+                        "comment": "º¸½ÓX±ßÊ±µÄ¹æ·¶ºÅ"
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL_HMI.intScheduleY": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_HMI::intScheduleY",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/UINT"
+                    },
+                    {
+                        "comment": "º¸½ÓY±ßÊ±µÄ¹æ·¶ºÅ"
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
         "PLC1.GVL_HMI.lrCrtPosX1": {
             "ACCESS": 3,
             "DOMAIN": "ADS",
@@ -3907,6 +3968,23 @@
             },
             "USEMAPPING": true
         },
+        "PLC1.GVL_HMI.lrGripperTunningAngle": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_HMI::lrGripperTunningAngle",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/LREAL"
+                    },
+                    {
+                        "comment": "¼Ð×¦Ðý×ª½Ç¶Èµ÷Õû,Ë³Ê±Õë"
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
         "PLC1.GVL_HMI.lrLength": {
             "ACCESS": 3,
             "DOMAIN": "ADS",
@@ -3914,6 +3992,145 @@
             "MAPPING": "PLC1::GVL_HMI::lrLength",
             "SCHEMA": {
                 "$ref": "tchmi:general#/definitions/LREAL"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL_HMI.lrR1MoveAngle": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_HMI::lrR1MoveAngle",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/LREAL"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL_HMI.lrR1MoveVelocity": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_HMI::lrR1MoveVelocity",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/LREAL"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL_HMI.lrR1TunningAngle": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_HMI::lrR1TunningAngle",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/LREAL"
+                    },
+                    {
+                        "comment": "Îü×ìÐý×ª½Ç¶Èµ÷Õû"
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL_HMI.lrVacXOffset": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_HMI::lrVacXOffset",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/LREAL"
+                    },
+                    {
+                        "comment": "Îü×ì·Å¸Ç°åÊ±XµÄÆ«ÒÆÁ¿£¬µ¥Î»mm"
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL_HMI.lrVacYOffset": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_HMI::lrVacYOffset",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/LREAL"
+                    },
+                    {
+                        "comment": "Îü×ì·Å¸Ç°åÊ±YµÄÆ«ÒÆÁ¿£¬µ¥Î»mm"
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL_HMI.lrWeldXNegOffset": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_HMI::lrWeldXNegOffset",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/LREAL"
+                    },
+                    {
+                        "comment": "º¸½ÓÊ±X¸º·½ÏòÆ«ÒÆÁ¿£¬µ¥Î»mm"
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL_HMI.lrWeldXPosOffset": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_HMI::lrWeldXPosOffset",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/LREAL"
+                    },
+                    {
+                        "comment": "º¸½ÓÊ±XÕý·½ÏòÆ«ÒÆÁ¿£¬µ¥Î»mm"
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL_HMI.lrWeldYNegOffset": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_HMI::lrWeldYNegOffset",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/LREAL"
+                    },
+                    {
+                        "comment": "º¸½ÓÊ±Y¸º·½ÏòÆ«ÒÆÁ¿£¬µ¥Î»mm"
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL_HMI.lrWeldYPosOffset": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_HMI::lrWeldYPosOffset",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/LREAL"
+                    },
+                    {
+                        "comment": "º¸½ÓÊ±YÕý·½ÏòÆ«ÒÆÁ¿£¬µ¥Î»mm"
+                    }
+                ]
             },
             "USEMAPPING": true
         },
@@ -3947,6 +4164,33 @@
             },
             "USEMAPPING": true
         },
+        "PLC1.GVL_HMI.lrX1X2Diff": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_HMI::lrX1X2Diff",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/LREAL"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL_HMI.lrX2GripperPositionOffset": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_HMI::lrX2GripperPositionOffset",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/LREAL"
+                    },
+                    {
+                        "comment": "X2Öá·½Ïòº¸½ÓÊ±¼Ð×¦¿ªºÏ¶Èµ÷Õû£¬µ¥Î»mm"
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
         "PLC1.GVL_HMI.lrX2MovePosition": {
             "ACCESS": 3,
             "DOMAIN": "ADS",
@@ -3967,11 +4211,58 @@
             },
             "USEMAPPING": true
         },
+        "PLC1.GVL_HMI.lrXLength": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_HMI::lrXLength",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/LREAL"
+            },
+            "USEMAPPING": true
+        },
         "PLC1.GVL_HMI.lrXOverrun": {
             "ACCESS": 3,
             "DOMAIN": "ADS",
             "DYNAMIC": true,
             "MAPPING": "PLC1::GVL_HMI::lrXOverrun",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/LREAL"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL_HMI.lrY1Y2Diff": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_HMI::lrY1Y2Diff",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/LREAL"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL_HMI.lrYGripperPositionOffset": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_HMI::lrYGripperPositionOffset",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/LREAL"
+                    },
+                    {
+                        "comment": "YÖá·½Ïòº¸½ÓÊ±¼Ð×¦¿ªºÏ¶Èµ÷Õû£¬µ¥Î»mm"
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL_HMI.lrYLength": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_HMI::lrYLength",
             "SCHEMA": {
                 "$ref": "tchmi:general#/definitions/LREAL"
             },
@@ -4137,6 +4428,16 @@
             },
             "USEMAPPING": true
         },
+        "PLC1.MAIN.fbMoveTest.ipImageInDisp.png": {
+            "ACCESS": 3,
+            "DOMAIN": "TcHmiVision",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::MAIN::fbMoveTest::ipImageInDisp::png",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/BINARY"
+            },
+            "USEMAPPING": true
+        },
         "PLC1.MAIN.fbPut.fbFindContour.ipImageThresholdDisp.png": {
             "ACCESS": 3,
             "DOMAIN": "TcHmiVision",
@@ -4174,11 +4475,31 @@
             },
             "USEMAPPING": true
         },
+        "PLC1.MAIN.fbSelect.ipImageInDisp.jpeg": {
+            "ACCESS": 3,
+            "DOMAIN": "TcHmiVision",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::MAIN::fbSelect::ipImageInDisp::jpeg",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/BINARY"
+            },
+            "USEMAPPING": true
+        },
         "PLC1.MAIN.fbSelect.ipImageInDisp.png": {
             "ACCESS": 3,
             "DOMAIN": "TcHmiVision",
             "DYNAMIC": true,
             "MAPPING": "PLC1::MAIN::fbSelect::ipImageInDisp::png",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/BINARY"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.MAIN.fbSelect.ipImageWorkDisp.png": {
+            "ACCESS": 3,
+            "DOMAIN": "TcHmiVision",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::MAIN::fbSelect::ipImageWorkDisp::png",
             "SCHEMA": {
                 "$ref": "tchmi:general#/definitions/BINARY"
             },
@@ -5511,6 +5832,7 @@
                 "PLC1.GVL_HMI.bElementResume": 3,
                 "PLC1.GVL_HMI.bHMIHome": 3,
                 "PLC1.GVL_HMI.bMoveTest": 3,
+                "PLC1.GVL_HMI.bR1MoveAbs": 3,
                 "PLC1.GVL_HMI.bShelfFull": 3,
                 "PLC1.GVL_HMI.bShelfResume": 3,
                 "PLC1.GVL_HMI.bStackBlow": 3,
@@ -5537,19 +5859,38 @@
                 "PLC1.GVL_HMI.bZ1JogFastForward": 3,
                 "PLC1.GVL_HMI.bZ1JogForward": 3,
                 "PLC1.GVL_HMI.bZ1MoveAbs": 3,
+                "PLC1.GVL_HMI.intECylinderWeldDepth": 3,
+                "PLC1.GVL_HMI.intScheduleX": 3,
+                "PLC1.GVL_HMI.intScheduleY": 3,
                 "PLC1.GVL_HMI.lrCrtPosX1": 3,
                 "PLC1.GVL_HMI.lrCrtPosX2": 3,
                 "PLC1.GVL_HMI.lrCrtPosY": 3,
                 "PLC1.GVL_HMI.lrCrtPosZ1": 3,
                 "PLC1.GVL_HMI.lrDistanceColumn": 3,
                 "PLC1.GVL_HMI.lrDistanceRow": 3,
+                "PLC1.GVL_HMI.lrGripperTunningAngle": 3,
                 "PLC1.GVL_HMI.lrLength": 3,
+                "PLC1.GVL_HMI.lrR1MoveAngle": 3,
+                "PLC1.GVL_HMI.lrR1MoveVelocity": 3,
+                "PLC1.GVL_HMI.lrR1TunningAngle": 3,
+                "PLC1.GVL_HMI.lrVacXOffset": 3,
+                "PLC1.GVL_HMI.lrVacYOffset": 3,
+                "PLC1.GVL_HMI.lrWeldXNegOffset": 3,
+                "PLC1.GVL_HMI.lrWeldXPosOffset": 3,
+                "PLC1.GVL_HMI.lrWeldYNegOffset": 3,
+                "PLC1.GVL_HMI.lrWeldYPosOffset": 3,
                 "PLC1.GVL_HMI.lrWidth": 3,
                 "PLC1.GVL_HMI.lrX1MovePosition": 3,
                 "PLC1.GVL_HMI.lrX1MoveVelocity": 3,
+                "PLC1.GVL_HMI.lrX1X2Diff": 3,
+                "PLC1.GVL_HMI.lrX2GripperPositionOffset": 3,
                 "PLC1.GVL_HMI.lrX2MovePosition": 3,
                 "PLC1.GVL_HMI.lrX2MoveVelocity": 3,
+                "PLC1.GVL_HMI.lrXLength": 3,
                 "PLC1.GVL_HMI.lrXOverrun": 3,
+                "PLC1.GVL_HMI.lrY1Y2Diff": 3,
+                "PLC1.GVL_HMI.lrYGripperPositionOffset": 3,
+                "PLC1.GVL_HMI.lrYLength": 3,
                 "PLC1.GVL_HMI.lrYMovePosition": 3,
                 "PLC1.GVL_HMI.lrYMoveVelocity": 3,
                 "PLC1.GVL_HMI.lrYOverrun": 3,
@@ -5566,10 +5907,13 @@
                 "PLC1.MAIN.fbC2Calibration.ipImageResDisp.bmp": 3,
                 "PLC1.MAIN.fbC2Calibration.ipImageResDisp.jpeg": 3,
                 "PLC1.MAIN.fbC2Calibration.ipImageResDisp.png": 3,
+                "PLC1.MAIN.fbMoveTest.ipImageInDisp.png": 3,
                 "PLC1.MAIN.fbPut.fbFindContour.ipImageThresholdDisp.png": 3,
                 "PLC1.MAIN.fbPut.ipImageResDisp.png": 3,
                 "PLC1.MAIN.fbSelect.ipImageInDisp": 3,
+                "PLC1.MAIN.fbSelect.ipImageInDisp.jpeg": 3,
                 "PLC1.MAIN.fbSelect.ipImageInDisp.png": 3,
+                "PLC1.MAIN.fbSelect.ipImageWorkDisp.png": 3,
                 "PLC1.MAIN.ipImageInDisplay.bmp": 3,
                 "PLC1.MAIN.ipImageInDisplay.jpeg": 3,
                 "PLC1.MAIN.ipImageInDisplay.stream": 3,

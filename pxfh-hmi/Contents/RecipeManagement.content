@@ -309,6 +309,18 @@
     "verticalAlignment": "Center"
   },
   {
+    "name": "recipe_tunning_config",
+    "displayName": "%l%tunning%/l%",
+    "targetFile": {
+      "path": "Contents/RecipeTunningConfig.content"
+    },
+    "targetFileHostPreload": true,
+    "targetFileHostPreAttach": true,
+    "targetFileHostKeepAlive": true,
+    "horizontalAlignment": "Left",
+    "verticalAlignment": "Center"
+  },
+  {
     "name": "recipe_other_config",
     "displayName": "%l%other%/l%",
     "targetFile": {
