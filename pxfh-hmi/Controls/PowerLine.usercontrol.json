@@ -1,0 +1,59 @@
+{
+  "parameters": [
+    {
+      "name": "data-tchmi-schedule",
+      "displayName": "schedule",
+      "allowSymbolExpressionsInObject": false,
+      "visible": true,
+      "type": "tchmi:project#/definitions/PLC1.PowerSchedule",
+      "category": "",
+      "description": "",
+      "requiredOnCompile": false,
+      "readOnly": false,
+      "bindable": true,
+      "heritable": true,
+      "propertyName": "schedule",
+      "propertySetterName": "setSchedule",
+      "propertyGetterName": "getSchedule",
+      "refTo": ""
+    },
+    {
+      "name": "data-tchmi-recipe",
+      "displayName": "recipe",
+      "allowSymbolExpressionsInObject": false,
+      "visible": true,
+      "type": "tchmi:project#/definitions/MyMainRecipeType",
+      "category": "",
+      "description": "",
+      "requiredOnCompile": false,
+      "readOnly": false,
+      "bindable": true,
+      "heritable": true,
+      "propertyName": "recipe",
+      "propertySetterName": "setRecipe",
+      "propertyGetterName": "getRecipe",
+      "refTo": ""
+    },
+    {
+      "name": "data-tchmi-axis",
+      "displayName": "axis",
+      "allowSymbolExpressionsInObject": false,
+      "visible": true,
+      "type": "tchmi:general#/definitions/String",
+      "category": "",
+      "description": "",
+      "defaultValueInternal": "\"x\"",
+      "requiredOnCompile": false,
+      "readOnly": false,
+      "bindable": true,
+      "heritable": true,
+      "propertyName": "axis",
+      "propertySetterName": "setAxis",
+      "propertyGetterName": "getAxis",
+      "refTo": ""
+    }
+  ],
+  "virtualRights": [],
+  "$schema": "./../../Packages/Beckhoff.TwinCAT.HMI.Framework.12.760.48/runtimes/native1.12-tchmi/Schema/UserControlConfig.Schema.json",
+  "description": ""
+}

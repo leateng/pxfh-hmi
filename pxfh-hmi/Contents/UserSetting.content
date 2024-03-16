@@ -2,7 +2,7 @@
 
 <div id="TcHmiTextblock_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="58" data-tchmi-height-unit="px" data-tchmi-left="30" data-tchmi-left-unit="px" data-tchmi-text="%l%user-setting%/l%" data-tchmi-top="30" data-tchmi-top-unit="px" data-tchmi-width="214" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-font-weight="Bold" data-tchmi-text-font-size="36">
 </div>
-<div id="TcHmiThemeSelect" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiThemeSelect" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="190" data-tchmi-left-unit="px" data-tchmi-top="114" data-tchmi-top-unit="px" data-tchmi-width="300" data-tchmi-width-unit="px">
+<div id="TcHmiThemeSelect" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiThemeSelect" data-tchmi-height="35" data-tchmi-height-unit="px" data-tchmi-left="190" data-tchmi-left-unit="px" data-tchmi-top="114" data-tchmi-top-unit="px" data-tchmi-width="300" data-tchmi-width-unit="px">
 <script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
 {
   "top": 3,
@@ -13,7 +13,7 @@
 </script>
 
 </div>
-<div id="TcHmiLocalizationSelect" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiLocalizationSelect" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="190" data-tchmi-left-unit="px" data-tchmi-top="150" data-tchmi-top-unit="px" data-tchmi-width="300" data-tchmi-width-unit="px">
+<div id="TcHmiLocalizationSelect" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiLocalizationSelect" data-tchmi-height="35" data-tchmi-height-unit="px" data-tchmi-left="190" data-tchmi-left-unit="px" data-tchmi-top="159" data-tchmi-top-unit="px" data-tchmi-width="300" data-tchmi-width-unit="px">
 <script data-tchmi-target-attribute="data-tchmi-localization-mapping" type="application/json">
 [
   {
@@ -44,13 +44,13 @@
 </script>
 
 </div>
-<div id="TcHmiTextblock_4" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="30" data-tchmi-left-unit="px" data-tchmi-text="%l%theme%/l%" data-tchmi-top="114" data-tchmi-top-unit="px" data-tchmi-width="150" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center">
+<div id="TcHmiTextblock_4" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="35" data-tchmi-height-unit="px" data-tchmi-left="30" data-tchmi-left-unit="px" data-tchmi-text="%l%theme%/l%" data-tchmi-top="114" data-tchmi-top-unit="px" data-tchmi-width="150" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center">
 </div>
-<div id="TcHmiTextblock_5" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="30" data-tchmi-left-unit="px" data-tchmi-text="%l%language%/l%" data-tchmi-top="150" data-tchmi-top-unit="px" data-tchmi-width="150" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center">
+<div id="TcHmiTextblock_5" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="35" data-tchmi-height-unit="px" data-tchmi-left="30" data-tchmi-left-unit="px" data-tchmi-text="%l%language%/l%" data-tchmi-top="159" data-tchmi-top-unit="px" data-tchmi-width="150" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center">
 </div>
 <div id="TcHmiLine" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiLine" data-tchmi-height="10" data-tchmi-height-unit="px" data-tchmi-left="30" data-tchmi-left-unit="px" data-tchmi-top="282" data-tchmi-top-unit="px" data-tchmi-width="785" data-tchmi-width-unit="px" data-tchmi-x2="800" data-tchmi-y2="0">
 </div>
-<div id="TcHmiButton_25" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiButton" data-tchmi-height="50" data-tchmi-height-unit="px" data-tchmi-left="390" data-tchmi-left-unit="px" data-tchmi-top="186" data-tchmi-top-unit="px" data-tchmi-width="100" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text="%l%submit%/l%">
+<div id="TcHmiButton_25" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiButton" data-tchmi-height="50" data-tchmi-height-unit="px" data-tchmi-left="390" data-tchmi-left-unit="px" data-tchmi-top="204" data-tchmi-top-unit="px" data-tchmi-width="100" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text="%l%submit%/l%">
 
 <script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
 [
@@ -84,8 +84,8 @@
 ]
 </script>
 </div>
-<div id="TcHmiUserManagement" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiUserManagement" data-tchmi-height="48" data-tchmi-height-unit="px" data-tchmi-left="190" data-tchmi-left-unit="px" data-tchmi-top="319" data-tchmi-top-unit="px" data-tchmi-width="300" data-tchmi-width-unit="px" data-tchmi-allow-logout="false">
+<div id="TcHmiUserManagement" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiUserManagement" data-tchmi-height="35" data-tchmi-height-unit="px" data-tchmi-left="190" data-tchmi-left-unit="px" data-tchmi-top="302" data-tchmi-top-unit="px" data-tchmi-width="300" data-tchmi-width-unit="px" data-tchmi-allow-logout="false">
 </div>
-<div id="TcHmiTextblock_10" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="30" data-tchmi-left-unit="px" data-tchmi-text="%f%%l%user-management%/l%%/f%" data-tchmi-top="319" data-tchmi-top-unit="px" data-tchmi-width="150" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center">
+<div id="TcHmiTextblock_10" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="35" data-tchmi-height-unit="px" data-tchmi-left="30" data-tchmi-left-unit="px" data-tchmi-text="%f%%l%user-management%/l%%/f%" data-tchmi-top="302" data-tchmi-top-unit="px" data-tchmi-width="150" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center">
 </div>
 </div>

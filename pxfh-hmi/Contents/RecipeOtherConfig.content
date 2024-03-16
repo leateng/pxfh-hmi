@@ -103,4 +103,8 @@
 </script>
 
 </div>
+<div id="TcHmiTextblock_219" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-text="禁用下摄像头" data-tchmi-top="82" data-tchmi-top-unit="px" data-tchmi-width="150" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-font-weight="Bold">
+</div>
+<div id="TcHmiToggleSwitch_12" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiToggleSwitch" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="170" data-tchmi-left-unit="px" data-tchmi-text="" data-tchmi-top="82" data-tchmi-top-unit="px" data-tchmi-width="100" data-tchmi-width-unit="px" data-tchmi-state-symbol="%i%selectedRecipe::bSkipAdjustProcess%/i%">
+</div>
 </div>

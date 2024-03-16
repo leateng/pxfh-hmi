@@ -54,6 +54,15 @@
             "startOffset": 1,
             "type": "array"
         },
+        "PLC1.ARRAY_1..2_OF-scheduleParaStruct": {
+            "items": {
+                "$ref": "#/definitions/PLC1.scheduleParaStruct"
+            },
+            "maxItems": 2,
+            "minItems": 2,
+            "startOffset": 1,
+            "type": "array"
+        },
         "PLC1.ARRAY_1..3_1..3_OF-UINT": {
             "displayAsMatrix": 2,
             "items": {
@@ -567,7 +576,7 @@
                         },
                         {
                             "comment": "ÈÈÁ¿±È %",
-                            "propertyOrder": 22
+                            "propertyOrder": 23
                         }
                     ]
                 },
@@ -577,7 +586,7 @@
                             "$ref": "tchmi:general#/definitions/UINT"
                         },
                         {
-                            "propertyOrder": 31
+                            "propertyOrder": 32
                         }
                     ]
                 },
@@ -587,7 +596,7 @@
                             "$ref": "tchmi:general#/definitions/UINT"
                         },
                         {
-                            "propertyOrder": 32
+                            "propertyOrder": 33
                         }
                     ]
                 },
@@ -597,7 +606,7 @@
                             "$ref": "tchmi:general#/definitions/UINT"
                         },
                         {
-                            "propertyOrder": 33
+                            "propertyOrder": 34
                         }
                     ]
                 },
@@ -607,7 +616,7 @@
                             "$ref": "tchmi:general#/definitions/UINT"
                         },
                         {
-                            "propertyOrder": 23
+                            "propertyOrder": 24
                         }
                     ]
                 },
@@ -617,7 +626,7 @@
                             "$ref": "tchmi:general#/definitions/UINT"
                         },
                         {
-                            "propertyOrder": 24
+                            "propertyOrder": 25
                         }
                     ]
                 },
@@ -627,7 +636,7 @@
                             "$ref": "tchmi:general#/definitions/UINT"
                         },
                         {
-                            "propertyOrder": 25
+                            "propertyOrder": 26
                         }
                     ]
                 },
@@ -637,7 +646,7 @@
                             "$ref": "tchmi:general#/definitions/UINT"
                         },
                         {
-                            "propertyOrder": 26
+                            "propertyOrder": 27
                         }
                     ]
                 },
@@ -647,7 +656,7 @@
                             "$ref": "tchmi:general#/definitions/UINT"
                         },
                         {
-                            "propertyOrder": 27
+                            "propertyOrder": 28
                         }
                     ]
                 },
@@ -657,7 +666,7 @@
                             "$ref": "tchmi:general#/definitions/UINT"
                         },
                         {
-                            "propertyOrder": 28
+                            "propertyOrder": 29
                         }
                     ]
                 },
@@ -667,7 +676,7 @@
                             "$ref": "tchmi:general#/definitions/UINT"
                         },
                         {
-                            "propertyOrder": 29
+                            "propertyOrder": 30
                         }
                     ]
                 },
@@ -677,7 +686,18 @@
                             "$ref": "tchmi:general#/definitions/UINT"
                         },
                         {
-                            "propertyOrder": 30
+                            "propertyOrder": 31
+                        }
+                    ]
+                },
+                "name": {
+                    "allOf": [
+                        {
+                            "$ref": "tchmi:general#/definitions/STRING%2880%29"
+                        },
+                        {
+                            "comment": "schedule name",
+                            "propertyOrder": 1
                         }
                     ]
                 },
@@ -688,7 +708,7 @@
                         },
                         {
                             "comment": "powerTimeHold : UINT;\r\n µçÁ÷£¬µ¥Î»A",
-                            "propertyOrder": 8
+                            "propertyOrder": 9
                         }
                     ]
                 },
@@ -698,7 +718,7 @@
                             "$ref": "tchmi:general#/definitions/UINT"
                         },
                         {
-                            "propertyOrder": 9
+                            "propertyOrder": 10
                         }
                     ]
                 },
@@ -708,7 +728,7 @@
                             "$ref": "tchmi:general#/definitions/UINT"
                         },
                         {
-                            "propertyOrder": 4
+                            "propertyOrder": 5
                         }
                     ]
                 },
@@ -718,7 +738,7 @@
                             "$ref": "tchmi:general#/definitions/UINT"
                         },
                         {
-                            "propertyOrder": 3
+                            "propertyOrder": 4
                         }
                     ]
                 },
@@ -728,7 +748,7 @@
                             "$ref": "tchmi:general#/definitions/UINT"
                         },
                         {
-                            "propertyOrder": 7
+                            "propertyOrder": 8
                         }
                     ]
                 },
@@ -739,7 +759,7 @@
                         },
                         {
                             "comment": "Ê±¼ä£¬µ¥Î»ms",
-                            "propertyOrder": 1
+                            "propertyOrder": 2
                         }
                     ]
                 },
@@ -749,7 +769,7 @@
                             "$ref": "tchmi:general#/definitions/UINT"
                         },
                         {
-                            "propertyOrder": 5
+                            "propertyOrder": 6
                         }
                     ]
                 },
@@ -759,7 +779,7 @@
                             "$ref": "tchmi:general#/definitions/UINT"
                         },
                         {
-                            "propertyOrder": 2
+                            "propertyOrder": 3
                         }
                     ]
                 },
@@ -769,7 +789,7 @@
                             "$ref": "tchmi:general#/definitions/UINT"
                         },
                         {
-                            "propertyOrder": 6
+                            "propertyOrder": 7
                         }
                     ]
                 },
@@ -780,7 +800,7 @@
                         },
                         {
                             "comment": "½×Ä¿±ê %",
-                            "propertyOrder": 10
+                            "propertyOrder": 11
                         }
                     ]
                 },
@@ -790,7 +810,7 @@
                             "$ref": "tchmi:general#/definitions/UINT"
                         },
                         {
-                            "propertyOrder": 19
+                            "propertyOrder": 20
                         }
                     ]
                 },
@@ -800,7 +820,7 @@
                             "$ref": "tchmi:general#/definitions/UINT"
                         },
                         {
-                            "propertyOrder": 20
+                            "propertyOrder": 21
                         }
                     ]
                 },
@@ -810,7 +830,7 @@
                             "$ref": "tchmi:general#/definitions/UINT"
                         },
                         {
-                            "propertyOrder": 21
+                            "propertyOrder": 22
                         }
                     ]
                 },
@@ -820,7 +840,7 @@
                             "$ref": "tchmi:general#/definitions/UINT"
                         },
                         {
-                            "propertyOrder": 11
+                            "propertyOrder": 12
                         }
                     ]
                 },
@@ -830,7 +850,7 @@
                             "$ref": "tchmi:general#/definitions/UINT"
                         },
                         {
-                            "propertyOrder": 12
+                            "propertyOrder": 13
                         }
                     ]
                 },
@@ -840,7 +860,7 @@
                             "$ref": "tchmi:general#/definitions/UINT"
                         },
                         {
-                            "propertyOrder": 13
+                            "propertyOrder": 14
                         }
                     ]
                 },
@@ -850,7 +870,7 @@
                             "$ref": "tchmi:general#/definitions/UINT"
                         },
                         {
-                            "propertyOrder": 14
+                            "propertyOrder": 15
                         }
                     ]
                 },
@@ -860,7 +880,7 @@
                             "$ref": "tchmi:general#/definitions/UINT"
                         },
                         {
-                            "propertyOrder": 15
+                            "propertyOrder": 16
                         }
                     ]
                 },
@@ -870,7 +890,7 @@
                             "$ref": "tchmi:general#/definitions/UINT"
                         },
                         {
-                            "propertyOrder": 16
+                            "propertyOrder": 17
                         }
                     ]
                 },
@@ -880,7 +900,7 @@
                             "$ref": "tchmi:general#/definitions/UINT"
                         },
                         {
-                            "propertyOrder": 17
+                            "propertyOrder": 18
                         }
                     ]
                 },
@@ -890,7 +910,7 @@
                             "$ref": "tchmi:general#/definitions/UINT"
                         },
                         {
-                            "propertyOrder": 18
+                            "propertyOrder": 19
                         }
                     ]
                 },
@@ -901,7 +921,7 @@
                         },
                         {
                             "comment": "Ê±¼ä±È %",
-                            "propertyOrder": 34
+                            "propertyOrder": 35
                         }
                     ]
                 },
@@ -911,7 +931,7 @@
                             "$ref": "tchmi:general#/definitions/UINT"
                         },
                         {
-                            "propertyOrder": 43
+                            "propertyOrder": 44
                         }
                     ]
                 },
@@ -921,7 +941,7 @@
                             "$ref": "tchmi:general#/definitions/UINT"
                         },
                         {
-                            "propertyOrder": 44
+                            "propertyOrder": 45
                         }
                     ]
                 },
@@ -931,7 +951,7 @@
                             "$ref": "tchmi:general#/definitions/UINT"
                         },
                         {
-                            "propertyOrder": 45
+                            "propertyOrder": 46
                         }
                     ]
                 },
@@ -941,7 +961,7 @@
                             "$ref": "tchmi:general#/definitions/UINT"
                         },
                         {
-                            "propertyOrder": 35
+                            "propertyOrder": 36
                         }
                     ]
                 },
@@ -951,7 +971,7 @@
                             "$ref": "tchmi:general#/definitions/UINT"
                         },
                         {
-                            "propertyOrder": 36
+                            "propertyOrder": 37
                         }
                     ]
                 },
@@ -961,7 +981,7 @@
                             "$ref": "tchmi:general#/definitions/UINT"
                         },
                         {
-                            "propertyOrder": 37
+                            "propertyOrder": 38
                         }
                     ]
                 },
@@ -971,7 +991,7 @@
                             "$ref": "tchmi:general#/definitions/UINT"
                         },
                         {
-                            "propertyOrder": 38
+                            "propertyOrder": 39
                         }
                     ]
                 },
@@ -981,7 +1001,7 @@
                             "$ref": "tchmi:general#/definitions/UINT"
                         },
                         {
-                            "propertyOrder": 39
+                            "propertyOrder": 40
                         }
                     ]
                 },
@@ -991,7 +1011,7 @@
                             "$ref": "tchmi:general#/definitions/UINT"
                         },
                         {
-                            "propertyOrder": 40
+                            "propertyOrder": 41
                         }
                     ]
                 },
@@ -1001,7 +1021,7 @@
                             "$ref": "tchmi:general#/definitions/UINT"
                         },
                         {
-                            "propertyOrder": 41
+                            "propertyOrder": 42
                         }
                     ]
                 },
@@ -1011,7 +1031,7 @@
                             "$ref": "tchmi:general#/definitions/UINT"
                         },
                         {
-                            "propertyOrder": 42
+                            "propertyOrder": 43
                         }
                     ]
                 }
@@ -3536,7 +3556,7 @@
             "DYNAMIC": true,
             "MAPPING": "PLC1::GVL_HMI::aScheduleInfo",
             "SCHEMA": {
-                "$ref": "tchmi:server#/definitions/PLC1.ARRAY_1..63_OF-scheduleParaStruct"
+                "$ref": "tchmi:server#/definitions/PLC1.ARRAY_1..2_OF-scheduleParaStruct"
             },
             "USEMAPPING": true
         },
@@ -3612,6 +3632,16 @@
             "DOMAIN": "ADS",
             "DYNAMIC": true,
             "MAPPING": "PLC1::GVL_HMI::bShelfResume",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL_HMI.bSkipAdjustProcess": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_HMI::bSkipAdjustProcess",
             "SCHEMA": {
                 "$ref": "tchmi:general#/definitions/BOOL"
             },
@@ -4083,6 +4113,23 @@
             },
             "USEMAPPING": true
         },
+        "PLC1.GVL_HMI.lrWeldXPointDistance": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_HMI::lrWeldXPointDistance",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/LREAL"
+                    },
+                    {
+                        "comment": "º¸½ÓX±ßÊ±µÄµã¼ä¾à"
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
         "PLC1.GVL_HMI.lrWeldXPosOffset": {
             "ACCESS": 3,
             "DOMAIN": "ADS",
@@ -4112,6 +4159,23 @@
                     },
                     {
                         "comment": "º¸½ÓÊ±Y¸º·½ÏòÆ«ÒÆÁ¿£¬µ¥Î»mm"
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL_HMI.lrWeldYPointDistance": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_HMI::lrWeldYPointDistance",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/LREAL"
+                    },
+                    {
+                        "comment": "º¸½ÓY±ßÊ±µÄµã¼ä¾à"
                     }
                 ]
             },
@@ -4211,6 +4275,16 @@
             },
             "USEMAPPING": true
         },
+        "PLC1.GVL_HMI.lrX2WeldVelocity": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_HMI::lrX2WeldVelocity",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/LREAL"
+            },
+            "USEMAPPING": true
+        },
         "PLC1.GVL_HMI.lrXLength": {
             "ACCESS": 3,
             "DOMAIN": "ADS",
@@ -4298,6 +4372,16 @@
             },
             "USEMAPPING": true
         },
+        "PLC1.GVL_HMI.lrYWeldVelocity": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_HMI::lrYWeldVelocity",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/LREAL"
+            },
+            "USEMAPPING": true
+        },
         "PLC1.GVL_HMI.lrZ1MovePosition": {
             "ACCESS": 3,
             "DOMAIN": "ADS",
@@ -4355,6 +4439,16 @@
             "MAPPING": "PLC1::GVL_HMI::nPlateWeldMode",
             "SCHEMA": {
                 "$ref": "tchmi:general#/definitions/INT"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL_HMI.strRecipeName": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_HMI::strRecipeName",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/STRING%2880%29"
             },
             "USEMAPPING": true
         },
@@ -5835,6 +5929,7 @@
                 "PLC1.GVL_HMI.bR1MoveAbs": 3,
                 "PLC1.GVL_HMI.bShelfFull": 3,
                 "PLC1.GVL_HMI.bShelfResume": 3,
+                "PLC1.GVL_HMI.bSkipAdjustProcess": 3,
                 "PLC1.GVL_HMI.bStackBlow": 3,
                 "PLC1.GVL_HMI.bStart": 3,
                 "PLC1.GVL_HMI.bVacBlow": 3,
@@ -5876,8 +5971,10 @@
                 "PLC1.GVL_HMI.lrVacXOffset": 3,
                 "PLC1.GVL_HMI.lrVacYOffset": 3,
                 "PLC1.GVL_HMI.lrWeldXNegOffset": 3,
+                "PLC1.GVL_HMI.lrWeldXPointDistance": 3,
                 "PLC1.GVL_HMI.lrWeldXPosOffset": 3,
                 "PLC1.GVL_HMI.lrWeldYNegOffset": 3,
+                "PLC1.GVL_HMI.lrWeldYPointDistance": 3,
                 "PLC1.GVL_HMI.lrWeldYPosOffset": 3,
                 "PLC1.GVL_HMI.lrWidth": 3,
                 "PLC1.GVL_HMI.lrX1MovePosition": 3,
@@ -5886,6 +5983,7 @@
                 "PLC1.GVL_HMI.lrX2GripperPositionOffset": 3,
                 "PLC1.GVL_HMI.lrX2MovePosition": 3,
                 "PLC1.GVL_HMI.lrX2MoveVelocity": 3,
+                "PLC1.GVL_HMI.lrX2WeldVelocity": 3,
                 "PLC1.GVL_HMI.lrXLength": 3,
                 "PLC1.GVL_HMI.lrXOverrun": 3,
                 "PLC1.GVL_HMI.lrY1Y2Diff": 3,
@@ -5894,12 +5992,14 @@
                 "PLC1.GVL_HMI.lrYMovePosition": 3,
                 "PLC1.GVL_HMI.lrYMoveVelocity": 3,
                 "PLC1.GVL_HMI.lrYOverrun": 3,
+                "PLC1.GVL_HMI.lrYWeldVelocity": 3,
                 "PLC1.GVL_HMI.lrZ1MovePosition": 3,
                 "PLC1.GVL_HMI.lrZ1MoveVelocity": 3,
                 "PLC1.GVL_HMI.nElementWeldMode": 3,
                 "PLC1.GVL_HMI.nMaxColumn": 3,
                 "PLC1.GVL_HMI.nMaxRow": 3,
                 "PLC1.GVL_HMI.nPlateWeldMode": 3,
+                "PLC1.GVL_HMI.strRecipeName": 3,
                 "PLC1.MAIN.CellMatrix": 3,
                 "PLC1.MAIN.MatrixWandH": 3,
                 "PLC1.MAIN.fbAdjust.fbFindContour.ipImageResDisp.png": 3,

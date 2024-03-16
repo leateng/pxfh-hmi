@@ -1,0 +1,87 @@
+<div id="PowerStepBar" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControl" data-tchmi-top="0" data-tchmi-left="0" data-tchmi-width="100" data-tchmi-height="100" data-tchmi-width-unit="%" data-tchmi-height-unit="%" data-tchmi-creator-viewport-width="640" data-tchmi-creator-viewport-height="320">
+
+<div id="TcHmiBarChart" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiBarChart" data-tchmi-height="100" data-tchmi-height-unit="%" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-x-axis-name="x Axis" data-tchmi-y-axis-name="y Axis 1" data-tchmi-y-axis-unit="%" data-tchmi-y-main-tick-max-value="100" data-tchmi-y-main-tick-min-value="0" data-tchmi-y-sub-tick-steps="4" data-tchmi-width="100" data-tchmi-width-unit="%" data-tchmi-bar-graph-arrangement="Clustered" data-tchmi-reference-lines-position="Background" data-tchmi-bar-graph-width="5" data-tchmi-show-x-axis="true" data-tchmi-x-show-labels="true" data-tchmi-x-axis-auto-scaling="true" data-tchmi-x-axis-decimal-places="3" data-tchmi-x-main-tick-steps="11" data-tchmi-show-y-axis="true" data-tchmi-y-show-labels="true" data-tchmi-y-main-tick-steps="11" data-tchmi-y-axis-auto-scaling="true" data-tchmi-y-logarithmic-scale="false">
+<script data-tchmi-target-attribute="data-tchmi-bar-graph-data" type="application/json">
+[
+  [
+    0,
+    10,
+    20,
+    30,
+    40,
+    50,
+    60,
+    70,
+    80,
+    90,
+    100
+  ],
+  [
+    100,
+    90,
+    80,
+    70,
+    60,
+    50,
+    40,
+    30,
+    20,
+    10,
+    0
+  ]
+]
+</script>
+<script data-tchmi-target-attribute="data-tchmi-bar-graph-descriptions" type="application/json">
+[
+  {
+    "barColor": "%tr%Control::TcHmi.Controls.Beckhoff.TcHmiBarChart::DefaultGraphColor%/tr%",
+    "legendName": "data0"
+  },
+  {
+    "barColor": "%tr%Control::TcHmi.Controls.Beckhoff.TcHmiBarChart::DefaultGraphColor%/tr%",
+    "legendName": "data1"
+  }
+]
+</script>
+
+
+<script data-tchmi-target-attribute="data-tchmi-bar-graph-colors" type="application/json">
+[
+  {
+    "color": "rgba(200, 2, 100, 1)"
+  },
+  {
+    "color": "rgba(200, 200, 20, 1)"
+  }
+]
+</script>
+</div>
+
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "%pp%powerSchedule%/pp%",
+    "actions": [
+      {
+        "objectType": "Function",
+        "active": true,
+        "fn": "TcHmi.Functions.pxfh_hmi.UpdatePowerScheduleBar",
+        "fnParams": [
+          {
+            "objectType": "Symbol",
+            "valueType": "tchmi:project#/definitions/PLC1.PowerSchedule",
+            "symbolExpression": "%pp%powerSchedule%/pp%"
+          },
+          {
+            "objectType": "Symbol",
+            "valueType": "tchmi:framework#/definitions/TcHmi.Controls.Beckhoff.TcHmiBarChart",
+            "symbolExpression": "%ctrl%TcHmiBarChart%/ctrl%"
+          }
+        ],
+        "asyncWait": true
+      }
+    ]
+  }
+]
+</script>
+</div>

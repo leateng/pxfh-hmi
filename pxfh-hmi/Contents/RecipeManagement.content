@@ -39,26 +39,6 @@
     "event": "TcHmiCombobox_MainRecipeList.onSelectionChanged",
     "actions": [
       {
-        "objectType": "JavaScript",
-        "active": true,
-        "sourceLines": [
-          "const control = TcHmi.Symbol.readEx(\"%ctrl%TcHmiCombobox_MainRecipeList%/ctrl%\");",
-          "",
-          "// console.log(control.getSelectedText());",
-          "// console.log(control.getSelectedId());",
-          "// console.log(control.getSelectedValue());",
-          "",
-          "const recipeName = control.getSelectedText();",
-          "const recipeValue = control.getSelectedValue();",
-          "",
-          "console.log(recipeName);",
-          "console.log(recipeValue);"
-        ],
-        "injectContextObject": false,
-        "asyncWait": true,
-        "waitMode": "Synchronous"
-      },
-      {
         "objectType": "Function",
         "active": false,
         "fn": "TcHmi.Functions.Beckhoff.ActivateRecipe",
@@ -68,6 +48,41 @@
             "functionExpression": "%ctrl%TcHmiCombobox_MainRecipeList::SelectedText%/ctrl%"
           }
         ],
+        "asyncWait": true
+      },
+      {
+        "objectType": "JavaScript",
+        "active": false,
+        "sourceLines": [
+          "var a = TcHmi.Symbol.readEx(\"%i%selectedRecipe%/i%\");",
+          "console.log(\"==selected recipe\");",
+          "console.log(a);",
+          "console.log(this);"
+        ],
+        "injectContextObject": true,
+        "asyncWait": true,
+        "waitMode": "Asynchronous"
+      },
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%i%selectedRecipeId%/i%",
+        "value": {
+          "objectType": "Symbol",
+          "valueType": "tchmi:general#/definitions/String",
+          "symbolExpression": "%ctrl%TcHmiCombobox_MainRecipeList::SelectedId%/ctrl%"
+        },
+        "asyncWait": true
+      },
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%i%selectedRecipeName%/i%",
+        "value": {
+          "objectType": "Symbol",
+          "valueType": "tchmi:general#/definitions/String",
+          "symbolExpression": "%ctrl%TcHmiCombobox_MainRecipeList::SelectedText%/ctrl%"
+        },
         "asyncWait": true
       },
       {
@@ -85,13 +100,47 @@
         "objectType": "JavaScript",
         "active": true,
         "sourceLines": [
-          "var a = TcHmi.Symbol.readEx(\"%i%selectedRecipe%/i%\");",
-          "console.log(\"==selected recipe\");",
-          "console.log(a);"
+          "const control = TcHmi.Symbol.readEx(\"%ctrl%TcHmiCombobox_MainRecipeList%/ctrl%\");",
+          "const recipeName = control.getSelectedText();",
+          "console.log(`==selected recipe ${recipeName}`);",
+          "",
+          "const powerScheduleStore = TcHmi.Symbol.readEx(\"%i%PowerScheduleStore%/i%\");",
+          "const xName = `${recipeName}_power_x`;",
+          "const yName = `${recipeName}_power_y`;",
+          "const xPowerSchedule = powerScheduleStore[xName];",
+          "const yPowerSchedule = powerScheduleStore[yName];",
+          "",
+          "console.log(powerScheduleStore)",
+          "",
+          "if(xPowerSchedule != null) {",
+          "\txPowerSchedule['name'] = xName;",
+          "\tTcHmi.Symbol.writeEx(\"%i%XPowerSchedule%/i%\", xPowerSchedule);",
+          "}",
+          "",
+          "if(yPowerSchedule != null) {",
+          "\tyPowerSchedule['name'] = yName;",
+          "\tTcHmi.Symbol.writeEx(\"%i%YPowerSchedule%/i%\", yPowerSchedule);",
+          "}"
         ],
         "injectContextObject": false,
         "asyncWait": true,
         "waitMode": "Synchronous"
+      }
+    ]
+  },
+  {
+    "event": "TcHmiCombobox_MainRecipeList.onInitialized",
+    "actions": [
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%ctrl%TcHmiCombobox_MainRecipeList::SelectedId%/ctrl%",
+        "value": {
+          "objectType": "Symbol",
+          "valueType": "tchmi:general#/definitions/String",
+          "symbolExpression": "%i%selectedRecipeId%/i%"
+        },
+        "asyncWait": true
       }
     ]
   }
@@ -108,7 +157,7 @@
     "actions": [
       {
         "objectType": "JavaScript",
-        "active": true,
+        "active": false,
         "sourceLines": [
           "var control = TcHmi.Symbol.readEx(\"%ctrl%TcHmiCombobox_MainRecipeList%/ctrl%\");",
           "console.log(control.getSelectedText());",
@@ -131,6 +180,19 @@
         "injectContextObject": false,
         "asyncWait": true,
         "waitMode": "Synchronous"
+      },
+      {
+        "objectType": "Function",
+        "active": true,
+        "fn": "TcHmi.Functions.pxfh_hmi.DeleteRecipe",
+        "fnParams": [
+          {
+            "objectType": "Symbol",
+            "valueType": "tchmi:general#/definitions/String",
+            "symbolExpression": "%i%selectedRecipeName%/i%"
+          }
+        ],
+        "asyncWait": true
       }
     ]
   }
@@ -301,6 +363,30 @@
     "displayName": "%l%welding%/l%",
     "targetFile": {
       "path": "Contents/RecipeWeldingConfig.content"
+    },
+    "targetFileHostPreload": true,
+    "targetFileHostPreAttach": true,
+    "targetFileHostKeepAlive": true,
+    "horizontalAlignment": "Left",
+    "verticalAlignment": "Center"
+  },
+  {
+    "name": "recipe_welding_x",
+    "displayName": "%l%x-axis%/l%",
+    "targetFile": {
+      "path": "Contents/RecipeWeldingX.content"
+    },
+    "targetFileHostPreload": true,
+    "targetFileHostPreAttach": true,
+    "targetFileHostKeepAlive": true,
+    "horizontalAlignment": "Left",
+    "verticalAlignment": "Center"
+  },
+  {
+    "name": "recipe_welding_y",
+    "displayName": "%l%y-axis%/l%",
+    "targetFile": {
+      "path": "Contents/RecipeWeldingY.content"
     },
     "targetFileHostPreload": true,
     "targetFileHostPreAttach": true,

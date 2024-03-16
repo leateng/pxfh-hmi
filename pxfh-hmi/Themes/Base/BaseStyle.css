@@ -365,3 +365,8 @@ div[data-tchmi-type="TcHmi.Controls.System.TcHmiView"] {
 img.tchmi-image-template-content {
     object-fit: contain;
 }
+
+#BottomNav {
+    border-top: 1px solid rgb(200, 200, 200);
+    background-color: rgba(0, 0, 0, 0.05);
+}

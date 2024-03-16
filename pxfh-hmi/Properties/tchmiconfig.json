@@ -10,7 +10,7 @@
     "websocketSystemTimeout": 60000,
     "websocketSubscriptionMode": "Change"
   },
-  "activeTheme": "Base-Dark",
+  "activeTheme": "Base",
   "themes": {
     "Base-Dark": {
       "resources": [
@@ -105,6 +105,36 @@
       "name": "functions/UpdateRecipe.js",
       "description": "",
       "type": "JavaScript"
+    },
+    {
+      "name": "functions/DeleteRecipe.js",
+      "description": "",
+      "type": "JavaScript"
+    },
+    {
+      "name": "functions/CalcPowerLineData2.js",
+      "description": "",
+      "type": "JavaScript"
+    },
+    {
+      "name": "functions/CalcCoolTime.js",
+      "description": "",
+      "type": "JavaScript"
+    },
+    {
+      "name": "functions/InitAnalogDiscStatusArray.js",
+      "description": "",
+      "type": "JavaScript"
+    },
+    {
+      "name": "functions/SyncSelectedRecipePowerSchedule.js",
+      "description": "",
+      "type": "JavaScript"
+    },
+    {
+      "name": "functions/UpdatePowerScheduleBar.js",
+      "description": "",
+      "type": "JavaScript"
     }
   ],
   "userControls": [
@@ -130,15 +160,31 @@
       "url": "Controls/NinePointConfirm.usercontrol"
     },
     {
+      "url": "Controls/PowerLine.usercontrol"
+    },
+    {
+      "url": "Controls/PowerSteps.usercontrol"
+    },
+    {
       "url": "Controls/RecipeDetail.usercontrol"
     },
     {
       "url": "Controls/VerticalDirectionKeyPad.usercontrol"
+    },
+    {
+      "url": "Controls/PowerStepBar.usercontrol"
     }
   ],
   "content": [
     {
       "url": "Contents/BottomNav.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    },
+    {
+      "url": "Contents/Jog2.content",
       "preload": false,
       "keepAlive": false,
       "loadSync": false,
@@ -208,7 +254,28 @@
       "preloadBindings": false
     },
     {
+      "url": "Contents/RecipeTunningConfig.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    },
+    {
       "url": "Contents/RecipeWeldingConfig.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    },
+    {
+      "url": "Contents/RecipeWeldingY.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    },
+    {
+      "url": "Contents/RecipeWeldingX.content",
       "preload": false,
       "keepAlive": false,
       "loadSync": false,
@@ -251,23 +318,9 @@
     },
     {
       "url": "Contents/Workspace.content",
-      "preload": false,
-      "keepAlive": false,
-      "loadSync": false,
-      "preloadBindings": false
-    },
-    {
-      "url": "Contents/Jog2.content",
-      "preload": false,
-      "keepAlive": false,
-      "loadSync": false,
-      "preloadBindings": false
-    },
-    {
-      "url": "Contents/RecipeTunningConfig.content",
-      "preload": false,
-      "keepAlive": false,
-      "loadSync": false,
+      "preload": true,
+      "keepAlive": true,
+      "loadSync": true,
       "preloadBindings": false
     }
   ],
@@ -281,10 +334,22 @@
   ],
   "userFunctions": [
     {
+      "url": "functions/CalcCoolTime.js"
+    },
+    {
       "url": "functions/CalcPowerLineData.js"
     },
     {
+      "url": "functions/CalcPowerLineData2.js"
+    },
+    {
       "url": "functions/CurrentUserName.js"
+    },
+    {
+      "url": "functions/DeleteRecipe.js"
+    },
+    {
+      "url": "functions/InitAnalogDiscStatusArray.js"
     },
     {
       "url": "functions/ListPowerSchedules.js"
@@ -296,7 +361,13 @@
       "url": "functions/PowerChartUpdate.js"
     },
     {
+      "url": "functions/SyncSelectedRecipePowerSchedule.js"
+    },
+    {
       "url": "functions/UpdatePowerSchedule.js"
+    },
+    {
+      "url": "functions/UpdatePowerScheduleBar.js"
     },
     {
       "url": "functions/UpdateRecipe.js"
@@ -403,6 +474,129 @@
         "type": "tchmi:project#/definitions/MyMainRecipeType",
         "persist": false,
         "readonly": false
+      },
+      "XPowerSchedule": {
+        "value": {
+          "heatRatio1": 100,
+          "heatRatio10": 100,
+          "heatRatio11": 100,
+          "heatRatio12": 100,
+          "heatRatio2": 100,
+          "heatRatio3": 100,
+          "heatRatio4": 100,
+          "heatRatio5": 100,
+          "heatRatio6": 100,
+          "heatRatio7": 100,
+          "heatRatio8": 100,
+          "heatRatio9": 100,
+          "name": "default",
+          "powerAmpere1": 100,
+          "powerAmpere2": 300,
+          "powerTimeCool": 10,
+          "powerTimeDown": 3,
+          "powerTimeDown2": 3,
+          "powerTimeUp": 3,
+          "powerTimeUp2": 3,
+          "powerTimeWeld": 5,
+          "powerTimeWeld2": 5,
+          "stageTarget1": 0,
+          "stageTarget10": 0,
+          "stageTarget11": 0,
+          "stageTarget12": 0,
+          "stageTarget2": 0,
+          "stageTarget3": 0,
+          "stageTarget4": 0,
+          "stageTarget5": 0,
+          "stageTarget6": 0,
+          "stageTarget7": 0,
+          "stageTarget8": 0,
+          "stageTarget9": 0,
+          "timeRatio1": 100,
+          "timeRatio10": 100,
+          "timeRatio11": 100,
+          "timeRatio12": 100,
+          "timeRatio2": 100,
+          "timeRatio3": 100,
+          "timeRatio4": 100,
+          "timeRatio5": 100,
+          "timeRatio6": 100,
+          "timeRatio7": 100,
+          "timeRatio8": 100,
+          "timeRatio9": 100
+        },
+        "type": "tchmi:server#/definitions/PLC1.scheduleParaStruct",
+        "persist": false,
+        "readonly": false
+      },
+      "YPowerSchedule": {
+        "value": {
+          "heatRatio1": 100,
+          "heatRatio10": 100,
+          "heatRatio11": 100,
+          "heatRatio12": 100,
+          "heatRatio2": 100,
+          "heatRatio3": 100,
+          "heatRatio4": 100,
+          "heatRatio5": 100,
+          "heatRatio6": 100,
+          "heatRatio7": 100,
+          "heatRatio8": 100,
+          "heatRatio9": 100,
+          "name": "default",
+          "powerAmpere1": 100,
+          "powerAmpere2": 300,
+          "powerTimeCool": 10,
+          "powerTimeDown": 3,
+          "powerTimeDown2": 3,
+          "powerTimeUp": 3,
+          "powerTimeUp2": 3,
+          "powerTimeWeld": 5,
+          "powerTimeWeld2": 5,
+          "stageTarget1": 0,
+          "stageTarget10": 0,
+          "stageTarget11": 0,
+          "stageTarget12": 0,
+          "stageTarget2": 0,
+          "stageTarget3": 0,
+          "stageTarget4": 0,
+          "stageTarget5": 0,
+          "stageTarget6": 0,
+          "stageTarget7": 0,
+          "stageTarget8": 0,
+          "stageTarget9": 0,
+          "timeRatio1": 100,
+          "timeRatio10": 100,
+          "timeRatio11": 100,
+          "timeRatio12": 100,
+          "timeRatio2": 100,
+          "timeRatio3": 100,
+          "timeRatio4": 100,
+          "timeRatio5": 100,
+          "timeRatio6": 100,
+          "timeRatio7": 100,
+          "timeRatio8": 100,
+          "timeRatio9": 100
+        },
+        "type": "tchmi:server#/definitions/PLC1.scheduleParaStruct",
+        "persist": false,
+        "readonly": false
+      },
+      "PowerScheduleStore": {
+        "value": {},
+        "type": "tchmi:general#/definitions/Object",
+        "persist": true,
+        "readonly": false
+      },
+      "selectedRecipeName": {
+        "value": "",
+        "type": "tchmi:general#/definitions/String",
+        "persist": false,
+        "readonly": false
+      },
+      "selectedRecipeId": {
+        "type": "tchmi:general#/definitions/Integer",
+        "persist": false,
+        "readonly": false
       }
     },
     "themedResources": {}
@@ -413,7 +607,7 @@
       "actions": [
         {
           "objectType": "WriteToSymbol",
-          "active": true,
+          "active": false,
           "symbolExpression": "%s%PLC1.GVL_HMI.aScheduleInfo%/s%",
           "value": {
             "objectType": "Symbol",

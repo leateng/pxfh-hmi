@@ -27,7 +27,7 @@
     <HmiViewportUserScaleable>Default</HmiViewportUserScaleable>
     <HmiPostProcessing>True</HmiPostProcessing>
     <Name>pxfh-hmi</Name>
-    <HmiCommunicationRouterPort>10112</HmiCommunicationRouterPort>
+    <HmiCommunicationRouterPort>10115</HmiCommunicationRouterPort>
     <HmiCommunicationServerAuthPort>13001</HmiCommunicationServerAuthPort>
     <HmiInitial>1.12.760.48</HmiInitial>
     <HmiRecent>1.12.760.48</HmiRecent>
@@ -179,6 +179,12 @@
     <Content Include="Contents\RecipeWeldingConfig.content">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="Contents\RecipeWeldingY.content">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Contents\RecipeWeldingX.content">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="Contents\RecipeBasicConfig.content">
       <SubType>Content</SubType>
     </Content>
@@ -196,6 +202,7 @@
     </Content>
     <Content Include="Contents\Workspace.content">
       <SubType>Content</SubType>
+      <Cache>True</Cache>
     </Content>
     <Content Include="Controls\AbsMove.usercontrol">
       <SubType>Content</SubType>
@@ -246,6 +253,29 @@
       <SubType>Content</SubType>
       <DependentUpon>Controls\NinePointConfirm.usercontrol</DependentUpon>
     </Content>
+    <Content Include="Controls\PowerLine.usercontrol">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Controls\PowerLine.usercontrol.json">
+      <SubType>Content</SubType>
+      <DependentUpon>Controls\PowerLine.usercontrol</DependentUpon>
+    </Content>
+    <Content Include="Controls\PowerStepBar.usercontrol">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Controls\PowerStepBar.usercontrol.json">
+      <SubType>Content</SubType>
+      <DependentUpon>Controls\PowerStepBar.usercontrol</DependentUpon>
+      <PreloadingContent>True</PreloadingContent>
+    </Content>
+    <Content Include="Controls\PowerSteps.usercontrol">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Controls\PowerSteps.usercontrol.json">
+      <SubType>Content</SubType>
+      <DependentUpon>Controls\PowerSteps.usercontrol</DependentUpon>
+      <PreloadingContent>True</PreloadingContent>
+    </Content>
     <Content Include="Controls\RecipeDetail.usercontrol">
       <SubType>Content</SubType>
     </Content>
@@ -260,6 +290,13 @@
       <SubType>Content</SubType>
       <DependentUpon>Controls\VerticalDirectionKeyPad.usercontrol</DependentUpon>
     </Content>
+    <Content Include="functions\CalcCoolTime.function.json">
+      <SubType>Content</SubType>
+      <DependentUpon>functions\CalcCoolTime.js</DependentUpon>
+    </Content>
+    <Content Include="functions\CalcCoolTime.js">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="functions\CalcPowerLineData.function.json">
       <SubType>Content</SubType>
       <DependentUpon>functions\CalcPowerLineData.js</DependentUpon>
@@ -267,11 +304,32 @@
     <Content Include="functions\CalcPowerLineData.js">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="functions\CalcPowerLineData2.function.json">
+      <SubType>Content</SubType>
+      <DependentUpon>functions\CalcPowerLineData2.js</DependentUpon>
+    </Content>
+    <Content Include="functions\CalcPowerLineData2.js">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="functions\CurrentUserName.function.json">
       <SubType>Content</SubType>
       <DependentUpon>functions\CurrentUserName.js</DependentUpon>
     </Content>
     <Content Include="functions\CurrentUserName.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="functions\DeleteRecipe.function.json">
+      <SubType>Content</SubType>
+      <DependentUpon>functions\DeleteRecipe.js</DependentUpon>
+    </Content>
+    <Content Include="functions\DeleteRecipe.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="functions\InitAnalogDiscStatusArray.function.json">
+      <SubType>Content</SubType>
+      <DependentUpon>functions\InitAnalogDiscStatusArray.js</DependentUpon>
+    </Content>
+    <Content Include="functions\InitAnalogDiscStatusArray.js">
       <SubType>Content</SubType>
     </Content>
     <Content Include="functions\ListPowerSchedules.function.json">
@@ -295,11 +353,25 @@
     <Content Include="functions\PowerChartUpdate.js">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="functions\SyncSelectedRecipePowerSchedule.function.json">
+      <SubType>Content</SubType>
+      <DependentUpon>functions\SyncSelectedRecipePowerSchedule.js</DependentUpon>
+    </Content>
+    <Content Include="functions\SyncSelectedRecipePowerSchedule.js">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="functions\UpdatePowerSchedule.function.json">
       <SubType>Content</SubType>
       <DependentUpon>functions\UpdatePowerSchedule.js</DependentUpon>
     </Content>
     <Content Include="functions\UpdatePowerSchedule.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="functions\UpdatePowerScheduleBar.function.json">
+      <SubType>Content</SubType>
+      <DependentUpon>functions\UpdatePowerScheduleBar.js</DependentUpon>
+    </Content>
+    <Content Include="functions\UpdatePowerScheduleBar.js">
       <SubType>Content</SubType>
     </Content>
     <Content Include="functions\UpdateRecipe.function.json">

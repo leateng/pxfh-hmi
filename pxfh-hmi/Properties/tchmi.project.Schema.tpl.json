@@ -57,8 +57,54 @@
       "type": "object",
       "id": "tchmi:project#/definitions/AnalogDiscs"
     },
+    "coordinates": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "Controls\\coordinates.usercontrol.json",
+      "type": "object",
+      "id": "tchmi:project#/definitions/coordinates"
+    },
+    "AbsMove": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "Controls\\AbsMove.usercontrol.json",
+      "type": "object",
+      "id": "tchmi:project#/definitions/AbsMove"
+    },
+    "BondPad": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "Controls\\BondPad.usercontrol.json",
+      "type": "object",
+      "id": "tchmi:project#/definitions/BondPad"
+    },
+    "Copy_of_PLC1.ARRAY_1..63_OF-scheduleParaStruct": {
+      "items": {
+        "$ref": "tchmi:server#/definitions/PLC1.scheduleParaStruct"
+      },
+      "type": "array",
+      "minItems": 63,
+      "maxItems": 63,
+      "title": "power schedule array",
+      "startOffset": 1,
+      "id": "tchmi:server#/definitions/PLC1.ARRAY_1..63_OF-scheduleParaStruct"
+    },
+    "PowerLine": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "Controls\\PowerLine.usercontrol.json",
+      "id": "tchmi:project#/definitions/PowerLine",
+      "type": "object"
+    },
     "PLC1.PowerSchedule": {
       "properties": {
+        "name": {
+          "$ref": "tchmi:general#/definitions/String"
+        },
         "heatRatio1": {
           "type": "number"
         },
@@ -193,53 +239,40 @@
         },
         "timeRatio9": {
           "type": "number"
-        },
-        "automatic": {
-          "type": "boolean"
         }
       },
       "type": "object",
       "id": "tchmi:project#/definitions/PLC1.PowerSchedule"
     },
-    "coordinates": {
+    "PowerSteps": {
       "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
       "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
       "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
-      "frameworkUserControlConfig": "Controls\\coordinates.usercontrol.json",
-      "type": "object",
-      "id": "tchmi:project#/definitions/coordinates"
+      "frameworkUserControlConfig": "Controls\\PowerSteps.usercontrol.json",
+      "id": "tchmi:project#/definitions/PowerSteps",
+      "type": "object"
     },
-    "AbsMove": {
+    "PowerStepBar": {
       "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
       "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
       "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
-      "frameworkUserControlConfig": "Controls\\AbsMove.usercontrol.json",
-      "type": "object",
-      "id": "tchmi:project#/definitions/AbsMove"
-    },
-    "BondPad": {
-      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
-      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
-      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
-      "frameworkUserControlConfig": "Controls\\BondPad.usercontrol.json",
-      "type": "object",
-      "id": "tchmi:project#/definitions/BondPad"
-    },
-    "Copy_of_PLC1.ARRAY_1..63_OF-scheduleParaStruct": {
-      "items": {
-        "$ref": "tchmi:server#/definitions/PLC1.scheduleParaStruct"
-      },
-      "type": "array",
-      "minItems": 63,
-      "maxItems": 63,
-      "title": "power schedule array",
-      "startOffset": 1,
-      "id": "tchmi:server#/definitions/PLC1.ARRAY_1..63_OF-scheduleParaStruct"
+      "frameworkUserControlConfig": "Controls\\PowerStepBar.usercontrol.json",
+      "id": "tchmi:project#/definitions/PowerStepBar",
+      "type": "object"
     },
     "MyMainRecipeType": {
       "properties": {
+        "bSkipAdjustProcess": {
+          "$ref": "tchmi:general#/definitions/BOOL"
+        },
         "intECylinderWeldDepth": {
           "$ref": "tchmi:general#/definitions/Number"
+        },
+        "intScheduleX": {
+          "$ref": "tchmi:general#/definitions/INT"
+        },
+        "intScheduleY": {
+          "$ref": "tchmi:general#/definitions/INT"
         },
         "lrDistanceColumn": {
           "$ref": "tchmi:general#/definitions/Number"
@@ -262,10 +295,16 @@
         "lrWeldXNegOffset": {
           "$ref": "tchmi:general#/definitions/Number"
         },
+        "lrWeldXPointDistance": {
+          "$ref": "tchmi:general#/definitions/Number"
+        },
         "lrWeldXPosOffset": {
           "$ref": "tchmi:general#/definitions/Number"
         },
         "lrWeldYNegOffset": {
+          "$ref": "tchmi:general#/definitions/Number"
+        },
+        "lrWeldYPointDistance": {
           "$ref": "tchmi:general#/definitions/Number"
         },
         "lrWeldYPosOffset": {
@@ -275,6 +314,9 @@
           "$ref": "tchmi:general#/definitions/Number"
         },
         "lrX2GripperPositionOffset": {
+          "$ref": "tchmi:general#/definitions/Number"
+        },
+        "lrX2WeldVelocity": {
           "$ref": "tchmi:general#/definitions/Number"
         },
         "lrXLength": {
@@ -295,6 +337,9 @@
         "lrYOverrun": {
           "$ref": "tchmi:general#/definitions/Number"
         },
+        "lrYWeldVelocity": {
+          "$ref": "tchmi:general#/definitions/Number"
+        },
         "nElementWeldMode": {
           "$ref": "tchmi:general#/definitions/Number"
         },
@@ -307,11 +352,8 @@
         "nPlateWeldMode": {
           "$ref": "tchmi:general#/definitions/Number"
         },
-        "intScheduleX": {
-          "$ref": "tchmi:general#/definitions/INT"
-        },
-        "intScheduleY": {
-          "$ref": "tchmi:general#/definitions/INT"
+        "strRecipeName": {
+          "$ref": "tchmi:general#/definitions/String"
         }
       },
       "type": "object",

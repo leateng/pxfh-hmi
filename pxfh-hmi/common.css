@@ -19,20 +19,16 @@ svg {
     width: calc(100% - 60px);
 }
 
-/*
 .analog-discs-grid-container {
-    display: grid;
-    grid-template-columns: repeat(var(--col), 1fr);
-    grid-template-rows: repeat(var(--row), 1fr);
+    background-color: rgba(0, 0, 0, 0);
+    border: 0px solid rgba(0, 0, 0, 0.1);
 }
-*/
 
 .analog-discs-grid-item {
     margin: 0px;
     cursor: pointer;
     background-color: #000000;
     background-size: cover;
-    border: 1px solid #000000;
     box-shadow: rgba(0, 0, 0, 0.6) 0px 0px 5px 0px;
 }
 
@@ -95,8 +91,4 @@ img.tchmi-image-template-content {
 
 .tchmi-class-myVerticalTab tchmi-content-tabs tchmi-tab-links tchmi-tab-link[active] {
     border-left: 2px solid #1960a3 !important;
-}
-
-.analog-discs-grid-container {
-    background-color: rgba(0, 0, 0, 0.3);
 }

@@ -1,74 +1,16 @@
-<div id="RecipeBasicConfig_1" data-tchmi-type="TcHmi.Controls.System.TcHmiContent" data-tchmi-top="0" data-tchmi-left="0" data-tchmi-width="100" data-tchmi-width-unit="%" data-tchmi-height="100" data-tchmi-height-unit="%" data-tchmi-height-mode="Content" data-tchmi-creator-viewport-height="800" data-tchmi-creator-viewport-width="960">
-<div id="TcHmiTextblock_117" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-text="%f%%l%x-axis%/l%%/f%" data-tchmi-top="46" data-tchmi-top-unit="px" data-tchmi-width="80" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-font-weight="Bold">
+<div id="RecipeBasicConfig_3" data-tchmi-type="TcHmi.Controls.System.TcHmiContent" data-tchmi-top="0" data-tchmi-left="0" data-tchmi-width="100" data-tchmi-width-unit="%" data-tchmi-height="100" data-tchmi-height-unit="%" data-tchmi-height-mode="Content" data-tchmi-creator-viewport-height="800" data-tchmi-creator-viewport-width="960">
+<div id="TcHmiTextblock_173" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="8" data-tchmi-left-unit="px" data-tchmi-top="46" data-tchmi-top-unit="px" data-tchmi-width="150" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-font-weight="Bold" data-tchmi-text="焊接方式">
 </div>
-<div id="TcHmiCombobox" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiCombobox" data-tchmi-auto-focus-out="true" data-tchmi-combobox-text="Select" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="170" data-tchmi-left-unit="px" data-tchmi-top="46" data-tchmi-top-unit="px" data-tchmi-width="264" data-tchmi-width-unit="px" data-tchmi-src-data="%f%TcHmi.Functions.pxfh_hmi.ListPowerSchedules(%i%powerScheduleArray%/i%)%/f%" data-tchmi-selected-index="%i%selectedRecipe::intScheduleX%/i%">
-<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
-{
-  "top": 3,
-  "right": 3,
-  "bottom": 3,
-  "left": 3
-}
-</script>
-
+<div id="TcHmiTextblock_174" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="8" data-tchmi-left-unit="px" data-tchmi-top="82" data-tchmi-top-unit="px" data-tchmi-width="150" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-font-weight="Bold" data-tchmi-text="先焊X边">
 </div>
-<div id="TcHmiTextblock_118" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-text="%f%%l%y-axis%/l%%/f%" data-tchmi-top="82" data-tchmi-top-unit="px" data-tchmi-width="80" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-font-weight="Bold">
+<div id="TcHmiToggleSwitch_9" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiToggleSwitch" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="168" data-tchmi-left-unit="px" data-tchmi-top="82" data-tchmi-top-unit="px" data-tchmi-width="100" data-tchmi-width-unit="px">
 </div>
-<div id="TcHmiCombobox_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiCombobox" data-tchmi-auto-focus-out="true" data-tchmi-combobox-text="Select" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="170" data-tchmi-left-unit="px" data-tchmi-top="82" data-tchmi-top-unit="px" data-tchmi-width="264" data-tchmi-width-unit="px" data-tchmi-src-data="%f%TcHmi.Functions.pxfh_hmi.ListPowerSchedules(%i%powerScheduleArray%/i%)%/f%" data-tchmi-selected-index="%i%selectedRecipe::intScheduleY|BindingMode=TwoWay%/i%">
-<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
-{
-  "top": 3,
-  "right": 3,
-  "bottom": 3,
-  "left": 3
-}
-</script>
-
-</div>
-<div id="TcHmiTextblock_119" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="170" data-tchmi-left-unit="px" data-tchmi-text="%f%%l%power-schedule%/l%%/f%" data-tchmi-top="10" data-tchmi-top-unit="px" data-tchmi-width="150" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-font-weight="Bold">
-</div>
-<div id="TcHmiTextblock_121" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="604" data-tchmi-left-unit="px" data-tchmi-text="%f%%l%spot-welding%/l%%/f%" data-tchmi-top="10" data-tchmi-top-unit="px" data-tchmi-width="100" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-font-weight="Bold">
-</div>
-<div id="TcHmiToggleSwitch_3" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiToggleSwitch" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="604" data-tchmi-left-unit="px" data-tchmi-text="" data-tchmi-top="46" data-tchmi-top-unit="px" data-tchmi-width="100" data-tchmi-width-unit="px">
-</div>
-<div id="TcHmiToggleSwitch_4" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiToggleSwitch" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="604" data-tchmi-left-unit="px" data-tchmi-text="" data-tchmi-top="82" data-tchmi-top-unit="px" data-tchmi-width="100" data-tchmi-width-unit="px">
-</div>
-<div id="TcHmiTextblock_122" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="444" data-tchmi-left-unit="px" data-tchmi-text="%f%%l%overrun%/l%%/f%" data-tchmi-top="10" data-tchmi-top-unit="px" data-tchmi-width="150" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-font-weight="Bold">
-</div>
-<div id="TcHmiNumericInput_94" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiNumericInput" data-tchmi-auto-focus-out="true" data-tchmi-decimal-digits="2" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="444" data-tchmi-left-unit="px" data-tchmi-max-value="100" data-tchmi-min-value="-10" data-tchmi-reset-to-last-valid-value="true" data-tchmi-top="46" data-tchmi-top-unit="px" data-tchmi-value="%i%selectedRecipe::lrXOverrun|BindingMode=TwoWay%/i%" data-tchmi-width="150" data-tchmi-width-unit="px" data-tchmi-auto-select-text="true" data-tchmi-ignore-invalid-values="true">
-<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
-{
-  "top": 3,
-  "right": 3,
-  "bottom": 3,
-  "left": 3
-}
-</script>
-
-</div>
-<div id="TcHmiNumericInput_95" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiNumericInput" data-tchmi-auto-focus-out="true" data-tchmi-decimal-digits="2" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="444" data-tchmi-left-unit="px" data-tchmi-max-value="100" data-tchmi-min-value="-10" data-tchmi-reset-to-last-valid-value="true" data-tchmi-top="82" data-tchmi-top-unit="px" data-tchmi-value="%i%selectedRecipe::lrYOverrun|BindingMode=TwoWay%/i%" data-tchmi-width="150" data-tchmi-width-unit="px" data-tchmi-auto-select-text="true" data-tchmi-ignore-invalid-values="true">
-<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
-{
-  "top": 3,
-  "right": 3,
-  "bottom": 3,
-  "left": 3
-}
-</script>
-
-</div>
-<div id="TcHmiTextblock_123" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-top="200" data-tchmi-top-unit="px" data-tchmi-width="150" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-font-weight="Bold" data-tchmi-text="焊接方式">
-</div>
-<div id="TcHmiTextblock_125" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-top="236" data-tchmi-top-unit="px" data-tchmi-width="150" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-font-weight="Bold" data-tchmi-text="先焊X边">
-</div>
-<div id="TcHmiToggleSwitch_6" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiToggleSwitch" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="170" data-tchmi-left-unit="px" data-tchmi-top="236" data-tchmi-top-unit="px" data-tchmi-width="100" data-tchmi-width-unit="px">
-</div>
-<div id="TcHmiRadioButton_2" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiRadioButton" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="330" data-tchmi-left-unit="px" data-tchmi-text="从边焊起" data-tchmi-top="200" data-tchmi-top-unit="px" data-tchmi-width="150" data-tchmi-width-unit="px" data-tchmi-radio-group="weld-method">
+<div id="TcHmiRadioButton_7" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiRadioButton" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="328" data-tchmi-left-unit="px" data-tchmi-text="从边焊起" data-tchmi-top="46" data-tchmi-top-unit="px" data-tchmi-width="150" data-tchmi-width-unit="px" data-tchmi-radio-group="weld-method">
 
 <script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
 [
   {
-    "event": "TcHmiRadioButton_2.onMouseClick",
+    "event": "TcHmiRadioButton_7.onMouseClick",
     "actions": [
       {
         "objectType": "WriteToSymbol",
@@ -111,7 +53,7 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%ctrl%TcHmiRadioButton_2::RadioState%/ctrl%",
+                "symbolExpression": "%ctrl%TcHmiRadioButton_7::RadioState%/ctrl%",
                 "value": {
                   "objectType": "StaticValue",
                   "valueType": "tchmi:framework#/definitions/ToggleState",
@@ -126,7 +68,7 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%ctrl%TcHmiRadioButton_2::RadioState%/ctrl%",
+                "symbolExpression": "%ctrl%TcHmiRadioButton_7::RadioState%/ctrl%",
                 "value": {
                   "objectType": "StaticValue",
                   "valueType": "tchmi:framework#/definitions/ToggleState",
@@ -144,12 +86,12 @@
 ]
 </script>
 </div>
-<div id="TcHmiRadioButton_3" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiRadioButton" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="170" data-tchmi-left-unit="px" data-tchmi-text="从中间起焊至两边" data-tchmi-top="200" data-tchmi-top-unit="px" data-tchmi-width="150" data-tchmi-width-unit="px" data-tchmi-radio-group="weld-method">
+<div id="TcHmiRadioButton_8" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiRadioButton" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="168" data-tchmi-left-unit="px" data-tchmi-text="从中间起焊至两边" data-tchmi-top="46" data-tchmi-top-unit="px" data-tchmi-width="150" data-tchmi-width-unit="px" data-tchmi-radio-group="weld-method">
 
 <script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
 [
   {
-    "event": "TcHmiRadioButton_3.onMouseClick",
+    "event": "TcHmiRadioButton_8.onMouseClick",
     "actions": [
       {
         "objectType": "WriteToSymbol",
@@ -192,7 +134,7 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%ctrl%TcHmiRadioButton_3::RadioState%/ctrl%",
+                "symbolExpression": "%ctrl%TcHmiRadioButton_8::RadioState%/ctrl%",
                 "value": {
                   "objectType": "StaticValue",
                   "valueType": "tchmi:framework#/definitions/ToggleState",
@@ -207,7 +149,7 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%ctrl%TcHmiRadioButton_3::RadioState%/ctrl%",
+                "symbolExpression": "%ctrl%TcHmiRadioButton_8::RadioState%/ctrl%",
                 "value": {
                   "objectType": "StaticValue",
                   "valueType": "tchmi:framework#/definitions/ToggleState",
@@ -225,14 +167,14 @@
 ]
 </script>
 </div>
-<div id="TcHmiTextblock_126" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-top="164" data-tchmi-top-unit="px" data-tchmi-width="150" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-font-weight="Bold" data-tchmi-text="焊盘模式">
+<div id="TcHmiTextblock_175" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="8" data-tchmi-left-unit="px" data-tchmi-top="10" data-tchmi-top-unit="px" data-tchmi-width="150" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-font-weight="Bold" data-tchmi-text="焊盘模式">
 </div>
-<div id="TcHmiRadioButton_4" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiRadioButton" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="170" data-tchmi-left-unit="px" data-tchmi-text="模式1" data-tchmi-top="164" data-tchmi-top-unit="px" data-tchmi-width="150" data-tchmi-width-unit="px" data-tchmi-radio-group="bond-pad-mod" data-tchmi-tooltip="放一个，焊一个">
+<div id="TcHmiRadioButton_9" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiRadioButton" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="168" data-tchmi-left-unit="px" data-tchmi-text="模式1" data-tchmi-top="10" data-tchmi-top-unit="px" data-tchmi-width="150" data-tchmi-width-unit="px" data-tchmi-radio-group="bond-pad-mod" data-tchmi-tooltip="放一个，焊一个">
 
 <script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
 [
   {
-    "event": "TcHmiRadioButton_4.onMouseClick",
+    "event": "TcHmiRadioButton_9.onMouseClick",
     "actions": [
       {
         "objectType": "WriteToSymbol",
@@ -275,7 +217,7 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%ctrl%TcHmiRadioButton_4::RadioState%/ctrl%",
+                "symbolExpression": "%ctrl%TcHmiRadioButton_9::RadioState%/ctrl%",
                 "value": {
                   "objectType": "StaticValue",
                   "valueType": "tchmi:framework#/definitions/ToggleState",
@@ -290,7 +232,7 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%ctrl%TcHmiRadioButton_4::RadioState%/ctrl%",
+                "symbolExpression": "%ctrl%TcHmiRadioButton_9::RadioState%/ctrl%",
                 "value": {
                   "objectType": "StaticValue",
                   "valueType": "tchmi:framework#/definitions/ToggleState",
@@ -308,18 +250,18 @@
 ]
 </script>
 </div>
-<div id="TcHmiRadioButton_5" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiRadioButton" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="330" data-tchmi-left-unit="px" data-tchmi-text="模式2" data-tchmi-top="164" data-tchmi-top-unit="px" data-tchmi-width="150" data-tchmi-width-unit="px" data-tchmi-radio-group="bond-pad-mod" data-tchmi-tooltip="放一个，焊半个">
+<div id="TcHmiRadioButton_10" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiRadioButton" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="328" data-tchmi-left-unit="px" data-tchmi-text="模式2" data-tchmi-top="10" data-tchmi-top-unit="px" data-tchmi-width="150" data-tchmi-width-unit="px" data-tchmi-radio-group="bond-pad-mod" data-tchmi-tooltip="放一个，焊半个">
 
 
 
 
 </div>
-<div id="TcHmiRadioButton_6" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiRadioButton" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="490" data-tchmi-left-unit="px" data-tchmi-text="模式3" data-tchmi-top="164" data-tchmi-top-unit="px" data-tchmi-width="150" data-tchmi-width-unit="px" data-tchmi-radio-group="bond-pad-mod" data-tchmi-tooltip="全放完，整体焊">
+<div id="TcHmiRadioButton_11" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiRadioButton" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="488" data-tchmi-left-unit="px" data-tchmi-text="模式3" data-tchmi-top="10" data-tchmi-top-unit="px" data-tchmi-width="150" data-tchmi-width-unit="px" data-tchmi-radio-group="bond-pad-mod" data-tchmi-tooltip="全放完，整体焊">
 
 <script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
 [
   {
-    "event": "TcHmiRadioButton_6.onMouseClick",
+    "event": "TcHmiRadioButton_11.onMouseClick",
     "actions": [
       {
         "objectType": "WriteToSymbol",
@@ -362,7 +304,7 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%ctrl%TcHmiRadioButton_6::RadioState%/ctrl%",
+                "symbolExpression": "%ctrl%TcHmiRadioButton_11::RadioState%/ctrl%",
                 "value": {
                   "objectType": "StaticValue",
                   "valueType": "tchmi:framework#/definitions/ToggleState",
@@ -377,7 +319,7 @@
               {
                 "objectType": "WriteToSymbol",
                 "active": true,
-                "symbolExpression": "%ctrl%TcHmiRadioButton_6::RadioState%/ctrl%",
+                "symbolExpression": "%ctrl%TcHmiRadioButton_11::RadioState%/ctrl%",
                 "value": {
                   "objectType": "StaticValue",
                   "valueType": "tchmi:framework#/definitions/ToggleState",
