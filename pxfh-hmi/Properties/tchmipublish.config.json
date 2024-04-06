@@ -7,6 +7,14 @@
       },
       {
         "publishServerExtension": true,
+        "name": "TcHmiAlarm"
+      },
+      {
+        "publishServerExtension": true,
+        "name": "TcHmiEventLogger"
+      },
+      {
+        "publishServerExtension": true,
         "name": "TcHmiLua"
       },
       {
@@ -67,6 +75,14 @@
       {
         "publishServerExtension": true,
         "name": "ADS"
+      },
+      {
+        "publishServerExtension": true,
+        "name": "TcHmiAlarm"
+      },
+      {
+        "publishServerExtension": true,
+        "name": "TcHmiEventLogger"
       },
       {
         "publishServerExtension": true,

@@ -115,7 +115,7 @@
       },
       {
         "objectType": "JavaScript",
-        "active": true,
+        "active": false,
         "sourceLines": [
           "console.log(\"start z up\")"
         ],

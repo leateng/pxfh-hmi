@@ -47,6 +47,8 @@
     "spot-welding": "点焊",
     "overrun": "超程",
     "save": "保存",
-    "tunning": "调试参数"
+    "tunning": "调试参数",
+    "sys-events": "事件",
+    "event-logger": "事件日志"
   }
 }

@@ -1,5 +1,5 @@
-<div id="AbsMove" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControl" data-tchmi-top="0" data-tchmi-left="0" data-tchmi-width="470" data-tchmi-height="216" data-tchmi-width-unit="px" data-tchmi-height-unit="px" data-tchmi-creator-viewport-width="500" data-tchmi-creator-viewport-height="500">
-<div id="TcHmiNumericInput_86" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiNumericInput" data-tchmi-auto-focus-out="true" data-tchmi-decimal-digits="0" data-tchmi-height="35" data-tchmi-height-unit="px" data-tchmi-left="51" data-tchmi-left-unit="px" data-tchmi-max-value="100" data-tchmi-min-value="0" data-tchmi-reset-to-last-valid-value="true" data-tchmi-top="46" data-tchmi-top-unit="px" data-tchmi-value="%i%AbsMoveSpeedX1|BindingMode=TwoWay%/i%" data-tchmi-width="150" data-tchmi-width-unit="px">
+<div id="AbsMove" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControl" data-tchmi-top="0" data-tchmi-left="0" data-tchmi-width="470" data-tchmi-height="171" data-tchmi-width-unit="px" data-tchmi-height-unit="px" data-tchmi-creator-viewport-width="500" data-tchmi-creator-viewport-height="500">
+<div id="TcHmiNumericInput_86" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiNumericInput" data-tchmi-auto-focus-out="true" data-tchmi-decimal-digits="0" data-tchmi-height="30" data-tchmi-height-unit="px" data-tchmi-left="51" data-tchmi-left-unit="px" data-tchmi-max-value="100" data-tchmi-min-value="1" data-tchmi-reset-to-last-valid-value="true" data-tchmi-top="46" data-tchmi-top-unit="px" data-tchmi-value="%s%PLC1.GVL_HMI.lrX1MoveVelocity|BindingMode=TwoWay%/s%" data-tchmi-width="150" data-tchmi-width-unit="px">
 <script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
 {
   "top": 3,
@@ -10,7 +10,7 @@
 </script>
 
 </div>
-<div id="TcHmiButton_45" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiButton" data-tchmi-height="35" data-tchmi-height-unit="px" data-tchmi-left="370" data-tchmi-left-unit="px" data-tchmi-text="Go" data-tchmi-top="46" data-tchmi-top-unit="px" data-tchmi-width="100" data-tchmi-width-unit="px" data-tchmi-word-wrap="true">
+<div id="TcHmiButton_45" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiButton" data-tchmi-height="30" data-tchmi-height-unit="px" data-tchmi-left="370" data-tchmi-left-unit="px" data-tchmi-text="Go" data-tchmi-top="46" data-tchmi-top-unit="px" data-tchmi-width="100" data-tchmi-width-unit="px" data-tchmi-word-wrap="true">
 
 <script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
 [
@@ -19,7 +19,7 @@
     "actions": [
       {
         "objectType": "WriteToSymbol",
-        "active": true,
+        "active": false,
         "symbolExpression": "%s%PLC1.GVL_HMI.lrX1MoveVelocity%/s%",
         "value": {
           "objectType": "Symbol",
@@ -66,11 +66,11 @@
 ]
 </script>
 </div>
-<div id="TcHmiTextblock_111" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="35" data-tchmi-height-unit="px" data-tchmi-left="1" data-tchmi-left-unit="px" data-tchmi-text="X1" data-tchmi-top="46" data-tchmi-top-unit="px" data-tchmi-width="50" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-font-size="16">
+<div id="TcHmiTextblock_111" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="30" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-text="X1" data-tchmi-top="46" data-tchmi-top-unit="px" data-tchmi-width="50" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-horizontal-alignment="Center" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-font-size="16">
 </div>
-<div id="TcHmiTextblock_112" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="35" data-tchmi-height-unit="px" data-tchmi-left="1" data-tchmi-left-unit="px" data-tchmi-text="X2" data-tchmi-top="91" data-tchmi-top-unit="px" data-tchmi-width="50" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-font-size="16">
+<div id="TcHmiTextblock_112" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="30" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-text="X2" data-tchmi-top="86" data-tchmi-top-unit="px" data-tchmi-width="50" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-horizontal-alignment="Center" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-font-size="16">
 </div>
-<div id="TcHmiNumericInput_87" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiNumericInput" data-tchmi-auto-focus-out="true" data-tchmi-decimal-digits="0" data-tchmi-height="35" data-tchmi-height-unit="px" data-tchmi-left="51" data-tchmi-left-unit="px" data-tchmi-max-value="100" data-tchmi-min-value="0" data-tchmi-reset-to-last-valid-value="true" data-tchmi-top="91" data-tchmi-top-unit="px" data-tchmi-value="%i%AbsMoveSpeedX2|BindingMode=TwoWay%/i%" data-tchmi-width="150" data-tchmi-width-unit="px">
+<div id="TcHmiNumericInput_87" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiNumericInput" data-tchmi-auto-focus-out="true" data-tchmi-decimal-digits="0" data-tchmi-height="30" data-tchmi-height-unit="px" data-tchmi-left="51" data-tchmi-left-unit="px" data-tchmi-max-value="100" data-tchmi-min-value="1" data-tchmi-reset-to-last-valid-value="true" data-tchmi-top="86" data-tchmi-top-unit="px" data-tchmi-value="%s%PLC1.GVL_HMI.lrX2MoveVelocity|BindingMode=TwoWay%/s%" data-tchmi-width="150" data-tchmi-width-unit="px">
 <script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
 {
   "top": 3,
@@ -81,7 +81,7 @@
 </script>
 
 </div>
-<div id="TcHmiButton_46" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiButton" data-tchmi-height="35" data-tchmi-height-unit="px" data-tchmi-left="370" data-tchmi-left-unit="px" data-tchmi-text="Go" data-tchmi-top="91" data-tchmi-top-unit="px" data-tchmi-width="100" data-tchmi-width-unit="px" data-tchmi-word-wrap="true">
+<div id="TcHmiButton_46" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiButton" data-tchmi-height="30" data-tchmi-height-unit="px" data-tchmi-left="370" data-tchmi-left-unit="px" data-tchmi-text="Go" data-tchmi-top="86" data-tchmi-top-unit="px" data-tchmi-width="100" data-tchmi-width-unit="px" data-tchmi-word-wrap="true">
 
 <script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
 [
@@ -90,7 +90,7 @@
     "actions": [
       {
         "objectType": "JavaScript",
-        "active": true,
+        "active": false,
         "sourceLines": [
           "const x2 = TcHmi.Symbol.readEx(\"%i%AbsMovePosX2%/i%\");",
           "console.log(`x2=${x2}`);"
@@ -101,7 +101,7 @@
       },
       {
         "objectType": "WriteToSymbol",
-        "active": true,
+        "active": false,
         "symbolExpression": "%s%PLC1.GVL_HMI.lrX2MoveVelocity%/s%",
         "value": {
           "objectType": "Symbol",
@@ -148,9 +148,9 @@
 ]
 </script>
 </div>
-<div id="TcHmiTextblock_113" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="35" data-tchmi-height-unit="px" data-tchmi-left="1" data-tchmi-left-unit="px" data-tchmi-text="Y" data-tchmi-top="136" data-tchmi-top-unit="px" data-tchmi-width="50" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-font-size="16">
+<div id="TcHmiTextblock_113" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="30" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-text="Y" data-tchmi-top="126" data-tchmi-top-unit="px" data-tchmi-width="50" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-horizontal-alignment="Center" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-font-size="16">
 </div>
-<div id="TcHmiNumericInput_88" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiNumericInput" data-tchmi-auto-focus-out="true" data-tchmi-decimal-digits="0" data-tchmi-height="35" data-tchmi-height-unit="px" data-tchmi-left="51" data-tchmi-left-unit="px" data-tchmi-max-value="1000" data-tchmi-min-value="0" data-tchmi-reset-to-last-valid-value="true" data-tchmi-top="136" data-tchmi-top-unit="px" data-tchmi-value="%i%AbsMoveSpeedY|BindingMode=TwoWay%/i%" data-tchmi-width="150" data-tchmi-width-unit="px">
+<div id="TcHmiNumericInput_88" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiNumericInput" data-tchmi-auto-focus-out="true" data-tchmi-decimal-digits="0" data-tchmi-height="30" data-tchmi-height-unit="px" data-tchmi-left="51" data-tchmi-left-unit="px" data-tchmi-max-value="1000" data-tchmi-min-value="1" data-tchmi-reset-to-last-valid-value="true" data-tchmi-top="126" data-tchmi-top-unit="px" data-tchmi-value="%s%PLC1.GVL_HMI.lrYMoveVelocity|BindingMode=TwoWay%/s%" data-tchmi-width="150" data-tchmi-width-unit="px">
 <script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
 {
   "top": 3,
@@ -161,7 +161,7 @@
 </script>
 
 </div>
-<div id="TcHmiButton_47" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiButton" data-tchmi-height="35" data-tchmi-height-unit="px" data-tchmi-left="370" data-tchmi-left-unit="px" data-tchmi-text="Go" data-tchmi-top="136" data-tchmi-top-unit="px" data-tchmi-width="100" data-tchmi-width-unit="px" data-tchmi-word-wrap="true">
+<div id="TcHmiButton_47" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiButton" data-tchmi-height="30" data-tchmi-height-unit="px" data-tchmi-left="370" data-tchmi-left-unit="px" data-tchmi-text="Go" data-tchmi-top="126" data-tchmi-top-unit="px" data-tchmi-width="100" data-tchmi-width-unit="px" data-tchmi-word-wrap="true">
 
 <script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
 [
@@ -170,7 +170,7 @@
     "actions": [
       {
         "objectType": "WriteToSymbol",
-        "active": true,
+        "active": false,
         "symbolExpression": "%s%PLC1.GVL_HMI.lrYMoveVelocity%/s%",
         "value": {
           "objectType": "Symbol",
@@ -217,9 +217,7 @@
 ]
 </script>
 </div>
-<div id="TcHmiTextblock_114" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="35" data-tchmi-height-unit="px" data-tchmi-left="1" data-tchmi-left-unit="px" data-tchmi-text="Z" data-tchmi-top="181" data-tchmi-top-unit="px" data-tchmi-width="50" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-font-size="16">
-</div>
-<div id="TcHmiNumericInput_89" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiNumericInput" data-tchmi-auto-focus-out="true" data-tchmi-decimal-digits="0" data-tchmi-height="35" data-tchmi-height-unit="px" data-tchmi-left="51" data-tchmi-left-unit="px" data-tchmi-max-value="100" data-tchmi-min-value="0" data-tchmi-reset-to-last-valid-value="true" data-tchmi-top="181" data-tchmi-top-unit="px" data-tchmi-value="%i%AbsMoveSpeedZ|BindingMode=TwoWay%/i%" data-tchmi-width="150" data-tchmi-width-unit="px">
+<div id="TcHmiNumericInput_90" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiNumericInput" data-tchmi-auto-focus-out="true" data-tchmi-decimal-digits="2" data-tchmi-height="30" data-tchmi-height-unit="px" data-tchmi-left="211" data-tchmi-left-unit="px" data-tchmi-max-value="275" data-tchmi-min-value="0" data-tchmi-reset-to-last-valid-value="true" data-tchmi-top="46" data-tchmi-top-unit="px" data-tchmi-value="%i%AbsMovePosX1|BindingMode=TwoWay%/i%" data-tchmi-width="150" data-tchmi-width-unit="px">
 <script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
 {
   "top": 3,
@@ -230,63 +228,7 @@
 </script>
 
 </div>
-<div id="TcHmiButton_48" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiButton" data-tchmi-height="35" data-tchmi-height-unit="px" data-tchmi-left="370" data-tchmi-left-unit="px" data-tchmi-text="Go" data-tchmi-top="181" data-tchmi-top-unit="px" data-tchmi-width="100" data-tchmi-width-unit="px" data-tchmi-word-wrap="true">
-
-<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
-[
-  {
-    "event": "TcHmiButton_48.onPressed",
-    "actions": [
-      {
-        "objectType": "WriteToSymbol",
-        "active": true,
-        "symbolExpression": "%s%PLC1.GVL_HMI.lrZ1MoveVelocity%/s%",
-        "value": {
-          "objectType": "Symbol",
-          "valueType": "tchmi:general#/definitions/String",
-          "symbolExpression": "%i%AbsMoveSpeedZ%/i%"
-        },
-        "asyncWait": true
-      },
-      {
-        "objectType": "WriteToSymbol",
-        "active": true,
-        "symbolExpression": "%s%PLC1.GVL_HMI.lrZ1MovePosition%/s%",
-        "value": {
-          "objectType": "Symbol",
-          "valueType": "tchmi:general#/definitions/String",
-          "symbolExpression": "%i%AbsMovePosZ%/i%"
-        },
-        "asyncWait": true
-      },
-      {
-        "objectType": "WriteToSymbol",
-        "active": true,
-        "symbolExpression": "%s%PLC1.GVL_HMI.bZ1MoveAbs%/s%",
-        "value": {
-          "objectType": "StaticValue",
-          "valueType": "tchmi:general#/definitions/BOOL",
-          "value": true
-        },
-        "asyncWait": true
-      },
-      {
-        "objectType": "WriteToSymbol",
-        "active": true,
-        "symbolExpression": "%s%PLC1.GVL_HMI.bMoveTest%/s%",
-        "value": {
-          "objectType": "StaticValue",
-          "valueType": "tchmi:general#/definitions/BOOL",
-          "value": true
-        },
-        "asyncWait": true
-      }
-    ]
-  }
-]
-</script>
-</div>
-<div id="TcHmiNumericInput_90" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiNumericInput" data-tchmi-auto-focus-out="true" data-tchmi-decimal-digits="2" data-tchmi-height="35" data-tchmi-height-unit="px" data-tchmi-left="211" data-tchmi-left-unit="px" data-tchmi-max-value="275" data-tchmi-min-value="0" data-tchmi-reset-to-last-valid-value="true" data-tchmi-top="46" data-tchmi-top-unit="px" data-tchmi-value="%i%AbsMovePosX1|BindingMode=TwoWay%/i%" data-tchmi-width="150" data-tchmi-width-unit="px">
+<div id="TcHmiNumericInput_91" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiNumericInput" data-tchmi-auto-focus-out="true" data-tchmi-decimal-digits="2" data-tchmi-height="30" data-tchmi-height-unit="px" data-tchmi-left="211" data-tchmi-left-unit="px" data-tchmi-max-value="0" data-tchmi-min-value="-30" data-tchmi-reset-to-last-valid-value="true" data-tchmi-top="86" data-tchmi-top-unit="px" data-tchmi-value="%i%AbsMovePosX2|BindingMode=TwoWay%/i%" data-tchmi-width="150" data-tchmi-width-unit="px">
 <script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
 {
   "top": 3,
@@ -297,29 +239,7 @@
 </script>
 
 </div>
-<div id="TcHmiNumericInput_91" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiNumericInput" data-tchmi-auto-focus-out="true" data-tchmi-decimal-digits="2" data-tchmi-height="35" data-tchmi-height-unit="px" data-tchmi-left="211" data-tchmi-left-unit="px" data-tchmi-max-value="0" data-tchmi-min-value="-30" data-tchmi-reset-to-last-valid-value="true" data-tchmi-top="91" data-tchmi-top-unit="px" data-tchmi-value="%i%AbsMovePosX2|BindingMode=TwoWay%/i%" data-tchmi-width="150" data-tchmi-width-unit="px">
-<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
-{
-  "top": 3,
-  "right": 3,
-  "bottom": 3,
-  "left": 3
-}
-</script>
-
-</div>
-<div id="TcHmiNumericInput_92" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiNumericInput" data-tchmi-auto-focus-out="true" data-tchmi-decimal-digits="2" data-tchmi-height="35" data-tchmi-height-unit="px" data-tchmi-left="211" data-tchmi-left-unit="px" data-tchmi-max-value="2200" data-tchmi-min-value="0" data-tchmi-reset-to-last-valid-value="true" data-tchmi-top="136" data-tchmi-top-unit="px" data-tchmi-value="%i%AbsMovePosY|BindingMode=TwoWay%/i%" data-tchmi-width="150" data-tchmi-width-unit="px">
-<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
-{
-  "top": 3,
-  "right": 3,
-  "bottom": 3,
-  "left": 3
-}
-</script>
-
-</div>
-<div id="TcHmiNumericInput_93" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiNumericInput" data-tchmi-auto-focus-out="true" data-tchmi-decimal-digits="2" data-tchmi-height="35" data-tchmi-height-unit="px" data-tchmi-left="211" data-tchmi-left-unit="px" data-tchmi-max-value="15" data-tchmi-min-value="0" data-tchmi-reset-to-last-valid-value="true" data-tchmi-top="181" data-tchmi-top-unit="px" data-tchmi-value="%i%AbsMovePosZ|BindingMode=TwoWay%/i%" data-tchmi-width="150" data-tchmi-width-unit="px">
+<div id="TcHmiNumericInput_92" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiNumericInput" data-tchmi-auto-focus-out="true" data-tchmi-decimal-digits="2" data-tchmi-height="30" data-tchmi-height-unit="px" data-tchmi-left="211" data-tchmi-left-unit="px" data-tchmi-max-value="2200" data-tchmi-min-value="0" data-tchmi-reset-to-last-valid-value="true" data-tchmi-top="126" data-tchmi-top-unit="px" data-tchmi-value="%i%AbsMovePosY|BindingMode=TwoWay%/i%" data-tchmi-width="150" data-tchmi-width-unit="px">
 <script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
 {
   "top": 3,

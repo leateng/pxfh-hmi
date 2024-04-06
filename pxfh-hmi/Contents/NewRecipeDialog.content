@@ -30,6 +30,8 @@
           "            nameInput.setText(\"\");",
           "            const dialog = TcHmi.Symbol.readEx(\"%ctrl%TcHmiPopup_NewRecipe%/ctrl%\");",
           "            dialog.close();",
+          "            ",
+          "            TcHmi.Symbol.writeEx(\"%i%selectedRecipeName%/i%\", recipeName);",
           "        } else {",
           "            console.log(data.error);",
           "        }",

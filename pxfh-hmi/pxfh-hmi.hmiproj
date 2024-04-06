@@ -32,7 +32,7 @@
     <HmiInitial>1.12.760.48</HmiInitial>
     <HmiRecent>1.12.760.48</HmiRecent>
     <HmiServerNodeAdvancedView>False</HmiServerNodeAdvancedView>
-    <HmiServerNodeAdvancedSettingsView>True</HmiServerNodeAdvancedSettingsView>
+    <HmiServerNodeAdvancedSettingsView>False</HmiServerNodeAdvancedSettingsView>
   </PropertyGroup>
   <PropertyGroup>
     <TwinCATHmi_Tasks>$(TcHmiDirectory)\MSBuild\Beckhoff.TwinCAT.HMI.tasks</TwinCATHmi_Tasks>
@@ -123,6 +123,8 @@
     <Folder Include="Controls" />
     <Folder Include="functions" />
     <Folder Include="javascripts" />
+    <Folder Include="Server\TcHmiAlarm" />
+    <Folder Include="Server\TcHmiEventLogger" />
     <Folder Include="styles" />
     <Folder Include="Server\TcHmiRecipeManagement" />
     <Folder Include="Server\TcHmiVision" />
@@ -141,6 +143,9 @@
       <SubType>Content</SubType>
     </Content>
     <Content Include="Contents\BottomNav.content">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Contents\Event.content">
       <SubType>Content</SubType>
     </Content>
     <Content Include="Contents\Jog2.content">
@@ -239,6 +244,13 @@
       <SubType>Content</SubType>
       <DependentUpon>Controls\coordinates.usercontrol</DependentUpon>
     </Content>
+    <Content Include="Controls\CylinderJog.usercontrol">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Controls\CylinderJog.usercontrol.json">
+      <SubType>Content</SubType>
+      <DependentUpon>Controls\CylinderJog.usercontrol</DependentUpon>
+    </Content>
     <Content Include="Controls\DirectionKeyPad.usercontrol">
       <SubType>Content</SubType>
     </Content>
@@ -246,12 +258,26 @@
       <SubType>Content</SubType>
       <DependentUpon>Controls\DirectionKeyPad.usercontrol</DependentUpon>
     </Content>
+    <Content Include="Controls\Gripper.usercontrol">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Controls\Gripper.usercontrol.json">
+      <SubType>Content</SubType>
+      <DependentUpon>Controls\Gripper.usercontrol</DependentUpon>
+    </Content>
     <Content Include="Controls\NinePointConfirm.usercontrol">
       <SubType>Content</SubType>
     </Content>
     <Content Include="Controls\NinePointConfirm.usercontrol.json">
       <SubType>Content</SubType>
       <DependentUpon>Controls\NinePointConfirm.usercontrol</DependentUpon>
+    </Content>
+    <Content Include="Controls\NozzleJog.usercontrol">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Controls\NozzleJog.usercontrol.json">
+      <SubType>Content</SubType>
+      <DependentUpon>Controls\NozzleJog.usercontrol</DependentUpon>
     </Content>
     <Content Include="Controls\PowerLine.usercontrol">
       <SubType>Content</SubType>
@@ -282,6 +308,13 @@
     <Content Include="Controls\RecipeDetail.usercontrol.json">
       <SubType>Content</SubType>
       <DependentUpon>Controls\RecipeDetail.usercontrol</DependentUpon>
+    </Content>
+    <Content Include="Controls\StackJog.usercontrol">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Controls\StackJog.usercontrol.json">
+      <SubType>Content</SubType>
+      <DependentUpon>Controls\StackJog.usercontrol</DependentUpon>
     </Content>
     <Content Include="Controls\VerticalDirectionKeyPad.usercontrol">
       <SubType>Content</SubType>
@@ -325,6 +358,13 @@
     <Content Include="functions\DeleteRecipe.js">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="functions\INC.function.json">
+      <SubType>Content</SubType>
+      <DependentUpon>functions\INC.js</DependentUpon>
+    </Content>
+    <Content Include="functions\INC.js">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="functions\InitAnalogDiscStatusArray.function.json">
       <SubType>Content</SubType>
       <DependentUpon>functions\InitAnalogDiscStatusArray.js</DependentUpon>
@@ -351,6 +391,13 @@
       <DependentUpon>functions\PowerChartUpdate.js</DependentUpon>
     </Content>
     <Content Include="functions\PowerChartUpdate.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="functions\SelectRecipeByName.function.json">
+      <SubType>Content</SubType>
+      <DependentUpon>functions\SelectRecipeByName.js</DependentUpon>
+    </Content>
+    <Content Include="functions\SelectRecipeByName.js">
       <SubType>Content</SubType>
     </Content>
     <Content Include="functions\SyncSelectedRecipePowerSchedule.function.json">
@@ -477,6 +524,12 @@
     <Content Include="Images\vision-normal.svg">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="Images\warning_normal - Copy.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Images\warning_normal.svg">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="Imports\hc.png">
       <SubType>Content</SubType>
     </Content>
@@ -508,14 +561,35 @@
     <Content Include="LoginPage.html">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="Server\TcHmiAlarm\TcHmiAlarm.Config.default.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Server\TcHmiAlarm\TcHmiAlarm.Config.remote.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Server\TcHmiAlarm\TcHmiAlarm.Storage.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Server\TcHmiEventLogger\TcHmiEventLogger.Config.default.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Server\TcHmiEventLogger\TcHmiEventLogger.Config.remote.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Server\TcHmiEventLogger\TcHmiEventLogger.Storage.json">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="Server\TcHmiLua\TcHmiLua.Config.default.json">
       <SubType>Content</SubType>
+      <Visible>True</Visible>
     </Content>
     <Content Include="Server\TcHmiLua\TcHmiLua.Config.remote.json">
       <SubType>Content</SubType>
+      <Visible>True</Visible>
     </Content>
     <Content Include="Server\TcHmiLua\TcHmiLua.Storage.json">
       <SubType>Content</SubType>
+      <Visible>True</Visible>
     </Content>
     <Content Include="Server\TcHmiRecipeManagement\TcHmiRecipeManagement.Config.default.json">
       <SubType>Content</SubType>
@@ -528,21 +602,27 @@
     </Content>
     <Content Include="Server\TcHmiSqliteLogger\TcHmiSqliteLogger.Config.default.json">
       <SubType>Content</SubType>
+      <Visible>True</Visible>
     </Content>
     <Content Include="Server\TcHmiSqliteLogger\TcHmiSqliteLogger.Config.remote.json">
       <SubType>Content</SubType>
+      <Visible>True</Visible>
     </Content>
     <Content Include="Server\TcHmiSqliteLogger\TcHmiSqliteLogger.Storage.json">
       <SubType>Content</SubType>
+      <Visible>True</Visible>
     </Content>
     <Content Include="Server\TcHmiUserManagement\TcHmiUserManagement.Config.default.json">
       <SubType>Content</SubType>
+      <Visible>True</Visible>
     </Content>
     <Content Include="Server\TcHmiUserManagement\TcHmiUserManagement.Config.remote.json">
       <SubType>Content</SubType>
+      <Visible>True</Visible>
     </Content>
     <Content Include="Server\TcHmiUserManagement\TcHmiUserManagement.Storage.json">
       <SubType>Content</SubType>
+      <Visible>True</Visible>
     </Content>
     <Content Include="Server\TcHmiVision\TcHmiVision.Config.default.json">
       <SubType>Content</SubType>

@@ -1058,6 +1058,20 @@
             "REQUIRED": true,
             "STARTUPTYPE": 1
         },
+        "TcHmiAlarm": {
+            "ENABLED": true,
+            "NAME": "TcHmiAlarm",
+            "PATH": "..\\..\\Packages\\Beckhoff.TwinCAT.HMI.Alarm.19.0.109\\runtimes\\win-x64\\native\\",
+            "REQUIRED": false,
+            "STARTUPTYPE": 1
+        },
+        "TcHmiEventLogger": {
+            "ENABLED": true,
+            "NAME": "TcHmiEventLogger",
+            "PATH": "..\\..\\Packages\\Beckhoff.TwinCAT.HMI.EventLogger.19.0.109\\runtimes\\win-x64\\native\\",
+            "REQUIRED": false,
+            "STARTUPTYPE": 1
+        },
         "TcHmiLua": {
             "ENABLED": true,
             "NAME": "TcHmiLua",
@@ -3560,6 +3574,16 @@
             },
             "USEMAPPING": true
         },
+        "PLC1.GVL_HMI.bECylinderMove": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_HMI::bECylinderMove",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            "USEMAPPING": true
+        },
         "PLC1.GVL_HMI.bElementEmpty": {
             "ACCESS": 3,
             "DOMAIN": "ADS",
@@ -3575,6 +3599,26 @@
             "DOMAIN": "ADS",
             "DYNAMIC": true,
             "MAPPING": "PLC1::GVL_HMI::bElementResume",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL_HMI.bGripperOpen": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_HMI::bGripperOpen",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL_HMI.bGripperRotate": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_HMI::bGripperRotate",
             "SCHEMA": {
                 "$ref": "tchmi:general#/definitions/BOOL"
             },
@@ -3612,6 +3656,36 @@
             "DOMAIN": "ADS",
             "DYNAMIC": true,
             "MAPPING": "PLC1::GVL_HMI::bR1MoveAbs",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL_HMI.bS1JogFastBackward": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_HMI::bS1JogFastBackward",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL_HMI.bS1JogFastForward": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_HMI::bS1JogFastForward",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/BOOL"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL_HMI.bS1MoveAbs": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_HMI::bS1MoveAbs",
             "SCHEMA": {
                 "$ref": "tchmi:general#/definitions/BOOL"
             },
@@ -3887,6 +3961,16 @@
             },
             "USEMAPPING": true
         },
+        "PLC1.GVL_HMI.intECylinderPosition": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_HMI::intECylinderPosition",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/INT"
+            },
+            "USEMAPPING": true
+        },
         "PLC1.GVL_HMI.intECylinderWeldDepth": {
             "ACCESS": 3,
             "DOMAIN": "ADS",
@@ -3899,6 +3983,33 @@
                     },
                     {
                         "comment": "º¸½ÓÊ±µç¸×¸ß¶È"
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL_HMI.intGripperAngleLow": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_HMI::intGripperAngleLow",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/INT"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL_HMI.intGripperCrtPosition": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_HMI::intGripperCrtPosition",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/INT"
+                    },
+                    {
+                        "comment": "¼Ð×¦µ±Ç°¿ªºÏ¶È"
                     }
                 ]
             },
@@ -4059,6 +4170,16 @@
                         "comment": "Îü×ìÐý×ª½Ç¶Èµ÷Õû"
                     }
                 ]
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL_HMI.lrS1JogFastVelocity": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_HMI::lrS1JogFastVelocity",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/LREAL"
             },
             "USEMAPPING": true
         },
@@ -4412,6 +4533,16 @@
             },
             "USEMAPPING": true
         },
+        "PLC1.GVL_HMI.nLight1DegreeMid": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_HMI::nLight1DegreeMid",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/INT"
+            },
+            "USEMAPPING": true
+        },
         "PLC1.GVL_HMI.nMaxColumn": {
             "ACCESS": 3,
             "DOMAIN": "ADS",
@@ -4449,6 +4580,16 @@
             "MAPPING": "PLC1::GVL_HMI::strRecipeName",
             "SCHEMA": {
                 "$ref": "tchmi:general#/definitions/STRING%2880%29"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL_HMI.uintGripperTargetPosition": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_HMI::uintGripperTargetPosition",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/INT"
             },
             "USEMAPPING": true
         },
@@ -4517,6 +4658,16 @@
             "DOMAIN": "TcHmiVision",
             "DYNAMIC": true,
             "MAPPING": "PLC1::MAIN::fbC2Calibration::ipImageResDisp::png",
+            "SCHEMA": {
+                "$ref": "tchmi:general#/definitions/BINARY"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.MAIN.fbMoveTest.ipImageInDisp.jpeg": {
+            "ACCESS": 3,
+            "DOMAIN": "TcHmiVision",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::MAIN::fbMoveTest::ipImageInDisp::jpeg",
             "SCHEMA": {
                 "$ref": "tchmi:general#/definitions/BINARY"
             },
@@ -5051,6 +5202,247 @@
                     "description": "The requestId of a subscription.",
                     "type": "integer"
                 }
+            },
+            "USEMAPPING": true
+        },
+        "TcHmiAlarm.ClearLoggedEvents": {
+            "ACCESS": 3,
+            "DOMAIN": "TcHmiAlarm",
+            "DYNAMIC": false,
+            "HIDDEN": true,
+            "MAPPING": "ClearLoggedEvents",
+            "OPTIONS": {},
+            "SCHEMA": {
+                "function": true
+            },
+            "USEMAPPING": true
+        },
+        "TcHmiAlarm.Config": {
+            "ACCESS": 0,
+            "DOMAIN": "TcHmiAlarm",
+            "DYNAMIC": false,
+            "HIDDEN": true,
+            "MAPPING": "Config",
+            "OPTIONS": {},
+            "SCHEMA": {},
+            "USEMAPPING": true
+        },
+        "TcHmiAlarm.Diagnostics": {
+            "ACCESS": 1,
+            "DOMAIN": "TcHmiAlarm",
+            "DYNAMIC": false,
+            "HIDDEN": true,
+            "MAPPING": "Diagnostics",
+            "OPTIONS": {},
+            "SCHEMA": {
+                "function": true,
+                "properties": {
+                    "activeAlarmsCount": {
+                        "propertyOrder": 7,
+                        "readOnly": true,
+                        "type": "integer"
+                    },
+                    "cachedAlarmsCount": {
+                        "propertyOrder": 5,
+                        "readOnly": true,
+                        "type": "integer"
+                    },
+                    "cachedInvalidAlarmsCount": {
+                        "propertyOrder": 6,
+                        "readOnly": true,
+                        "type": "integer"
+                    },
+                    "cachedMessagesCount": {
+                        "propertyOrder": 4,
+                        "readOnly": true,
+                        "type": "integer"
+                    },
+                    "database": {
+                        "properties": {
+                            "databaseSize": {
+                                "allOf": [
+                                    {
+                                        "$ref": "tchmi:general#/definitions/INT64"
+                                    },
+                                    {
+                                        "displayClass": "byte",
+                                        "propertyOrder": 1,
+                                        "readOnly": true
+                                    }
+                                ]
+                            },
+                            "numEntries": {
+                                "propertyOrder": 2,
+                                "readOnly": true,
+                                "type": "integer"
+                            }
+                        },
+                        "required": [
+                            "databaseSize",
+                            "numEntries"
+                        ],
+                        "type": "object"
+                    },
+                    "importedEventsCount": {
+                        "propertyOrder": 1,
+                        "readOnly": true,
+                        "type": "integer"
+                    },
+                    "importedInvalidAlarmsCount": {
+                        "propertyOrder": 3,
+                        "readOnly": true,
+                        "type": "integer"
+                    },
+                    "importedMessagesCount": {
+                        "propertyOrder": 2,
+                        "readOnly": true,
+                        "type": "integer"
+                    }
+                },
+                "readOnly": true,
+                "required": [
+                    "importedEventsCount",
+                    "importedMessagesCount",
+                    "importedInvalidAlarmsCount",
+                    "cachedMessagesCount",
+                    "cachedAlarmsCount",
+                    "cachedInvalidAlarmsCount",
+                    "activeAlarmsCount",
+                    "database"
+                ],
+                "type": "object"
+            },
+            "USEMAPPING": true
+        },
+        "TcHmiEventLogger.ClearLoggedEvents": {
+            "ACCESS": 3,
+            "DOMAIN": "TcHmiEventLogger",
+            "DYNAMIC": false,
+            "HIDDEN": true,
+            "MAPPING": "ClearLoggedEvents",
+            "OPTIONS": {},
+            "SCHEMA": {
+                "function": true,
+                "writeValue": {
+                    "properties": {
+                        "targetName": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "targetName"
+                    ],
+                    "type": "object"
+                }
+            },
+            "USEMAPPING": true
+        },
+        "TcHmiEventLogger.Config": {
+            "ACCESS": 0,
+            "DOMAIN": "TcHmiEventLogger",
+            "DYNAMIC": false,
+            "HIDDEN": true,
+            "MAPPING": "Config",
+            "OPTIONS": {},
+            "SCHEMA": {},
+            "USEMAPPING": true
+        },
+        "TcHmiEventLogger.Diagnostics": {
+            "ACCESS": 1,
+            "DOMAIN": "TcHmiEventLogger",
+            "DYNAMIC": false,
+            "HIDDEN": true,
+            "MAPPING": "Diagnostics",
+            "OPTIONS": {},
+            "SCHEMA": {
+                "function": true,
+                "properties": {
+                    "TARGET_SYSTEMS": {
+                        "additionalProperties": {
+                            "properties": {
+                                "activeAlarmsCount": {
+                                    "propertyOrder": 10,
+                                    "readOnly": true,
+                                    "type": "integer"
+                                },
+                                "cachedAlarmsCount": {
+                                    "hidden": true,
+                                    "propertyOrder": 8,
+                                    "readOnly": true,
+                                    "type": "integer"
+                                },
+                                "cachedInvalidAlarmsCount": {
+                                    "hidden": true,
+                                    "propertyOrder": 9,
+                                    "readOnly": true,
+                                    "type": "integer"
+                                },
+                                "cachedMessagesCount": {
+                                    "hidden": true,
+                                    "propertyOrder": 7,
+                                    "readOnly": true,
+                                    "type": "integer"
+                                },
+                                "connectError": {
+                                    "propertyOrder": 2,
+                                    "readOnly": true,
+                                    "type": "string"
+                                },
+                                "connectionState": {
+                                    "propertyOrder": 1,
+                                    "readOnly": true,
+                                    "type": "string"
+                                },
+                                "importedAlarmsCount": {
+                                    "propertyOrder": 5,
+                                    "readOnly": true,
+                                    "type": "integer"
+                                },
+                                "importedEventsCount": {
+                                    "propertyOrder": 3,
+                                    "readOnly": true,
+                                    "type": "integer"
+                                },
+                                "importedInvalidAlarmsCount": {
+                                    "propertyOrder": 6,
+                                    "readOnly": true,
+                                    "type": "integer"
+                                },
+                                "importedMessagesCount": {
+                                    "propertyOrder": 4,
+                                    "readOnly": true,
+                                    "type": "integer"
+                                }
+                            },
+                            "readOnly": true,
+                            "required": [
+                                "connectionState"
+                            ],
+                            "type": "object"
+                        },
+                        "description": "DESC_TARGET_SYSTEM",
+                        "readOnly": true,
+                        "type": "object"
+                    }
+                },
+                "readOnly": true,
+                "type": "object"
+            },
+            "USEMAPPING": true
+        },
+        "TcHmiEventLogger.ListEnabledTargetSystems": {
+            "ACCESS": 3,
+            "DOMAIN": "TcHmiEventLogger",
+            "DYNAMIC": false,
+            "HIDDEN": true,
+            "MAPPING": "ListEnabledTargetSystems",
+            "OPTIONS": {},
+            "SCHEMA": {
+                "function": true,
+                "items": {
+                    "type": "string"
+                },
+                "type": "array"
             },
             "USEMAPPING": true
         },
@@ -5922,11 +6314,17 @@
                 "Logout": 3,
                 "PLC1.GVL_HMI.CellMatrix": 3,
                 "PLC1.GVL_HMI.aScheduleInfo": 3,
+                "PLC1.GVL_HMI.bECylinderMove": 3,
                 "PLC1.GVL_HMI.bElementEmpty": 3,
                 "PLC1.GVL_HMI.bElementResume": 3,
+                "PLC1.GVL_HMI.bGripperOpen": 3,
+                "PLC1.GVL_HMI.bGripperRotate": 3,
                 "PLC1.GVL_HMI.bHMIHome": 3,
                 "PLC1.GVL_HMI.bMoveTest": 3,
                 "PLC1.GVL_HMI.bR1MoveAbs": 3,
+                "PLC1.GVL_HMI.bS1JogFastBackward": 3,
+                "PLC1.GVL_HMI.bS1JogFastForward": 3,
+                "PLC1.GVL_HMI.bS1MoveAbs": 3,
                 "PLC1.GVL_HMI.bShelfFull": 3,
                 "PLC1.GVL_HMI.bShelfResume": 3,
                 "PLC1.GVL_HMI.bSkipAdjustProcess": 3,
@@ -5954,7 +6352,10 @@
                 "PLC1.GVL_HMI.bZ1JogFastForward": 3,
                 "PLC1.GVL_HMI.bZ1JogForward": 3,
                 "PLC1.GVL_HMI.bZ1MoveAbs": 3,
+                "PLC1.GVL_HMI.intECylinderPosition": 3,
                 "PLC1.GVL_HMI.intECylinderWeldDepth": 3,
+                "PLC1.GVL_HMI.intGripperAngleLow": 3,
+                "PLC1.GVL_HMI.intGripperCrtPosition": 3,
                 "PLC1.GVL_HMI.intScheduleX": 3,
                 "PLC1.GVL_HMI.intScheduleY": 3,
                 "PLC1.GVL_HMI.lrCrtPosX1": 3,
@@ -5968,6 +6369,7 @@
                 "PLC1.GVL_HMI.lrR1MoveAngle": 3,
                 "PLC1.GVL_HMI.lrR1MoveVelocity": 3,
                 "PLC1.GVL_HMI.lrR1TunningAngle": 3,
+                "PLC1.GVL_HMI.lrS1JogFastVelocity": 3,
                 "PLC1.GVL_HMI.lrVacXOffset": 3,
                 "PLC1.GVL_HMI.lrVacYOffset": 3,
                 "PLC1.GVL_HMI.lrWeldXNegOffset": 3,
@@ -5996,10 +6398,12 @@
                 "PLC1.GVL_HMI.lrZ1MovePosition": 3,
                 "PLC1.GVL_HMI.lrZ1MoveVelocity": 3,
                 "PLC1.GVL_HMI.nElementWeldMode": 3,
+                "PLC1.GVL_HMI.nLight1DegreeMid": 3,
                 "PLC1.GVL_HMI.nMaxColumn": 3,
                 "PLC1.GVL_HMI.nMaxRow": 3,
                 "PLC1.GVL_HMI.nPlateWeldMode": 3,
                 "PLC1.GVL_HMI.strRecipeName": 3,
+                "PLC1.GVL_HMI.uintGripperTargetPosition": 3,
                 "PLC1.MAIN.CellMatrix": 3,
                 "PLC1.MAIN.MatrixWandH": 3,
                 "PLC1.MAIN.fbAdjust.fbFindContour.ipImageResDisp.png": 3,
@@ -6007,6 +6411,7 @@
                 "PLC1.MAIN.fbC2Calibration.ipImageResDisp.bmp": 3,
                 "PLC1.MAIN.fbC2Calibration.ipImageResDisp.jpeg": 3,
                 "PLC1.MAIN.fbC2Calibration.ipImageResDisp.png": 3,
+                "PLC1.MAIN.fbMoveTest.ipImageInDisp.jpeg": 3,
                 "PLC1.MAIN.fbMoveTest.ipImageInDisp.png": 3,
                 "PLC1.MAIN.fbPut.fbFindContour.ipImageThresholdDisp.png": 3,
                 "PLC1.MAIN.fbPut.ipImageResDisp.png": 3,
@@ -6032,6 +6437,9 @@
                 "PLC1.MAIN.selectedPowerSchedule": 3,
                 "SetLocale": 3,
                 "SubscribeEvents": 3,
+                "TcHmiAlarm.Diagnostics": 1,
+                "TcHmiEventLogger.Diagnostics": 1,
+                "TcHmiEventLogger.ListEnabledTargetSystems": 3,
                 "TcHmiRecipeManagement.ActivateRecipe": 3,
                 "TcHmiRecipeManagement.GetActiveRecipes": 3,
                 "TcHmiRecipeManagement.GetRecipes": 3,
@@ -6123,13 +6531,14 @@
                 "USERGROUPUSERS_TIMEFORMATLOCALE": "project",
                 "USERGROUPUSERS_TIMEZONE": "project"
             },
-            "teng": {
-                "USERGROUPUSERS_AUTO_LOGOFF": "PT0S",
+            "test123": {
+                "USERGROUPUSERS_AUTO_LOGOFF": "P30D",
                 "USERGROUPUSERS_GROUPS": [
-                    "__SystemUsers",
-                    "operator"
+                    "__SystemUsers"
                 ],
-                "USERGROUPUSERS_LOCALE": "client"
+                "USERGROUPUSERS_LOCALE": "en",
+                "USERGROUPUSERS_TIMEFORMATLOCALE": "project",
+                "USERGROUPUSERS_TIMEZONE": "project"
             }
         }
     },

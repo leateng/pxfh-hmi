@@ -3,9 +3,22 @@
 #BottomNavRegion .tchmi-button-template-content-text {
     color: #4089cb;
 }
+
 #BottomNavRegion .down .tchmi-button-template-content-text {
-    color: #FFFFFF;
+    font-weight: bold;
+
 }
+/*
+#BottomNavRegion .down::after {
+    content: ""; 
+    position: absolute; 
+    bottom: 0; 
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #4476c0;
+}
+ */
 
 svg {
 }
@@ -18,6 +31,12 @@ svg {
     height: calc(100% - 80px);
     width: calc(100% - 60px);
 }
+
+#TcHmiEventGrid {
+    height: calc(100% - 90px);
+    width: calc(100% - 60px);
+}
+
 
 .analog-discs-grid-container {
     background-color: rgba(0, 0, 0, 0);
@@ -33,23 +52,32 @@ svg {
 }
 
 /*forbidden status*/
-.analog-discs-grid-item[status="0"] {
-    background-image: url(Images/background_red_active.svg);
-}
+    .analog-discs-grid-item[status="0"] {
+        /*background-image: url(Images/background_red_active.svg);*/
+        background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.6));
+    }
 
 /*normal status*/
 .analog-discs-grid-item[status="1"] {
-    background: linear-gradient(135deg, #35333d, #141415);
+    background-image: linear-gradient(135deg, #35333d, #141415);
 }
 
 /*process status*/
 .analog-discs-grid-item[status="2"] {
-    background-image: url(Images/background_yellow_active.svg);
+    /* background-image: url(Images/background_yellow_active.svg); */
+    background-image: linear-gradient(135deg, #e0a500, #d08500);
 }
 
 /*normal done*/
 .analog-discs-grid-item[status="3"] {
-    background-image: url(Images/background_green_active.svg);
+    /*background-image: url(Images/background_green_active.svg);*/
+    background-image: linear-gradient(135deg, #00a000, #009000);
+}
+
+/*error status*/
+.analog-discs-grid-item[status="5"] {
+    /*background-image: url(Images/background_red_active.svg);*/
+    background-image: linear-gradient(135deg, #aa0000, #FF0000);
 }
 
 tchmi-content-tabs tchmi-tab-links {
@@ -91,4 +119,13 @@ img.tchmi-image-template-content {
 
 .tchmi-class-myVerticalTab tchmi-content-tabs tchmi-tab-links tchmi-tab-link[active] {
     border-left: 2px solid #1960a3 !important;
+}
+
+/* start stop button */
+#TcHmiButton_stop {
+    background: linear-gradient(135deg, #aa0000, #FF0000) !important;
+}
+
+#TcHmiButton_start {
+    background: linear-gradient(135deg, #00a000, #009000) !important;
 }

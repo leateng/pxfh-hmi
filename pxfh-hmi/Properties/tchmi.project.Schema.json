@@ -260,6 +260,22 @@
       "id": "tchmi:project#/definitions/PowerStepBar",
       "type": "object"
     },
+    "Gripper": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "Controls\\Gripper.usercontrol.json",
+      "type": "object",
+      "id": "tchmi:project#/definitions/Gripper"
+    },
+    "StackJog": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "Controls\\StackJog.usercontrol.json",
+      "type": "object",
+      "id": "tchmi:project#/definitions/StackJog"
+    },
     "MyMainRecipeType": {
       "properties": {
         "bSkipAdjustProcess": {
@@ -310,10 +326,16 @@
         "lrWeldYPosOffset": {
           "$ref": "tchmi:general#/definitions/Number"
         },
+        "lrX1MoveVelocity": {
+          "$ref": "tchmi:general#/definitions/Number"
+        },
         "lrX1X2Diff": {
           "$ref": "tchmi:general#/definitions/Number"
         },
         "lrX2GripperPositionOffset": {
+          "$ref": "tchmi:general#/definitions/Number"
+        },
+        "lrX2MoveVelocity": {
           "$ref": "tchmi:general#/definitions/Number"
         },
         "lrX2WeldVelocity": {
@@ -334,10 +356,16 @@
         "lrYLength": {
           "$ref": "tchmi:general#/definitions/Number"
         },
+        "lrYMoveVelocity": {
+          "$ref": "tchmi:general#/definitions/Number"
+        },
         "lrYOverrun": {
           "$ref": "tchmi:general#/definitions/Number"
         },
         "lrYWeldVelocity": {
+          "$ref": "tchmi:general#/definitions/Number"
+        },
+        "lrZ1MoveVelocity": {
           "$ref": "tchmi:general#/definitions/Number"
         },
         "nElementWeldMode": {
@@ -354,10 +382,29 @@
         },
         "strRecipeName": {
           "$ref": "tchmi:general#/definitions/String"
+        },
+        "nLight1DegreeMid": {
+          "$ref": "tchmi:general#/definitions/INT"
         }
       },
       "type": "object",
       "id": "tchmi:project#/definitions/MyMainRecipeType"
+    },
+    "NozzleJog": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "Controls\\NozzleJog.usercontrol.json",
+      "type": "object",
+      "id": "tchmi:project#/definitions/NozzleJog"
+    },
+    "CylinderJog": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "Controls\\CylinderJog.usercontrol.json",
+      "type": "object",
+      "id": "tchmi:project#/definitions/CylinderJog"
     }
   }
 }

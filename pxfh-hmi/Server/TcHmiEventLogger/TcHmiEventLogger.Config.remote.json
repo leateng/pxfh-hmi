@@ -1,0 +1,8 @@
+{
+    "TARGET_SYSTEMS": {
+        "remote": {
+            "ADDRESS": "169.254.250.10.1.1",
+            "ENABLED": true
+        }
+    }
+}

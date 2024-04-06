@@ -143,6 +143,29 @@
         "asyncWait": true
       }
     ]
+  },
+  {
+    "event": "%s%TcHmiRecipeManagement.Config::recipeList%/s%",
+    "actions": [
+      {
+        "objectType": "Function",
+        "active": true,
+        "fn": "TcHmi.Functions.pxfh_hmi.SelectRecipeByName",
+        "fnParams": [
+          {
+            "objectType": "Symbol",
+            "valueType": "tchmi:framework#/definitions/TcHmi.Controls.Beckhoff.TcHmiCombobox",
+            "symbolExpression": "%ctrl%TcHmiCombobox_MainRecipeList%/ctrl%"
+          },
+          {
+            "objectType": "Symbol",
+            "valueType": "tchmi:general#/definitions/String",
+            "symbolExpression": "%i%selectedRecipeName%/i%"
+          }
+        ],
+        "asyncWait": true
+      }
+    ]
   }
 ]
 </script>

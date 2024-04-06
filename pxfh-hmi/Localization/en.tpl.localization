@@ -47,6 +47,8 @@
     "spot-welding": "Spot Welding",
     "overrun": "Overrun",
     "save": "Save",
-    "tunning": "Tunning"
+    "tunning": "Tunning",
+    "sys-events": "Events",
+    "event-logger": "Event Logger"
   }
 }
